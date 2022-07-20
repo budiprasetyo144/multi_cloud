@@ -4,13 +4,14 @@ import 'package:mcs_flutter/animation/animasi1.dart';
 import 'package:mcs_flutter/animation/animasi4.dart';
 import 'package:mcs_flutter/widget/botton.dart';
 import 'package:mcs_flutter/const/conts.dart';
-import 'package:mcs_flutter/screen/footer.dart';
 import 'package:mcs_flutter/screen/home3.dart';
 import 'package:mcs_flutter/screen/home4.dart';
 import 'package:mcs_flutter/screen/home5.dart';
 import 'package:mcs_flutter/screen/home6.dart';
 import 'package:mcs_flutter/screen/home7.dart';
 import 'package:mcs_flutter/screen/home8.dart';
+import 'package:mcs_flutter/screen/home9.dart';
+
 
 import '../animation/animasi2.dart';
 import '../animation/animasi3.dart';
@@ -36,15 +37,15 @@ class _HomePageState extends State<HomePage> {
             : AppbarFullSize(screenSize, context),
         body: ListView(
           children: [
-            Home(),
+            const Home(),
             Home2(screenSize: screenSize),
-            Home3(),
-            Home4(),
-            Home5(),
-            Home6(),
-            Home7(),
-            Home8(),
-            Home9(),
+            const Home3(),
+            const Home4(),
+            const Home5(),
+            const Home6(),
+            const Home7(),
+            const Home8(),
+            const Home9(),
             
           ],
         ),
@@ -66,18 +67,20 @@ class Home2 extends StatelessWidget {
     return Container(
       height: screenSize.height * 0.5,
       width: screenSize.width,
-      color: Color.fromARGB(255, 8, 66, 113),
+      color: const Color.fromARGB(255, 8, 66, 113),
+
       child: Row(
         children: [
           SizedBox(
             width: screenSize.width * 0.1,
           ),
+
           Container(
             padding: EdgeInsets.only(top: screenSize.height * 0.1),
             width: screenSize.width * 0.2,
             child: Column(
               children: [
-                Animasi(),
+                const Animasi(),
                 SizedBox(
                   height: screenSize.height * 0.03,
                 ),
@@ -121,12 +124,13 @@ class Home2 extends StatelessWidget {
               ],
             ),
           ),
+
           Container(
             padding: EdgeInsets.only(top: screenSize.height * 0.1),
             width: screenSize.width * 0.2,
             child: Column(
               children: [
-                Animasi2(),
+                const Animasi2(),
                 SizedBox(
                   height: screenSize.height * 0.03,
                 ),
@@ -170,12 +174,13 @@ class Home2 extends StatelessWidget {
               ],
             ),
           ),
+
           Container(
             padding: EdgeInsets.only(top: screenSize.height * 0.1),
             width: screenSize.width * 0.2,
             child: Column(
               children: [
-                Animasi3(),
+                const Animasi3(),
                 SizedBox(
                   height: screenSize.height * 0.03,
                 ),
@@ -219,12 +224,13 @@ class Home2 extends StatelessWidget {
               ],
             ),
           ),
+
           Container(
             padding: EdgeInsets.only(top: screenSize.height * 0.1),
             width: screenSize.width * 0.2,
             child: Column(
               children: [
-                Animasi4(),
+                const Animasi4(),
                 SizedBox(
                   height: screenSize.height * 0.03,
                 ),
@@ -274,6 +280,7 @@ class Home2 extends StatelessWidget {
   }
 }
 
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -290,9 +297,11 @@ class _HomeState extends State<Home> {
         Image.asset(
           "assets/images/79032468-01.jpeg",
         ),
+
         Container(
           padding: EdgeInsets.only(
-              left: screenSize.width * 0.5, top: screenSize.height * 0.2),
+              left: screenSize.width * 0.5,
+              top: screenSize.height * 0.2),
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -305,7 +314,7 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
                 Text(
@@ -340,54 +349,60 @@ class _HomeState extends State<Home> {
                       color: kTextColor,
                       fontWeight: FontWeight.bold),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "If your organization is going to compete",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20, color: Colors.black54),
+                      fontSize: 20,
+                      color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "and win with data, you need multi-cloud.",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20, color: Colors.black54),
+                      fontSize: 20,
+                      color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "It’s the durable, scalable solution that",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20, color: Colors.black54),
+                      fontSize: 20,
+                      color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "allows you to extract more value from your",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20, color: Colors.black54),
+                      fontSize: 20,
+                      color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "data and drive new innovations across your",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20, color: Colors.black54),
+                      fontSize: 20,
+                      color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "business.",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20, color: Colors.black54),
+                      fontSize: 20,
+                      color: Colors.black54),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
-                Container(
+                SizedBox(
                   height: screenSize.height * 0.1,
                   width: screenSize.width * 0.2,
                   child: Botton_tombol(title: "LEARN MORE"),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
               ],
