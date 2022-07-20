@@ -53,7 +53,7 @@ class Home3 extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-<<<<<<< HEAD
+
                   overflow: TextOverflow.ellipsis,
                   "Instead of operating within the constraints of a single cloud vendor",
                   style: GoogleFonts.robotoCondensed(
@@ -119,13 +119,7 @@ class Home3 extends StatelessWidget {
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "into a single cloud.",
-=======
-                  "Instead of operating within the constraints of a single cloud vendor,"
-                      " a multi-cloud strategy allows you to access the cloud services from multiple cloud providers simultaneously. "
-                      "These cloud providers include AWS, Azure, Google Cloud Platform, or Oracle Cloud. "
-                      "Using the wide range of leading-edge services available from these providers on a single data set, "
-                      "attached to all clouds simultaneously, can boost innovation and grow your business faster than if your data was locked into a single cloud.",
->>>>>>> 83bb0c27807218ddba6bc800b81dc3c6eae33a22
+
                   style: GoogleFonts.robotoCondensed(
                     color: Colors.black,
                     fontSize: 20,
@@ -137,14 +131,9 @@ class Home3 extends StatelessWidget {
                 ),
                 Row(
                   children: [
-<<<<<<< HEAD
                     Container(
                       width: screenSize.width*0.1,
                       height: screenSize.height*0.08,
-=======
-                    SizedBox(
-                      width: 200,
->>>>>>> 83bb0c27807218ddba6bc800b81dc3c6eae33a22
                       child: Botton_tombol(
                         title: "Learn More",
                       ),
