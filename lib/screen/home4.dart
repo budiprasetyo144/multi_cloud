@@ -24,6 +24,7 @@ class Home4 extends StatelessWidget {
                   ),
                   Container(
                     child: Text(
+                      overflow: TextOverflow.ellipsis,
                       "Our company story is a values story",
                       style: GoogleFonts.robotoCondensed(
                           color: Colors.white,
@@ -35,6 +36,8 @@ class Home4 extends StatelessWidget {
                     flex: 1,
                   ),
                   Container(
+                    height: screenSize.height * 0.3,
+                    width: screenSize.width * 0.8,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -47,40 +50,47 @@ class Home4 extends StatelessWidget {
                             Container(
                               color: Colors.white,
                               height: 60,
-                              width: 60,
-                              margin: EdgeInsets.only(right: 20),
+                              width: screenSize.width * 0.04,
+                              margin: EdgeInsets.only(
+                                  right: screenSize.width * 0.01),
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Sit amet nisl purus in mollis nunc sed id semper.",
-                                  style: GoogleFonts.robotoCondensed(
-                                    color: Colors.white,
-                                    fontSize: 20,
+                            Container(
+                              width: screenSize.width * 0.3,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    overflow: TextOverflow.ellipsis,
+                                    "Sit amet nisl purus in mollis nunc sed id semper.",
+                                    style: GoogleFonts.robotoCondensed(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  "At in tellus integer feugiat.",
-                                  style: GoogleFonts.robotoCondensed(
-                                    color: Colors.white,
-                                    fontSize: 20,
+                                  SizedBox(
+                                    height: 5,
                                   ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  "Commodo viverra maecenas accumsan lacus vel facilisis.",
-                                  style: GoogleFonts.robotoCondensed(
-                                    color: Colors.white,
-                                    fontSize: 20,
+                                  Text(
+                                    overflow: TextOverflow.ellipsis,
+                                    "At in tellus integer feugiat.",
+                                    style: GoogleFonts.robotoCondensed(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                    ),
                                   ),
-                                ),
-                              ],
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text(
+                                    overflow: TextOverflow.ellipsis,
+                                    "Commodo viverra maecenas accumsan lacus vel facilisis.",
+                                    style: GoogleFonts.robotoCondensed(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                             Spacer(
                               flex: 1,
@@ -91,40 +101,48 @@ class Home4 extends StatelessWidget {
                                 Container(
                                   color: Colors.white,
                                   height: 60,
-                                  width: 60,
-                                  margin: EdgeInsets.only(right: 20),
+                                  width: screenSize.width * 0.04,
+                                  margin: EdgeInsets.only(
+                                      right: screenSize.width * 0.01),
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Sit amet nisl purus in mollis nunc sed id semper.",
-                                      style: GoogleFonts.robotoCondensed(
-                                        color: Colors.white,
-                                        fontSize: 20,
+                                Container(
+                                  width: screenSize.width * 0.3,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        overflow: TextOverflow.ellipsis,
+                                        "Sit amet nisl purus in mollis nunc sed id semper.",
+                                        style: GoogleFonts.robotoCondensed(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                        ),
                                       ),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      "At in tellus integer feugiat.",
-                                      style: GoogleFonts.robotoCondensed(
-                                        color: Colors.white,
-                                        fontSize: 20,
+                                      SizedBox(
+                                        height: 5,
                                       ),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      "Commodo viverra maecenas accumsan lacus vel facilisis.",
-                                      style: GoogleFonts.robotoCondensed(
-                                        color: Colors.white,
-                                        fontSize: 20,
+                                      Text(
+                                        overflow: TextOverflow.ellipsis,
+                                        "At in tellus integer feugiat.",
+                                        style: GoogleFonts.robotoCondensed(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                      SizedBox(
+                                        height: 5,
+                                      ),
+                                      Text(
+                                        overflow: TextOverflow.ellipsis,
+                                        "Commodo viverra maecenas accumsan lacus vel facilisis.",
+                                        style: GoogleFonts.robotoCondensed(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
@@ -141,24 +159,72 @@ class Home4 extends StatelessWidget {
                   ),
                   // KOLOM 2
                   Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    height: screenSize.height * 0.11,
+                    width: screenSize.width * 0.8,
+                    child: Row(
                       children: [
+                        Spacer(
+                          flex: 1,
+                        ),
+                        Container(
+                          color: Colors.white,
+                          height: 60,
+                          width: screenSize.width * 0.04,
+                          margin: EdgeInsets.only(
+                              right: screenSize.width * 0.01),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              overflow: TextOverflow.ellipsis,
+                              "Sit amet nisl purus in mollis nunc sed id semper.",
+                              style: GoogleFonts.robotoCondensed(
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              overflow: TextOverflow.ellipsis,
+                              "At in tellus integer feugiat.",
+                              style: GoogleFonts.robotoCondensed(
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              overflow: TextOverflow.ellipsis,
+                              "Commodo viverra maecenas accumsan lacus vel facilisis.",
+                              style: GoogleFonts.robotoCondensed(
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Spacer(
+                          flex: 1,
+                        ),
                         Row(
                           children: [
-                            Spacer(
-                              flex: 1,
-                            ),
                             Container(
                               color: Colors.white,
                               height: 60,
-                              width: 60,
-                              margin: EdgeInsets.only(right: 20),
+                              width: screenSize.width * 0.04,
+                              margin: EdgeInsets.only(
+                                  right: screenSize.width * 0.01),
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
+                                  overflow: TextOverflow.ellipsis,
                                   "Sit amet nisl purus in mollis nunc sed id semper.",
                                   style: GoogleFonts.robotoCondensed(
                                     color: Colors.white,
@@ -169,6 +235,7 @@ class Home4 extends StatelessWidget {
                                   height: 5,
                                 ),
                                 Text(
+                                  overflow: TextOverflow.ellipsis,
                                   "At in tellus integer feugiat.",
                                   style: GoogleFonts.robotoCondensed(
                                     color: Colors.white,
@@ -179,6 +246,7 @@ class Home4 extends StatelessWidget {
                                   height: 5,
                                 ),
                                 Text(
+                                  overflow: TextOverflow.ellipsis,
                                   "Commodo viverra maecenas accumsan lacus vel facilisis.",
                                   style: GoogleFonts.robotoCondensed(
                                     color: Colors.white,
@@ -186,58 +254,11 @@ class Home4 extends StatelessWidget {
                                   ),
                                 ),
                               ],
-                            ),
-                            Spacer(
-                              flex: 1,
-                            ),
-
-                            // BARIS 2
-                            Row(
-                              children: [
-                                Container(
-                                  color: Colors.white,
-                                  height: 60,
-                                  width: 60,
-                                  margin: EdgeInsets.only(right: 20),
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Sit amet nisl purus in mollis nunc sed id semper.",
-                                      style: GoogleFonts.robotoCondensed(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      "At in tellus integer feugiat.",
-                                      style: GoogleFonts.robotoCondensed(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      "Commodo viverra maecenas accumsan lacus vel facilisis.",
-                                      style: GoogleFonts.robotoCondensed(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                      ),
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                            Spacer(
-                              flex: 1,
-                            ),
+                            )
                           ],
+                        ),
+                        Spacer(
+                          flex: 1,
                         ),
                       ],
                     ),

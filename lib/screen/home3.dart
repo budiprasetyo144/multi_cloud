@@ -23,6 +23,7 @@ class Home3 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
+                  overflow: TextOverflow.ellipsis,
                   "Explore Cloud solutions",
                   style: GoogleFonts.robotoCondensed(
                       color: Color.fromARGB(255, 12, 66, 101),
@@ -33,6 +34,7 @@ class Home3 extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
+                  overflow: TextOverflow.ellipsis,
                   "for every challenge and",
                   style: GoogleFonts.robotoCondensed(
                       color: Color.fromARGB(255, 12, 66, 101),
@@ -50,7 +52,71 @@ class Home3 extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  "Instead of operating within the constraints of a single cloud vendor, a multi-cloud strategy allows you to access the cloud services from multiple cloud providers simultaneously. These cloud providers include AWS, Azure, Google Cloud Platform, or Oracle Cloud. Using the wide range of leading-edge services available from these providers on a single data set, attached to all clouds simultaneously, can boost innovation and grow your business faster than if your data was locked into a single cloud.",
+                  overflow: TextOverflow.ellipsis,
+                  "Instead of operating within the constraints of a single cloud vendor",
+                  style: GoogleFonts.robotoCondensed(
+                    color: Colors.black,
+                    fontSize: 20,
+                    height: 1.5,
+                  ),
+                ),
+                 Text(
+                  overflow: TextOverflow.ellipsis,
+                  "a multi-cloud strategy allows you to access the cloud services from",
+                  style: GoogleFonts.robotoCondensed(
+                    color: Colors.black,
+                    fontSize: 20,
+                    height: 1.5,
+                  ),
+                ),
+                Text(
+                  overflow: TextOverflow.ellipsis,
+                  "multiple cloud providers simultaneously. These cloud providers ",
+                  style: GoogleFonts.robotoCondensed(
+                    color: Colors.black,
+                    fontSize: 20,
+                    height: 1.5,
+                  ),
+                ),
+                Text(
+                  overflow: TextOverflow.ellipsis,
+                  "include AWS, Azure, Google Cloud Platform, or Oracle Cloud. Using",
+                  style: GoogleFonts.robotoCondensed(
+                    color: Colors.black,
+                    fontSize: 20,
+                    height: 1.5,
+                  ),
+                ),
+                Text(
+                  overflow: TextOverflow.ellipsis,
+                  "the wide range of leading-edge services available from these providers",
+                  style: GoogleFonts.robotoCondensed(
+                    color: Colors.black,
+                    fontSize: 20,
+                    height: 1.5,
+                  ),
+                ),
+                Text(
+                  overflow: TextOverflow.ellipsis,
+                  "on a single data set, attached to all clouds simultaneously, can boost",
+                  style: GoogleFonts.robotoCondensed(
+                    color: Colors.black,
+                    fontSize: 20,
+                    height: 1.5,
+                  ),
+                ),
+                Text(
+                  overflow: TextOverflow.ellipsis,
+                  "innovation and grow your business faster than if your data was locked",
+                  style: GoogleFonts.robotoCondensed(
+                    color: Colors.black,
+                    fontSize: 20,
+                    height: 1.5,
+                  ),
+                ),
+                Text(
+                  overflow: TextOverflow.ellipsis,
+                  "into a single cloud.",
                   style: GoogleFonts.robotoCondensed(
                     color: Colors.black,
                     fontSize: 20,
@@ -63,7 +129,8 @@ class Home3 extends StatelessWidget {
                 Row(
                   children: [
                     Container(
-                      width: 200,
+                      width: screenSize.width*0.1,
+                      height: screenSize.height*0.08,
                       child: Botton_tombol(
                         title: "Learn More",
                       ),
