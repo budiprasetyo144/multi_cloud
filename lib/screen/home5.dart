@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../text_body.dart';
+import '../text/text_body.dart';
 
 class Home5 extends StatefulWidget {
   const Home5({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'conts.dart';
+import '../const/conts.dart';
 
 class En extends StatefulWidget {
   const En({Key? key}) : super(key: key);

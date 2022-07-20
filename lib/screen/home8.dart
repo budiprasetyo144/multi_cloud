@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mcs_flutter/botton.dart';
-import 'package:mcs_flutter/conts.dart';
+import 'package:mcs_flutter/widget/botton.dart';
+import 'package:mcs_flutter/const/conts.dart';
 
 class Home8 extends StatelessWidget {
   const Home8({Key? key}) : super(key: key);

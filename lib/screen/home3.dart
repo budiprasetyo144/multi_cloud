@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../botton.dart';
+import '../widget/botton.dart';
 
 class Home3 extends StatelessWidget {
   const Home3({super.key});

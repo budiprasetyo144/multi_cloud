@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mcs_flutter/conts.dart';
+import 'package:mcs_flutter/const/conts.dart';
 
 class Home7 extends StatelessWidget {
   const Home7({Key? key}) : super(key: key);
