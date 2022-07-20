@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/const/conts.dart';
-
+import 'package:mcs_flutter/screen/post.dart';
+import 'package:mcs_flutter/screen/post_body.dart';
 import '../text/text_body.dart';
+import 'package:mcs_flutter/widget/container_post.dart';
+import 'package:mcs_flutter/text/text_post.dart';
 
 class Home6 extends StatefulWidget {
   const Home6({Key? key}) : super(key: key);
@@ -57,13 +60,28 @@ class _Home6State extends State<Home6> {
                         ),
                       ),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PostBody(
+                                    Image: 'assets/images/3.jpeg',
+                                    HeadText: headgrid1,
+                                    Tanggal: tanggal,
+                                    Bodyfull: bodyfull1,
+                                    Urutan: urutan1,
+
+                                ),
+                              ),
+                            );
+                          },
                           child: Text(
                             'LEARN MORE',
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
                                 color: Colors.white),
-                          ))
+                          )
+                      )
                     ],
                   ),
                 ),
@@ -101,7 +119,21 @@ class _Home6State extends State<Home6> {
                         ),
                       ),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PostBody(
+                                    Image: 'assets/images/2.jpeg',
+                                    HeadText: headgrid2,
+                                    Tanggal: tanggal,
+                                    Bodyfull: bodyfull2,
+                                    Urutan: urutan2,
+
+                                ),
+                              ),
+                            );
+                          },
                           child: Text(
                             'LEARN MORE',
                             style: TextStyle(
@@ -145,7 +177,21 @@ class _Home6State extends State<Home6> {
                         ),
                       ),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PostBody(
+                                    Image: 'assets/images/1.jpeg',
+                                    HeadText: headgrid3,
+                                    Tanggal: tanggal,
+                                    Bodyfull: bodyfull3,
+                                    Urutan: urutan3,
+
+                                ),
+                              ),
+                            );
+                          },
                           child: Text(
                             'LEARN MORE',
                             style: TextStyle(
@@ -158,7 +204,13 @@ class _Home6State extends State<Home6> {
               ],
             ),
             TextButton.icon(
-                onPressed: (){},
+                onPressed: (){Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Post(),
+                  ),
+                );
+                  },
                 icon: Icon(Icons.newspaper,color: Colors.white,size: 30,),
                 label: Text('Read All News',style: TextStyle(fontSize: 30,color: Colors.white),),
             )
@@ -167,3 +219,4 @@ class _Home6State extends State<Home6> {
     );
   }
 }
+
