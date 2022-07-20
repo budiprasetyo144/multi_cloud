@@ -68,7 +68,7 @@ class Home4 extends StatelessWidget {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 5,
+                                    height: screenSize.height * 0.005,
                                   ),
                                   Text(
                                     overflow: TextOverflow.ellipsis,
@@ -79,7 +79,7 @@ class Home4 extends StatelessWidget {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 5,
+                                    height: screenSize.height * 0.005,
                                   ),
                                   Text(
                                     overflow: TextOverflow.ellipsis,
@@ -120,7 +120,7 @@ class Home4 extends StatelessWidget {
                                         ),
                                       ),
                                       SizedBox(
-                                        height: 5,
+                                        height: screenSize.height * 0.005,
                                       ),
                                       Text(
                                         overflow: TextOverflow.ellipsis,
@@ -131,7 +131,7 @@ class Home4 extends StatelessWidget {
                                         ),
                                       ),
                                       SizedBox(
-                                        height: 5,
+                                        height: screenSize.height * 0.005,
                                       ),
                                       Text(
                                         overflow: TextOverflow.ellipsis,
@@ -187,7 +187,7 @@ class Home4 extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(
-                                height: 5,
+                                height: screenSize.height * 0.005,
                               ),
                               Text(
                                 overflow: TextOverflow.ellipsis,
@@ -198,7 +198,7 @@ class Home4 extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(
-                                height: 5,
+                                height: screenSize.height * 0.005,
                               ),
                               Text(
                                 overflow: TextOverflow.ellipsis,
@@ -237,7 +237,7 @@ class Home4 extends StatelessWidget {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 5,
+                                    height: screenSize.height * 0.005,
                                   ),
                                   Text(
                                     overflow: TextOverflow.ellipsis,
@@ -248,7 +248,7 @@ class Home4 extends StatelessWidget {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 5,
+                                    height: screenSize.height * 0.005,
                                   ),
                                   Text(
                                     overflow: TextOverflow.ellipsis,
