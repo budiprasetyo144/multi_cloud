@@ -1,39 +1,44 @@
-import 'dart:js';
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/main.dart';
 import 'package:mcs_flutter/widget/dropdown.dart';
-import 'package:mcs_flutter/screen/home.dart';
-
 import '../const/conts.dart';
 
 PreferredSize AppbarSmallSize(Size screenSize) {
   return PreferredSize(
     preferredSize: Size(screenSize.width, 135),
     child: Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(
-              color: kPrimaryColor, width: 1, style: BorderStyle.solid),
+              color: kPrimaryColor,
+              width: 1,
+              style: BorderStyle.solid
+          ),
         ),
       ),
+
       child: Row(
         children: [
-          Spacer(
+          const Spacer(
             flex: 1,
           ),
           Container(
-            padding: EdgeInsets.only(left: 30, top: 20, bottom: 20),
+            padding: const EdgeInsets.only(
+                left: 30,
+                top: 20,
+                bottom: 20
+            ),
             child: Image.asset("assets/logo/multicloudsolution.jpg"),
           ),
-          Spacer(
+          const Spacer(
             flex: 1,
           ),
-          Container(
+          const SizedBox(
             height: 50,
             width: 150,
             child: En(),
           ),
-          Spacer(
+          const Spacer(
             flex: 1,
           ),
         ],
@@ -46,19 +51,26 @@ PreferredSize AppbarFullSize(Size screenSize, BuildContext context) {
   return PreferredSize(
     preferredSize: Size(screenSize.width, 135),
     child: Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(
-              color: kPrimaryColor, width: 1, style: BorderStyle.solid),
+              color: kPrimaryColor,
+              width: 1,
+              style: BorderStyle.solid),
         ),
       ),
+
       child: Row(
         children: [
           SizedBox(
             width: screenSize.width * 0.1,
           ),
           Container(
-            padding: EdgeInsets.only(left: 30, top: 20, bottom: 20),
+            padding: const EdgeInsets.only(
+                left: 30,
+                top: 20,
+                bottom: 20
+            ),
             child: Image.asset("assets/logo/multicloudsolution.jpg"),
           ),
           SizedBox(
@@ -68,57 +80,74 @@ PreferredSize AppbarFullSize(Size screenSize, BuildContext context) {
             onTap: () {Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => MyApp(),
-              ),
-            );
+                builder: (context) => const MyApp(),
+              ),);
               },
-            child: Text(
+            child: const Text(
               "Home",
               style: TextStyle(
-                  fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                  color: kTextColor
+              ),
             ),
           ),
           SizedBox(
             width: screenSize.width * 0.03,
           ),
-          Text(
+          const Text(
             "About us",
             style: TextStyle(
-                fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
+                fontSize: 17,
+                fontWeight: FontWeight.bold,
+                color: kTextColor
+            ),
           ),
           SizedBox(
             width: screenSize.width * 0.03,
           ),
-          Text(
+          const Text(
             "Solution",
             style: TextStyle(
-                fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
+                fontSize: 17,
+                fontWeight: FontWeight.bold,
+                color: kTextColor
+            ),
           ),
           SizedBox(
             width: screenSize.width * 0.03,
           ),
-          Text(
+          const Text(
             "Contact Us",
             style: TextStyle(
-                fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
+                fontSize: 17,
+                fontWeight: FontWeight.bold,
+                color: kTextColor
+            ),
           ),
           SizedBox(
             width: screenSize.width * 0.03,
           ),
-          Container(
+          SizedBox(
             height: 50,
             width: 250,
             child: TextFormField(
               decoration: InputDecoration(
                 labelText: "Search",
-                prefixIcon: Icon(Icons.search),
+                prefixIcon: const Icon(Icons.search),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(width: 1, color: Colors.blue),
                   borderRadius: BorderRadius.circular(15),
+                  borderSide: const BorderSide(
+                      width: 1,
+                      color: Colors.blue
+                  ),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(width: 1, color: Colors.blue),
                   borderRadius: BorderRadius.circular(15),
+                  borderSide: const BorderSide(
+                      width: 1,
+                      color: Colors.blue
+                  ),
                 ),
               ),
             ),
