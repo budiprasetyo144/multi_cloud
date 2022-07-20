@@ -12,14 +12,14 @@ class Home3 extends StatelessWidget {
     return Container(
       height: screenSize.height,
       width: screenSize.width,
-      color: const Color.fromARGB(255, 241, 252, 254),
+      color:  Color.fromARGB(255, 241, 252, 254),
 
       child: Row(
         children: [
           Container(
             height: 600,
             width: screenSize.width * 0.5,
-            padding: const EdgeInsets.only(left: 200, top: 20),
+            padding:  EdgeInsets.only(left: screenSize.width*0.1, top: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -27,7 +27,7 @@ class Home3 extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   "Explore Cloud solutions",
                   style: GoogleFonts.robotoCondensed(
-                      color: const Color.fromARGB(255, 12, 66, 101),
+                      color:  Color.fromARGB(255, 12, 66, 101),
                       fontSize: 50,
                       fontWeight: FontWeight.bold),
                 ),
@@ -38,14 +38,14 @@ class Home3 extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   "for every challenge and",
                   style: GoogleFonts.robotoCondensed(
-                      color: const Color.fromARGB(255, 12, 66, 101),
+                      color:  Color.fromARGB(255, 12, 66, 101),
                       fontSize: 50,
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
                   "budget",
                   style: GoogleFonts.robotoCondensed(
-                      color: const Color.fromARGB(255, 12, 66, 101),
+                      color:  Color.fromARGB(255, 12, 66, 101),
                       fontSize: 50,
                       fontWeight: FontWeight.bold),
                 ),
