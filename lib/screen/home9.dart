@@ -14,31 +14,32 @@ class Home9 extends StatelessWidget {
       children: [
         Container(
           color: kPrimaryColor,
-          child: Container(
+          child: SizedBox(
             height: screenSize.height,
             width: screenSize.width,
             child: Row(
               children: [
-                Spacer(
+                const Spacer(
                   flex: 3,
                 ),
-                Container(
+                SizedBox(
                   width: 500,
                   height: 500,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(12),
                     child: SizedBox.fromSize(
-                      size: Size.fromRadius(48),
+                      size: const Size.fromRadius(48),
                       child: Image.network("assets/images/vbbvvb.jpg",
                           fit: BoxFit.cover),
                     ),
                   ),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
+
                 Container(
-                  padding: EdgeInsets.all(30),
+                  padding: const EdgeInsets.all(30),
                   width: 400,
                   height: 400,
                   decoration: BoxDecoration(
@@ -49,52 +50,69 @@ class Home9 extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Spacer(
-                        flex: 1,
-                      ),
+
                       Text(
-                        "Our Mission",
-                        textAlign: TextAlign.left,
+                        "Our Vission & Mission "
+                            "\n",
                         style: TextStyle(
-                            fontSize: 40,
+                            fontSize: 30,
                             color: Colors.orange[800],
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Spacer(
-                        flex: 1,
-                      ),
-                      Text(
-                        "Vision : To be Preferred IT Partner In The Region."
-                        ""
-                        "Mission : Establish excellent end to end IT Services to enable clients to grow their business rapidly thru high competence and professional resources.",
-                        style: TextStyle(fontSize: 20, height: 2),
-                      ),
-                      Spacer(
-                        flex: 1,
-                      ),
-                      Text("Image from Frepik"),
-                      Spacer(
+                            fontWeight: FontWeight.bold
+                        )),
+
+                      const Text(
+                         "Vision :"
+                             "\n",
+                         style: TextStyle(
+                             fontSize: 20,
+                             fontWeight: FontWeight.bold
+                         )),
+
+                      const Text(
+                          "To be Preferred IT Partner In The Region."
+                              "\n",
+                          style: TextStyle(
+                              fontSize: 18
+                          )),
+
+                      const Text("Mission : "
+                              "\n",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold
+                          )),
+
+                      const Text("Establish excellent end to end IT Services to enable clients to grow their business rapidly thru high competence and professional resources."
+                              "\n",
+                          style: TextStyle(
+                              fontSize: 18,
+                              height: 1.5
+                          )),
+                      const Spacer(
                         flex: 1,
                       ),
                     ],
                   ),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 3,
                 ),
               ],
             ),
           ),
         ),
+
         Container(
           height: 800,
           width: screenSize.width,
           color: Colors.white,
           child: Row(
             children: [
-              Spacer(
+              const Spacer(
                 flex: 3,
               ),
+
               Container(
                 decoration: BoxDecoration(
                     color: kPrimaryColor,
@@ -105,83 +123,114 @@ class Home9 extends StatelessWidget {
                 height: screenSize.height * 0.7,
                 width: screenSize.width * 0.35,
                 child: Container(
-                  padding: EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Spacer(
+                      const Spacer(
                         flex: 1,
                       ),
+
                       Row(
                         children: [
-                          Icon(Icons.phone,color: Colors.white),
-                          SizedBox(width: 5,),
+                          const Icon(
+                              Icons.phone,
+                              color: Colors.white),
+                          const SizedBox(
+                              width: 5),
                           Text(
                             "CALL US",
-                            style: GoogleFonts.robotoCondensed(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),
-                          ),
+                            style: GoogleFonts.robotoCondensed(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold
+                            )),
                         ],
                       ),
-                      Spacer(
+                      const Spacer(
                         flex: 1,
                       ),
-                      Text(
+
+                      const Text(
                           "Office : (021) 5795 - 8040, "
                           "Email : info@eksad.com",
-                          style: TextStyle(color: Colors.white,fontSize: 16)),
-                      Spacer(
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16)),
+                      const Spacer(
                         flex: 2,
                       ),
+
                       Row(
                         children: [
-                          Icon(Icons.location_pin,color: Colors.white),
-                          SizedBox(width: 5,),
+                          const Icon(
+                              Icons.location_pin,
+                              color: Colors.white),
+                          const SizedBox(
+                              width: 5,),
                           Text("LOCATION",
-                              style: GoogleFonts.robotoCondensed(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.robotoCondensed(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
                         ],
                       ),
-                      Spacer(
+                      const Spacer(
                         flex: 1,
                       ),
-                      Text(
+
+                      const Text(
                           "The East Tower 19th Floor, "
                           "Jl. DR. Ide Anak Agung Gde Agung, "
                           "Kuningan, Kecamatan Setiabudi, "
                           "Kota Jakarta Selatan, DKI Jakarta 12950",
-                          style: TextStyle(color: Colors.white,fontSize: 16)),
-                      Spacer(
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16)),
+                      const Spacer(
                         flex: 2,
                       ),
+
                       Row(
                         children: [
-                          Icon(Icons.watch_off_rounded,color: Colors.white),
-                          SizedBox(width: 5,),
+                          const Icon(
+                              Icons.access_time,
+                              color: Colors.white),
+                          const SizedBox(
+                              width: 5,),
                           Text("BUSINESS HOURS",
-                              style: GoogleFonts.robotoCondensed(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.robotoCondensed(
+                                  color: Colors.white,
+                                  fontSize: 20,fontWeight:
+                                  FontWeight.bold)),
                         ],
                       ),
-                      Spacer(
+                      const Spacer(
                         flex: 1,
                       ),
-                      Text(
-                          "Mon–Fri"
-                          " 8.30 am–5.30 pm,   "
+
+                      const Text(
+                          "Mon–Fri   "
+                          "8.30 am–5.30 pm,  "
                           "Sat&Sun Closed",
-                          style: TextStyle(color: Colors.white,fontSize: 16)),
-                      Spacer(
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16)),
+                      const Spacer(
                         flex: 1,
                       ),
                     ],
                   ),
                 ),
               ),
-              Spacer(
+              const Spacer(
                 flex: 1,
               ),
+
               Container(
-                padding: EdgeInsets.all(50),
-                decoration: BoxDecoration(color: Colors.white, boxShadow: [
+                padding: const EdgeInsets.all(50),
+                decoration: const BoxDecoration(color: Colors.white, boxShadow: [
                   BoxShadow(
                     color: Colors.grey,
                     spreadRadius: 4,
@@ -194,7 +243,7 @@ class Home9 extends StatelessWidget {
                 width: screenSize.width * 0.35,
                 child: Column(
                   children: [
-                    Spacer(
+                    const Spacer(
                       flex: 1,
                     ),
                     Text(
@@ -204,67 +253,91 @@ class Home9 extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           color: kTextColor),
                     ),
-                    Spacer(
+                    const Spacer(
                       flex: 1,
                     ),
+
                     TextFormField(
-                      decoration: InputDecoration(hintText: "Enter Your Name"),
+                      decoration: const InputDecoration(
+                          hintText: "Enter Your Name"),
                     ),
-                    Spacer(
+                    const Spacer(
                       flex: 1,
                     ),
+
                     TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           hintText: "Enter A Valid Email Address"),
                     ),
-                    Spacer(
+                    const Spacer(
                       flex: 1,
                     ),
+
                     TextFormField(
-                      decoration: InputDecoration(),
+                      decoration: const InputDecoration(
+                          hintText: ""),
                     ),
-                    Spacer(
+                    const Spacer(
                       flex: 1,
                     ),
-                    Container(
+
+                    SizedBox(
                         height: 60,
                         width: 600,
                         child: Botton_tombol(
                           title: "SUBMIT",
                         )),
-                    Spacer(
+                    const Spacer(
                       flex: 1,
                     ),
                   ],
                 ),
               ),
-              Spacer(
+              const Spacer(
                 flex: 3,
               ),
             ],
           ),
         ),
+
         Container(
           width: screenSize.width,
           height: screenSize.height * 0.3,
-          color: Color.fromARGB(255, 70, 70, 70),
+          color: const Color.fromARGB(255, 70, 70, 70),
           child: Column(
             children: [
-              Spacer(flex: 1),
-              Text(
+              const Spacer(
+                  flex: 1),
+              const Text(
                 "PT Tiga Daya Digital Indonesia",
                 style: TextStyle(
                   color: Colors.white,
-                ),
-              ),
-              Spacer(flex: 2),
-              Text(
-                "Powered by EKSAD Technology",
+                )),
+              const Spacer(
+                  flex: 1),
+
+              const Text(
+                "Powered by EKSAD Technology ",
                 style: TextStyle(
                   color: Colors.white,
-                ),
+                )),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Icon(
+                      Icons.copyright,
+                      color: Colors.white),
+                  Text(
+                      "2022. All Rights Reserved.",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                      )),
+                ],
               ),
-              Spacer(flex: 1),
+              const Spacer(
+                  flex: 1),
             ],
           ),
         )
