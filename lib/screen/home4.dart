@@ -49,7 +49,7 @@ class Home4 extends StatelessWidget {
                             ),
                             Container(
                               color: Colors.white,
-                              height: 60,
+                              height: screenSize.height*0.08,
                               width: screenSize.width * 0.04,
                               margin: EdgeInsets.only(
                                   right: screenSize.width * 0.01),
@@ -100,7 +100,7 @@ class Home4 extends StatelessWidget {
                               children: [
                                 Container(
                                   color: Colors.white,
-                                  height: 60,
+                                  height: screenSize.height*0.08,
                                   width: screenSize.width * 0.04,
                                   margin: EdgeInsets.only(
                                       right: screenSize.width * 0.01),
@@ -168,7 +168,7 @@ class Home4 extends StatelessWidget {
                         ),
                         Container(
                           color: Colors.white,
-                          height: 60,
+                          height: screenSize.height*0.08,
                           width: screenSize.width * 0.04,
                           margin: EdgeInsets.only(
                               right: screenSize.width * 0.01),
@@ -218,7 +218,7 @@ class Home4 extends StatelessWidget {
                           children: [
                             Container(
                               color: Colors.white,
-                              height: 60,
+                              height: screenSize.height*0.08,
                               width: screenSize.width * 0.04,
                               margin: EdgeInsets.only(
                                   right: screenSize.width * 0.01),

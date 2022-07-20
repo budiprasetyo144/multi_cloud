@@ -16,6 +16,7 @@ class Home6 extends StatefulWidget {
 class _Home6State extends State<Home6> {
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Container(
         padding: EdgeInsets.symmetric(vertical: 30, horizontal: 50),
         height: 680,
@@ -31,7 +32,7 @@ class _Home6State extends State<Home6> {
                     color: Color.fromARGB(255, 241, 23, 42),
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  width: 370,
+                  width: screenSize.width*0.25,
                   height: 500,
                   child: Column(
                     children: [
@@ -47,6 +48,7 @@ class _Home6State extends State<Home6> {
                       Container(
                         padding: EdgeInsets.only(top: 20),
                         child: Text(
+                          overflow: TextOverflow.ellipsis,
                           'Our Company',
                           style: TextStyle(color: Colors.white, fontSize: 30),
                         ),
@@ -90,7 +92,7 @@ class _Home6State extends State<Home6> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  width: 370,
+                  width: screenSize.width*0.25,
                   height: 500,
                   child: Column(
                     children: [
@@ -114,6 +116,7 @@ class _Home6State extends State<Home6> {
                         height: 150,
                         padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                         child: Text(
+                          
                           row2,
                           style: TextStyle(color: Colors.black, fontSize: 15),
                         ),
@@ -148,7 +151,7 @@ class _Home6State extends State<Home6> {
                     color: Color.fromARGB(255, 241, 23, 42),
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  width: 370,
+                  width: screenSize.width*0.25,
                   height: 500,
                   child: Column(
                     children: [
