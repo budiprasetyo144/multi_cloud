@@ -73,7 +73,7 @@ class _Home5State extends State<Home5> {
                               fontStyle: FontStyle.italic),
                         ),
                         Text(
-                          ',  ​highly-trained driver',
+                          ',  highly-trained driver',
                           style: TextStyle(fontSize: 17,letterSpacing: 1.3,color: Color.fromARGB(255, 118, 118, 118),),
                         ),
                       ],
