@@ -1,10 +1,10 @@
 import 'dart:js';
 
 import 'package:flutter/material.dart';
-import 'package:mcs_flutter/dropdown.dart';
+import 'package:mcs_flutter/widget/dropdown.dart';
 import 'package:mcs_flutter/screen/home.dart';
 
-import '../conts.dart';
+import '../const/conts.dart';
 
 PreferredSize AppbarSmallSize(Size screenSize) {
   return PreferredSize(

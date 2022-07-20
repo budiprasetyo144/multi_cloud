@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mcs_flutter/animation/animasi1.dart';
 import 'package:mcs_flutter/animation/animasi4.dart';
-import 'package:mcs_flutter/botton.dart';
-import 'package:mcs_flutter/conts.dart';
-import 'package:mcs_flutter/screen/Home9.dart';
+import 'package:mcs_flutter/widget/botton.dart';
+import 'package:mcs_flutter/const/conts.dart';
+import 'package:mcs_flutter/screen/footer.dart';
 import 'package:mcs_flutter/screen/home3.dart';
 import 'package:mcs_flutter/screen/home4.dart';
 import 'package:mcs_flutter/screen/home5.dart';
@@ -14,7 +14,7 @@ import 'package:mcs_flutter/screen/home8.dart';
 
 import '../animation/animasi2.dart';
 import '../animation/animasi3.dart';
-import '../responsive.dart';
+import '../widget/responsive.dart';
 import 'appbar.dart';
 
 class HomePage extends StatefulWidget {

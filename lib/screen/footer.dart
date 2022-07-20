@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mcs_flutter/botton.dart';
-import 'package:mcs_flutter/conts.dart';
+import 'package:mcs_flutter/widget/botton.dart';
+import 'package:mcs_flutter/const/conts.dart';
 
 class Home9 extends StatelessWidget {
   const Home9({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'conts.dart';
+import '../const/conts.dart';
 
 
 class Botton_tombol2 extends StatelessWidget {
