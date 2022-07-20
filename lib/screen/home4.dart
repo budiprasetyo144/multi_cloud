@@ -7,7 +7,7 @@ class Home4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    return Row(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Column(
@@ -173,40 +173,43 @@ class Home4 extends StatelessWidget {
                           margin: EdgeInsets.only(
                               right: screenSize.width * 0.01),
                         ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              overflow: TextOverflow.ellipsis,
-                              "Sit amet nisl purus in mollis nunc sed id semper.",
-                              style: GoogleFonts.robotoCondensed(
-                                color: Colors.white,
-                                fontSize: 20,
+                        Container(
+                          width: screenSize.width * 0.3,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                overflow: TextOverflow.ellipsis,
+                                "Sit amet nisl purus in mollis nunc sed id semper.",
+                                style: GoogleFonts.robotoCondensed(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              overflow: TextOverflow.ellipsis,
-                              "At in tellus integer feugiat.",
-                              style: GoogleFonts.robotoCondensed(
-                                color: Colors.white,
-                                fontSize: 20,
+                              SizedBox(
+                                height: 5,
                               ),
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              overflow: TextOverflow.ellipsis,
-                              "Commodo viverra maecenas accumsan lacus vel facilisis.",
-                              style: GoogleFonts.robotoCondensed(
-                                color: Colors.white,
-                                fontSize: 20,
+                              Text(
+                                overflow: TextOverflow.ellipsis,
+                                "At in tellus integer feugiat.",
+                                style: GoogleFonts.robotoCondensed(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                ),
                               ),
-                            ),
-                          ],
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                overflow: TextOverflow.ellipsis,
+                                "Commodo viverra maecenas accumsan lacus vel facilisis.",
+                                style: GoogleFonts.robotoCondensed(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                         Spacer(
                           flex: 1,
@@ -220,40 +223,43 @@ class Home4 extends StatelessWidget {
                               margin: EdgeInsets.only(
                                   right: screenSize.width * 0.01),
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  overflow: TextOverflow.ellipsis,
-                                  "Sit amet nisl purus in mollis nunc sed id semper.",
-                                  style: GoogleFonts.robotoCondensed(
-                                    color: Colors.white,
-                                    fontSize: 20,
+                            Container(
+                              width: screenSize.width * 0.3,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    overflow: TextOverflow.ellipsis,
+                                    "Sit amet nisl purus in mollis nunc sed id semper.",
+                                    style: GoogleFonts.robotoCondensed(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  overflow: TextOverflow.ellipsis,
-                                  "At in tellus integer feugiat.",
-                                  style: GoogleFonts.robotoCondensed(
-                                    color: Colors.white,
-                                    fontSize: 20,
+                                  SizedBox(
+                                    height: 5,
                                   ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  overflow: TextOverflow.ellipsis,
-                                  "Commodo viverra maecenas accumsan lacus vel facilisis.",
-                                  style: GoogleFonts.robotoCondensed(
-                                    color: Colors.white,
-                                    fontSize: 20,
+                                  Text(
+                                    overflow: TextOverflow.ellipsis,
+                                    "At in tellus integer feugiat.",
+                                    style: GoogleFonts.robotoCondensed(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                    ),
                                   ),
-                                ),
-                              ],
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text(
+                                    overflow: TextOverflow.ellipsis,
+                                    "Commodo viverra maecenas accumsan lacus vel facilisis.",
+                                    style: GoogleFonts.robotoCondensed(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             )
                           ],
                         ),
