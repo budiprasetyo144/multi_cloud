@@ -18,7 +18,7 @@ class _Home6State extends State<Home6> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-        padding: EdgeInsets.symmetric(vertical: 30, horizontal: 50),
+        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 50),
         height: 680,
         color: kPrimaryColor,
         child: Column(
@@ -29,7 +29,7 @@ class _Home6State extends State<Home6> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 241, 23, 42),
+                    color: const Color.fromARGB(255, 241, 23, 42),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   width: screenSize.width*0.25,
@@ -39,14 +39,14 @@ class _Home6State extends State<Home6> {
                       Container(
                         height: 250,
                         decoration: BoxDecoration(
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage('assets/images/xcxcxc.jpg'),
                               fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(30),
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.only(top: 20),
+                        padding: const EdgeInsets.only(top: 20),
                         child: Text(
                           overflow: TextOverflow.ellipsis,
                           'Our Company',
@@ -55,10 +55,10 @@ class _Home6State extends State<Home6> {
                       ),
                       Container(
                         height: 150,
-                        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                         child: Text(
                           row1,
-                          style: TextStyle(color: Colors.white, fontSize: 15),
+                          style: const TextStyle(color: Colors.white, fontSize: 15),
                         ),
                       ),
                       TextButton(
@@ -77,7 +77,7 @@ class _Home6State extends State<Home6> {
                               ),
                             );
                           },
-                          child: Text(
+                          child: const Text(
                             'LEARN MORE',
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
@@ -87,6 +87,7 @@ class _Home6State extends State<Home6> {
                     ],
                   ),
                 ),
+
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -99,26 +100,26 @@ class _Home6State extends State<Home6> {
                       Container(
                         height: 250,
                         decoration: BoxDecoration(
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage('assets/images/vbvb.jpg'),
                               fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(30),
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.only(top: 20),
-                        child: Text(
+                        padding: const EdgeInsets.only(top: 20),
+                        child: const Text(
                           'Carriers',
                           style: TextStyle(color: Colors.black, fontSize: 30),
                         ),
                       ),
                       Container(
                         height: 150,
-                        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                         child: Text(
                           
                           row2,
-                          style: TextStyle(color: Colors.black, fontSize: 15),
+                          style: const TextStyle(color: Colors.black, fontSize: 15),
                         ),
                       ),
                       TextButton(
@@ -137,7 +138,7 @@ class _Home6State extends State<Home6> {
                               ),
                             );
                           },
-                          child: Text(
+                          child: const Text(
                             'LEARN MORE',
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
@@ -146,9 +147,10 @@ class _Home6State extends State<Home6> {
                     ],
                   ),
                 ),
+
                 Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 241, 23, 42),
+                    color: const Color.fromARGB(255, 241, 23, 42),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   width: screenSize.width*0.25,
@@ -158,25 +160,25 @@ class _Home6State extends State<Home6> {
                       Container(
                         height: 250,
                         decoration: BoxDecoration(
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage('assets/images/cvcvcv.jpg'),
                               fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(30),
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.only(top: 20),
-                        child: Text(
+                        padding: const EdgeInsets.only(top: 20),
+                        child: const Text(
                           'Logistics',
                           style: TextStyle(color: Colors.white, fontSize: 30),
                         ),
                       ),
                       Container(
                         height: 150,
-                        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                         child: Text(
                           row3,
-                          style: TextStyle(color: Colors.white, fontSize: 15),
+                          style: const TextStyle(color: Colors.white, fontSize: 15),
                         ),
                       ),
                       TextButton(
@@ -195,7 +197,7 @@ class _Home6State extends State<Home6> {
                               ),
                             );
                           },
-                          child: Text(
+                          child: const Text(
                             'LEARN MORE',
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
@@ -206,16 +208,18 @@ class _Home6State extends State<Home6> {
                 ),
               ],
             ),
+
+
             TextButton.icon(
                 onPressed: (){Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Post(),
+                    builder: (context) => const Post(),
                   ),
                 );
                   },
-                icon: Icon(Icons.newspaper,color: Colors.white,size: 30,),
-                label: Text('Read All News',style: TextStyle(fontSize: 30,color: Colors.white),),
+                icon: const Icon(Icons.newspaper,color: Colors.white,size: 30,),
+                label: const Text('Read All News',style: TextStyle(fontSize: 30,color: Colors.white),),
             )
           ],
         ),
