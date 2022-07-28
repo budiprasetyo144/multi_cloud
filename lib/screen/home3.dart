@@ -12,14 +12,13 @@ class Home3 extends StatelessWidget {
     return Container(
       height: screenSize.height,
       width: screenSize.width,
-      color:  Color.fromARGB(255, 241, 252, 254),
-
+      color: Color.fromARGB(255, 241, 252, 254),
       child: Row(
         children: [
           Container(
             height: 600,
             width: screenSize.width * 0.5,
-            padding:  EdgeInsets.only(left: screenSize.width*0.1, top: 20),
+            padding: EdgeInsets.only(left: screenSize.width * 0.1, top: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -27,7 +26,7 @@ class Home3 extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   "Explore Cloud solutions",
                   style: GoogleFonts.robotoCondensed(
-                      color:  Color.fromARGB(255, 12, 66, 101),
+                      color: Color.fromARGB(255, 12, 66, 101),
                       fontSize: 50,
                       fontWeight: FontWeight.bold),
                 ),
@@ -38,14 +37,14 @@ class Home3 extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   "for every challenge and",
                   style: GoogleFonts.robotoCondensed(
-                      color:  Color.fromARGB(255, 12, 66, 101),
+                      color: Color.fromARGB(255, 12, 66, 101),
                       fontSize: 50,
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
                   "budget",
                   style: GoogleFonts.robotoCondensed(
-                      color:  Color.fromARGB(255, 12, 66, 101),
+                      color: Color.fromARGB(255, 12, 66, 101),
                       fontSize: 50,
                       fontWeight: FontWeight.bold),
                 ),
@@ -53,7 +52,6 @@ class Home3 extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-
                   overflow: TextOverflow.ellipsis,
                   "Instead of operating within the constraints of a single cloud vendor",
                   style: GoogleFonts.robotoCondensed(
@@ -62,7 +60,7 @@ class Home3 extends StatelessWidget {
                     height: 1.5,
                   ),
                 ),
-                 Text(
+                Text(
                   overflow: TextOverflow.ellipsis,
                   "a multi-cloud strategy allows you to access the cloud services from",
                   style: GoogleFonts.robotoCondensed(
@@ -82,7 +80,8 @@ class Home3 extends StatelessWidget {
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
-                  "include AWS, Azure, Google Cloud Platform, or Oracle Cloud. Using",
+                  // "include AWS, Azure, Google Cloud Platform, or Oracle Cloud. Using",
+                  "include Huawei, Alibaba Cloud, AWS, Azure. Using",
                   style: GoogleFonts.robotoCondensed(
                     color: Colors.black,
                     fontSize: 20,
@@ -119,7 +118,6 @@ class Home3 extends StatelessWidget {
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "into a single cloud.",
-
                   style: GoogleFonts.robotoCondensed(
                     color: Colors.black,
                     fontSize: 20,
@@ -132,8 +130,8 @@ class Home3 extends StatelessWidget {
                 Row(
                   children: [
                     Container(
-                      width: screenSize.width*0.1,
-                      height: screenSize.height*0.08,
+                      width: screenSize.width * 0.1,
+                      height: screenSize.height * 0.08,
                       child: Botton_tombol(
                         title: "Learn More",
                       ),
@@ -146,7 +144,6 @@ class Home3 extends StatelessWidget {
               ],
             ),
           ),
-
           SizedBox(
             width: screenSize.width * 0.5,
             height: 600,
