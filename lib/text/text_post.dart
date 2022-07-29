@@ -3,7 +3,7 @@ String headgrid2 = 'Post 5 Headline';
 String headgrid3 = 'Post 4 Headline';
 String headgrid4 = 'Post 3 Headline';
 String headgrid5 = 'Post 2 Headline';
-String headgrid6 = 'Post 1 Headline';
+String headgrid6 = 'Tentang EKSAD IT';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -53,7 +53,40 @@ String bodyfull6 =
     'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten '
     'dalam mengerjakan proyek-proyek perusahaan serta memiliki pengetahuan teknis yang terbukti. '
     'EKSAD IT resources juga membantu Anda dalam meningkatkan kinerja layanan dan '
-    'menawarkan peningkatan fleksibilitas dalam manajemen tenaga kerja.'
+    'menawarkan peningkatan fleksibilitas dalam manajemen tenaga kerja. '
+    '\n'
+    '\n'
+    ''
+    'Keunggulan Kami:'
+    '\n'
+    '1. Kecepatan'
+    '\n'
+    'Pemenuhan sumber daya maksimal 3 bulan dari PO'
+    '\n'
+    '\n'
+    '2. Integritas & Komitmen'
+    '\n'
+    'Sumber daya dengan integritas dan komitmen yang tinggi dalam menyelesaikan tugas'
+    '\n'
+    '\n'
+    '3. Kompeten'
+    '\n'
+    'Sumber daya yang sudah terlatih dan bersertifikasi'
+    '\n'
+    '\n'
+    '4. Fleksibel'
+    '\n'
+    'Fleksibilitas untuk klien yang akan merekrut sumber daya menjadi permanen karyawan'
+    '\n'
+    '\n'
+    '5. Bisnis Fokus'
+    '\n'
+    'Membantu klien untuk fokus pada aktivitas bisnis utama mereka'
+    '\n'
+    '\n'
+    '6. Biaya Kompetitif'
+    '\n'
+    'Harga kompetitif dievaluasi setiap 2 tahun'
     '\n';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
