@@ -32,9 +32,9 @@ class PostBody extends StatelessWidget {
           : AppbarFullSize(screenSize, context),
       body: ListView(
         children: [
-          Container(
+          SingleChildScrollView(
             padding: EdgeInsets.only(left: 70, right: 70),
-            height: 850,
+            controller: ScrollController(),
             child: Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
