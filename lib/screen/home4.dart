@@ -13,7 +13,7 @@ class Home4 extends StatelessWidget {
         Column(
           children: [
             Container(
-              height: 500,
+              height: 600,
               width: screenSize.width,
               color: Color.fromARGB(255, 0, 36, 192),
               child: Column(

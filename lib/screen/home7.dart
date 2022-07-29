@@ -9,7 +9,7 @@ class Home7 extends StatelessWidget {
     var screenSize = MediaQuery.of(context).size;
     return Container(
       color: const Color.fromARGB(255, 227, 235, 253),
-      height: 740,
+      height: 630,
       width: screenSize.width,
       child: Column(
         children: [

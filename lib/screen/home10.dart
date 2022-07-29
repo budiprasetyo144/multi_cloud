@@ -10,7 +10,7 @@ class Home10 extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: 800,
+      height: 680,
       width: screenSize.width,
       color: Colors.white,
       child: Row(
