@@ -81,7 +81,7 @@ class Home3 extends StatelessWidget {
                 Text(
                   overflow: TextOverflow.ellipsis,
                   // "include AWS, Azure, Google Cloud Platform, or Oracle Cloud. Using",
-                  "include Huawei, Alibaba Cloud, AWS, Azure. Using",
+                  "include Huawei, Alibaba Cloud, AWS. Using",
                   style: GoogleFonts.robotoCondensed(
                     color: Colors.black,
                     fontSize: 20,
