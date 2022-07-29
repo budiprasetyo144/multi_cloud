@@ -10,7 +10,7 @@ class Home3 extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: screenSize.height,
+      height: screenSize.height*0.9,
       width: screenSize.width,
       color: Color.fromARGB(255, 241, 252, 254),
       child: Row(

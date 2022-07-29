@@ -14,9 +14,8 @@ class _Home5State extends State<Home5> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    return Container(
-      child: Container(
-        height: 700,
+    return  Container(
+        height: 660,
         color: Color(-12166252),
         child: Row(
           //crossAxisAlignment: CrossAxisAlignment.center,
@@ -117,7 +116,7 @@ class _Home5State extends State<Home5> {
               ),
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
               width: screenSize.width * 0.3,
-              height: screenSize.height * 0.8,
+              height: screenSize.height * 0.78,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -136,7 +135,7 @@ class _Home5State extends State<Home5> {
                     height: 30,
                   ),
                   Container(
-                    height: 380,
+                    height: 360,
                     width: screenSize.width * 0.3,
                     child: Text(
                       redline,
@@ -197,7 +196,7 @@ class _Home5State extends State<Home5> {
             ),
           ],
         ),
-      ),
+
     );
   }
 }
