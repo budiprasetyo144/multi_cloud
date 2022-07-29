@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
         appBar: ResponsiveWidget.isSmallScreen(context)
             ? AppbarSmallSize(screenSize)
             : PreferredSize(
-          preferredSize: Size(screenSize.width, 135),
+          preferredSize: Size(screenSize.width, 110),
           child: Container(
             decoration: const BoxDecoration(
               border: Border(
@@ -123,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                       width: screenSize.width * 0.03,
                     ),
                     TextButton(onPressed: (){
-                      _scrollToIndex(10);
+                      _scrollToIndex(9);
                     },
                       child: Text(
                         "Contact Us",

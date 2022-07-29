@@ -13,7 +13,7 @@ class Home9 extends StatelessWidget {
     return Container(
       color: kPrimaryColor,
       child: SizedBox(
-        height: screenSize.height,
+        height: screenSize.height*0.75,
         width: screenSize.width,
         child: Row(
           children: [

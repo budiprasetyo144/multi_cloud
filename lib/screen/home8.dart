@@ -51,7 +51,7 @@ class ContactUs extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(left: 40, right: 20),
             width: screenSize.width*0.37,
-            height: screenSize.height*0.6,
+            height: screenSize.height*0.45,
             color: Colors.white,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
