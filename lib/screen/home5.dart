@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../text/text_body.dart';
 
@@ -57,53 +57,6 @@ class _Home5State extends State<Home5> {
                           height: 2),
                     ),
                   ),
-                  Container(
-                    width: screenSize.width * 0.5,
-                    height: 50,
-                    padding: EdgeInsets.only(left: screenSize.width * 0.01),
-                    child: Row(
-                      children: <Widget>[
-                        CircleAvatar(
-                          radius: screenSize.width * 0.02,
-                          foregroundImage:
-                              AssetImage('assets/images/1222_150.jpg'),
-                        ),
-                        SizedBox(
-                          width: screenSize.width * 0.02,
-                        ),
-                        Container(
-                          width: screenSize.width * 0.2,
-                          height: 50,
-                          child: Row(
-                            children: [
-                              Container(
-                                width: screenSize.width * 0.07,
-                                child: Text(
-                                  overflow: TextOverflow.ellipsis,
-                                  'Bob Rawsthorn',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
-                                      fontStyle: FontStyle.italic),
-                                ),
-                              ),
-                              Container(
-                                width: screenSize.width * 0.1,
-                                child: Text(
-                                  overflow: TextOverflow.ellipsis,
-                                  ',  highly-trained driver',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    color: Color.fromARGB(255, 118, 118, 118),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
                 ],
               ),
             ),
@@ -117,26 +70,14 @@ class _Home5State extends State<Home5> {
               ),
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
               width: screenSize.width * 0.3,
-              height: screenSize.height * 0.8,
+              height: screenSize.height * 0.5,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
+                  SizedBox(height: 20,),
                   Container(
-                    padding: EdgeInsets.only(top: 30),
-                    child: Text(
-                      'Our Value',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 50,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Container(
-                    height: 380,
+                    height: 330,
                     width: screenSize.width * 0.3,
                     child: Text(
                       redline,
@@ -144,51 +85,6 @@ class _Home5State extends State<Home5> {
                           color: Colors.white, fontSize: 20, height: 1.5),
                     ),
                   ),
-                  Container(
-                    height: 40,
-                    width: screenSize.width * 0.3,
-                    child: Row(
-                      children: [
-                        IconButton(
-                            onPressed: () {},
-                            icon: FaIcon(
-                              FontAwesomeIcons.facebookSquare,
-                              size: screenSize.width * 0.04,
-                              color: Colors.white,
-                            )),
-                        SizedBox(
-                          width: screenSize.width * 0.02,
-                        ),
-                        IconButton(
-                            onPressed: () {},
-                            icon: FaIcon(
-                              FontAwesomeIcons.twitterSquare,
-                              size: screenSize.width * 0.04,
-                              color: Colors.white,
-                            )),
-                        SizedBox(
-                          width: screenSize.width * 0.02,
-                        ),
-                        IconButton(
-                            onPressed: () {},
-                            icon: FaIcon(
-                              FontAwesomeIcons.instagramSquare,
-                              size: screenSize.width * 0.04,
-                              color: Colors.white,
-                            )),
-                        SizedBox(
-                          width: screenSize.width * 0.02,
-                        ),
-                        IconButton(
-                            onPressed: () {},
-                            icon: FaIcon(
-                              FontAwesomeIcons.linkedinIn,
-                              size: screenSize.width * 0.04,
-                              color: Colors.white,
-                            )),
-                      ],
-                    ),
-                  )
                 ],
               ),
             ),

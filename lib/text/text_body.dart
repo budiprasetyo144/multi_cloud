@@ -1,13 +1,6 @@
-String whiteline = 'The mission is to be recognized as the standard-bearer '
-    'of quality performance in flatbed transportation. We will accomplish '
-    'this by searching out the very best people.';
+String whiteline = 'The Mission to be Establish excellent end to end IT Services to enable clients to grow their business rapidly thru high competence and professional resources.';
 
-String redline = 'In the multi-cloud era, IT organizations face the challenge of '
-    'supporting both existing and new application architectures and workloads '
-    'across all major clouds, at the edge, in co-location facilities, in sovereign '
-    'environments and in their private data center. Each cloud provider, with its '
-    'own operating stack, services and toolsets, delivers a unique set of capabilities '
-    'that do not extend functionality to other cloud platforms.';
+String redline = 'Our comprehensive cloud migration framework brings industrialized capabilities together with exclusive pre-configured industry-specific tools, methods, and automation across all cloud models and multiple delivery methods (IaaS, PaaS, and SaaS).';
 
 String row1 = 'Eksad Providing Services High Quality Based '
     'on Strong Experience in the industry and technology. '
