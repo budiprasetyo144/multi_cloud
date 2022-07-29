@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mcs_flutter/screen/footer.dart';
 import 'package:mcs_flutter/widget/responsive.dart';
 import 'package:mcs_flutter/screen/appbar.dart';
 import 'package:mcs_flutter/text/text_post.dart';
@@ -31,33 +32,32 @@ class PostBody extends StatelessWidget {
           : AppbarFullSize(screenSize, context),
       body: ListView(
         children: [
-          Container(
-            padding: EdgeInsets.only(left: 70, right: 70),
-            height: 850,
-            child: Container(
+          SingleChildScrollView(
+            padding: const EdgeInsets.only(left: 70, right: 70),
+            controller: ScrollController(),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                  padding: EdgeInsets.only(top: 3),
+                  padding: const EdgeInsets.only(top: 3),
                   height: 90,
                   child: Row(
                     children: [
-                      Container(
+                      SizedBox(
                           height: 20,
                           child: TextButton(onPressed: (){
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => MyApp(),
+                                builder: (context) => const MyApp(),
                               ),
                             );
-                          }, child: Text('Home',style: TextStyle(color: Colors.red,fontSize: 17),))
+                          }, child: const Text('Home',style: TextStyle(color: Colors.red,fontSize: 17),))
                       ),
                       Container(
-                        padding: EdgeInsets.only(top: 1),
+                        padding: const EdgeInsets.only(top: 1),
                         height: 20,
-                        child: Text(' > ',style: TextStyle(color: Colors.red,fontSize: 17),),
+                        child: const Text(' > ',style: TextStyle(color: Colors.red,fontSize: 17),),
                       ),
                       Container(
                         height: 20,
@@ -119,17 +119,7 @@ class PostBody extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-          Container(
-            height: 200,
-            color: Colors.black87,
-            child: Center(
-              child: Text(
-                'PT. Tiga Daya Digital Indonesia',
-                style: TextStyle(fontSize: 16, color: Colors.white),
-              ),
-            ),
-          )
+          Footer(),
         ],
       ),
     );

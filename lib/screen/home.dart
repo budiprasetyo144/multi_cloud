@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mcs_flutter/animation/animasi1.dart';
 import 'package:mcs_flutter/animation/animasi4.dart';
+import 'package:mcs_flutter/screen/footer.dart';
+import 'package:mcs_flutter/screen/home10.dart';
 import 'package:mcs_flutter/widget/botton.dart';
 import 'package:mcs_flutter/const/conts.dart';
+import 'package:mcs_flutter/screen/home2.dart';
 import 'package:mcs_flutter/screen/home3.dart';
 import 'package:mcs_flutter/screen/home4.dart';
 import 'package:mcs_flutter/screen/home5.dart';
@@ -11,6 +14,7 @@ import 'package:mcs_flutter/screen/home6.dart';
 import 'package:mcs_flutter/screen/home7.dart';
 import 'package:mcs_flutter/screen/home8.dart';
 import 'package:mcs_flutter/screen/home9.dart';
+
 
 import '../animation/animasi2.dart';
 import '../animation/animasi3.dart';
@@ -25,16 +29,148 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+
+  PageController controller = PageController();
+  void _scrollToIndex(int index) {
+    controller.animateToPage(index, duration: Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
+  }
+  int selectedIndex= 0;
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: "Multi Cloud Solution By EKSAD",
       home: Scaffold(
         appBar: ResponsiveWidget.isSmallScreen(context)
             ? AppbarSmallSize(screenSize)
-            : AppbarFullSize(screenSize, context),
+            : PreferredSize(
+          preferredSize: Size(screenSize.width, 110),
+          child: Container(
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                    color: kPrimaryColor,
+                    width: 1,
+                    style: BorderStyle.solid),
+              ),
+            ),
+
+            child: Row(
+              children: [
+                SizedBox(
+                  width: screenSize.width * 0.1,
+                ),
+                Container(
+                  padding: const EdgeInsets.only(
+                      left: 30,
+                      top: 20,
+                      bottom: 20
+                  ),
+                  child: Image.asset("assets/logo/multicloudsolution.jpg"),
+                ),
+                SizedBox(
+                  width: screenSize.width * 0.2,
+                ),
+                Row(
+                  children: [
+                    TextButton(onPressed: (){
+                      _scrollToIndex(0);
+                    },
+                      child: Text(
+                        "Home",
+                        style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: kTextColor
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: screenSize.width * 0.03,
+                    ),
+                    TextButton(onPressed: (){
+                      _scrollToIndex(5);
+
+                    },
+                      child: Text(
+                        "About us",
+                        style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: kTextColor
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: screenSize.width * 0.03,
+                    ),
+                    TextButton(onPressed: (){
+                      _scrollToIndex(2);
+                    },
+                      child: Text(
+                        "Solution",
+                        style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: kTextColor
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: screenSize.width * 0.03,
+                    ),
+                    TextButton(onPressed: (){
+                      _scrollToIndex(9);
+                    },
+                      child: Text(
+                        "Contact Us",
+                        style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: kTextColor
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+                SizedBox(
+                  width: screenSize.width * 0.03,
+                ),
+                SizedBox(
+                  height: 50,
+                  width: 250,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      labelText: "Search",
+                      prefixIcon: const Icon(Icons.search),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: const BorderSide(
+                            width: 1,
+                            color: Colors.blue
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: const BorderSide(
+                            width: 1,
+                            color: Colors.blue
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
         body: ListView(
+          scrollDirection: Axis.vertical,
+          controller: controller,
           children: [
             const Home(),
             Home2(screenSize: screenSize),
@@ -45,6 +181,8 @@ class _HomePageState extends State<HomePage> {
             const Home7(),
             const Home8(),
             const Home9(),
+            Home10(),
+            Footer(),
           ],
         ),
       ),
@@ -52,226 +190,8 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class Home2 extends StatelessWidget {
-  const Home2({
-    Key? key,
-    required this.screenSize,
-  }) : super(key: key);
 
-  final Size screenSize;
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: screenSize.height * 0.5,
-      width: screenSize.width,
-      color: const Color.fromARGB(255, 8, 66, 113),
-      child: Row(
-        children: [
-          SizedBox(
-            width: screenSize.width * 0.1,
-          ),
-          Container(
-            padding: EdgeInsets.only(top: screenSize.height * 0.1),
-            width: screenSize.width * 0.2,
-            child: Column(
-              children: [
-                const Animasi(),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  "MIGRATE",
-                  style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "Sample text. Click to select the",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "text box. Click again or double",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "click to start editing the text.",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.only(top: screenSize.height * 0.1),
-            width: screenSize.width * 0.2,
-            child: Column(
-              children: [
-                const Animasi2(),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  "ACCESS",
-                  style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "Sample text. Click to select the",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "text box. Click again or double",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "click to start editing the text.",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.only(top: screenSize.height * 0.1),
-            width: screenSize.width * 0.2,
-            child: Column(
-              children: [
-                const Animasi3(),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  "PROTECT",
-                  style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "Sample text. Click to select the",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "text box. Click again or double",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "click to start editing the text.",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.only(top: screenSize.height * 0.1),
-            width: screenSize.width * 0.2,
-            child: Column(
-              children: [
-                const Animasi4(),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  "SCALE",
-                  style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "Sample text. Click to select the",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "text box. Click again or double",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "click to start editing the text.",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -289,16 +209,18 @@ class _HomeState extends State<Home> {
         Image.asset(
           "assets/images/79032468-01.jpeg",
         ),
+
         Container(
           padding: EdgeInsets.only(
-              left: screenSize.width * 0.5, top: screenSize.height * 0.2),
+              left: screenSize.width * 0.5,
+              top: screenSize.height * 0.02),
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: Colors.white,
             ),
             padding: EdgeInsets.all(screenSize.width * 0.04),
-            height: screenSize.height * 0.95,
+            height: screenSize.height * 0.8,
             width: screenSize.width * 0.32,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -346,37 +268,43 @@ class _HomeState extends State<Home> {
                   overflow: TextOverflow.ellipsis,
                   "If your organization is going to compete",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20, color: Colors.black54),
+                      fontSize: 20,
+                      color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "and win with data, you need multi-cloud.",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20, color: Colors.black54),
+                      fontSize: 20,
+                      color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "It’s the durable, scalable solution that",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20, color: Colors.black54),
+                      fontSize: 20,
+                      color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "allows you to extract more value from your",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20, color: Colors.black54),
+                      fontSize: 20,
+                      color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "data and drive new innovations across your",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20, color: Colors.black54),
+                      fontSize: 20,
+                      color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "business.",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20, color: Colors.black54),
+                      fontSize: 20,
+                      color: Colors.black54),
                 ),
                 const Spacer(
                   flex: 1,
@@ -397,3 +325,50 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+
+
+
+
+// const Text(
+// "Home",
+// style: TextStyle(
+// fontSize: 17,
+// fontWeight: FontWeight.bold,
+// color: kTextColor
+// ),
+// ),
+// ),
+// SizedBox(
+// width: screenSize.width * 0.03,
+// ),
+// const Text(
+// "About us",
+// style: TextStyle(
+// fontSize: 17,
+// fontWeight: FontWeight.bold,
+// color: kTextColor
+// ),
+// ),
+// SizedBox(
+// width: screenSize.width * 0.03,
+// ),
+// const Text(
+// "Solution",
+// style: TextStyle(
+// fontSize: 17,
+// fontWeight: FontWeight.bold,
+// color: kTextColor
+// ),
+// ),
+// SizedBox(
+// width: screenSize.width * 0.03,
+// ),
+// const Text(
+// "Contact Us",
+// style: TextStyle(
+// fontSize: 17,
+// fontWeight: FontWeight.bold,
+// color: kTextColor
+// ),
+// ),
