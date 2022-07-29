@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mcs_flutter/animation/animasi1.dart';
 import 'package:mcs_flutter/animation/animasi4.dart';
+import 'package:mcs_flutter/screen/footer.dart';
+import 'package:mcs_flutter/screen/home10.dart';
 import 'package:mcs_flutter/widget/botton.dart';
 import 'package:mcs_flutter/const/conts.dart';
 import 'package:mcs_flutter/screen/home3.dart';
@@ -26,16 +28,26 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+
+  PageController controller = PageController();
+  void _scrollToIndex(int index) {
+    controller.animateToPage(index + 1, duration: Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
+  }
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: "Multi Cloud Solution By EKSAD",
       home: Scaffold(
         appBar: ResponsiveWidget.isSmallScreen(context)
             ? AppbarSmallSize(screenSize)
             : AppbarFullSize(screenSize, context),
         body: ListView(
+          scrollDirection: Axis.vertical,
+          controller: controller,
           children: [
             const Home(),
             Home2(screenSize: screenSize),
@@ -46,6 +58,8 @@ class _HomePageState extends State<HomePage> {
             const Home7(),
             const Home8(),
             const Home9(),
+            Home10(),
+            Footer(),
             
           ],
         ),
@@ -301,14 +315,14 @@ class _HomeState extends State<Home> {
         Container(
           padding: EdgeInsets.only(
               left: screenSize.width * 0.5,
-              top: screenSize.height * 0.2),
+              top: screenSize.height * 0.02),
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: Colors.white,
             ),
             padding: EdgeInsets.all(screenSize.width * 0.04),
-            height: screenSize.height * 0.95,
+            height: screenSize.height * 0.8,
             width: screenSize.width * 0.32,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -413,3 +427,50 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+
+
+
+
+// const Text(
+// "Home",
+// style: TextStyle(
+// fontSize: 17,
+// fontWeight: FontWeight.bold,
+// color: kTextColor
+// ),
+// ),
+// ),
+// SizedBox(
+// width: screenSize.width * 0.03,
+// ),
+// const Text(
+// "About us",
+// style: TextStyle(
+// fontSize: 17,
+// fontWeight: FontWeight.bold,
+// color: kTextColor
+// ),
+// ),
+// SizedBox(
+// width: screenSize.width * 0.03,
+// ),
+// const Text(
+// "Solution",
+// style: TextStyle(
+// fontSize: 17,
+// fontWeight: FontWeight.bold,
+// color: kTextColor
+// ),
+// ),
+// SizedBox(
+// width: screenSize.width * 0.03,
+// ),
+// const Text(
+// "Contact Us",
+// style: TextStyle(
+// fontSize: 17,
+// fontWeight: FontWeight.bold,
+// color: kTextColor
+// ),
+// ),
