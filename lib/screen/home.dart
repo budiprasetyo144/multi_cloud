@@ -306,14 +306,14 @@ class _HomeState extends State<Home> {
                       fontSize: 20,
                       color: Colors.black54),
                 ),
-                const Spacer(
-                  flex: 1,
-                ),
-                SizedBox(
-                  height: screenSize.height * 0.1,
-                  width: screenSize.width * 0.2,
-                  child: Botton_tombol(title: "LEARN MORE"),
-                ),
+                // const Spacer(
+                //   flex: 1,
+                // ),
+                // SizedBox(
+                //   height: screenSize.height * 0.1,
+                //   width: screenSize.width * 0.2,
+                //   child: Botton_tombol(title: "LEARN MORE"),
+                // ),
                 const Spacer(
                   flex: 1,
                 ),
