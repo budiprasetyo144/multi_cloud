@@ -149,10 +149,10 @@ class _PostState extends State<Post> {
                       ),
                       GridContainer(
                         HeadGrid: headgrid6,
-                        ImageGrid: 'assets/images/1.jpeg',
+                        ImageGrid: 'assets/images/eksad IT resources.jpg',
                         BodyGrid: bodygrid6,
                         arah: PostBody(
-                          Image: 'assets/images/1.jpeg',
+                          Image: 'assets/images/eksad IT resources.jpg',
                           HeadText: headgrid6,
                           Tanggal: tanggal,
                           Bodyfull: bodyfull6,

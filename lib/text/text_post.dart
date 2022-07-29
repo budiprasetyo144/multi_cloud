@@ -1,16 +1,26 @@
-String headgrid1 = 'Post 6 Headline';
+String headgrid1 = 'Who We Are';
 String headgrid2 = 'Post 5 Headline';
 String headgrid3 = 'Post 4 Headline';
 String headgrid4 = 'Post 3 Headline';
 String headgrid5 = 'Post 2 Headline';
 String headgrid6 = 'Post 1 Headline';
 
-String bodygrid1 = 'Example text for headline 6. Example text for headline 6. Example text for headline 6. Example text for headline 6. ';
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+String bodygrid1 = 'About EKSAD IT '
+    'EKSAD provides solutions and professional IT resource partners,'
+    'which provides IT experts who are competent in working on company projects '
+    'and have proven technical knowledge. '
+    'EKSAD IT resources also help you improve service performance '
+    'and offer increased flexibility in workforce management.';
 String bodygrid2 = 'Example text for headline 5. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
 String bodygrid3 = 'Example text for headline 4. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
 String bodygrid4 = 'Example text for headline 3. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
 String bodygrid5 = 'Example text for headline 2. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
-String bodygrid6 = 'Example text for headline 1. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
+
+String bodygrid6 = 'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten ...';
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 String bodyfull1 = 'Build enterprise-grade containerized applications faster with '
     'best-in-class managed Kubernetes and serverless platform on cloud '
@@ -38,11 +48,20 @@ String bodyfull4 = 'A multicloud solution is a cloud computing solution that\'s 
 String bodyfull5 = 'Flexibility to choose cloud services from different cloud providers '
     'based on the combination of pricing, performance, security and compliance requirements, '
     'geographical location that best suits the business;';
-String bodyfull6 = 'The key to maximizing the benefits of a multicloud architecture is to '
-    'manage applications and resources across the multiple clouds centrally, as if they were '
-    'part of a single cloud. But multicloud management comes with multiple challenges';
+
+String bodyfull6 =
+    'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten '
+    'dalam mengerjakan proyek-proyek perusahaan serta memiliki pengetahuan teknis yang terbukti. '
+    'EKSAD IT resources juga membantu Anda dalam meningkatkan kinerja layanan dan '
+    'menawarkan peningkatan fleksibilitas dalam manajemen tenaga kerja.'
+    '\n';
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 String tanggal = '17 Juli 2022';
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 String urutan1 = 'News 6';
 String urutan2 = 'News 5';
