@@ -12,7 +12,6 @@ import 'package:mcs_flutter/screen/home7.dart';
 import 'package:mcs_flutter/screen/home8.dart';
 import 'package:mcs_flutter/screen/home9.dart';
 
-
 import '../animation/animasi2.dart';
 import '../animation/animasi3.dart';
 import '../widget/responsive.dart';
@@ -46,7 +45,6 @@ class _HomePageState extends State<HomePage> {
             const Home7(),
             const Home8(),
             const Home9(),
-            
           ],
         ),
       ),
@@ -68,13 +66,11 @@ class Home2 extends StatelessWidget {
       height: screenSize.height * 0.5,
       width: screenSize.width,
       color: const Color.fromARGB(255, 8, 66, 113),
-
       child: Row(
         children: [
           SizedBox(
             width: screenSize.width * 0.1,
           ),
-
           Container(
             padding: EdgeInsets.only(top: screenSize.height * 0.1),
             width: screenSize.width * 0.2,
@@ -124,7 +120,6 @@ class Home2 extends StatelessWidget {
               ],
             ),
           ),
-
           Container(
             padding: EdgeInsets.only(top: screenSize.height * 0.1),
             width: screenSize.width * 0.2,
@@ -174,7 +169,6 @@ class Home2 extends StatelessWidget {
               ],
             ),
           ),
-
           Container(
             padding: EdgeInsets.only(top: screenSize.height * 0.1),
             width: screenSize.width * 0.2,
@@ -224,7 +218,6 @@ class Home2 extends StatelessWidget {
               ],
             ),
           ),
-
           Container(
             padding: EdgeInsets.only(top: screenSize.height * 0.1),
             width: screenSize.width * 0.2,
@@ -280,7 +273,6 @@ class Home2 extends StatelessWidget {
   }
 }
 
-
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -297,11 +289,9 @@ class _HomeState extends State<Home> {
         Image.asset(
           "assets/images/79032468-01.jpeg",
         ),
-
         Container(
           padding: EdgeInsets.only(
-              left: screenSize.width * 0.5,
-              top: screenSize.height * 0.2),
+              left: screenSize.width * 0.5, top: screenSize.height * 0.2),
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -356,43 +346,37 @@ class _HomeState extends State<Home> {
                   overflow: TextOverflow.ellipsis,
                   "If your organization is going to compete",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20,
-                      color: Colors.black54),
+                      fontSize: 20, color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "and win with data, you need multi-cloud.",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20,
-                      color: Colors.black54),
+                      fontSize: 20, color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "It’s the durable, scalable solution that",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20,
-                      color: Colors.black54),
+                      fontSize: 20, color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "allows you to extract more value from your",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20,
-                      color: Colors.black54),
+                      fontSize: 20, color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "data and drive new innovations across your",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20,
-                      color: Colors.black54),
+                      fontSize: 20, color: Colors.black54),
                 ),
                 Text(
                   overflow: TextOverflow.ellipsis,
                   "business.",
                   style: GoogleFonts.robotoCondensed(
-                      fontSize: 20,
-                      color: Colors.black54),
+                      fontSize: 20, color: Colors.black54),
                 ),
                 const Spacer(
                   flex: 1,
