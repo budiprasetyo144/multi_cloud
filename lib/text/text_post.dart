@@ -1,34 +1,48 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 String headgrid1 = 'Who We Are';
-String headgrid2 = 'Post 5 Headline';
-String headgrid3 = 'Post 4 Headline';
+String headgrid2 = 'Post A Headline';
+String headgrid3 = 'Post A Headline';
 String headgrid4 = 'Partner EKSAD';
 String headgrid5 = 'Mengapa Cloud Service EKSAD';
 String headgrid6 = 'Tentang EKSAD IT';
 
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-String bodygrid1 = 'About EKSAD IT '
+
+String bodygrid1 =
+    'About EKSAD IT '
     'EKSAD provides solutions and professional IT resource partners,'
     'which provides IT experts who are competent in working on company projects '
     'and have proven technical knowledge. '
     'EKSAD IT resources also help you improve service performance '
     'and offer increased flexibility in workforce management.';
 
-String bodygrid2 = 'Example text for headline 5. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
-String bodygrid3 = 'Example text for headline 4. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
+String bodygrid2 =
+    'Example text for headline 5. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
 
-String bodygrid4 = 'Partner EKSAD dalam teknologi: '
+String bodygrid3 =
+    'Example text for headline 4. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
+
+String bodygrid4 =
+    'Partner EKSAD dalam teknologi: '
     '\n'
     '1. Alibaba Cloud  '
     '2. Google Cloud  '
     '3. Huawei Cloud ...'
     '\n ';
 
-String bodygrid5 = 'Example text for headline 2. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
+String bodygrid5 =
+    'Example text for headline 2. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
 
-String bodygrid6 = 'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten ...';
+String bodygrid6 =
+    'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten ...';
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 String bodyfull1 = 'Build enterprise-grade containerized applications faster with '
     'best-in-class managed Kubernetes and serverless platform on cloud '
@@ -101,9 +115,13 @@ String bodyfull6 =
     'Harga kompetitif dievaluasi setiap 2 tahun'
     '\n';
 
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-String tanggal = '17 Juli 2022';
+
+String tanggal = '22 Juli 2022';
+String tanggal2 = '21 Juli 2022';
+String tanggal3 = '20 Juli 2022';
 String tanggal4 = '19 Juli 2022';
 String tanggal5 = '18 Juli 2022';
 String tanggal6 = '17 Juli 2022';
@@ -117,3 +135,6 @@ String urutan3 = 'News 4';
 String urutan4 = 'News 3';
 String urutan5 = 'News 2';
 String urutan6 = 'News 1';
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
