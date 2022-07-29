@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mcs_flutter/screen/footer.dart';
 import 'package:mcs_flutter/widget/responsive.dart';
 import 'package:mcs_flutter/screen/appbar.dart';
 import 'package:mcs_flutter/text/text_post.dart';
@@ -120,16 +121,7 @@ class PostBody extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            height: 200,
-            color: Colors.black87,
-            child: Center(
-              child: Text(
-                'PT. Tiga Daya Digital Indonesia',
-                style: TextStyle(fontSize: 16, color: Colors.white),
-              ),
-            ),
-          )
+          Footer(),
         ],
       ),
     );

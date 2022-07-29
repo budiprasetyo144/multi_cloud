@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mcs_flutter/screen/footer.dart';
 import 'package:mcs_flutter/widget/container_post.dart';
 import 'package:mcs_flutter/text/text_post.dart';
 import 'package:mcs_flutter/screen/post_body.dart';
@@ -149,10 +150,10 @@ class _PostState extends State<Post> {
                       ),
                       GridContainer(
                         HeadGrid: headgrid6,
-                        ImageGrid: 'assets/images/1.jpeg',
+                        ImageGrid: 'assets/images/eksad IT resources.jpg',
                         BodyGrid: bodygrid6,
                         arah: PostBody(
-                          Image: 'assets/images/1.jpeg',
+                          Image: 'assets/images/eksad IT resources.jpg',
                           HeadText: headgrid6,
                           Tanggal: tanggal,
                           Bodyfull: bodyfull6,
@@ -164,7 +165,8 @@ class _PostState extends State<Post> {
                 ),
               ],
             ),
-          )
+          ),
+          Footer(),
         ],
       ),
     );
