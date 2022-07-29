@@ -3,7 +3,7 @@ String headgrid2 = 'Post 5 Headline';
 String headgrid3 = 'Post 4 Headline';
 String headgrid4 = 'Post 3 Headline';
 String headgrid5 = 'Post 2 Headline';
-String headgrid6 = 'Post 1 Headline';
+String headgrid6 = 'Tentang EKSAD IT';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

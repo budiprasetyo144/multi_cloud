@@ -19,15 +19,20 @@ class Footer extends StatelessWidget {
               "PT Tiga Daya Digital Indonesia",
               style: TextStyle(
                 color: Colors.white,
+                fontSize: 18,
               )),
-          const Spacer(
-              flex: 1),
+          SizedBox(
+            height: 10,
+          ),
 
           const Text(
               "Powered by EKSAD Technology ",
               style: TextStyle(
                 color: Colors.white,
               )),
+          SizedBox(
+            height: 10,
+          ),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
