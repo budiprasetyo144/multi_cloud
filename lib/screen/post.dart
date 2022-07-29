@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mcs_flutter/screen/footer.dart';
 import 'package:mcs_flutter/widget/container_post.dart';
 import 'package:mcs_flutter/text/text_post.dart';
 import 'package:mcs_flutter/screen/post_body.dart';
@@ -164,7 +165,8 @@ class _PostState extends State<Post> {
                 ),
               ],
             ),
-          )
+          ),
+          Footer(),
         ],
       ),
     );
