@@ -35,7 +35,7 @@ String bodygrid4 =
     '\n ';
 
 String bodygrid5 =
-    'Example text for headline 2. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
+    'Fleksibilitas untuk memilih layanan cloud ... ';
 
 String bodygrid6 =
     'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten ...';
@@ -71,9 +71,15 @@ String bodyfull4 = 'Partner EKSAD dalam teknologi: '
     '4. AWS Cloud '
     '\n ';
 
-String bodyfull5 = 'Flexibility to choose cloud services from different cloud providers '
-    'based on the combination of pricing, performance, security and compliance requirements, '
-    'geographical location that best suits the business;';
+String bodyfull5 =
+    'Fleksibilitas untuk memilih layanan cloud dari penyedia cloud yang berbeda '
+    'berdasarkan kombinasi harga, kinerja, keamanan, dan persyaratan kepatuhan, '
+    'lokasi geografis yang paling sesuai dengan bisnis'
+    '\n';
+
+    // 'Flexibility to choose cloud services from different cloud providers '
+    // 'based on the combination of pricing, performance, security and compliance requirements, '
+    // 'geographical location that best suits the business;'
 
 String bodyfull6 =
     'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten '
