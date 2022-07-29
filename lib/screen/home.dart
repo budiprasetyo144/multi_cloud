@@ -6,6 +6,7 @@ import 'package:mcs_flutter/screen/footer.dart';
 import 'package:mcs_flutter/screen/home10.dart';
 import 'package:mcs_flutter/widget/botton.dart';
 import 'package:mcs_flutter/const/conts.dart';
+import 'package:mcs_flutter/screen/home2.dart';
 import 'package:mcs_flutter/screen/home3.dart';
 import 'package:mcs_flutter/screen/home4.dart';
 import 'package:mcs_flutter/screen/home5.dart';
@@ -32,8 +33,9 @@ class _HomePageState extends State<HomePage> {
 
   PageController controller = PageController();
   void _scrollToIndex(int index) {
-    controller.animateToPage(index + 1, duration: Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
+    controller.animateToPage(index, duration: Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
   }
+  int selectedIndex= 0;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +46,128 @@ class _HomePageState extends State<HomePage> {
       home: Scaffold(
         appBar: ResponsiveWidget.isSmallScreen(context)
             ? AppbarSmallSize(screenSize)
-            : AppbarFullSize(screenSize, context),
+            : PreferredSize(
+          preferredSize: Size(screenSize.width, 135),
+          child: Container(
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                    color: kPrimaryColor,
+                    width: 1,
+                    style: BorderStyle.solid),
+              ),
+            ),
+
+            child: Row(
+              children: [
+                SizedBox(
+                  width: screenSize.width * 0.1,
+                ),
+                Container(
+                  padding: const EdgeInsets.only(
+                      left: 30,
+                      top: 20,
+                      bottom: 20
+                  ),
+                  child: Image.asset("assets/logo/multicloudsolution.jpg"),
+                ),
+                SizedBox(
+                  width: screenSize.width * 0.2,
+                ),
+                Row(
+                  children: [
+                    TextButton(onPressed: (){
+                      _scrollToIndex(0);
+                    },
+                      child: Text(
+                        "Home",
+                        style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: kTextColor
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: screenSize.width * 0.03,
+                    ),
+                    TextButton(onPressed: (){
+                      _scrollToIndex(5);
+
+                    },
+                      child: Text(
+                        "About us",
+                        style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: kTextColor
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: screenSize.width * 0.03,
+                    ),
+                    TextButton(onPressed: (){
+                      _scrollToIndex(2);
+                    },
+                      child: Text(
+                        "Solution",
+                        style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: kTextColor
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: screenSize.width * 0.03,
+                    ),
+                    TextButton(onPressed: (){
+                      _scrollToIndex(10);
+                    },
+                      child: Text(
+                        "Contact Us",
+                        style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: kTextColor
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+                SizedBox(
+                  width: screenSize.width * 0.03,
+                ),
+                SizedBox(
+                  height: 50,
+                  width: 250,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      labelText: "Search",
+                      prefixIcon: const Icon(Icons.search),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: const BorderSide(
+                            width: 1,
+                            color: Colors.blue
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: const BorderSide(
+                            width: 1,
+                            color: Colors.blue
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
         body: ListView(
           scrollDirection: Axis.vertical,
           controller: controller,
@@ -60,7 +183,6 @@ class _HomePageState extends State<HomePage> {
             const Home9(),
             Home10(),
             Footer(),
-            
           ],
         ),
       ),
@@ -68,231 +190,7 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class Home2 extends StatelessWidget {
-  const Home2({
-    Key? key,
-    required this.screenSize,
-  }) : super(key: key);
 
-  final Size screenSize;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: screenSize.height * 0.5,
-      width: screenSize.width,
-      color: const Color.fromARGB(255, 8, 66, 113),
-
-      child: Row(
-        children: [
-          SizedBox(
-            width: screenSize.width * 0.1,
-          ),
-
-          Container(
-            padding: EdgeInsets.only(top: screenSize.height * 0.1),
-            width: screenSize.width * 0.2,
-            child: Column(
-              children: [
-                const Animasi(),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  "MIGRATE",
-                  style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "Sample text. Click to select the",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "text box. Click again or double",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "click to start editing the text.",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          Container(
-            padding: EdgeInsets.only(top: screenSize.height * 0.1),
-            width: screenSize.width * 0.2,
-            child: Column(
-              children: [
-                const Animasi2(),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  "ACCESS",
-                  style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "Sample text. Click to select the",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "text box. Click again or double",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "click to start editing the text.",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          Container(
-            padding: EdgeInsets.only(top: screenSize.height * 0.1),
-            width: screenSize.width * 0.2,
-            child: Column(
-              children: [
-                const Animasi3(),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  "PROTECT",
-                  style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "Sample text. Click to select the",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "text box. Click again or double",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "click to start editing the text.",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          Container(
-            padding: EdgeInsets.only(top: screenSize.height * 0.1),
-            width: screenSize.width * 0.2,
-            child: Column(
-              children: [
-                const Animasi4(),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  "SCALE",
-                  style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: screenSize.height * 0.03,
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "Sample text. Click to select the",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "text box. Click again or double",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "click to start editing the text.",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
 
 
 class Home extends StatefulWidget {
