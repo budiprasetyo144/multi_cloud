@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "Multi Cloud Solution By EKSAD",
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
