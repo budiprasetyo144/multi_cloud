@@ -33,32 +33,31 @@ class PostBody extends StatelessWidget {
       body: ListView(
         children: [
           SingleChildScrollView(
-            padding: EdgeInsets.only(left: 70, right: 70),
+            padding: const EdgeInsets.only(left: 70, right: 70),
             controller: ScrollController(),
-            child: Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                  padding: EdgeInsets.only(top: 3),
+                  padding: const EdgeInsets.only(top: 3),
                   height: 90,
                   child: Row(
                     children: [
-                      Container(
+                      SizedBox(
                           height: 20,
                           child: TextButton(onPressed: (){
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => MyApp(),
+                                builder: (context) => const MyApp(),
                               ),
                             );
-                          }, child: Text('Home',style: TextStyle(color: Colors.red,fontSize: 17),))
+                          }, child: const Text('Home',style: TextStyle(color: Colors.red,fontSize: 17),))
                       ),
                       Container(
-                        padding: EdgeInsets.only(top: 1),
+                        padding: const EdgeInsets.only(top: 1),
                         height: 20,
-                        child: Text(' > ',style: TextStyle(color: Colors.red,fontSize: 17),),
+                        child: const Text(' > ',style: TextStyle(color: Colors.red,fontSize: 17),),
                       ),
                       Container(
                         height: 20,
@@ -120,7 +119,6 @@ class PostBody extends StatelessWidget {
                 ],
               ),
             ),
-          ),
           Footer(),
         ],
       ),
