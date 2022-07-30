@@ -2,9 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../widget/botton.dart';
+import '../const/conts.dart';
 
 class Home3 extends StatelessWidget {
-  const Home3({super.key});
+  Home3({super.key, required this.isi});
+
+  int isi;
+  PageController controller = PageController();
+  void _scrollToIndex(int index) {
+    controller.animateToPage(index,
+        duration: Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -132,8 +140,25 @@ class Home3 extends StatelessWidget {
                     Container(
                       width: screenSize.width * 0.1,
                       height: screenSize.height * 0.08,
-                      child: Botton_tombol(
-                        title: "Learn More",
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            primary: kPrimaryColor),
+                        onPressed: () {
+                          _scrollToIndex(isi);
+                        },
+                        child: Container(
+                          padding: EdgeInsets.all(20),
+                          child: Text(
+                            'Learn More',
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                        ),
                       ),
                     ),
                     SizedBox(
