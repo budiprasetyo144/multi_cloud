@@ -10,7 +10,7 @@ class Home3 extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: screenSize.height*0.91,
+      height: screenSize.height * 0.91,
       width: screenSize.width,
       color: Color.fromARGB(255, 241, 252, 254),
       child: Row(
@@ -81,7 +81,7 @@ class Home3 extends StatelessWidget {
                 Text(
                   overflow: TextOverflow.ellipsis,
                   // "include AWS, Azure, Google Cloud Platform, or Oracle Cloud. Using",
-                  "include Huawei, Alibaba Cloud, AWS. Using",
+                  "include Alibaba Cloud, Huawei Cloud, Google Cloud, AWS. Using",
                   style: GoogleFonts.robotoCondensed(
                     color: Colors.black,
                     fontSize: 20,
