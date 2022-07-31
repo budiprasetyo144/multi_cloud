@@ -195,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Text(
                           overflow: TextOverflow.ellipsis,
-                          "Explore Cloud solutions",
+                          "ExplorAA Cloud solutions",
                           style: GoogleFonts.robotoCondensed(
                               color: Color.fromARGB(255, 12, 66, 101),
                               fontSize: 50,
@@ -346,7 +346,103 @@ class _HomePageState extends State<HomePage> {
             const Home5(),
             const Home6(),
             const Home7(),
-            const Home8(),
+            //  Home8(isi: 9,),
+            Stack(
+      children: [
+        Container(
+          color: const Color.fromARGB(255, 1, 51, 93),
+          height: 300,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 300),
+          child: Container(
+            width: screenSize.width,
+            height: 450,
+            color: const Color.fromARGB(255, 227, 235, 253),
+          ),
+        ),
+        Column(
+          children:  [
+            SizedBox(
+              height: 150,
+            ),
+            Center(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            padding: const EdgeInsets.only(left: 40, right: 20),
+            width: screenSize.width * 0.37,
+            height: screenSize.height * 0.45,
+            color: Colors.white,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Spacer(
+                  flex: 2,
+                ),
+                const Text(
+                  'Contact Us',
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: kTextColor,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const Spacer(
+                  flex: 1,
+                ),
+                const Text(
+                  'Quickly incentivize impactful action items before tactical collaboration and idea-sharing. Monotonically engage market-driven intellectual capital through wireless opportunities. Progressively network performance based services for functionalized testing procedures.',
+                  style: TextStyle(fontSize: 20, height: 1.5),
+                ),
+                const Spacer(
+                  flex: 1,
+                ),
+                // Botton_tombol2(title: "LEARN MORE",),
+
+                Container(
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        primary: kPrimaryColor),
+                    onPressed: () {_scrollToIndex(9);},
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      child: Text(
+                        "LEARN MORE",
+                        style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
+                const Spacer(
+                  flex: 2,
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: screenSize.width * 0.37,
+            height: screenSize.height * 0.6,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/images/server.jpg'),
+                  fit: BoxFit.fill),
+            ),
+          )
+        ],
+      ),
+    ),
+          ],
+        )
+      ],
+    ),
             const Home9(),
             Home10(),
             Footer(),
