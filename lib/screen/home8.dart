@@ -71,7 +71,7 @@ class ContactUs extends StatelessWidget {
                   style: TextStyle(fontSize: 20, height: 1.5),
                 ),
                 const Spacer(flex: 1,),
-                Botton_tombol2(title: "LEARN MORE"),
+                Botton_tombol2(title: "LEARN MORE",),
                 const Spacer(flex: 2,),
               ],
             ),
@@ -82,7 +82,7 @@ class ContactUs extends StatelessWidget {
             height: screenSize.height*0.6,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('assets/images/vbvbvb.jpg'),
+                  image: AssetImage('assets/images/server.jpg'),
                   fit: BoxFit.fill),
             ),
           )
