@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mcs_flutter/animation/animasi1.dart';
-import 'package:mcs_flutter/animation/animasi4.dart';
 import 'package:mcs_flutter/dashboard/dashboard.dart';
 import 'package:mcs_flutter/screen/footer.dart';
 import 'package:mcs_flutter/screen/home10.dart';
-import 'package:mcs_flutter/widget/botton.dart';
 import 'package:mcs_flutter/const/conts.dart';
 import 'package:mcs_flutter/screen/home2.dart';
 import 'package:mcs_flutter/screen/home3.dart';
@@ -15,9 +12,8 @@ import 'package:mcs_flutter/screen/home6.dart';
 import 'package:mcs_flutter/screen/home7.dart';
 import 'package:mcs_flutter/screen/home8.dart';
 import 'package:mcs_flutter/screen/home9.dart';
+import 'package:mcs_flutter/widget/whatsapp.dart';
 
-import '../animation/animasi2.dart';
-import '../animation/animasi3.dart';
 import '../widget/responsive.dart';
 import 'appbar.dart';
 
@@ -177,6 +173,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButton: WAChat(),
       body: ListView(
         scrollDirection: Axis.vertical,
         controller: controller2,
