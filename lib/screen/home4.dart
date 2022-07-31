@@ -49,36 +49,7 @@ class Home4 extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    overflow: TextOverflow.ellipsis,
-                                    "Sit amet nisl purus in mollis nunc sed id semper.",
-                                    style: GoogleFonts.robotoCondensed(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: screenSize.height * 0.005,
-                                  ),
-                                  Text(
-                                    overflow: TextOverflow.ellipsis,
-                                    "At in tellus integer feugiat.",
-                                    style: GoogleFonts.robotoCondensed(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: screenSize.height * 0.005,
-                                  ),
-                                  Text(
-                                    overflow: TextOverflow.ellipsis,
-                                    "Commodo viverra maecenas accumsan lacus vel facilisis.",
-                                    style: GoogleFonts.robotoCondensed(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                    ),
-                                  ),
+                                  Image(image: AssetImage('assets/logo/alibaba.png'))
                                 ],
                               ),
                             ),
@@ -94,36 +65,7 @@ class Home4 extends StatelessWidget {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      Text(
-                                        overflow: TextOverflow.ellipsis,
-                                        "Sit amet nisl purus in mollis nunc sed id semper.",
-                                        style: GoogleFonts.robotoCondensed(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: screenSize.height * 0.005,
-                                      ),
-                                      Text(
-                                        overflow: TextOverflow.ellipsis,
-                                        "At in tellus integer feugiat.",
-                                        style: GoogleFonts.robotoCondensed(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: screenSize.height * 0.005,
-                                      ),
-                                      Text(
-                                        overflow: TextOverflow.ellipsis,
-                                        "Commodo viverra maecenas accumsan lacus vel facilisis.",
-                                        style: GoogleFonts.robotoCondensed(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                        ),
-                                      ),
+                                      Image(image: AssetImage('assets/logo/google.png'))
                                     ],
                                   ),
                                 ),
@@ -142,7 +84,7 @@ class Home4 extends StatelessWidget {
                   ),
                   // KOLOM 2
                   Container(
-                    height: screenSize.height * 0.11,
+                    height: screenSize.height * 0.20,
                     width: screenSize.width * 0.8,
                     child: Row(
                       children: [
@@ -154,36 +96,8 @@ class Home4 extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                overflow: TextOverflow.ellipsis,
-                                "Sit amet nisl purus in mollis nunc sed id semper.",
-                                style: GoogleFonts.robotoCondensed(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                ),
-                              ),
-                              SizedBox(
-                                height: screenSize.height * 0.005,
-                              ),
-                              Text(
-                                overflow: TextOverflow.ellipsis,
-                                "At in tellus integer feugiat.",
-                                style: GoogleFonts.robotoCondensed(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                ),
-                              ),
-                              SizedBox(
-                                height: screenSize.height * 0.005,
-                              ),
-                              Text(
-                                overflow: TextOverflow.ellipsis,
-                                "Commodo viverra maecenas accumsan lacus vel facilisis.",
-                                style: GoogleFonts.robotoCondensed(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                ),
-                              ),
+                              Image(image: AssetImage('assets/logo/aws.png',),
+                              )
                             ],
                           ),
                         ),
@@ -197,37 +111,8 @@ class Home4 extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    overflow: TextOverflow.ellipsis,
-                                    "Sit amet nisl purus in mollis nunc sed id semper.",
-                                    style: GoogleFonts.robotoCondensed(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: screenSize.height * 0.005,
-                                  ),
-                                  Text(
-                                    overflow: TextOverflow.ellipsis,
-                                    "At in tellus integer feugiat.",
-                                    style: GoogleFonts.robotoCondensed(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: screenSize.height * 0.005,
-                                  ),
-                                  Text(
-                                    overflow: TextOverflow.ellipsis,
-                                    "Commodo viverra maecenas accumsan lacus vel facilisis.",
-                                    style: GoogleFonts.robotoCondensed(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                ],
+                              Image(image: AssetImage('assets/logo/huawei.png',),
+                              )],
                               ),
                             )
                           ],
