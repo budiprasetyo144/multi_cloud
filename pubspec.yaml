@@ -33,6 +33,7 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
+  data_table_2: ^2.3.5
   side_navigation: ^1.0.2
   cupertino_icons: ^1.0.2
   fly_animation: ^0.0.2

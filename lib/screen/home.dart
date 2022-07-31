@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mcs_flutter/animation/animasi1.dart';
 import 'package:mcs_flutter/animation/animasi4.dart';
+import 'package:mcs_flutter/dashboard/dashboard.dart';
 import 'package:mcs_flutter/screen/footer.dart';
 import 'package:mcs_flutter/screen/home10.dart';
 import 'package:mcs_flutter/widget/botton.dart';
@@ -39,10 +40,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Multi Cloud Solution By EKSAD",
-      home: Scaffold(
+    return Scaffold(
         appBar: ResponsiveWidget.isSmallScreen(context)
             ? AppbarSmallSize(screenSize)
             : PreferredSize(
@@ -154,6 +152,15 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
+                      Spacer(),
+                      IconButton(onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Dashboard(),
+                          ),
+                        );
+                      }, icon: Icon(Icons.brightness_low_sharp,color: Colors.white,))
                     ],
                   ),
                 ),
@@ -337,7 +344,6 @@ class _HomePageState extends State<HomePage> {
             Footer(),
           ],
         ),
-      ),
     );
   }
 }

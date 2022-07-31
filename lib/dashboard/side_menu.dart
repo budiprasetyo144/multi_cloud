@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mcs_flutter/dashboard/main_dashboard.dart';
+import 'package:mcs_flutter/dashboard/news_dashboard.dart';
+import 'package:mcs_flutter/dashboard/pages_dashboard.dart';
+import 'package:mcs_flutter/dashboard/setting_dashboard.dart';
 import 'package:side_navigation/side_navigation.dart';
 
 class SideMenu extends StatefulWidget {
@@ -8,7 +12,10 @@ class SideMenu extends StatefulWidget {
   State<SideMenu> createState() => _SideMenuState();
 }
 List<Widget> views = [
-
+  MainDashboard(),
+  SettingDashboard(),
+  PagesDashboard(),
+  NewsDashboard()
 ];
 
 

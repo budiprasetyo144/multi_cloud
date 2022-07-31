@@ -17,19 +17,17 @@ class Home2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: screenSize.height * 0.43,
+      height: screenSize.height * 0.4,
       width: screenSize.width,
       color: const Color.fromARGB(255, 8, 66, 113),
 
       child: Center(
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
-              width: screenSize.width * 0.1,
-            ),
-
             Container(
-              padding: EdgeInsets.only(top: screenSize.height * 0.05),
+              padding: EdgeInsets.only(top: screenSize.height * 0.1),
               width: screenSize.width * 0.2,
               child: Column(
                 children: [
@@ -49,7 +47,7 @@ class Home2 extends StatelessWidget {
             ),
 
             Container(
-              padding: EdgeInsets.only(top: screenSize.height * 0.05),
+              padding: EdgeInsets.only(top: screenSize.height * 0.1),
               width: screenSize.width * 0.2,
               child: Column(
                 children: [
@@ -69,7 +67,7 @@ class Home2 extends StatelessWidget {
             ),
 
             Container(
-              padding: EdgeInsets.only(top: screenSize.height * 0.05),
+              padding: EdgeInsets.only(top: screenSize.height * 0.1),
               width: screenSize.width * 0.2,
               child: Column(
                 children: [
@@ -89,7 +87,7 @@ class Home2 extends StatelessWidget {
             ),
 
             Container(
-              padding: EdgeInsets.only(top: screenSize.height * 0.05),
+              padding: EdgeInsets.only(top: screenSize.height * 0.1),
               width: screenSize.width * 0.2,
               child: Column(
                 children: [

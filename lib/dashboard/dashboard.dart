@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mcs_flutter/screen/home.dart';
+import 'package:mcs_flutter/dashboard/side_menu.dart';
+import 'package:mcs_flutter/dashboard/appbar_dashboard.dart';
 
 
 
@@ -9,8 +10,8 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: HomePage(),
+      appBar: BarAtas(context),
+      body: SideMenu(),
     );
   }
 }
