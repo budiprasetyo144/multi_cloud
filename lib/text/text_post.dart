@@ -1,59 +1,84 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-String headgrid1 = 'Who We Are';
-String headgrid2 = 'Post A Headline';
-String headgrid3 = 'Post A Headline';
+String headgrid1 = 'Our Company';
+String headgrid2 = 'Carries';
+String headgrid3 = 'Logistics';
 String headgrid4 = 'Partner EKSAD';
 String headgrid5 = 'Mengapa Cloud Service EKSAD';
 String headgrid6 = 'Tentang EKSAD IT';
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+String bodygrid1 = 'Eksad Providing Services High Quality Based '
+    'on Strong Experience in the industry and technology. '
+    'Building the right IT Service Solution to enable it '
+    'Partners in speeding up business development'
+    ;
 
-String bodygrid1 =
-    'About EKSAD IT '
-    'EKSAD provides solutions and professional IT resource partners,'
-    'which provides IT experts who are competent in working on company projects '
-    'and have proven technical knowledge. '
-    'EKSAD IT resources also help you improve service performance '
-    'and offer increased flexibility in workforce management.';
+String bodygrid2 = 'EKSAD provides tailored services focusing on clients’ '
+    'specific demands in international and domestic markets.'
+    'It’s time to bridge the gap and communicate with your '
+    'business across channels.';
+String bodygrid3 = 'Generally the detailed organization and implementation '
+    'of a complex operation. In a general business sense, logistics is '
+    ''
+    'the point of consumption to meet the requirements of customers or corporations.';
 
-String bodygrid2 =
-    'Example text for headline 5. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
-
-String bodygrid3 =
-    'Example text for headline 4. Example text for headline 5. Example text for headline 5. Example text for headline 5. ';
-
-String bodygrid4 =
-    'Partner EKSAD dalam teknologi: '
+String bodygrid4 = 'Partner EKSAD dalam teknologi: '
     '\n'
     '1. Alibaba Cloud  '
     '2. Google Cloud  '
     '3. Huawei Cloud ...'
     '\n ';
 
-String bodygrid5 =
-    'Fleksibilitas untuk memilih layanan cloud ... ';
+String bodygrid5 = 'Fleksibilitas untuk memilih layanan cloud ... '
+    'EKSAD provides solutions and professional IT resource partners,'
+    'which provides IT experts who are competent in working on company projects '
+    'and have proven technical knowledge. '
+    'EKSAD IT resources also help you improve service performance '
+    'and offer increased flexibility in workforce management.';
 
 String bodygrid6 =
-    'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten ...';
-
+    'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten ...'
+    'EKSAD provides solutions and professional IT resource partners,'
+    'which provides IT experts who are competent in working on company projects '
+    'and have proven technical knowledge. '
+    'EKSAD IT resources also help you improve service performance '
+    'and offer increased flexibility in workforce management.';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-String bodyfull1 = 'Build enterprise-grade containerized applications faster with '
+String bodyfull1 =
+'Eksad Providing Services High Quality Based '
+    'on Strong Experience in the industry and technology. '
+    'Building the right IT Service Solution to enable it '
+    'Partners in speeding up business development'
+    'About EKSAD IT '
+    'EKSAD provides solutions and professional IT resource partners,'
+    'which provides IT experts who are competent in working on company projects '
+    'and have proven technical knowledge. '
+    'EKSAD IT resources also help you improve service performance '
+    'and offer increased flexibility in workforce management.'
+    'Build enterprise-grade containerized applications faster with '
     'best-in-class managed Kubernetes and serverless platform on cloud '
     'and on-premises environments. You can build a fast, scalable software '
     'delivery pipeline no matter where you run by seamlessly implementing DevOps '
     'and SRE practices with cloud-native tooling and expert guidance.';
-String bodyfull2 = 'Multicloud - the use of cloud services from two or '
+String bodyfull2 = 
+'EKSAD provides tailored services focusing on clients’ '
+    'specific demands in international and domestic markets.'
+    'It’s time to bridge the gap and communicate with your '
+    'business across channels.'
+'Multicloud - the use of cloud services from two or '
     'more vendors - gives organizations more flexibility to optimize performance, '
     'control costs, and leverage the best cloud technologies available.';
 
-String bodyfull3 = 'Multicloud is the use of cloud services from more than one cloud vendor. '
+String bodyfull3 =
+'Generally the detailed organization and implementation '
+    'of a complex operation. In a general business sense, logistics is '
+    ''
+    'the point of consumption to meet the requirements of customers or corporations.'
+    'Multicloud is the use of cloud services from more than one cloud vendor. '
     'It can be as simple as using software-as-a-service (SaaS) from different cloud vendors – '
     'e.g., Salesforce and Workday. But in the enterprise, multicloud typically refers to '
     'running enterprise applications on platform-as-a-service (PaaS) or infrastructure-as-a-service '
@@ -77,9 +102,9 @@ String bodyfull5 =
     'lokasi geografis yang paling sesuai dengan bisnis'
     '\n';
 
-    // 'Flexibility to choose cloud services from different cloud providers '
-    // 'based on the combination of pricing, performance, security and compliance requirements, '
-    // 'geographical location that best suits the business;'
+// 'Flexibility to choose cloud services from different cloud providers '
+// 'based on the combination of pricing, performance, security and compliance requirements, '
+// 'geographical location that best suits the business;'
 
 String bodyfull6 =
     'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten '
@@ -121,9 +146,7 @@ String bodyfull6 =
     'Harga kompetitif dievaluasi setiap 2 tahun'
     '\n';
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 String tanggal = '22 Juli 2022';
 String tanggal2 = '21 Juli 2022';
@@ -132,15 +155,14 @@ String tanggal4 = '19 Juli 2022';
 String tanggal5 = '18 Juli 2022';
 String tanggal6 = '17 Juli 2022';
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-String urutan1 = 'News 6';
-String urutan2 = 'News 5';
-String urutan3 = 'News 4';
-String urutan4 = 'News 3';
-String urutan5 = 'News 2';
-String urutan6 = 'News 1';
+String urutan1 = headgrid1;
+String urutan2 = headgrid2;
+String urutan3 = headgrid3;
+String urutan4 =headgrid4;
+String urutan5 = headgrid5;
+String urutan6 = headgrid6;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
