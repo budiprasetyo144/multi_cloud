@@ -29,10 +29,18 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  //   Untuk pake PAGE per index
   PageController controller = PageController();
-  void _scrollToIndex(int index) {
+  void _scrollToIndex2(int index) {
     controller.animateToPage(index,
         duration: Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
+  }
+
+  //   Untuk pake LIST per height container
+  ScrollController controller2 = ScrollController();
+  void _scrollToIndex(double index) {
+    controller2.animateTo(index, duration: Duration(seconds: 1), curve: Curves.fastLinearToSlowEaseIn);
   }
 
   int selectedIndex = 0;
@@ -87,7 +95,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           TextButton(
                             onPressed: () {
-                              _scrollToIndex(5);
+                              _scrollToIndex(3150);                              //// POSISI ABOUT US
                             },
                             child: Text(
                               "About us",
@@ -102,7 +110,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           TextButton(
                             onPressed: () {
-                              _scrollToIndex(2);
+                              _scrollToIndex(1230);                               //// POSISI SOLUTION
                             },
                             child: Text(
                               "Solution",
@@ -117,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           TextButton(
                             onPressed: () {
-                              _scrollToIndex(9);
+                              _scrollToIndex(5900);                               //// POSISI CONTACT US
                             },
                             child: Text(
                               "Contact Us",
@@ -167,7 +175,7 @@ class _HomePageState extends State<HomePage> {
               ),
         body: ListView(
           scrollDirection: Axis.vertical,
-          controller: controller,
+          controller: controller2,
           children: [
             const Home(),
             Home2(screenSize: screenSize),
