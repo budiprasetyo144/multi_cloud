@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/screen/home.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -11,8 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Multi Cloud Solution By EKSAD",
       debugShowCheckedModeBanner: false,
+      title: "Multi Cloud Solution By EKSAD",
       home: HomePage(),
     );
   }

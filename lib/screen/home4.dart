@@ -25,15 +25,12 @@ class Home4 extends StatelessWidget {
                   Container(
                     child: Text(
                       overflow: TextOverflow.ellipsis,
-                      "Our company story is a values story",
+                      "Our Partner",
                       style: GoogleFonts.robotoCondensed(
                           color: Colors.white,
                           fontSize: 50,
                           fontWeight: FontWeight.bold),
                     ),
-                  ),
-                  Spacer(
-                    flex: 1,
                   ),
                   Container(
                     height: screenSize.height * 0.3,
@@ -46,13 +43,6 @@ class Home4 extends StatelessWidget {
                           children: [
                             Spacer(
                               flex: 1,
-                            ),
-                            Container(
-                              color: Colors.white,
-                              height: screenSize.height*0.08,
-                              width: screenSize.width * 0.04,
-                              margin: EdgeInsets.only(
-                                  right: screenSize.width * 0.01),
                             ),
                             Container(
                               width: screenSize.width * 0.3,
@@ -98,13 +88,6 @@ class Home4 extends StatelessWidget {
                             // BARIS 2
                             Row(
                               children: [
-                                Container(
-                                  color: Colors.white,
-                                  height: screenSize.height*0.08,
-                                  width: screenSize.width * 0.04,
-                                  margin: EdgeInsets.only(
-                                      right: screenSize.width * 0.01),
-                                ),
                                 Container(
                                   width: screenSize.width * 0.3,
                                   child: Column(
@@ -167,13 +150,6 @@ class Home4 extends StatelessWidget {
                           flex: 1,
                         ),
                         Container(
-                          color: Colors.white,
-                          height: screenSize.height*0.08,
-                          width: screenSize.width * 0.04,
-                          margin: EdgeInsets.only(
-                              right: screenSize.width * 0.01),
-                        ),
-                        Container(
                           width: screenSize.width * 0.3,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -216,13 +192,6 @@ class Home4 extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            Container(
-                              color: Colors.white,
-                              height: screenSize.height*0.08,
-                              width: screenSize.width * 0.04,
-                              margin: EdgeInsets.only(
-                                  right: screenSize.width * 0.01),
-                            ),
                             Container(
                               width: screenSize.width * 0.3,
                               child: Column(

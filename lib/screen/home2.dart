@@ -17,19 +17,17 @@ class Home2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: screenSize.height * 0.43,
+      height: screenSize.height * 0.4,
       width: screenSize.width,
       color: const Color.fromARGB(255, 8, 66, 113),
 
       child: Center(
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
-              width: screenSize.width * 0.1,
-            ),
-
             Container(
-              padding: EdgeInsets.only(top: screenSize.height * 0.05),
+              padding: EdgeInsets.only(top: screenSize.height * 0.1),
               width: screenSize.width * 0.2,
               child: Column(
                 children: [
@@ -38,48 +36,18 @@ class Home2 extends StatelessWidget {
                     height: screenSize.height * 0.03,
                   ),
                   Text(
-                    "MIGRATE",
+                    "LOCAL SUPPORT",
                     style: GoogleFonts.robotoCondensed(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    height: screenSize.height * 0.03,
-                  ),
-                  Text(
-                    overflow: TextOverflow.ellipsis,
-                    "Sample text. Click to select the",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
-                  Text(
-                    overflow: TextOverflow.ellipsis,
-                    "text box. Click again or double",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
-                  Text(
-                    overflow: TextOverflow.ellipsis,
-                    "click to start editing the text.",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
                   ),
                 ],
               ),
             ),
 
             Container(
-              padding: EdgeInsets.only(top: screenSize.height * 0.05),
+              padding: EdgeInsets.only(top: screenSize.height * 0.1),
               width: screenSize.width * 0.2,
               child: Column(
                 children: [
@@ -88,48 +56,18 @@ class Home2 extends StatelessWidget {
                     height: screenSize.height * 0.03,
                   ),
                   Text(
-                    "ACCESS",
+                    "CLOUD IMPLEMENTATION",
                     style: GoogleFonts.robotoCondensed(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    height: screenSize.height * 0.03,
-                  ),
-                  Text(
-                    overflow: TextOverflow.ellipsis,
-                    "Sample text. Click to select the",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
-                  Text(
-                    overflow: TextOverflow.ellipsis,
-                    "text box. Click again or double",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
-                  Text(
-                    overflow: TextOverflow.ellipsis,
-                    "click to start editing the text.",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
                   ),
                 ],
               ),
             ),
 
             Container(
-              padding: EdgeInsets.only(top: screenSize.height * 0.05),
+              padding: EdgeInsets.only(top: screenSize.height * 0.1),
               width: screenSize.width * 0.2,
               child: Column(
                 children: [
@@ -138,48 +76,18 @@ class Home2 extends StatelessWidget {
                     height: screenSize.height * 0.03,
                   ),
                   Text(
-                    "PROTECT",
+                    "CLOUD MIGRATION",
                     style: GoogleFonts.robotoCondensed(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    height: screenSize.height * 0.03,
-                  ),
-                  Text(
-                    overflow: TextOverflow.ellipsis,
-                    "Sample text. Click to select the",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
-                  Text(
-                    overflow: TextOverflow.ellipsis,
-                    "text box. Click again or double",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
-                  Text(
-                    overflow: TextOverflow.ellipsis,
-                    "click to start editing the text.",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
                   ),
                 ],
               ),
             ),
 
             Container(
-              padding: EdgeInsets.only(top: screenSize.height * 0.05),
+              padding: EdgeInsets.only(top: screenSize.height * 0.1),
               width: screenSize.width * 0.2,
               child: Column(
                 children: [
@@ -188,41 +96,11 @@ class Home2 extends StatelessWidget {
                     height: screenSize.height * 0.03,
                   ),
                   Text(
-                    "SCALE",
+                    "CLOUD REPORTING",
                     style: GoogleFonts.robotoCondensed(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    height: screenSize.height * 0.03,
-                  ),
-                  Text(
-                    overflow: TextOverflow.ellipsis,
-                    "Sample text. Click to select the",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
-                  Text(
-                    overflow: TextOverflow.ellipsis,
-                    "text box. Click again or double",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
-                  Text(
-                    overflow: TextOverflow.ellipsis,
-                    "click to start editing the text.",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.robotoCondensed(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
                   ),
                 ],
               ),
