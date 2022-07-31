@@ -7,7 +7,7 @@ import '../const/conts.dart';
 class Home3 extends StatelessWidget {
   Home3({super.key, required this.isi});
 
-  int isi;
+  Widget isi;
   PageController controller = PageController();
   void _scrollToIndex(int index) {
     controller.animateToPage(index,
@@ -26,13 +26,14 @@ class Home3 extends StatelessWidget {
           Container(
             height: 600,
             width: screenSize.width * 0.5,
-            padding: EdgeInsets.only(left: screenSize.width * 0.1, top: 20),
+            padding:
+            EdgeInsets.only(left: screenSize.width * 0.1, top: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   overflow: TextOverflow.ellipsis,
-                  "Explore Cloud solutions",
+                  "ExplorAA Cloud solutions",
                   style: GoogleFonts.robotoCondensed(
                       color: Color.fromARGB(255, 12, 66, 101),
                       fontSize: 50,
@@ -140,26 +141,7 @@ class Home3 extends StatelessWidget {
                     Container(
                       width: screenSize.width * 0.1,
                       height: screenSize.height * 0.08,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                            primary: kPrimaryColor),
-                        onPressed: () {
-                          _scrollToIndex(isi);
-                        },
-                        child: Container(
-                          padding: EdgeInsets.all(20),
-                          child: Text(
-                            'Learn More',
-                            style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          ),
-                        ),
-                      ),
+                      child: isi
                     ),
                     SizedBox(
                       width: screenSize.width * 0.03,
