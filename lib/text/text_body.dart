@@ -16,10 +16,16 @@ String row1 =
     'partners in speeding up business development.';
 
 String row2 =
-    'EKSAD provides tailored services focusing on clients’ '
-    'specific demands in international and domestic markets.'
-    'It’s time to bridge the gap and communicate with your '
-    'business across channels.';
+    'Thanks to the reliability and extensive ability '
+    'to deploy solutions from Alibaba Cloud '
+    'to dozens of client companies. '
+    'EKSAD received an award from Alibaba as the top performer of the year. '
+    '\n';
+
+    // 'EKSAD provides tailored services focusing on clients’ '
+    // 'specific demands in international and domestic markets.'
+    // 'It’s time to bridge the gap and communicate with your '
+    // 'business across channels.';
 
 String row3 =
     'Generally the detailed organization and implementation '

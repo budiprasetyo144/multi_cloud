@@ -186,6 +186,18 @@ class _PostState extends State<Post> {
                           Urutan: urutan6,
                         ),
                       ),
+                      GridContainer(
+                        HeadGrid: headgrid7,
+                        ImageGrid: 'assets/images/eksad.jpg',
+                        BodyGrid: bodygrid7,
+                        arah: PostBody(
+                          Imagez: 'assets/images/eksad.jpg',
+                          HeadText: headgrid7,
+                          Tanggal: tanggal7,
+                          Bodyfull: bodyfull7,
+                          Urutan: urutan7,
+                        ),
+                      ),
                     ],
                   ),
                 ),

@@ -101,7 +101,7 @@ class _Home6State extends State<Home6> {
                         height: 250,
                         decoration: BoxDecoration(
                           image: const DecorationImage(
-                              image: AssetImage('assets/images/vbvb.jpg'),
+                              image: AssetImage('assets/images/eksad.jpg'),
                               fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(30),
                         ),
@@ -109,7 +109,7 @@ class _Home6State extends State<Home6> {
                       Container(
                         padding: const EdgeInsets.only(top: 20),
                         child: const Text(
-                          'Carriers',
+                          'Award From Alibaba',
                           style: TextStyle(color: Colors.black, fontSize: 30),
                         ),
                       ),
@@ -128,11 +128,11 @@ class _Home6State extends State<Home6> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => PostBody(
-                                    Imagez: 'assets/images/vbvb.jpg',
-                                    HeadText: headgrid2,
-                                    Tanggal: tanggal,
-                                    Bodyfull: bodyfull2,
-                                    Urutan: urutan2,
+                                    Imagez: 'assets/images/eksad.jpg',
+                                    HeadText: headgrid7,
+                                    Tanggal: tanggal7,
+                                    Bodyfull: bodyfull7,
+                                    Urutan: urutan7,
 
                                 ),
                               ),

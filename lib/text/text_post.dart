@@ -6,6 +6,7 @@ String headgrid3 = 'Logistics';
 String headgrid4 = 'EKSAD Partner';
 String headgrid5 = 'Why EKSAD Cloud Service';
 String headgrid6 = 'About EKSAD IT';
+String headgrid7 = 'Alibaba Cloud Award';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -46,6 +47,12 @@ String bodygrid6 =
     // 'and have proven technical knowledge. '
     // 'EKSAD IT resources also help you improve service performance '
     // 'and offer increased flexibility in workforce management.';
+
+String bodygrid7 =
+    'Thanks to the reliability and extensive ability '
+    'to deploy solutions from Alibaba Cloud ...'
+    '\n';
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -154,6 +161,14 @@ String bodyfull6 =
     'Competitive price evaluated every 2 years'
     '\n';
 
+String bodyfull7 =
+    'Thanks to the reliability and extensive ability '
+    'to deploy solutions from Alibaba Cloud '
+    'to dozens of client companies. '
+    'EKSAD received an award from Alibaba as the top performer of the year. '
+    '\n';
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 String tanggal = '22 July 2022';
@@ -162,6 +177,7 @@ String tanggal3 = '20 July 2022';
 String tanggal4 = '19 July 2022';
 String tanggal5 = '18 July 2022';
 String tanggal6 = '17 July 2022';
+String tanggal7 = '1 August 2022';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -171,6 +187,7 @@ String urutan3 = headgrid3;
 String urutan4 = headgrid4;
 String urutan5 = headgrid5;
 String urutan6 = headgrid6;
+String urutan7 = headgrid7;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
