@@ -29,14 +29,14 @@ class _HomePageState extends State<HomePage> {
   PageController controller = PageController();
   void _scrollToIndex2(int index) {
     controller.animateToPage(index,
-        duration: Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
+        duration: const Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
   }
 
   //   Untuk pake LIST per height container
   ScrollController controller2 = ScrollController();
   void _scrollToIndex(double index) {
     controller2.animateTo(index,
-        duration: Duration(seconds: 1), curve: Curves.fastLinearToSlowEaseIn);
+        duration: const Duration(seconds: 1), curve: Curves.fastLinearToSlowEaseIn);
   }
 
   int selectedIndex = 0;
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                           onPressed: () {
                             _scrollToIndex(0);
                           },
-                          child: Text(
+                          child: const Text(
                             "Home",
                             style: TextStyle(
                                 fontSize: 17,
@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                           onPressed: () {
                             _scrollToIndex(3150); //// POSISI ABOUT US
                           },
-                          child: Text(
+                          child: const Text(
                             "About us",
                             style: TextStyle(
                                 fontSize: 17,
@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                           onPressed: () {
                             _scrollToIndex(1230); //// POSISI SOLUTION
                           },
-                          child: Text(
+                          child: const Text(
                             "Solution",
                             style: TextStyle(
                                 fontSize: 17,
@@ -122,7 +122,7 @@ class _HomePageState extends State<HomePage> {
                           onPressed: () {
                             _scrollToIndex(5900); //// POSISI CONTACT US
                           },
-                          child: Text(
+                          child: const Text(
                             "Contact Us",
                             style: TextStyle(
                                 fontSize: 17,
@@ -155,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     IconButton(
                         onPressed: () {
                           Navigator.push(
@@ -165,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           );
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.brightness_low_sharp,
                           color: Colors.white,
                         ))
@@ -174,7 +174,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-      floatingActionButton: WAChat(),
+      floatingActionButton: const WAChat(),
       body: ListView(
         scrollDirection: Axis.vertical,
         controller: controller2,
@@ -192,8 +192,8 @@ class _HomePageState extends State<HomePage> {
               _scrollToIndex(5900);
             },
             child: Container(
-              padding: EdgeInsets.all(20),
-              child: Text(
+              padding: const EdgeInsets.all(20),
+              child: const Text(
                 'Learn More',
                 style: TextStyle(
                     fontSize: 15,
@@ -217,8 +217,8 @@ class _HomePageState extends State<HomePage> {
                 _scrollToIndex(5900);
               },
               child: Container(
-                padding: EdgeInsets.all(20),
-                child: Text(
+                padding: const EdgeInsets.all(20),
+                child: const Text(
                   "LEARN MORE",
                   style: TextStyle(
                       fontSize: 15,
@@ -230,7 +230,7 @@ class _HomePageState extends State<HomePage> {
           ),
           const Home9(),
           Home10(),
-          Footer(),
+          const Footer(),
         ],
       ),
     );
