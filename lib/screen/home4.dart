@@ -7,100 +7,84 @@ class Home4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Container(
-          height: 600,
-          width: screenSize.width,
-          //color: Color.fromARGB(255, 0, 36, 192),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Spacer(
-                flex: 1,
+    return Container(
+      height: screenSize.height*0.8,
+      width: screenSize.width,
+      //color: Color.fromARGB(255, 0, 36, 192),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            width: screenSize.width,
+            height: screenSize.height * 0.2,
+            color: Color.fromARGB(255, 0, 36, 192),
+            child: Center(
+              child: Text(
+                overflow: TextOverflow.ellipsis,
+                "Our Partner",
+                style: GoogleFonts.robotoCondensed(
+                    color: Colors.white,
+                    fontSize: 60,
+                    fontWeight: FontWeight.bold),
               ),
-              Container(
-                width: screenSize.width,
-                height: screenSize.height * 0.2,
-                color: Color.fromARGB(255, 0, 36, 192),
-                child: Center(
-                  child: Text(
-                    overflow: TextOverflow.ellipsis,
-                    "Our Partner",
-                    style: GoogleFonts.robotoCondensed(
-                        color: Colors.white,
-                        fontSize: 50,
-                        fontWeight: FontWeight.bold),
+            ),
+          ),
+          Container(
+            height: screenSize.height * 0.3,
+            width: screenSize.width,
+            child: Row(
+              children: [
+                Spacer(
+                  flex: 1,
+                ),
+                Container(
+                  width: screenSize.width * 0.3,
+                  child: Image(image: AssetImage('assets/logo/alibaba.png')),
+                ),
+                Spacer(
+                  flex: 1,
+                ),
+                // BARIS 2
+                Container(
+                  width: screenSize.width * 0.3,
+                  child: Image(image: AssetImage('assets/logo/google.png')),
+                ),
+                Spacer(
+                  flex: 1,
+                ),
+              ],
+            ),
+          ),
+          // KOLOM 2
+          Container(
+            height: screenSize.height * 0.3,
+            width: screenSize.width,
+            child: Row(
+              children: [
+                Spacer(
+                  flex: 1,
+                ),
+                Container(
+                  width: screenSize.width * 0.3,
+                  child: Image(image: AssetImage('assets/logo/aws.png',),
                   ),
                 ),
-              ),
-              Container(
-                height: screenSize.height * 0.3,
-                width: screenSize.width * 0.8,
-
-                child: Row(
-                  children: [
-                    Spacer(
-                      flex: 1,
-                    ),
-                    Container(
-                      width: screenSize.width * 0.3,
-                      child: Image(image: AssetImage('assets/logo/alibaba.png')),
-                    ),
-                    Spacer(
-                      flex: 1,
-                    ),
-                    // BARIS 2
-                    Container(
-                      width: screenSize.width * 0.3,
-                      child: Image(image: AssetImage('assets/logo/google.png')),
-                    ),
-                    Spacer(
-                      flex: 1,
-                    ),
-                  ],
+                Spacer(
+                  flex: 1,
                 ),
-              ),
-              Spacer(
-                flex: 1,
-              ),
-              // KOLOM 2
-              Container(
-                height: screenSize.height * 0.20,
-                width: screenSize.width * 0.8,
-
-                child: Row(
-                  children: [
-                    Spacer(
-                      flex: 1,
-                    ),
-                    Container(
-                      width: screenSize.width * 0.3,
-                      child: Image(image: AssetImage('assets/logo/aws.png',),
-                      ),
-                    ),
-                    Spacer(
-                      flex: 1,
-                    ),
-                    Container(
-                      width: screenSize.width * 0.3,
-                      child: Image(image: AssetImage('assets/logo/huawei.png',),
-                      ),
-                    ),
-                    Spacer(
-                      flex: 1,
-                    ),
-                  ],
+                Container(
+                  width: screenSize.width * 0.3,
+                  child: Image(image: AssetImage('assets/logo/huawei.png',),
+                  ),
                 ),
-              ),
-              Spacer(
-                flex: 2,
-              ),
-            ],
+                Spacer(
+                  flex: 1,
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
