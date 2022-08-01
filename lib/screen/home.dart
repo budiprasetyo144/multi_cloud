@@ -12,6 +12,7 @@ import 'package:mcs_flutter/screen/home6.dart';
 import 'package:mcs_flutter/screen/home7.dart';
 import 'package:mcs_flutter/screen/home8.dart';
 import 'package:mcs_flutter/screen/home9.dart';
+import 'package:mcs_flutter/widget/botton.dart';
 import 'package:mcs_flutter/widget/whatsapp.dart';
 
 import '../widget/responsive.dart';
@@ -306,45 +307,52 @@ class _HomeState extends State<Home> {
                 const Spacer(
                   flex: 1,
                 ),
+
                 Text(
+                  textAlign: TextAlign.justify,
                   overflow: TextOverflow.ellipsis,
                   "If your organization is going to compete",
                   style: GoogleFonts.robotoCondensed(
                       fontSize: 20, color: Colors.black54),
                 ),
                 Text(
+                  textAlign: TextAlign.justify,
                   overflow: TextOverflow.ellipsis,
                   "and win with data, you need multi-cloud.",
                   style: GoogleFonts.robotoCondensed(
                       fontSize: 20, color: Colors.black54),
                 ),
                 Text(
+                  textAlign: TextAlign.justify,
                   overflow: TextOverflow.ellipsis,
                   "It’s the durable, scalable solution that",
                   style: GoogleFonts.robotoCondensed(
                       fontSize: 20, color: Colors.black54),
                 ),
                 Text(
+                  textAlign: TextAlign.justify,
                   overflow: TextOverflow.ellipsis,
                   "allows you to extract more value from your",
                   style: GoogleFonts.robotoCondensed(
                       fontSize: 20, color: Colors.black54),
                 ),
                 Text(
+                  textAlign: TextAlign.justify,
                   overflow: TextOverflow.ellipsis,
                   "data and drive new innovations across your",
                   style: GoogleFonts.robotoCondensed(
                       fontSize: 20, color: Colors.black54),
                 ),
                 Text(
+                  textAlign: TextAlign.justify,
                   overflow: TextOverflow.ellipsis,
                   "business.",
                   style: GoogleFonts.robotoCondensed(
                       fontSize: 20, color: Colors.black54),
                 ),
-                // const Spacer(
-                //   flex: 1,
-                // ),
+                const Spacer(
+                  flex: 1,
+                ),
                 // SizedBox(
                 //   height: screenSize.height * 0.1,
                 //   width: screenSize.width * 0.2,
