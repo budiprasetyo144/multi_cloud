@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mcs_flutter/const/conts.dart';
 import 'package:mcs_flutter/screen/post.dart';
 import 'package:mcs_flutter/screen/post_body.dart';
 import '../text/text_body.dart';
-import 'package:mcs_flutter/widget/container_post.dart';
 import 'package:mcs_flutter/text/text_post.dart';
 
 class Home6 extends StatefulWidget {
@@ -20,7 +18,7 @@ class _Home6State extends State<Home6> {
     return Container(
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 50),
         height: 680,
-        color: Color.fromARGB(255, 12, 66, 101),
+        color: const Color.fromARGB(255, 12, 66, 101),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
