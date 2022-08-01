@@ -13,7 +13,7 @@ String row1 =
     'EKSAD providing services high quality based '
     'on strong experience in the industry and technology. '
     'Building the right IT service solution to enable its '
-    'partners in speeding up business development';
+    'partners in speeding up business development.';
 
 String row2 =
     'EKSAD provides tailored services focusing on clients’ '
