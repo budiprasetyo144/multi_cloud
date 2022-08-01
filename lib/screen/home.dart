@@ -206,7 +206,6 @@ class _HomePageState extends State<HomePage> {
           const Home5(),
           const Home6(),
           const Home7(),
-          //  Home8(isi: 9,),
           Home8(
             isi: ElevatedButton(
               style: ElevatedButton.styleFrom(
