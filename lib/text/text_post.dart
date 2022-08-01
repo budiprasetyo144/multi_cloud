@@ -3,89 +3,101 @@
 String headgrid1 = 'Our Company';
 String headgrid2 = 'Carries';
 String headgrid3 = 'Logistics';
-String headgrid4 = 'Partner EKSAD';
-String headgrid5 = 'Mengapa Cloud Service EKSAD';
-String headgrid6 = 'Tentang EKSAD IT';
+String headgrid4 = 'EKSAD Partner';
+String headgrid5 = 'Why EKSAD Cloud Service';
+String headgrid6 = 'About EKSAD IT';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-String bodygrid1 = 'Eksad Providing Services High Quality Based '
-    'on Strong Experience in the industry and technology. '
-    'Building the right IT Service Solution to enable it '
-    'Partners in speeding up business development'
-    ;
+String bodygrid1 =
+    'Eksad providing services high quality based '
+    'on strong experience ... ';
+    // 'in the industry and technology. '
+    // 'Building the right IT Service Solution to enable it '
+    // 'Partners in speeding up business development';
 
-String bodygrid2 = 'EKSAD provides tailored services focusing on clients’ '
-    'specific demands in international and domestic markets.'
-    'It’s time to bridge the gap and communicate with your '
-    'business across channels.';
-String bodygrid3 = 'Generally the detailed organization and implementation '
-    'of a complex operation. In a general business sense, logistics is '
-    ''
-    'the point of consumption to meet the requirements of customers or corporations.';
+String bodygrid2 =
+    'EKSAD provides tailored services focusing on clients’ '
+    'specific demands ... ';
+    // 'in international and domestic markets.'
+    // 'It’s time to bridge the gap and communicate with your '
+    // 'business across channels.';
 
-String bodygrid4 = 'Partner EKSAD dalam teknologi: '
+String bodygrid3 =
+    'Generally the detailed organization and implementation '
+    'of a complex operation. In a general business sense, logistics is ... ';
+    // 'the point of consumption to meet the requirements of customers or corporations.';
+
+String bodygrid4 =
+    'EKSAD partner in technology: '
     '\n'
     '1. Alibaba Cloud  '
     '2. Google Cloud  '
     '3. Huawei Cloud ...'
     '\n ';
 
-String bodygrid5 = 'Fleksibilitas untuk memilih layanan cloud ... '
-    'EKSAD provides solutions and professional IT resource partners,'
-    'which provides IT experts who are competent in working on company projects '
-    'and have proven technical knowledge. '
-    'EKSAD IT resources also help you improve service performance '
-    'and offer increased flexibility in workforce management.';
+String bodygrid5 =
+    'Flexibility to choose cloud service ... ';
+
 
 String bodygrid6 =
-    'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten ...'
-    'EKSAD provides solutions and professional IT resource partners,'
-    'which provides IT experts who are competent in working on company projects '
-    'and have proven technical knowledge. '
-    'EKSAD IT resources also help you improve service performance '
-    'and offer increased flexibility in workforce management.';
+    'EKSAD provides solutions and professional IT resource partners, which provides competent IT experts ...';
+    // 'which provides IT experts who are competent in working on company projects '
+    // 'and have proven technical knowledge. '
+    // 'EKSAD IT resources also help you improve service performance '
+    // 'and offer increased flexibility in workforce management.';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 String bodyfull1 =
-'Eksad Providing Services High Quality Based '
-    'on Strong Experience in the industry and technology. '
-    'Building the right IT Service Solution to enable it '
-    'Partners in speeding up business development'
-    'About EKSAD IT '
-    'EKSAD provides solutions and professional IT resource partners,'
+    'EKSAD providing services high quality based '
+    'on strong experience in the industry and technology. '
+    'Building the right IT service solution to enable it '
+    'partners in speeding up business development.'
+    '\n'
+    '\n'
+    'EKSAD provides solutions and professional IT resource partners, '
     'which provides IT experts who are competent in working on company projects '
     'and have proven technical knowledge. '
+    '\n'
+    '\n'
     'EKSAD IT resources also help you improve service performance '
-    'and offer increased flexibility in workforce management.'
+    'and offer increased flexibility in workforce management. '
     'Build enterprise-grade containerized applications faster with '
-    'best-in-class managed Kubernetes and serverless platform on cloud '
+    'best-in-class managed kubernetes and serverless platform on cloud '
     'and on-premises environments. You can build a fast, scalable software '
     'delivery pipeline no matter where you run by seamlessly implementing DevOps '
-    'and SRE practices with cloud-native tooling and expert guidance.';
-String bodyfull2 = 
-'EKSAD provides tailored services focusing on clients’ '
-    'specific demands in international and domestic markets.'
+    'and SRE practices with cloud-native tooling and expert guidance.'
+    '\n';
+
+String bodyfull2 =
+    'EKSAD provides tailored services focusing on clients’ '
+    'specific demands in international and domestic markets. '
     'It’s time to bridge the gap and communicate with your '
-    'business across channels.'
-'Multicloud - the use of cloud services from two or '
+    'business across channels. '
+    '\n'
+    '\n'
+    'Multicloud - the use of cloud services from two or '
     'more vendors - gives organizations more flexibility to optimize performance, '
-    'control costs, and leverage the best cloud technologies available.';
+    'control costs, and leverage the best cloud technologies available.'
+    '\n';
 
 String bodyfull3 =
-'Generally the detailed organization and implementation '
+    'Generally the detailed organization and implementation '
     'of a complex operation. In a general business sense, logistics is '
-    ''
-    'the point of consumption to meet the requirements of customers or corporations.'
+    'the point of consumption to meet the requirements of customers or corporations. '
+    '\n'
+    '\n'
     'Multicloud is the use of cloud services from more than one cloud vendor. '
     'It can be as simple as using software-as-a-service (SaaS) from different cloud vendors – '
-    'e.g., Salesforce and Workday. But in the enterprise, multicloud typically refers to '
+    'e.g., salesforce and workday. But in the enterprise, multicloud typically refers to '
     'running enterprise applications on platform-as-a-service (PaaS) or infrastructure-as-a-service '
     '(IaaS) from multiple cloud service providers, such as Amazon Web Services (AWS), '
-    'Google Cloud Platform, IBM Cloud and Microsoft Azure.';
+    'Google Cloud Platform, IBM Cloud and Microsoft Azure.'
+    '\n';
 
-String bodyfull4 = 'Partner EKSAD dalam teknologi: '
+String bodyfull4 =
+    'EKSAD Partner in technology: '
     '\n'
     '1. Alibaba Cloud'
     '\n'
@@ -97,70 +109,66 @@ String bodyfull4 = 'Partner EKSAD dalam teknologi: '
     '\n ';
 
 String bodyfull5 =
-    'Fleksibilitas untuk memilih layanan cloud dari penyedia cloud yang berbeda '
-    'berdasarkan kombinasi harga, kinerja, keamanan, dan persyaratan kepatuhan, '
-    'lokasi geografis yang paling sesuai dengan bisnis'
+    'Flexibility to select cloud services from different cloud providers '
+    'based on the combination of pricing, performance, security, '
+    'and compliance requirements, geographic location that best suited to business.'
     '\n';
 
-// 'Flexibility to choose cloud services from different cloud providers '
-// 'based on the combination of pricing, performance, security and compliance requirements, '
-// 'geographical location that best suits the business;'
-
 String bodyfull6 =
-    'EKSAD memberikan solusi dan mitra resources IT yang professional, yang menyediakan tenaga ahli IT yang berkompeten '
-    'dalam mengerjakan proyek-proyek perusahaan serta memiliki pengetahuan teknis yang terbukti. '
-    'EKSAD IT resources juga membantu Anda dalam meningkatkan kinerja layanan dan '
-    'menawarkan peningkatan fleksibilitas dalam manajemen tenaga kerja. '
+    'EKSAD provides solutions and professional IT resource partners, '
+    'which provide IT experts who are competent in working on company projects '
+    'and have proven technical knowledge. '
+    'EKSAD IT resources also help you improve service performance '
+    'and offer increased flexibility in workforce management. '
     '\n'
     '\n'
-    ''
-    'Keunggulan Kami:'
+    'Our Advantages:'
     '\n'
-    '1. Kecepatan'
+    '1. Speed'
     '\n'
-    'Pemenuhan sumber daya maksimal 3 bulan dari PO'
-    '\n'
-    '\n'
-    '2. Integritas & Komitmen'
-    '\n'
-    'Sumber daya dengan integritas dan komitmen yang tinggi dalam menyelesaikan tugas'
+    'Fulfillment of resources a maximum of 3 months from PO'
     '\n'
     '\n'
-    '3. Kompeten'
+    '2. Integrity & Commitment'
     '\n'
-    'Sumber daya yang sudah terlatih dan bersertifikasi'
-    '\n'
-    '\n'
-    '4. Fleksibel'
-    '\n'
-    'Fleksibilitas untuk klien yang akan merekrut sumber daya menjadi permanen karyawan'
+    'Resources with high integrity and commitment in completing tasks'
     '\n'
     '\n'
-    '5. Bisnis Fokus'
+    '3. Competent'
     '\n'
-    'Membantu klien untuk fokus pada aktivitas bisnis utama mereka'
+    'Trained and certified resources'
     '\n'
     '\n'
-    '6. Biaya Kompetitif'
+    '4. Flexibility'
     '\n'
-    'Harga kompetitif dievaluasi setiap 2 tahun'
+    'Flexibility for clients who will recruit resources to become permanent employees'
+    '\n'
+    '\n'
+    '5. Focus Business'
+    '\n'
+    'Helping clients to focus on their main business activities'
+    '\n'
+    '\n'
+    '6. Competitive Cost'
+    '\n'
+    'Competitive price evaluated every 2 years'
     '\n';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-String tanggal = '22 Juli 2022';
-String tanggal2 = '21 Juli 2022';
-String tanggal3 = '20 Juli 2022';
-String tanggal4 = '19 Juli 2022';
-String tanggal5 = '18 Juli 2022';
-String tanggal6 = '17 Juli 2022';
+String tanggal = '22 July 2022';
+String tanggal2 = '21 July 2022';
+String tanggal3 = '20 July 2022';
+String tanggal4 = '19 July 2022';
+String tanggal5 = '18 July 2022';
+String tanggal6 = '17 July 2022';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 String urutan1 = headgrid1;
 String urutan2 = headgrid2;
 String urutan3 = headgrid3;
-String urutan4 =headgrid4;
+String urutan4 = headgrid4;
 String urutan5 = headgrid5;
 String urutan6 = headgrid6;
 

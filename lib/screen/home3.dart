@@ -33,7 +33,7 @@ class Home3 extends StatelessWidget {
               children: [
                 Text(
                   overflow: TextOverflow.ellipsis,
-                  "ExplorAA Cloud solutions",
+                  "Explore Cloud solutions",
                   style: GoogleFonts.robotoCondensed(
                       color: Color.fromARGB(255, 12, 66, 101),
                       fontSize: 50,
