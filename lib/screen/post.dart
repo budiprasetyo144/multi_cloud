@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mcs_flutter/dashboard/dashboard.dart';
 import 'package:mcs_flutter/widget/container_post.dart';
 import 'package:mcs_flutter/text/text_post.dart';
 import 'package:mcs_flutter/screen/post_body.dart';
@@ -20,12 +21,38 @@ class _PostState extends State<Post> {
     return Scaffold(
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarSmallSize(screenSize)
-          : AppbarFullSize(screenSize, context),
+          : PreferredSize(
+        preferredSize: Size(screenSize.width, 110),
+        child: Row(
+          children: [
+            SizedBox(width: screenSize.width*0.02,),
+            Container(
+              padding:
+              const EdgeInsets.only(left: 30, top: 20, bottom: 20),
+              child: Image.asset("assets/logo/multicloudsolution.jpg"),
+            ),
+            Spacer(flex: 7,),
+            IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Dashboard(),
+                    ),
+                  );
+                },
+                icon: Icon(
+                  Icons.brightness_low_sharp,
+                  color: Colors.white,
+                ))
+          ],
+        ),
+      ),
       body: ListView(
         children: [
           Container(
             //height: 800,
-            color: Colors.white,
+            color: Colors.white70,
             child: Column(
               children: [
                 Container(
@@ -92,7 +119,7 @@ class _PostState extends State<Post> {
                         ImageGrid: 'assets/images/xcxcxc.jpg',
                         BodyGrid: bodygrid1,
                         arah: PostBody(
-                          Image: 'assets/images/xcxcxc.jpg',
+                          Imagez: 'assets/images/xcxcxc.jpg',
                           HeadText: headgrid1,
                           Tanggal: tanggal,
                           Bodyfull: bodyfull1,
@@ -104,7 +131,7 @@ class _PostState extends State<Post> {
                         ImageGrid: 'assets/images/vbvb.jpg',
                         BodyGrid: bodygrid2,
                         arah: PostBody(
-                          Image: 'assets/images/vbvb.jpg',
+                          Imagez: 'assets/images/vbvb.jpg',
                           HeadText: headgrid2,
                           Tanggal: tanggal,
                           Bodyfull: bodyfull2,
@@ -116,7 +143,7 @@ class _PostState extends State<Post> {
                         ImageGrid: 'assets/images/cvcvcv.jpg',
                         BodyGrid: bodygrid3,
                         arah: PostBody(
-                          Image: 'assets/images/cvcvcv.jpg',
+                          Imagez: 'assets/images/cvcvcv.jpg',
                           HeadText: headgrid3,
                           Tanggal: tanggal,
                           Bodyfull: bodyfull3,
@@ -128,7 +155,7 @@ class _PostState extends State<Post> {
                         ImageGrid: 'assets/images/partner eksad.jpg',
                         BodyGrid: bodygrid4,
                         arah: PostBody(
-                          Image: 'assets/images/partner eksad.jpg',
+                          Imagez: 'assets/images/partner eksad.jpg',
                           HeadText: headgrid4,
                           Tanggal: tanggal4,
                           Bodyfull: bodyfull4,
@@ -140,7 +167,7 @@ class _PostState extends State<Post> {
                         ImageGrid: 'assets/images/problem solution.jpg',
                         BodyGrid: bodygrid5,
                         arah: PostBody(
-                          Image: 'assets/images/keuntungan.jpg',
+                          Imagez: 'assets/images/keuntungan.jpg',
                           HeadText: headgrid5,
                           Tanggal: tanggal5,
                           Bodyfull: bodyfull5,
@@ -152,7 +179,7 @@ class _PostState extends State<Post> {
                         ImageGrid: 'assets/images/1.jpeg',
                         BodyGrid: bodygrid6,
                         arah: PostBody(
-                          Image: 'assets/images/1.jpeg',
+                          Imagez: 'assets/images/1.jpeg',
                           HeadText: headgrid6,
                           Tanggal: tanggal6,
                           Bodyfull: bodyfull6,

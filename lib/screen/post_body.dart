@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mcs_flutter/dashboard/dashboard.dart';
 import 'package:mcs_flutter/screen/footer.dart';
 import 'package:mcs_flutter/widget/responsive.dart';
 import 'package:mcs_flutter/screen/appbar.dart';
@@ -8,14 +9,14 @@ import 'package:mcs_flutter/screen/post.dart';
 
 
 class PostBody extends StatelessWidget {
-  final String Image;
+  final String Imagez;
   final String HeadText;
   final String Tanggal;
   final String Bodyfull;
   final String Urutan;
   const PostBody(
       {Key? key,
-        required this.Image,
+        required this.Imagez,
         required this.HeadText,
         required this.Tanggal,
         required this.Bodyfull,
@@ -29,7 +30,33 @@ class PostBody extends StatelessWidget {
     return Scaffold(
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppbarSmallSize(screenSize)
-          : AppbarFullSize(screenSize, context),
+          : PreferredSize(
+        preferredSize: Size(screenSize.width, 110),
+        child: Row(
+          children: [
+            SizedBox(width: screenSize.width*0.02,),
+            Container(
+              padding:
+              const EdgeInsets.only(left: 30, top: 20, bottom: 20),
+              child: Image.asset("assets/logo/multicloudsolution.jpg"),
+            ),
+            Spacer(flex: 7,),
+            IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Dashboard(),
+                    ),
+                  );
+                },
+                icon: Icon(
+                  Icons.brightness_low_sharp,
+                  color: Colors.white,
+                ))
+          ],
+        ),
+      ),
       body: ListView(
         children: [
           SingleChildScrollView(
@@ -87,7 +114,7 @@ class PostBody extends StatelessWidget {
                   Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage(Image),
+                          image: AssetImage(Imagez),
                           fit: BoxFit.cover),
                     ),
                     height: 450,

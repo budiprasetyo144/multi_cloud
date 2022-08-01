@@ -67,7 +67,7 @@ class _Home6State extends State<Home6> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => PostBody(
-                                    Image: 'assets/images/xcxcxc.jpg',
+                                    Imagez: 'assets/images/xcxcxc.jpg',
                                     HeadText: headgrid1,
                                     Tanggal: tanggal,
                                     Bodyfull: bodyfull1,
@@ -128,7 +128,7 @@ class _Home6State extends State<Home6> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => PostBody(
-                                    Image: 'assets/images/vbvb.jpg',
+                                    Imagez: 'assets/images/vbvb.jpg',
                                     HeadText: headgrid2,
                                     Tanggal: tanggal,
                                     Bodyfull: bodyfull2,
@@ -187,7 +187,7 @@ class _Home6State extends State<Home6> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => PostBody(
-                                    Image: 'assets/images/cvcvcv.jpg',
+                                    Imagez: 'assets/images/cvcvcv.jpg',
                                     HeadText: headgrid3,
                                     Tanggal: tanggal,
                                     Bodyfull: bodyfull3,
