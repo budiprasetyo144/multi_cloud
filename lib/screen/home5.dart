@@ -16,7 +16,7 @@ class _Home5State extends State<Home5> {
     var screenSize = MediaQuery.of(context).size;
     return Container(
         height: 620,
-        color: Color(-12166252),
+      color: const Color.fromARGB(255, 227, 235, 253),
         child: Row(
           //crossAxisAlignment: CrossAxisAlignment.center,
           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
