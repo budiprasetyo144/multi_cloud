@@ -11,7 +11,7 @@ class Home9 extends StatelessWidget {
     var screenSize = MediaQuery.of(context).size;
 
     return Container(
-      color: kPrimaryColor,
+      color: Color.fromARGB(255, 12, 66, 101),
       child: SizedBox(
         height: screenSize.height*0.75,
         width: screenSize.width,
@@ -27,7 +27,7 @@ class Home9 extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 child: SizedBox.fromSize(
                   size: const Size.fromRadius(48),
-                  child: Image.network("assets/images/vbbvvb.jpg",
+                  child: Image.network("assets/images/cloud.jpg",
                       fit: BoxFit.cover),
                 ),
               ),
@@ -50,7 +50,7 @@ class Home9 extends StatelessWidget {
                 children: [
 
                   Text(
-                    "Our Vission & Mission "
+                    "Our Vision & Mission "
                         "\n",
                     style: TextStyle(
                         fontSize: 30,

@@ -20,7 +20,7 @@ class _Home6State extends State<Home6> {
     return Container(
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 50),
         height: 680,
-        color: kPrimaryColor,
+        color: Color.fromARGB(255, 12, 66, 101),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

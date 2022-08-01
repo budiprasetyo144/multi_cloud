@@ -15,7 +15,7 @@ class Home4 extends StatelessWidget {
             Container(
               height: 600,
               width: screenSize.width,
-              color: Color.fromARGB(255, 0, 36, 192),
+              color: Color.fromARGB(255, 12, 66, 101),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -27,7 +27,7 @@ class Home4 extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       "Our Partner",
                       style: GoogleFonts.robotoCondensed(
-                          color: Colors.white,
+                          color: Color.fromARGB(255, 241, 252, 254),
                           fontSize: 50,
                           fontWeight: FontWeight.bold),
                     ),
