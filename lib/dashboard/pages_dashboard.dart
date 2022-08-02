@@ -41,7 +41,54 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     ),
                   ),
                 ),
-                ElevatedButton(onPressed: (){}, child: Text('Add New Pages'))
+                ElevatedButton(onPressed: (){
+                  showDialog<String>(
+                    context: context,
+                    builder: (BuildContext context) => AlertDialog(
+                      title: Center(child: const Text('ADD NEW PAGES')),
+                      content: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        verticalDirection: VerticalDirection.down,
+
+                        children: [
+                          Container(
+                            width: 200,
+                            child: TextFormField(
+                              textAlign: TextAlign.start,
+                              decoration: InputDecoration(
+                                labelText: "Masukkan Nama",
+                                hintStyle: TextStyle(),
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5.0)),
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 40,),
+                          Container(
+                            width: 200,
+                            child: TextFormField(
+                              textAlign: TextAlign.start,
+                              maxLines: 7,
+                              decoration: InputDecoration(
+                                labelText: "Masukkan Keterangan",
+                                hintStyle: TextStyle(),
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5.0)),
+                              ),
+                            ),
+                          ),
+
+                        ],
+                      ),
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: () => Navigator.pop(context, 'SAVE'),
+                          child: const Text('OK'),
+                        ),
+                      ],
+                    ),
+                  );
+                }, child: Text('Add New Pages'))
               ],
             ),
           ),
@@ -443,3 +490,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
     );
   }
 }
+
+
+
+
