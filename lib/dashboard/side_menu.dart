@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/dashboard/main_dashboard.dart';
 import 'package:mcs_flutter/dashboard/news_dashboard.dart';
-import 'package:mcs_flutter/dashboard/ourtalent_dashboard.dart';
+import 'package:mcs_flutter/dashboard/ourpartner_dashboard.dart';
 import 'package:mcs_flutter/dashboard/pages_dashboard.dart';
 import 'package:mcs_flutter/dashboard/setting_dashboard.dart';
 import 'package:side_navigation/side_navigation.dart';
@@ -18,7 +18,7 @@ List<Widget> views = [
   SettingDashboard(),
   PagesDashboard(),
   NewsDashboard(),
-  OurTalent()
+  OurPartner()
 ];
 
 int selectedIndex = 0;
@@ -73,8 +73,8 @@ class _SideMenuState extends State<SideMenu> {
                 label: 'News',
               ),
               SideNavigationBarItem(
-                icon: Icons.currency_bitcoin,
-                label: 'Our Talent',
+                icon: Icons.group,
+                label: 'Our Partner',
               ),
             ],
             onTap: (index) {
