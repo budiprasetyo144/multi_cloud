@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/dashboard/main_dashboard.dart';
 import 'package:mcs_flutter/dashboard/news_dashboard.dart';
+import 'package:mcs_flutter/dashboard/ourtalent_dashboard.dart';
 import 'package:mcs_flutter/dashboard/pages_dashboard.dart';
 import 'package:mcs_flutter/dashboard/setting_dashboard.dart';
 import 'package:side_navigation/side_navigation.dart';
@@ -11,14 +12,14 @@ class SideMenu extends StatefulWidget {
   @override
   State<SideMenu> createState() => _SideMenuState();
 }
+
 List<Widget> views = [
   MainDashboard(),
   SettingDashboard(),
   PagesDashboard(),
-  NewsDashboard()
+  NewsDashboard(),
+  OurTalent()
 ];
-
-
 
 int selectedIndex = 0;
 
@@ -45,7 +46,8 @@ class _SideMenuState extends State<SideMenu> {
                       color: Colors.white,
                       fontSize: 18,
                       fontWeight: FontWeight.bold),
-                ),),
+                ),
+              ),
               subtitle: Container(),
               // subtitle: Text(
               //   'Admin Eksad',
@@ -70,6 +72,10 @@ class _SideMenuState extends State<SideMenu> {
                 icon: Icons.post_add,
                 label: 'News',
               ),
+              SideNavigationBarItem(
+                icon: Icons.currency_bitcoin,
+                label: 'Our Talent',
+              ),
             ],
             onTap: (index) {
               setState(() {
@@ -80,13 +86,13 @@ class _SideMenuState extends State<SideMenu> {
             // Make use of standard() constructor for other themes
             theme: SideNavigationBarTheme(
               backgroundColor:
-              //Color.fromARGB(200, 9, 47, 171),
-              Color.fromARGB(255, 18, 108, 178),
+                  //Color.fromARGB(200, 9, 47, 171),
+                  Color.fromARGB(255, 18, 108, 178),
               togglerTheme: SideNavigationBarTogglerTheme(
-                  shrinkIconColor: Colors.white,
-                  expandIconColor: Colors.white),
-              itemTheme:
-              SideNavigationBarItemTheme(selectedItemColor: Colors.white,unselectedItemColor: Colors.white60),
+                  shrinkIconColor: Colors.white, expandIconColor: Colors.white),
+              itemTheme: SideNavigationBarItemTheme(
+                  selectedItemColor: Colors.white,
+                  unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),
             ),
           ),

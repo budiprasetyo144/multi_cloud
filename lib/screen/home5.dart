@@ -21,7 +21,7 @@ class _Home5State extends State<Home5> {
           //crossAxisAlignment: CrossAxisAlignment.center,
           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Spacer(
+            const Spacer(
               flex: 3,
             ),
             Container(
@@ -36,7 +36,7 @@ class _Home5State extends State<Home5> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Container(
-                    padding: EdgeInsets.only(left: 30),
+                    padding: const EdgeInsets.only(left: 30),
                     child: Image.asset(
                       'assets/icons/206058.png',
                       height: 50,
@@ -46,10 +46,10 @@ class _Home5State extends State<Home5> {
                   Container(
                     width: screenSize.width * 0.5,
                     height: 350,
-                    padding: EdgeInsets.only(left: 30, right: 20),
+                    padding: const EdgeInsets.only(left: 30, right: 20),
                     child: Text(
                       whiteline,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 20,
                           color: Color.fromARGB(255, 118, 118, 118),
                           letterSpacing: 2,
@@ -59,35 +59,35 @@ class _Home5State extends State<Home5> {
                 ],
               ),
             ),
-            Spacer(
+            const Spacer(
               flex: 1,
             ),
             Container(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 241, 23, 42),
+                color: const Color.fromARGB(255, 241, 23, 42),
                 borderRadius: BorderRadius.circular(30),
               ),
-              padding: EdgeInsets.symmetric(vertical: 17, horizontal: 34),
+              padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 34),
               width: screenSize.width * 0.3,
               height: screenSize.height * 0.5,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  SizedBox(height: 20,),
-                  Container(
+                  const SizedBox(height: 20,),
+                  SizedBox(
                     height: screenSize.height*0.4,
                     width: screenSize.width * 0.25,
                     child: Text(
                       redline,
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.white, fontSize: 22, height: 1.5),
                     ),
                   ),
                 ],
               ),
             ),
-            Spacer(
+            const Spacer(
               flex: 3,
             ),
           ],

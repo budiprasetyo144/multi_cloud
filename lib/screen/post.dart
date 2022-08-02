@@ -32,6 +32,25 @@ class _PostState extends State<Post> {
               child: Image.asset("assets/logo/multicloudsolution.jpg"),
             ),
             Spacer(flex: 7,),
+          SizedBox(
+            height: 50,
+            width: 250,
+            child: TextFormField(
+              decoration: InputDecoration(
+                labelText: "Search",
+                prefixIcon: const Icon(Icons.search),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15),
+                  borderSide: const BorderSide(width: 1, color: Colors.blue),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15),
+                  borderSide: const BorderSide(width: 1, color: Colors.blue),
+                ),
+              ),
+            ),
+          ),
+            Spacer(),
             IconButton(
                 onPressed: () {
                   Navigator.push(
@@ -152,10 +171,10 @@ class _PostState extends State<Post> {
                       ),
                       GridContainer(
                         HeadGrid: headgrid4,
-                        ImageGrid: 'assets/images/partner eksad.jpg',
+                        ImageGrid: 'assets/images/partner_eksad.jpg',
                         BodyGrid: bodygrid4,
                         arah: PostBody(
-                          Imagez: 'assets/images/partner eksad.jpg',
+                          Imagez: 'assets/images/partner_eksad.jpg',
                           HeadText: headgrid4,
                           Tanggal: tanggal4,
                           Bodyfull: bodyfull4,
@@ -164,7 +183,7 @@ class _PostState extends State<Post> {
                       ),
                       GridContainer(
                         HeadGrid: headgrid5,
-                        ImageGrid: 'assets/images/problem solution.jpg',
+                        ImageGrid: 'assets/images/problem_solution.jpg',
                         BodyGrid: bodygrid5,
                         arah: PostBody(
                           Imagez: 'assets/images/keuntungan.jpg',

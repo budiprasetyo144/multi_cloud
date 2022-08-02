@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:mcs_flutter/widget/botton.dart';
-import 'package:mcs_flutter/const/conts.dart';
+
 
 class Home9 extends StatelessWidget {
   const Home9({Key? key}) : super(key: key);
@@ -11,7 +9,7 @@ class Home9 extends StatelessWidget {
     var screenSize = MediaQuery.of(context).size;
 
     return Container(
-      color: Color.fromARGB(255, 12, 66, 101),
+      color: const Color.fromARGB(255, 12, 66, 101),
       child: SizedBox(
         height: screenSize.height*0.75,
         width: screenSize.width,
@@ -81,7 +79,7 @@ class Home9 extends StatelessWidget {
                           fontWeight: FontWeight.bold
                       )),
 
-                  const Text("Establish excellent end to end IT Services to enable clients to grow their business rapidly thru high competence and professional resources."
+                  const Text("Establish excellent end to end IT Services to enable clients to grow their business rapidly through high competence and professional resources."
                           "\n",
                       style: TextStyle(
                           fontSize: 18,

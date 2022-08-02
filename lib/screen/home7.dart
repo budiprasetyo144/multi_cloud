@@ -10,11 +10,11 @@ class Home7 extends StatelessWidget {
     return Container(
       color: const Color.fromARGB(255, 227, 235, 253),
       height: 740,
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       width: screenSize.width,
       child: Column(
         children: [
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           const Center(
             child: Text("Multi Cloud Solutions",
                 style: TextStyle(
@@ -22,7 +22,7 @@ class Home7 extends StatelessWidget {
                     color: kTextColor,
                     fontWeight: FontWeight.bold)),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -34,8 +34,8 @@ class Home7 extends StatelessWidget {
                 height: 300,
                 width: screenSize.width * 0.30,
                 child: Column(
-                  children: [
-                    Text("Effeciency Improvement",
+                  children: const [
+                    Text("Efficiency Improvement",
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold
@@ -57,7 +57,7 @@ class Home7 extends StatelessWidget {
                 height: 300,
                 width: screenSize.width * 0.30,
                 child: Column(
-                  children: [
+                  children: const [
                     Text("Better Scalability",
                       style: TextStyle(
                           fontSize: 24,
@@ -85,7 +85,7 @@ class Home7 extends StatelessWidget {
                 height: 300,
                 width: screenSize.width * 0.30,
                 child: Column(
-                  children: [
+                  children: const [
                     Text("Agility & Adaptability",
                       style: TextStyle(
                           fontSize: 24,
@@ -112,7 +112,7 @@ class Home7 extends StatelessWidget {
                 height: 300,
                 width: screenSize.width * 0.30,
                 child: Column(
-                  children: [
+                  children: const [
                     Text("Faster Development Cycles",
                       style: TextStyle(
                           fontSize: 24,

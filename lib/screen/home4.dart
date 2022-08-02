@@ -7,7 +7,7 @@ class Home4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       height: screenSize.height*0.8,
       width: screenSize.width,
       //color: Color.fromARGB(255, 0, 36, 192),
@@ -17,7 +17,7 @@ class Home4 extends StatelessWidget {
           Container(
             width: screenSize.width,
             height: screenSize.height * 0.2,
-            color: Color.fromARGB(255, 0, 36, 192),
+            color: const Color.fromARGB(255, 0, 36, 192),
             child: Center(
               child: Text(
                 overflow: TextOverflow.ellipsis,
@@ -29,55 +29,55 @@ class Home4 extends StatelessWidget {
               ),
             ),
           ),
-          Container(
+          SizedBox(
             height: screenSize.height * 0.3,
             width: screenSize.width,
             child: Row(
               children: [
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
-                Container(
+                SizedBox(
                   width: screenSize.width * 0.3,
-                  child: Image(image: AssetImage('assets/logo/alibaba.png')),
+                  child: const Image(image: AssetImage('assets/logo/alibaba.png')),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
                 // BARIS 2
-                Container(
+                SizedBox(
                   width: screenSize.width * 0.3,
-                  child: Image(image: AssetImage('assets/logo/google.png')),
+                  child: const Image(image: AssetImage('assets/logo/google.png')),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
               ],
             ),
           ),
           // KOLOM 2
-          Container(
+          SizedBox(
             height: screenSize.height * 0.3,
             width: screenSize.width,
             child: Row(
               children: [
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
-                Container(
+                SizedBox(
                   width: screenSize.width * 0.3,
-                  child: Image(image: AssetImage('assets/logo/aws.png',),
+                  child: const Image(image: AssetImage('assets/logo/aws.png',),
                   ),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
-                Container(
+                SizedBox(
                   width: screenSize.width * 0.3,
-                  child: Image(image: AssetImage('assets/logo/huawei.png',),
+                  child: const Image(image: AssetImage('assets/logo/huawei.png',),
                   ),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
               ],

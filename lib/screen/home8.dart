@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mcs_flutter/widget/botton.dart';
 import 'package:mcs_flutter/const/conts.dart';
 
 class Home8 extends StatelessWidget {
@@ -10,7 +8,7 @@ class Home8 extends StatelessWidget {
   PageController controller = PageController();
   void _scrollToIndex(int index) {
     controller.animateToPage(index,
-        duration: Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
+        duration: const Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
   }
 
 
@@ -33,7 +31,7 @@ class Home8 extends StatelessWidget {
         ),
         Column(
           children:  [
-            SizedBox(
+            const SizedBox(
               height: 150,
             ),
             Center(

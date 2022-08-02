@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../widget/botton.dart';
-import '../const/conts.dart';
+// import '../widget/botton.dart';
+// import '../const/conts.dart';
 
 class Home3 extends StatelessWidget {
   Home3({super.key, required this.isi});
@@ -10,8 +10,10 @@ class Home3 extends StatelessWidget {
   Widget isi;
   PageController controller = PageController();
   void _scrollToIndex(int index) {
-    controller.animateToPage(index,
-        duration: Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
+    controller.animateToPage(
+        index,
+        duration: const Duration(seconds: 2),
+        curve: Curves.fastLinearToSlowEaseIn);
   }
 
   @override
@@ -20,7 +22,7 @@ class Home3 extends StatelessWidget {
     return Container(
       height: screenSize.height * 0.91,
       width: screenSize.width,
-      color: Color.fromARGB(255, 241, 252, 254),
+      color: const Color.fromARGB(255, 241, 252, 254),
       child: Row(
         children: [
           Container(
@@ -35,7 +37,7 @@ class Home3 extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   "Explore Cloud solutions",
                   style: GoogleFonts.robotoCondensed(
-                      color: Color.fromARGB(255, 12, 66, 101),
+                      color: const Color.fromARGB(255, 12, 66, 101),
                       fontSize: 50,
                       fontWeight: FontWeight.bold),
                 ),
@@ -46,14 +48,14 @@ class Home3 extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   "for every challenge and",
                   style: GoogleFonts.robotoCondensed(
-                      color: Color.fromARGB(255, 12, 66, 101),
+                      color: const Color.fromARGB(255, 12, 66, 101),
                       fontSize: 50,
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
                   "budget",
                   style: GoogleFonts.robotoCondensed(
-                      color: Color.fromARGB(255, 12, 66, 101),
+                      color: const Color.fromARGB(255, 12, 66, 101),
                       fontSize: 50,
                       fontWeight: FontWeight.bold),
                 ),
@@ -138,7 +140,7 @@ class Home3 extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Container(
+                    SizedBox(
                       width: screenSize.width * 0.1,
                       height: screenSize.height * 0.08,
                       child: isi
