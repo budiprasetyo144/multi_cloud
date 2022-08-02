@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class OurPartner extends StatefulWidget {
-  const OurPartner({Key? key}) : super(key: key);
+class OurTalent extends StatefulWidget {
+  const OurTalent({Key? key}) : super(key: key);
 
   @override
-  State<OurPartner> createState() => _OurPartnerState();
+  State<OurTalent> createState() => _OurTalentState();
 }
 
 // @override
@@ -24,7 +24,7 @@ class OurPartner extends StatefulWidget {
 //   );
 // }
 
-class _OurPartnerState extends State<OurPartner> {
+class _OurTalentState extends State<OurTalent> {
   //position , skill , level , industry, location
 
   int selectedIndex = 0;
@@ -62,7 +62,7 @@ class _OurPartnerState extends State<OurPartner> {
                     height: 95,
                     width: 1200,
                     child: Text(
-                      'Our Partner',
+                      'Our Talent',
                       style: TextStyle(
                           fontSize: 35,
                           color: Colors.white,

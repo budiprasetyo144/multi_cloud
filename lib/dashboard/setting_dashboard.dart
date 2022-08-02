@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mcs_flutter/dashboard/dashboard.dart';
 import 'package:mcs_flutter/dashboard/main_dashboard.dart';
 
-
 class SettingDashboard extends StatefulWidget {
   const SettingDashboard({super.key});
 
@@ -57,11 +56,14 @@ class _SettingDashboardState extends State<SettingDashboard> {
                       ),
                       onPressed: () {
                         Navigator.push(
-                            context, MaterialPageRoute(builder: (context) => Dashboard()));
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Dashboard()));
                       },
                       child: Text(
                         'Save Setting',
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ],
@@ -84,7 +86,9 @@ class _SettingDashboardState extends State<SettingDashboard> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(width: 20,),
+                          SizedBox(
+                            width: 20,
+                          ),
                           Text(
                             "Site icon",
                             style: TextStyle(
@@ -98,15 +102,15 @@ class _SettingDashboardState extends State<SettingDashboard> {
                           Container(
                             height: 50,
                             width: 150,
-                            child:
-                            Image.asset("assets/logo/multicloudsolution.jpg"),
+                            child: Image.asset(
+                                "assets/logo/multicloudsolution.jpg"),
                           ),
                           SizedBox(
                             height: 20,
                           ),
                           Container(
                               height: 30,
-                              width: 100,
+                              width: 150,
                               child: ElevatedButton(
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(
@@ -117,7 +121,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                     // shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
                                   ),
                                   child: Text(
-                                    "Change",
+                                    "Choose Image",
                                     style: TextStyle(color: Colors.black),
                                   ))),
                           SizedBox(
@@ -125,7 +129,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                           ),
                           Container(
                               height: 30,
-                              width: 100,
+                              width: 150,
                               child: ElevatedButton(
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(
@@ -136,8 +140,8 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                     // shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
                                   ),
                                   child: Text(
-                                    "Remove",
-                                    style: TextStyle(color: Colors.red),
+                                    "Upload Image",
+                                    style: TextStyle(color: Colors.black),
                                   )))
                         ],
                       ),
@@ -219,7 +223,9 @@ class _SettingDashboardState extends State<SettingDashboard> {
                 ),
                 Row(
                   children: [
-                    SizedBox(width: 20,),
+                    SizedBox(
+                      width: 20,
+                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -279,7 +285,6 @@ class _SettingDashboardState extends State<SettingDashboard> {
                     ),
                   ],
                 ),
-
                 Spacer(
                   flex: 20,
                 ),
