@@ -32,6 +32,25 @@ class _PostState extends State<Post> {
               child: Image.asset("assets/logo/multicloudsolution.jpg"),
             ),
             Spacer(flex: 7,),
+          SizedBox(
+            height: 50,
+            width: 250,
+            child: TextFormField(
+              decoration: InputDecoration(
+                labelText: "Search",
+                prefixIcon: const Icon(Icons.search),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15),
+                  borderSide: const BorderSide(width: 1, color: Colors.blue),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15),
+                  borderSide: const BorderSide(width: 1, color: Colors.blue),
+                ),
+              ),
+            ),
+          ),
+            Spacer(),
             IconButton(
                 onPressed: () {
                   Navigator.push(
