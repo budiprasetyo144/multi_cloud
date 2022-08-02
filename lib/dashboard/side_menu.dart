@@ -73,7 +73,7 @@ class _SideMenuState extends State<SideMenu> {
                 label: 'News',
               ),
               SideNavigationBarItem(
-                icon: Icons.currency_bitcoin,
+                icon: Icons.group,
                 label: 'Our Talent',
               ),
             ],
