@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:data_table_2/data_table_2.dart';
+import 'package:mcs_flutter/api/page_api.dart';
 import 'package:mcs_flutter/dashboard/dashboard.dart';
-import 'package:mcs_flutter/screen/home.dart';
 
 class PagesDashboard extends StatefulWidget {
   const PagesDashboard({Key? key}) : super(key: key);
@@ -11,6 +11,11 @@ class PagesDashboard extends StatefulWidget {
 }
 
 class _PagesDashboardState extends State<PagesDashboard> {
+
+  final formKey = GlobalKey<FormState>();
+  String nm = '';
+  String pg = '';
+
   String allDates = 'All dates';
   bool value = false;
   bool value1 = false;
@@ -46,44 +51,63 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     context: context,
                     builder: (BuildContext context) => AlertDialog(
                       title: Center(child: const Text('ADD NEW PAGES')),
-                      content: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        verticalDirection: VerticalDirection.down,
+                      content: Form(
+                        key: formKey,
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          verticalDirection: VerticalDirection.down,
 
-                        children: [
-                          Container(
-                            width: 200,
-                            child: TextFormField(
-                              textAlign: TextAlign.start,
-                              decoration: InputDecoration(
-                                labelText: "Masukkan Nama",
-                                hintStyle: TextStyle(),
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(5.0)),
+                          children: [
+                            Container(
+                              width: 200,
+                              child: TextFormField(
+                                textAlign: TextAlign.start,
+                                decoration: InputDecoration(
+                                  labelText: "Masukkan Nama",
+                                  hintStyle: TextStyle(),
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5.0)),
+                                ),
+                                onChanged: (value) => nm = value,
                               ),
                             ),
-                          ),
-                          SizedBox(height: 40,),
-                          Container(
-                            width: 200,
-                            child: TextFormField(
-                              textAlign: TextAlign.start,
-                              maxLines: 7,
-                              decoration: InputDecoration(
-                                labelText: "Masukkan Keterangan",
-                                hintStyle: TextStyle(),
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(5.0)),
+                            SizedBox(height: 40,),
+                            Container(
+                              width: 200,
+                              child: TextFormField(
+                                textAlign: TextAlign.start,
+                                maxLines: 7,
+                                decoration: InputDecoration(
+                                  labelText: "Masukkan Keterangan",
+                                  hintStyle: TextStyle(),
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5.0)),
+                                ),
+                                onChanged: (value) => pg = value,
                               ),
                             ),
-                          ),
 
-                        ],
+                          ],
+                        ),
                       ),
                       actions: <Widget>[
                         TextButton(
-                          onPressed: () => Navigator.pop(context, 'SAVE'),
-                          child: const Text('OK'),
+                          onPressed: (){
+                            if (nm.trim().isEmpty && nm == null){
+                              print('Nama Page Kosong');
+                            }else if(pg.trim().isEmpty && pg == null){
+                              print('Isi page kosong');
+                            }
+                            PageApi().createPage(nm,pg);
+                            print('Data Tersimpan');
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Dashboard(),
+                              ),
+                            );
+                          },
+                          child: const Text('save'),
                         ),
                       ],
                     ),
