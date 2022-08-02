@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:data_table_2/data_table_2.dart';
 import 'package:mcs_flutter/api/page_api.dart';
 import 'package:mcs_flutter/dashboard/dashboard.dart';
+import 'package:mcs_flutter/model/page_model.dart';
 
 class PagesDashboard extends StatefulWidget {
   const PagesDashboard({Key? key}) : super(key: key);
@@ -15,13 +16,6 @@ class _PagesDashboardState extends State<PagesDashboard> {
   final formKey = GlobalKey<FormState>();
   String nm = '';
   String pg = '';
-
-  String allDates = 'All dates';
-  bool value = false;
-  bool value1 = false;
-  bool value2 = false;
-  bool value3 = false;
-  bool value4 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -205,316 +199,51 @@ class _PagesDashboardState extends State<PagesDashboard> {
           ),
           SizedBox(height: 10,),
           Container(
-            color: Colors.white,
-            height: 300,
-            width: screenSize.width,
-            padding: EdgeInsets.zero,
-            child: DataTable2(
-              columnSpacing: 30,
-              dataRowHeight: 70,
-              horizontalMargin: 10,
-              minWidth: 600,
-              columns: [
-                DataColumn2(
-                  label: Text('Title',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold
-                    ),
+            child: FutureBuilder<List<dynamic>>(
+              future: PageApi().getPage(),
+              builder: (BuildContext context,AsyncSnapshot snapshot) {
+                if (snapshot.hasError ||
+                    snapshot.data == null ||
+                    snapshot.connectionState == ConnectionState.waiting
+                ) {
+                  return const CircularProgressIndicator();
+                }
+                return DataTable(
+                  decoration: BoxDecoration(
+                    color: Colors.white
                   ),
-                  size: ColumnSize.M,
-                ),
-                DataColumn(
-                  label: Text('Author',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold
-                    ),
-                  ),
-                ),
-                DataColumn(
-                  label: Text('Detail',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold
-                    ),
-                  ),
-                ),
-              ],
-              rows: [
-                DataRow(cells: [
-                  DataCell(
-                      Container(
-                        // padding: EdgeInsets.only(top: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-
-                              children: [
-                                Image(image: AssetImage
-                                  ('assets/icons/home.png'),
-                                  height: 35,
-                                  width: 35,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    // SizedBox(height: 10,width: 10,),
-                                    Text('     About',
-                                      style: TextStyle(
-                                          color: Color.fromARGB(255, 0, 0, 139)
-                                      ),),
-                                    Row(
-                                      children: [
-                                        // Text('Edit'),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>Dashboard(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('Edit',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>Dashboard(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('Remove',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>Dashboard(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('View',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    )
-                                  ],
-                                )
-                              ],
-                            ),
-
-                          ],
-                        ),
-                      )
-                  ),
-                  DataCell(Text('Admin',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 0, 0, 139)
-                    ),
-                  ),),
-                  DataCell(Text('2022-06-18'),),
-                ]),
-                DataRow(cells: [
-                  DataCell(
-                      Container(
-                        // padding: EdgeInsets.only(top: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-
-                              children: [
-                                Image(image: AssetImage
-                                  ('assets/icons/home.png'),
-                                  height: 35,
-                                  width: 35,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    // SizedBox(height: 10,width: 10,),
-                                    Text('     News',
-                                      style: TextStyle(
-                                          color: Color.fromARGB(255, 0, 0, 139)
-                                      ),),
-                                    Row(
-                                      children: [
-                                        // Text('Edit'),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>Dashboard(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('Edit',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>Dashboard(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('Remove',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>Dashboard(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('View',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    )
-                                  ],
-                                )
-                              ],
-                            ),
-
-                          ],
-                        ),
-                      )
-                  ),
-                  DataCell(Text('Admin',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 0, 0, 139)
-                    ),
-                  ),),
-                  DataCell(Text('2022-06-18'),),
-                ]),
-                DataRow(cells: [
-                  DataCell(
-                      Container(
-                        // padding: EdgeInsets.only(top: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-
-                              children: [
-                                Image(image: AssetImage
-                                  ('assets/icons/home.png'),
-                                  height: 35,
-                                  width: 35,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    // SizedBox(height: 10,width: 10,),
-                                    Text('     Contact',
-                                      style: TextStyle(
-                                          color: Color.fromARGB(255, 0, 0, 139)
-                                      ),),
-                                    Row(
-                                      children: [
-                                        // Text('Edit'),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>Dashboard(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('Edit',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>Dashboard(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('Remove',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                        TextButton(
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>Dashboard(),
-                                                )
-                                            );
-                                          },
-                                          child: Text('View',
-                                            style: TextStyle(
-                                                color: Colors.black
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    )
-                                  ],
-                                )
-                              ],
-                            ),
-
-                          ],
-                        ),
-                      )
-                  ),
-                  DataCell(Text('Admin',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 0, 0, 139)
-                    ),
-                  ),),
-                  DataCell(Text('2022-06-18'),),
-                ]),
-              ],
+                  columnSpacing: 300,
+                  columns: const [
+                    DataColumn(label: Text('Id')),
+                    DataColumn(label: Text('Title')),
+                    DataColumn(label: Text('Page')),
+                    DataColumn(label: Text('Status')),
+                  ],
+                  rows: List.generate(snapshot.data.length, (index) {
+                    var pgm = snapshot.data[index];
+                    return DataRow(cells: [
+                      DataCell(
+                        Text(pgm['idpage'].toString()),
+                      ),
+                      DataCell(
+                        Text(pgm['title']),
+                      ),
+                      DataCell(
+                        Text(pgm['page']),
+                      ),
+                      DataCell(
+                        Text(pgm['status']),
+                      ),
+                    ]);
+                  },
+                  )
+                      .toList(),
+                );
+              },
             ),
-          )
+          ),
         ],
       ),
     );
   }
 }
-
-
-
-
