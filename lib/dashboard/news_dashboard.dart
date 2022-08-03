@@ -239,7 +239,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                     var pgm = snapshot.data[index];
                     return DataRow(cells: [
                       DataCell(
-                        Text(pgm['idpage'].toString()),
+                        Text(pgm['idpost'].toString()),
                       ),
                       DataCell(
                         Text(pgm['title']),
