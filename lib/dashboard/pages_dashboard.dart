@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:data_table_2/data_table_2.dart';
 import 'package:mcs_flutter/api/page_api.dart';
 import 'package:mcs_flutter/dashboard/dashboard.dart';
-import 'package:mcs_flutter/model/page_model.dart';
 
 class PagesDashboard extends StatefulWidget {
   const PagesDashboard({Key? key}) : super(key: key);

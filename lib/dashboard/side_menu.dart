@@ -18,7 +18,7 @@ List<Widget> views = [
   SettingDashboard(),
   PagesDashboard(),
   NewsDashboard(),
-  OurPartner()
+  OurpartnerDashboard()
 ];
 
 int selectedIndex = 0;

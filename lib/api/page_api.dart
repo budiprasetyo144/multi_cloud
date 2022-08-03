@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:mcs_flutter/model/page_model.dart';
 
 class PageApi {
   Future<List<dynamic>> getPage() async {
