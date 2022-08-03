@@ -20,6 +20,7 @@ class _FilterState extends State<FilterButton> {
                 gradient: LinearGradient(
                   colors: <Color>[
                     Color(0xFF42A5F5),
+                    Color(0xFF145A91),
                   ],
                 ),
               ),

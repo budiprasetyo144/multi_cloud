@@ -245,10 +245,10 @@ class _NewsDashboardState extends State<NewsDashboard> {
                         Text(pgm['title']),
                       ),
                       DataCell(
-                        Text(pgm['news']),
+                        Text(pgm['post']),
                       ),
                       DataCell(
-                        Text(pgm['images']),
+                        Text(pgm['image']),
                       ),
                       DataCell(
                         Text(pgm['status']),

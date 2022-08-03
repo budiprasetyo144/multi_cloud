@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 class NewsApi{
   Future<bool> createNews(title,news,image) async {
     final response = await http.post(
-        Uri.parse('http://10.107.250.246:8081/post/savePost'),
+        Uri.parse('http://10.3.4.231:8081/post/savePost'),
         body: jsonEncode({
           "title": title,
           "post": news,
@@ -23,7 +23,7 @@ class NewsApi{
   }
   Future<bool> updateNews(id,title,news,image) async {
     final response = await http.post(
-        Uri.parse('http://10.107.250.246:8081/post/savePost'),
+        Uri.parse('http://10.3.4.231:8081/post/savePost'),
         body: jsonEncode({
           "idpost": id,
           "title": title,
