@@ -6,12 +6,12 @@ class PageApi{
 
   Future<List<dynamic>> getPage() async {
     var response = await http.get(
-        Uri.parse('http://10.107.142.52:8082/page/getAllPageByIdRole'));
+        Uri.parse('http://10.3.4.231:8082/page/getAllPageByIdRole'));
     return jsonDecode(response.body)['data'];
   }
   Future<bool> createPage(name, page) async {
     final response = await http.post(
-        Uri.parse('http://10.107.142.52:8081/page/savePage'),
+        Uri.parse('http://10.3.4.231:8081/page/savePage'),
         body: jsonEncode({
           "title": name,
           "page": page

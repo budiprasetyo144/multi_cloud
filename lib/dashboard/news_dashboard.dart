@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mcs_flutter/dashboard/dashboard.dart';
 import 'package:mcs_flutter/widget/filter.dart';
 import 'package:mcs_flutter/widget/dropdownbuttondates.dart';
+import 'package:mcs_flutter/api/news_api.dart';
 
 class NewsDashboard extends StatefulWidget {
   const NewsDashboard({Key? key}) : super(key: key);
@@ -17,6 +18,9 @@ class _NewsDashboardState extends State<NewsDashboard> {
   bool value3 = false;
   bool value4 = false;
   final formKey = GlobalKey<FormState>();
+  String title = '';
+  String news = '';
+  String images = '';
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +56,20 @@ class _NewsDashboardState extends State<NewsDashboard> {
 
                           children: [
                             SizedBox(height: 20,),
-                            IconButton(onPressed: (){}, icon: Icon(Icons.add_photo_alternate_outlined,size: 30,)),
+                            //IconButton(onPressed: (){}, icon: Icon(Icons.add_photo_alternate_outlined,size: 30,)),
+                            Container(
+                              width: 230,
+                              child: TextFormField(
+                                textAlign: TextAlign.start,
+                                decoration: InputDecoration(
+                                  labelText: "Masukkan Code Image",
+                                  hintStyle: TextStyle(),
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5.0)),
+                                ),
+                                onChanged: (value) => images = value,
+                              ),
+                            ),
                             SizedBox(height: 30,),
                             Container(
                               width: 230,
@@ -64,7 +81,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(5.0)),
                                 ),
-                                //onChanged: (value) => nm = value,
+                                onChanged: (value) => title = value,
                               ),
                             ),
                             SizedBox(height: 30,),
@@ -79,7 +96,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(5.0)),
                                 ),
-                                //onChanged: (value) => pg = value,
+                                onChanged: (value) => news = value,
                               ),
                             ),
 
@@ -89,13 +106,15 @@ class _NewsDashboardState extends State<NewsDashboard> {
                       actions: <Widget>[
                         TextButton(
                           onPressed: (){
-                            // if (nm.trim().isEmpty && nm == null){
-                            //   print('Nama Page Kosong');
-                            // }else if(pg.trim().isEmpty && pg == null){
-                            //   print('Isi page kosong');
-                            // }
-                            // PageApi().createPage(nm,pg);
-                            // print('Data Tersimpan');
+                            if (title.trim().isEmpty && news == null && images == null){
+                              print('Title News Kosong');
+                            }else if(news.trim().isEmpty && title == null && images == null){
+                              print('Isi News kosong');
+                            }else if(images.trim().isEmpty && title == null && news == null){
+                              print('Images Kosong');
+                            }
+                            NewsApi().createNews(title,news,images);
+                            print('Data Tersimpan');
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -103,7 +122,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                               ),
                             );
                           },
-                          child: const Text('save'),
+                          child: const Text('Save'),
                         ),
                       ],
                     ),
@@ -193,621 +212,58 @@ class _NewsDashboardState extends State<NewsDashboard> {
               Text("3 items"),
             ],
           ),
-          Expanded(
-            child: Container(
-              color: Colors.white,
-              height: screenSize.height * 0.5,
-              width: screenSize.width,
-              padding: const EdgeInsets.all(10),
-              child: ListView(
-                children: [
-                  DataTable(
-                      columnSpacing: 30,
-                      dataRowHeight: 70,
-                      horizontalMargin: 10,
-                      columns: [
-                        DataColumn(
-                            label: Checkbox(
-                                value: value,
-                                onChanged: (bool? value) {
-                                  setState(() {
-                                    this.value = value!;
-                                  });
-                                })),
-                        const DataColumn(
-                            label: Text(
-                              'Title',
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold),
-                            )),
-                        const DataColumn(
-                            label: Text(
-                              'Author',
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold),
-                            )),
-                        const DataColumn(
-                            label: Text(
-                              'Date',
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold),
-                            )),
-                      ],
-                      rows: [
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value1,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value1 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Books Recomendation by Senior Developer',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      const SizedBox(height: 10),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(width: 20)
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-06-18')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value2,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value2 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Welcome Bootcamp Batch 4',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(width: 20)
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-07-18')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value3,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value3 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Hello World!',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(width: 20)
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-07-17')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value4,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value4 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Why We Are Here?',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(height: 20, width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(height: 20, width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(height: 20, width: 20),
-                                    ],
-                                  )
-                                ],
-                              )
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-07-18'))
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value2,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value2 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Welcome Bootcamp Batch 4',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(width: 20)
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-07-18')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value2,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value2 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Welcome Bootcamp Batch 4',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(width: 20)
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-07-18')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value2,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value2 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Welcome Bootcamp Batch 4',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(width: 20)
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-07-18')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value2,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value2 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Welcome Bootcamp Batch 4',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(width: 20)
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-07-18')),
-                        ])
-                      ]),
-                ],
-              ),
+          Container(
+            child: FutureBuilder<List<dynamic>>(
+              future: NewsApi().getNews(),
+              builder: (BuildContext context,AsyncSnapshot snapshot) {
+                if (snapshot.hasError ||
+                    snapshot.data == null ||
+                    snapshot.connectionState == ConnectionState.waiting
+                ) {
+                  return const CircularProgressIndicator();
+                }
+                return DataTable(
+                  decoration: BoxDecoration(
+                      color: Colors.white
+                  ),
+                  columnSpacing: 300,
+                  columns: const [
+                    DataColumn(label: Text('Id')),
+                    DataColumn(label: Text('Title')),
+                    DataColumn(label: Text('News')),
+                    DataColumn(label: Text('Images')),
+                    DataColumn(label: Text('Status')),
+                    DataColumn(label: Text('Action')),
+                  ],
+                  rows: List.generate(snapshot.data.length, (index) {
+                    var pgm = snapshot.data[index];
+                    return DataRow(cells: [
+                      DataCell(
+                        Text(pgm['idpage'].toString()),
+                      ),
+                      DataCell(
+                        Text(pgm['title']),
+                      ),
+                      DataCell(
+                        Text(pgm['news']),
+                      ),
+                      DataCell(
+                        Text(pgm['images']),
+                      ),
+                      DataCell(
+                        Text(pgm['status']),
+                      ),
+                      DataCell(
+                        Text('edit'),
+                      ),
+                    ]);
+                  },
+                  )
+                      .toList(),
+                );
+              },
             ),
-          )
+          ),
         ],
       ),
     );
