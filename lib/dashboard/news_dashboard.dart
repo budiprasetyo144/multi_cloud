@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mcs_flutter/dashboard/dashboard.dart';
 import 'package:mcs_flutter/widget/filter.dart';
 import 'package:mcs_flutter/widget/dropdownbuttondates.dart';
 
@@ -15,6 +16,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
   bool value2 = false;
   bool value3 = false;
   bool value4 = false;
+  final formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,76 @@ class _NewsDashboardState extends State<NewsDashboard> {
                         fontSize: 20,
                       )),
                 ),
-                ElevatedButton(onPressed: (){}, child: Text('Add New News'))
+                ElevatedButton(onPressed: (){
+                  showDialog<String>(
+                    context: context,
+                    builder: (BuildContext context) => AlertDialog(
+                      title: Center(child: const Text('Add News')),
+                      content: Form(
+                        key: formKey,
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          verticalDirection: VerticalDirection.down,
+
+                          children: [
+                            SizedBox(height: 20,),
+                            IconButton(onPressed: (){}, icon: Icon(Icons.add_photo_alternate_outlined,size: 30,)),
+                            SizedBox(height: 30,),
+                            Container(
+                              width: 230,
+                              child: TextFormField(
+                                textAlign: TextAlign.start,
+                                decoration: InputDecoration(
+                                  labelText: "Masukkan Title",
+                                  hintStyle: TextStyle(),
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5.0)),
+                                ),
+                                //onChanged: (value) => nm = value,
+                              ),
+                            ),
+                            SizedBox(height: 30,),
+                            Container(
+                              width: 230,
+                              child: TextFormField(
+                                textAlign: TextAlign.start,
+                                maxLines: 7,
+                                decoration: InputDecoration(
+                                  labelText: "Masukkan Keterangan News",
+                                  hintStyle: TextStyle(),
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5.0)),
+                                ),
+                                //onChanged: (value) => pg = value,
+                              ),
+                            ),
+
+                          ],
+                        ),
+                      ),
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: (){
+                            // if (nm.trim().isEmpty && nm == null){
+                            //   print('Nama Page Kosong');
+                            // }else if(pg.trim().isEmpty && pg == null){
+                            //   print('Isi page kosong');
+                            // }
+                            // PageApi().createPage(nm,pg);
+                            // print('Data Tersimpan');
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Dashboard(),
+                              ),
+                            );
+                          },
+                          child: const Text('save'),
+                        ),
+                      ],
+                    ),
+                  );
+                }, child: Text('Add News'))
               ],
             ),
           ),
