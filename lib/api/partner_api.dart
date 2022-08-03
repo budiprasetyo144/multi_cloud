@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 class PartnerApi{
   Future<bool> createPartner(title,image) async {
     final response = await http.post(
-        Uri.parse('http://10.107.250.246:8081/partner/savePost'),
+        Uri.parse('http://10.107.250.246:8081/partner/savePartner'),
         body: jsonEncode({
           "title": title,
           "image": image
@@ -22,9 +22,9 @@ class PartnerApi{
   }
   Future<bool> updatePartner(id,title,image) async {
     final response = await http.post(
-        Uri.parse('http://10.107.250.246:8081/partner/savePost'),
+        Uri.parse('http://10.107.250.246:8081/partner/savePartner'),
         body: jsonEncode({
-          "idpost": id,
+          "idpartner": id,
           "title": title,
           "image": image
         }),
@@ -40,7 +40,7 @@ class PartnerApi{
   }
   Future<List<dynamic>> getPartner() async{
     var response = await http.get(
-        Uri.parse('http://localhost:8082/partner/getAllPostByIdRole'));
+        Uri.parse('http://localhost:8082/partner/getAllPartner'));
     return jsonDecode(response.body)['data'];
   }
 }
