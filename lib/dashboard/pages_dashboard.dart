@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:data_table_2/data_table_2.dart';
 import 'package:mcs_flutter/api/page_api.dart';
 import 'package:mcs_flutter/dashboard/dashboard.dart';
-import 'package:mcs_flutter/model/page_model.dart';
 
 class PagesDashboard extends StatefulWidget {
   const PagesDashboard({Key? key}) : super(key: key);
@@ -218,6 +216,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     DataColumn(label: Text('Title')),
                     DataColumn(label: Text('Page')),
                     DataColumn(label: Text('Status')),
+                    DataColumn(label: Text('Action')),
                   ],
                   rows: List.generate(snapshot.data.length, (index) {
                     var pgm = snapshot.data[index];
@@ -233,6 +232,9 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       ),
                       DataCell(
                         Text(pgm['status']),
+                      ),
+                      DataCell(
+                        Text('edit'),
                       ),
                     ]);
                   },
