@@ -20,6 +20,14 @@ class Home10 extends StatelessWidget {
       height: 680,
       width: screenSize.width,
       color: Colors.white,
+      // decoration: BoxDecoration(
+      //     gradient: LinearGradient(
+      //         colors: <Color>[
+      //           Color(0xFF0D5396),
+      //           Color(0xFF2B69A4),
+      //           Color(0xFF42A5F5),
+      //         ])
+      // ),
       child: Row(
         children: [
           const Spacer(
@@ -125,7 +133,7 @@ class Home10 extends StatelessWidget {
             decoration: const BoxDecoration(color: Colors.white, boxShadow: [
               BoxShadow(
                 color: Colors.grey,
-                spreadRadius: 4,
+                spreadRadius: 3,
                 blurRadius: 4,
                 blurStyle: BlurStyle.normal,
                 offset: Offset(3, 3),
