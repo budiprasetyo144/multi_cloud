@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/api/setting_api.dart';
-import 'package:mcs_flutter/dashboard/dashboard.dart';
-
 
 class SettingDashboard extends StatefulWidget {
   const SettingDashboard({super.key});
@@ -11,8 +9,9 @@ class SettingDashboard extends StatefulWidget {
 }
 
 class _SettingDashboardState extends State<SettingDashboard> {
-
+  var btnText = 'Save Setting';
   final formKey =  GlobalKey<FormState>();
+  String id = '';
   String im ='assets/ass.jpg';
   String tt = '';
   String tl = '';
@@ -24,14 +23,14 @@ class _SettingDashboardState extends State<SettingDashboard> {
     var screenSize = MediaQuery.of(context).size;
     var screenSize1 = screenSize.width * 0.6;
     return Container(
-      color: Color.fromRGBO(238, 224, 224, 1),
+      color: const Color.fromRGBO(238, 224, 224, 1),
       height: 1000,
-      padding: EdgeInsets.only(left: 100),
+      padding: const EdgeInsets.only(left: 100),
       width: screenSize.width,
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "General Setting",
               textAlign: TextAlign.start,
               style: TextStyle(
@@ -41,7 +40,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
               color: Colors.white,
               height: 600,
               width: 1100,
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Form(
                 key: formKey,
                 child: Column(
@@ -49,7 +48,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Site Profile",
+                        const Text("Site Profile",
                             style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 20,
@@ -63,22 +62,29 @@ class _SettingDashboardState extends State<SettingDashboard> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5),
                             ),
-                            primary: Color.fromARGB(255, 0, 36, 192),
+                            primary: const Color.fromARGB(255, 0, 36, 192),
                           ),
                           onPressed: () {
-                            print('file image ='+im+'\ntitle = '+tt+'\nTagline = '+tl+'\nEmail = '+em+'\nNo Telp = '+no);
-                            SettingApi().createSetting(im.toString(), tt.toString(), tl.toString(), em.toString(), no.toString());
-                            print('Data Tersimpan');
-                          //
-                            // Navigator.push(
-                            //     context,
-                            //   MaterialPageRoute(
-                            //       builder: (context) => const Dashboard(),
-                            // ),
-                            // );
+                            switch(btnText){
+                              case 'Save Setting':
+                                SettingApi().createSetting(im.toString(), tt.toString(), tl.toString(), em.toString(), no.toString());
+                                setState(() {
+                                  btnText = 'Update Setting';
+                                });
+                                break;
+                              case 'Update Setting':
+
+                                setState(() {
+                                  btnText = 'Save Update';
+                                });
+                                break;
+                              case 'Save Update':
+
+                                break;
+                              default:
+                            }
                           },
-                          child: Text(
-                            'Save Setting',
+                          child: Text(btnText,
                             style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                           ),
                         ),
