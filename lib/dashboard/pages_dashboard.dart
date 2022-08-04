@@ -58,7 +58,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                       hintStyle: TextStyle(),
                                       border: OutlineInputBorder(
                                           borderRadius:
-                                          BorderRadius.circular(5.0)),
+                                              BorderRadius.circular(5.0)),
                                     ),
                                     onChanged: (value) => nm = value,
                                   ),
@@ -75,8 +75,9 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                       labelText: "Masukkan Keterangan",
                                       hintStyle: TextStyle(),
                                       border: OutlineInputBorder(
-                                          borderRadius:
-                                          BorderRadius.circular(5.0)),
+                                        borderRadius:
+                                            BorderRadius.circular(5.0),
+                                      ),
                                     ),
                                     onChanged: (value) => pg = value,
                                   ),
@@ -87,21 +88,41 @@ class _PagesDashboardState extends State<PagesDashboard> {
                           actions: <Widget>[
                             TextButton(
                               onPressed: () {
-                                if (nm.trim().isEmpty && nm == null) {
-                                  print('Nama Page Kosong');
-                                } else if (pg.trim().isEmpty && pg == null) {
-                                  print('Isi page kosong');
+                                Navigator.pop(context);
+                                if (nm.isEmpty && pg.isEmpty) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                        content: Text('Data Can\'t Be Empty')),
+                                  );
+                                } else if (pg.isEmpty) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                        content:
+                                            Text('Content Can\'t Be Empty')),
+                                  );
+                                } else if (nm.isEmpty) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                        content: Text('Name Can\'t Be Empty')),
+                                  );
+                                } else {
+                                  PageApi().createPage(nm, pg).then(
+                                    (isSuccess) {
+                                      if (isSuccess) {
+                                        setState(() {});
+                                        Scaffold.of(this.context).showSnackBar(
+                                            SnackBar(
+                                                content: Text("Data success")));
+                                      } else {
+                                        Scaffold.of(this.context).showSnackBar(
+                                            SnackBar(
+                                                content:
+                                                    Text("Data failed!!!")));
+                                      }
+                                    },
+                                  );
                                 }
-                                PageApi().createPage(nm, pg);
-                                print('Data Tersimpan');
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const Dashboard(),
-                                  ),
-                                );
                               },
-
                               child: const Text('save'),
                             ),
                           ],
@@ -140,12 +161,12 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       prefixIcon: const Icon(Icons.search),
                       enabledBorder: OutlineInputBorder(
                         borderSide:
-                        const BorderSide(width: 1, color: Colors.blue),
+                            const BorderSide(width: 1, color: Colors.blue),
                         borderRadius: BorderRadius.circular(5),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide:
-                        const BorderSide(width: 1, color: Colors.blue),
+                            const BorderSide(width: 1, color: Colors.blue),
                         borderRadius: BorderRadius.circular(5),
                       ),
                     ),
@@ -220,7 +241,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                   ],
                   rows: List.generate(
                     snapshot.data.length,
-                        (index) {
+                    (index) {
                       var pgm = snapshot.data[index];
                       return DataRow(cells: [
                         DataCell(
@@ -263,13 +284,13 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                               setState(() {});
                                               Scaffold.of(this.context)
                                                   .showSnackBar(SnackBar(
-                                                  content: Text(
-                                                      "Delete data success")));
+                                                      content: Text(
+                                                          "Delete data success")));
                                             } else {
                                               Scaffold.of(this.context)
                                                   .showSnackBar(SnackBar(
-                                                  content: Text(
-                                                      "Delete data failed")));
+                                                      content: Text(
+                                                          "Delete data failed")));
                                             }
                                           });
                                         },
