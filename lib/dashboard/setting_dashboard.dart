@@ -10,6 +10,7 @@ class SettingDashboard extends StatefulWidget {
 
 class _SettingDashboardState extends State<SettingDashboard> {
   var btnText = 'Save Setting';
+  var enb = true;
   final formKey =  GlobalKey<FormState>();
   String id = '';
   String im ='assets/ass.jpg';
@@ -70,11 +71,12 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                 SettingApi().createSetting(im.toString(), tt.toString(), tl.toString(), em.toString(), no.toString());
                                 setState(() {
                                   btnText = 'Update Setting';
+                                  enb = false;
                                 });
                                 break;
                               case 'Update Setting':
-
                                 setState(() {
+                                  enb = true;
                                   btnText = 'Save Update';
                                 });
                                 break;
@@ -197,6 +199,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                               width: 1, color: Colors.grey))
                                   ),
                                   onChanged: (value) => tt = value,
+                                  enabled: enb,
                                 ),
                               ),
                               SizedBox(
@@ -224,6 +227,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                               width: 1, color: Colors.grey))
                                   ),
                                   onChanged: (value) => tl = value,
+                                  enabled: enb,
                                 ),
                               ),
                               SizedBox(
@@ -275,6 +279,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                             width: 1, color: Colors.grey))
                                 ),
                                 onChanged: (value) => em = value,
+                                enabled: enb,
                               ),
                             ),
                             SizedBox(
@@ -302,6 +307,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                             width: 1, color: Colors.grey))
                                 ),
                                 onChanged: (value) => no = value,
+                                enabled: enb,
                               ),
                             ),
                           ],
