@@ -91,10 +91,8 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:data_table_2/data_table_2.dart';
 import 'package:mcs_flutter/api/page_api.dart';
 import 'package:mcs_flutter/dashboard/dashboard.dart';
-// import 'package:mcs_flutter/model/page_model.dart';
 
 class OurpartnerDashboard extends StatefulWidget {
   const OurpartnerDashboard({Key? key}) : super(key: key);
@@ -125,7 +123,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
               children: [
                 Container(
                   child: Text(
-                    'Images    ',
+                    'Our Partner    ',
                     style: TextStyle(
                       fontSize: 20,
                     ),
@@ -303,12 +301,13 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                 }
                 return DataTable(
                   decoration: BoxDecoration(color: Colors.white),
-                  columnSpacing: 300,
+                  columnSpacing: 200,
                   columns: const [
-                    DataColumn(label: Text('Id')),
-                    DataColumn(label: Text('Title')),
+                    DataColumn(label: Text('No')),
+                    DataColumn(label: Text('Image')),
                     DataColumn(label: Text('Page')),
                     DataColumn(label: Text('Status')),
+                    DataColumn(label: Text('Action')),
                   ],
                   rows: List.generate(
                     snapshot.data.length,
@@ -326,6 +325,59 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                         ),
                         DataCell(
                           Text(pgm['status']),
+                        ),
+                        DataCell(
+                          TextButton(
+                            style: TextButton.styleFrom(
+                              padding: const EdgeInsets.all(16.0),
+                              primary: Colors.black,
+                              backgroundColor: Color.fromARGB(255, 245, 27, 27),
+                              textStyle: const TextStyle(fontSize: 10),
+                            ),
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    title: Text("Warning"),
+                                    content: Text(
+                                        "Are you sure want to delete data page ${pgm['title']}?"),
+                                    actions: <Widget>[
+                                      TextButton(
+                                        child: Text("Yes"),
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                          PageApi()
+                                              .deletePage(pgm['idpage'])
+                                              .then((isSuccess) {
+                                            if (isSuccess) {
+                                              setState(() {});
+                                              Scaffold.of(this.context)
+                                                  .showSnackBar(SnackBar(
+                                                      content: Text(
+                                                          "Delete data success")));
+                                            } else {
+                                              Scaffold.of(this.context)
+                                                  .showSnackBar(SnackBar(
+                                                      content: Text(
+                                                          "Delete data failed")));
+                                            }
+                                          });
+                                        },
+                                      ),
+                                      TextButton(
+                                        child: Text("No"),
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            },
+                            child: const Text("Delete"),
+                          ),
                         ),
                       ]);
                     },
