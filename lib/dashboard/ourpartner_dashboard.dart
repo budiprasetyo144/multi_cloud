@@ -91,7 +91,7 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:mcs_flutter/api/page_api.dart';
+import 'package:mcs_flutter/api/partner_api.dart';
 import 'package:mcs_flutter/dashboard/dashboard.dart';
 
 class OurpartnerDashboard extends StatefulWidget {
@@ -104,7 +104,7 @@ class OurpartnerDashboard extends StatefulWidget {
 class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
   final formKey = GlobalKey<FormState>();
   String nm = '';
-  String pg = '';
+  String pt = '';
 
   @override
   Widget build(BuildContext context) {
@@ -150,9 +150,9 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                       hintStyle: TextStyle(),
                                       border: OutlineInputBorder(
                                           borderRadius:
-                                              BorderRadius.circular(5.0)),
+                                          BorderRadius.circular(5.0)),
                                     ),
-                                    onChanged: (value) => nm = value,
+                                    onChanged: (value) => pt = value,
                                   ),
                                 ),
                                 SizedBox(
@@ -168,9 +168,9 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                       hintStyle: TextStyle(),
                                       border: OutlineInputBorder(
                                           borderRadius:
-                                              BorderRadius.circular(5.0)),
+                                          BorderRadius.circular(5.0)),
                                     ),
-                                    onChanged: (value) => pg = value,
+                                    onChanged: (value) => nm = value,
                                   ),
                                 ),
                               ],
@@ -181,10 +181,12 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                               onPressed: () {
                                 if (nm.trim().isEmpty && nm == null) {
                                   print('Nama Page Kosong');
-                                } else if (pg.trim().isEmpty && pg == null) {
+                                } else if (pt.trim().isEmpty && pt == null) {
                                   print('Isi page kosong');
                                 }
-                                PageApi().createPage(nm, pg);
+
+                                print(nm + '\n' + pt);
+                                PartnerApi().createPartner(nm, pt);
                                 print('Data Tersimpan');
                                 Navigator.push(
                                   context,
@@ -231,12 +233,12 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                       prefixIcon: const Icon(Icons.search),
                       enabledBorder: OutlineInputBorder(
                         borderSide:
-                            const BorderSide(width: 1, color: Colors.blue),
+                        const BorderSide(width: 1, color: Colors.blue),
                         borderRadius: BorderRadius.circular(5),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide:
-                            const BorderSide(width: 1, color: Colors.blue),
+                        const BorderSide(width: 1, color: Colors.blue),
                         borderRadius: BorderRadius.circular(5),
                       ),
                     ),
@@ -292,7 +294,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
           ),
           Container(
             child: FutureBuilder<List<dynamic>>(
-              future: PageApi().getPage(),
+              future: PartnerApi().getPartner(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 if (snapshot.hasError ||
                     snapshot.data == null ||
@@ -303,28 +305,28 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                   decoration: BoxDecoration(color: Colors.white),
                   columnSpacing: 200,
                   columns: const [
-                    DataColumn(label: Text('No')),
-                    DataColumn(label: Text('Image')),
-                    DataColumn(label: Text('Page')),
+                    DataColumn(label: Text('Id_Partner')),
+                    DataColumn(label: Text('Name')),
+                    DataColumn(label: Text('Path')),
                     DataColumn(label: Text('Status')),
                     DataColumn(label: Text('Action')),
                   ],
                   rows: List.generate(
                     snapshot.data.length,
-                    (index) {
+                        (index) {
                       var pgm = snapshot.data[index];
                       return DataRow(cells: [
                         DataCell(
-                          Text(pgm['idpage'].toString()),
+                          Text(pgm['partner_id'].toString()),
                         ),
                         DataCell(
-                          Text(pgm['title']),
+                          Text(pgm['file_name']),
                         ),
                         DataCell(
-                          Text(pgm['page']),
+                          Text(pgm['file_path']),
                         ),
                         DataCell(
-                          Text(pgm['status']),
+                          Text(pgm['status_partner']),
                         ),
                         DataCell(
                           TextButton(
@@ -335,46 +337,46 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                               textStyle: const TextStyle(fontSize: 10),
                             ),
                             onPressed: () {
-                              showDialog(
-                                context: context,
-                                builder: (context) {
-                                  return AlertDialog(
-                                    title: Text("Warning"),
-                                    content: Text(
-                                        "Are you sure want to delete data page ${pgm['title']}?"),
-                                    actions: <Widget>[
-                                      TextButton(
-                                        child: Text("Yes"),
-                                        onPressed: () {
-                                          Navigator.pop(context);
-                                          PageApi()
-                                              .deletePage(pgm['idpage'])
-                                              .then((isSuccess) {
-                                            if (isSuccess) {
-                                              setState(() {});
-                                              Scaffold.of(this.context)
-                                                  .showSnackBar(SnackBar(
-                                                      content: Text(
-                                                          "Delete data success")));
-                                            } else {
-                                              Scaffold.of(this.context)
-                                                  .showSnackBar(SnackBar(
-                                                      content: Text(
-                                                          "Delete data failed")));
-                                            }
-                                          });
-                                        },
-                                      ),
-                                      TextButton(
-                                        child: Text("No"),
-                                        onPressed: () {
-                                          Navigator.pop(context);
-                                        },
-                                      ),
-                                    ],
-                                  );
-                                },
-                              );
+                              // showDialog(
+                              //   context: context,
+                              //   builder: (context) {
+                              //     return AlertDialog(
+                              //       title: Text("Warning"),
+                              //       content: Text(
+                              //           "Are you sure want to delete data page ${pgm['title']}?"),
+                              //       actions: <Widget>[
+                              //         TextButton(
+                              //           child: Text("Yes"),
+                              //           onPressed: () {
+                              //             Navigator.pop(context);
+                              //             PartnerApi()
+                              //                 .deletePartner(pgm['idpartner'])
+                              //                 .then((isSuccess) {
+                              //               if (isSuccess) {
+                              //                 setState(() {});
+                              //                 Scaffold.of(this.context)
+                              //                     .showSnackBar(SnackBar(
+                              //                         content: Text(
+                              //                             "Delete data success")));
+                              //               } else {
+                              //                 Scaffold.of(this.context)
+                              //                     .showSnackBar(SnackBar(
+                              //                         content: Text(
+                              //                             "Delete data failed")));
+                              //               }
+                              //             });
+                              //           },
+                              //         ),
+                              //         TextButton(
+                              //           child: Text("No"),
+                              //           onPressed: () {
+                              //             Navigator.pop(context);
+                              //           },
+                              //         ),
+                              //       ],
+                              //     );
+                              //   },
+                              // );
                             },
                             child: const Text("Delete"),
                           ),
