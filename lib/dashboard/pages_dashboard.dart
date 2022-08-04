@@ -89,6 +89,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                             TextButton(
                               onPressed: () {
                                 Navigator.pop(context);
+
                                 if (nm.isEmpty && pg.isEmpty) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(
@@ -122,6 +123,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                     },
                                   );
                                 }
+
                               },
                               child: const Text('save'),
                             ),
