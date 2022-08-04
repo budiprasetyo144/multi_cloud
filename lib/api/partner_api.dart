@@ -33,8 +33,22 @@ class PartnerApi {
   }
 
   Future<List<dynamic>> getPartner() async {
-    var response = await http
-        .get(Uri.parse('http://10.107.122.152:8082/partner/getAllPartner'));
+    var response = await http.get(
+        Uri.parse('http://10.107.122.152:8082/partner/getAllPartnerByActive'));
     return jsonDecode(response.body)['data'];
+  }
+
+  Future<bool> deletePartner(id) async {
+    final response = await http.delete(
+      Uri.parse('http://10.107.122.152:8081/partner/deletePartner/$id'),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    );
+    if (response.statusCode == 200) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

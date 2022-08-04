@@ -150,7 +150,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                       hintStyle: TextStyle(),
                                       border: OutlineInputBorder(
                                           borderRadius:
-                                          BorderRadius.circular(5.0)),
+                                              BorderRadius.circular(5.0)),
                                     ),
                                     onChanged: (value) => pt = value,
                                   ),
@@ -168,7 +168,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                       hintStyle: TextStyle(),
                                       border: OutlineInputBorder(
                                           borderRadius:
-                                          BorderRadius.circular(5.0)),
+                                              BorderRadius.circular(5.0)),
                                     ),
                                     onChanged: (value) => nm = value,
                                   ),
@@ -233,12 +233,12 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                       prefixIcon: const Icon(Icons.search),
                       enabledBorder: OutlineInputBorder(
                         borderSide:
-                        const BorderSide(width: 1, color: Colors.blue),
+                            const BorderSide(width: 1, color: Colors.blue),
                         borderRadius: BorderRadius.circular(5),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide:
-                        const BorderSide(width: 1, color: Colors.blue),
+                            const BorderSide(width: 1, color: Colors.blue),
                         borderRadius: BorderRadius.circular(5),
                       ),
                     ),
@@ -303,9 +303,9 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                 }
                 return DataTable(
                   decoration: BoxDecoration(color: Colors.white),
-                  columnSpacing: 200,
+                  columnSpacing: 150,
                   columns: const [
-                    DataColumn(label: Text('Id_Partner')),
+                    DataColumn(label: Text('Id')),
                     DataColumn(label: Text('Name')),
                     DataColumn(label: Text('Path')),
                     DataColumn(label: Text('Status')),
@@ -313,20 +313,20 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                   ],
                   rows: List.generate(
                     snapshot.data.length,
-                        (index) {
+                    (index) {
                       var pgm = snapshot.data[index];
                       return DataRow(cells: [
                         DataCell(
-                          Text(pgm['partner_id'].toString()),
+                          Text(pgm['partnerId'].toString()),
                         ),
                         DataCell(
-                          Text(pgm['file_name']),
+                          Text(pgm['filename']),
                         ),
                         DataCell(
-                          Text(pgm['file_path']),
+                          Text(pgm['filepath']),
                         ),
                         DataCell(
-                          Text(pgm['status_partner']),
+                          Text(pgm['status']),
                         ),
                         DataCell(
                           TextButton(
@@ -337,46 +337,46 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                               textStyle: const TextStyle(fontSize: 10),
                             ),
                             onPressed: () {
-                              // showDialog(
-                              //   context: context,
-                              //   builder: (context) {
-                              //     return AlertDialog(
-                              //       title: Text("Warning"),
-                              //       content: Text(
-                              //           "Are you sure want to delete data page ${pgm['title']}?"),
-                              //       actions: <Widget>[
-                              //         TextButton(
-                              //           child: Text("Yes"),
-                              //           onPressed: () {
-                              //             Navigator.pop(context);
-                              //             PartnerApi()
-                              //                 .deletePartner(pgm['idpartner'])
-                              //                 .then((isSuccess) {
-                              //               if (isSuccess) {
-                              //                 setState(() {});
-                              //                 Scaffold.of(this.context)
-                              //                     .showSnackBar(SnackBar(
-                              //                         content: Text(
-                              //                             "Delete data success")));
-                              //               } else {
-                              //                 Scaffold.of(this.context)
-                              //                     .showSnackBar(SnackBar(
-                              //                         content: Text(
-                              //                             "Delete data failed")));
-                              //               }
-                              //             });
-                              //           },
-                              //         ),
-                              //         TextButton(
-                              //           child: Text("No"),
-                              //           onPressed: () {
-                              //             Navigator.pop(context);
-                              //           },
-                              //         ),
-                              //       ],
-                              //     );
-                              //   },
-                              // );
+                              showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    title: Text("Warning"),
+                                    content: Text(
+                                        "Are you sure want to delete data partner ${pgm['filename']}?"),
+                                    actions: <Widget>[
+                                      TextButton(
+                                        child: Text("Yes"),
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                          PartnerApi()
+                                              .deletePartner(pgm['partnerId'])
+                                              .then((isSuccess) {
+                                            if (isSuccess) {
+                                              setState(() {});
+                                              Scaffold.of(this.context)
+                                                  .showSnackBar(SnackBar(
+                                                      content: Text(
+                                                          "Delete data success")));
+                                            } else {
+                                              Scaffold.of(this.context)
+                                                  .showSnackBar(SnackBar(
+                                                      content: Text(
+                                                          "Delete data failed")));
+                                            }
+                                          });
+                                        },
+                                      ),
+                                      TextButton(
+                                        child: Text("No"),
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
                             },
                             child: const Text("Delete"),
                           ),
