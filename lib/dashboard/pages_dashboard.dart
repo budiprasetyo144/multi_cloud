@@ -123,7 +123,6 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                     },
                                   );
                                 }
-
                               },
                               child: const Text('save'),
                             ),
@@ -233,7 +232,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                 }
                 return DataTable(
                   decoration: BoxDecoration(color: Colors.white),
-                  columnSpacing: 200,
+                  columnSpacing: 150,
                   columns: const [
                     DataColumn(label: Text('Id')),
                     DataColumn(label: Text('Title')),
@@ -259,56 +258,171 @@ class _PagesDashboardState extends State<PagesDashboard> {
                           Text(pgm['status']),
                         ),
                         DataCell(
-                          TextButton(
-                            style: TextButton.styleFrom(
-                              padding: const EdgeInsets.all(16.0),
-                              primary: Colors.black,
-                              backgroundColor: Color.fromARGB(255, 245, 27, 27),
-                              textStyle: const TextStyle(fontSize: 15),
-                            ),
-                            onPressed: () {
-                              showDialog(
-                                context: context,
-                                builder: (context) {
-                                  return AlertDialog(
-                                    title: Text("Warning"),
-                                    content: Text(
-                                        "Are you sure want to delete data page ${pgm['title']}?"),
-                                    actions: <Widget>[
-                                      TextButton(
-                                        child: Text("Yes"),
-                                        onPressed: () {
-                                          Navigator.pop(context);
-                                          PageApi()
-                                              .deletePage(pgm['idpage'])
-                                              .then((isSuccess) {
-                                            if (isSuccess) {
-                                              setState(() {});
-                                              Scaffold.of(this.context)
-                                                  .showSnackBar(SnackBar(
-                                                      content: Text(
-                                                          "Delete data success")));
-                                            } else {
-                                              Scaffold.of(this.context)
-                                                  .showSnackBar(SnackBar(
-                                                      content: Text(
-                                                          "Delete data failed")));
-                                            }
-                                          });
-                                        },
-                                      ),
-                                      TextButton(
-                                        child: Text("No"),
-                                        onPressed: () {
-                                          Navigator.pop(context);
-                                        },
-                                      ),
-                                    ],
+                          Row(
+                            children: [
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  padding: const EdgeInsets.all(16.0),
+                                  primary: Colors.blue,
+                                  // backgroundColor:
+                                  //     Color.fromARGB(255, 12, 163, 244),
+                                  textStyle: const TextStyle(fontSize: 15),
+                                ),
+                                onPressed: () {
+                                  // showDialog(
+                                  //   context: context,
+                                  //   builder: (context) {
+                                  //     return AlertDialog(
+                                  //       title: Text("Warning"),
+                                  //       content: Text(
+                                  //           "Are you sure want to delete data page ${pgm['title']}?"),
+                                  //       actions: <Widget>[
+                                  //         TextButton(
+                                  //           child: Text("Yes"),
+                                  //           onPressed: () {
+                                  //             Navigator.pop(context);
+                                  //             PageApi()
+                                  //                 .deletePage(pgm['idpage'])
+                                  //                 .then((isSuccess) {
+                                  //               if (isSuccess) {
+                                  //                 setState(() {});
+                                  //                 Scaffold.of(this.context)
+                                  //                     .showSnackBar(SnackBar(
+                                  //                         content: Text(
+                                  //                             "Delete data success")));
+                                  //               } else {
+                                  //                 Scaffold.of(this.context)
+                                  //                     .showSnackBar(SnackBar(
+                                  //                         content: Text(
+                                  //                             "Delete data failed")));
+                                  //               }
+                                  //             });
+                                  //           },
+                                  //         ),
+                                  //         TextButton(
+                                  //           child: Text("No"),
+                                  //           onPressed: () {
+                                  //             Navigator.pop(context);
+                                  //           },
+                                  //         ),
+                                  //       ],
+                                  //     );
+                                  //   },
+                                  // );
+                                },
+                                child: const Text("View"),
+                              ),
+                              Spacer(
+                                flex: 1,
+                              ),
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  padding: const EdgeInsets.all(16.0),
+                                  primary: Colors.blue,
+                                  // backgroundColor:
+                                  //     Color.fromARGB(255, 245, 27, 27),
+                                  textStyle: const TextStyle(fontSize: 15),
+                                ),
+                                onPressed: () {
+                                  // showDialog(
+                                  //   context: context,
+                                  //   builder: (context) {
+                                  //     return AlertDialog(
+                                  //       title: Text("Warning"),
+                                  //       content: Text(
+                                  //           "Are you sure want to delete data page ${pgm['title']}?"),
+                                  //       actions: <Widget>[
+                                  //         TextButton(
+                                  //           child: Text("Yes"),
+                                  //           onPressed: () {
+                                  //             Navigator.pop(context);
+                                  //             PageApi()
+                                  //                 .deletePage(pgm['idpage'])
+                                  //                 .then((isSuccess) {
+                                  //               if (isSuccess) {
+                                  //                 setState(() {});
+                                  //                 Scaffold.of(this.context)
+                                  //                     .showSnackBar(SnackBar(
+                                  //                         content: Text(
+                                  //                             "Delete data success")));
+                                  //               } else {
+                                  //                 Scaffold.of(this.context)
+                                  //                     .showSnackBar(SnackBar(
+                                  //                         content: Text(
+                                  //                             "Delete data failed")));
+                                  //               }
+                                  //             });
+                                  //           },
+                                  //         ),
+                                  //         TextButton(
+                                  //           child: Text("No"),
+                                  //           onPressed: () {
+                                  //             Navigator.pop(context);
+                                  //           },
+                                  //         ),
+                                  //       ],
+                                  //     );
+                                  //   },
+                                  // );
+                                },
+                                child: const Text("Edit"),
+                              ),
+                              Spacer(
+                                flex: 1,
+                              ),
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  padding: const EdgeInsets.all(16.0),
+                                  primary: Colors.black,
+                                  backgroundColor:
+                                      Color.fromARGB(255, 245, 27, 27),
+                                  textStyle: const TextStyle(fontSize: 15),
+                                ),
+                                onPressed: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (context) {
+                                      return AlertDialog(
+                                        title: Text("Warning"),
+                                        content: Text(
+                                            "Are you sure want to delete data page ${pgm['title']}?"),
+                                        actions: <Widget>[
+                                          TextButton(
+                                            child: Text("Yes"),
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                              PageApi()
+                                                  .deletePage(pgm['idpage'])
+                                                  .then((isSuccess) {
+                                                if (isSuccess) {
+                                                  setState(() {});
+                                                  Scaffold.of(this.context)
+                                                      .showSnackBar(SnackBar(
+                                                          content: Text(
+                                                              "Delete data success")));
+                                                } else {
+                                                  Scaffold.of(this.context)
+                                                      .showSnackBar(SnackBar(
+                                                          content: Text(
+                                                              "Delete data failed")));
+                                                }
+                                              });
+                                            },
+                                          ),
+                                          TextButton(
+                                            child: Text("No"),
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                            },
+                                          ),
+                                        ],
+                                      );
+                                    },
                                   );
                                 },
-                              );
-                            },
-                            child: const Text("Delete"),
+                                child: const Text("Delete"),
+                              ),
+                            ],
                           ),
                         ),
                       ]);
