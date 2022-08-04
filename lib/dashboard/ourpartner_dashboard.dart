@@ -178,22 +178,58 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                           ),
                           actions: <Widget>[
                             TextButton(
-                              onPressed: () {
-                                if (nm.trim().isEmpty && nm == null) {
-                                  print('Nama Page Kosong');
-                                } else if (pt.trim().isEmpty && pt == null) {
-                                  print('Isi page kosong');
-                                }
+                              // onPressed: () {
+                              //   if (nm.trim().isEmpty && nm == null) {
+                              //     print('Nama Page Kosong');
+                              //   } else if (pt.trim().isEmpty && pt == null) {
+                              //     print('Isi page kosong');
+                              //   }
 
-                                print(nm + '\n' + pt);
-                                PartnerApi().createPartner(nm, pt);
-                                print('Data Tersimpan');
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const Dashboard(),
-                                  ),
-                                );
+                              //   print(nm + '\n' + pt);
+                              //   PartnerApi().createPartner(nm, pt);
+                              //   print('Data Tersimpan');
+                              //   Navigator.push(
+                              //     context,
+                              //     MaterialPageRoute(
+                              //       builder: (context) => const Dashboard(),
+                              //     ),
+                              //   );
+                              onPressed: () {
+                                Navigator.pop(context);
+
+                                if (nm.isEmpty && pt.isEmpty) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                        content: Text('Data Can\'t Be Empty')),
+                                  );
+                                } else if (pt.isEmpty) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                        content:
+                                            Text('Content Can\'t Be Empty')),
+                                  );
+                                } else if (nm.isEmpty) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                        content: Text('Name Can\'t Be Empty')),
+                                  );
+                                } else {
+                                  PartnerApi().createPartner(nm, pt).then(
+                                    (isSuccess) {
+                                      if (isSuccess) {
+                                        setState(() {});
+                                        Scaffold.of(this.context).showSnackBar(
+                                            SnackBar(
+                                                content: Text("Data success")));
+                                      } else {
+                                        Scaffold.of(this.context).showSnackBar(
+                                            SnackBar(
+                                                content:
+                                                    Text("Data failed!!!")));
+                                      }
+                                    },
+                                  );
+                                }
                               },
                               child: const Text('save'),
                             ),
