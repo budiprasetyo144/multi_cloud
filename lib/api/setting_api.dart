@@ -3,15 +3,14 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class SettingApi{
-  Future<bool> createSetting(image,name, title, tagline, email, no) async {
+  Future<bool> createSetting(im, tt, tl, em, no) async {
     final response = await http.post(
-      Uri.parse('http://10.107.250.246:8081/setting/saveSetting'),
+      Uri.parse('http://10.107.133.115:8081/setting/saveSetting'),
       body: jsonEncode({
-        "image": image,
-        "name": name,
-        "title": title,
-        "tagline": tagline,
-        "email": email,
+        "image": im,
+        "title": tt,
+        "tagline": tl,
+        "email": em,
         "no": no
       }),
       headers: {
@@ -26,7 +25,7 @@ class SettingApi{
   }
   Future<bool> updateSetting(id,image,name, title, tagline, email, no) async {
     final response = await http.put(
-        Uri.parse('http://10.107.250.246:8081/setting/updateSetting'),
+        Uri.parse('http://10.107.133.115:8081/setting/updateSetting'),
         body: jsonEncode({
           "idsetting": id,
           "image": image,
@@ -34,7 +33,8 @@ class SettingApi{
           "title": title,
           "tagline": tagline,
           "email": email,
-          "no": no
+          "no": no,
+          "idrole": "R001"
         }),
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
@@ -48,7 +48,7 @@ class SettingApi{
   }
   Future<List<dynamic>> getSetting() async{
     var response = await http.get(
-        Uri.parse('http://localhost:8082/setting/getAllSettingByIdRole'));
+        Uri.parse('http://10.107.133.115:8082/setting/getAllSettingByIdRole'));
     return jsonDecode(response.body)['data'];
   }
 }

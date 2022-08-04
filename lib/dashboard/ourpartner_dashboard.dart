@@ -91,7 +91,7 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:mcs_flutter/api/page_api.dart';
+import 'package:mcs_flutter/api/partner_api.dart';
 import 'package:mcs_flutter/dashboard/dashboard.dart';
 
 class OurpartnerDashboard extends StatefulWidget {
@@ -104,7 +104,7 @@ class OurpartnerDashboard extends StatefulWidget {
 class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
   final formKey = GlobalKey<FormState>();
   String nm = '';
-  String pg = '';
+  String pt = '';
 
   @override
   Widget build(BuildContext context) {
@@ -152,7 +152,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                           borderRadius:
                                               BorderRadius.circular(5.0)),
                                     ),
-                                    onChanged: (value) => nm = value,
+                                    onChanged: (value) => pt = value,
                                   ),
                                 ),
                                 SizedBox(
@@ -170,7 +170,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                           borderRadius:
                                               BorderRadius.circular(5.0)),
                                     ),
-                                    onChanged: (value) => pg = value,
+                                    onChanged: (value) => nm = value,
                                   ),
                                 ),
                               ],
@@ -178,20 +178,58 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                           ),
                           actions: <Widget>[
                             TextButton(
+                              // onPressed: () {
+                              //   if (nm.trim().isEmpty && nm == null) {
+                              //     print('Nama Page Kosong');
+                              //   } else if (pt.trim().isEmpty && pt == null) {
+                              //     print('Isi page kosong');
+                              //   }
+
+                              //   print(nm + '\n' + pt);
+                              //   PartnerApi().createPartner(nm, pt);
+                              //   print('Data Tersimpan');
+                              //   Navigator.push(
+                              //     context,
+                              //     MaterialPageRoute(
+                              //       builder: (context) => const Dashboard(),
+                              //     ),
+                              //   );
                               onPressed: () {
-                                if (nm.trim().isEmpty && nm == null) {
-                                  print('Nama Page Kosong');
-                                } else if (pg.trim().isEmpty && pg == null) {
-                                  print('Isi page kosong');
+                                Navigator.pop(context);
+
+                                if (nm.isEmpty && pt.isEmpty) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                        content: Text('Data Can\'t Be Empty')),
+                                  );
+                                } else if (pt.isEmpty) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                        content:
+                                            Text('Content Can\'t Be Empty')),
+                                  );
+                                } else if (nm.isEmpty) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                        content: Text('Name Can\'t Be Empty')),
+                                  );
+                                } else {
+                                  PartnerApi().createPartner(nm, pt).then(
+                                    (isSuccess) {
+                                      if (isSuccess) {
+                                        setState(() {});
+                                        Scaffold.of(this.context).showSnackBar(
+                                            SnackBar(
+                                                content: Text("Data success")));
+                                      } else {
+                                        Scaffold.of(this.context).showSnackBar(
+                                            SnackBar(
+                                                content:
+                                                    Text("Data failed!!!")));
+                                      }
+                                    },
+                                  );
                                 }
-                                PageApi().createPage(nm, pg);
-                                print('Data Tersimpan');
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const Dashboard(),
-                                  ),
-                                );
                               },
                               child: const Text('save'),
                             ),
@@ -292,7 +330,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
           ),
           Container(
             child: FutureBuilder<List<dynamic>>(
-              future: PageApi().getPage(),
+              future: PartnerApi().getPartner(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 if (snapshot.hasError ||
                     snapshot.data == null ||
@@ -301,11 +339,11 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                 }
                 return DataTable(
                   decoration: BoxDecoration(color: Colors.white),
-                  columnSpacing: 200,
+                  columnSpacing: 150,
                   columns: const [
-                    DataColumn(label: Text('No')),
-                    DataColumn(label: Text('Image')),
-                    DataColumn(label: Text('Page')),
+                    DataColumn(label: Text('Id')),
+                    DataColumn(label: Text('Name')),
+                    DataColumn(label: Text('Path')),
                     DataColumn(label: Text('Status')),
                     DataColumn(label: Text('Action')),
                   ],
@@ -315,13 +353,13 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                       var pgm = snapshot.data[index];
                       return DataRow(cells: [
                         DataCell(
-                          Text(pgm['idpage'].toString()),
+                          Text(pgm['partnerId'].toString()),
                         ),
                         DataCell(
-                          Text(pgm['title']),
+                          Text(pgm['filename']),
                         ),
                         DataCell(
-                          Text(pgm['page']),
+                          Text(pgm['filepath']),
                         ),
                         DataCell(
                           Text(pgm['status']),
@@ -341,14 +379,14 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                   return AlertDialog(
                                     title: Text("Warning"),
                                     content: Text(
-                                        "Are you sure want to delete data page ${pgm['title']}?"),
+                                        "Are you sure want to delete data partner ${pgm['filename']}?"),
                                     actions: <Widget>[
                                       TextButton(
                                         child: Text("Yes"),
                                         onPressed: () {
                                           Navigator.pop(context);
-                                          PageApi()
-                                              .deletePage(pgm['idpage'])
+                                          PartnerApi()
+                                              .deletePartner(pgm['partnerId'])
                                               .then((isSuccess) {
                                             if (isSuccess) {
                                               setState(() {});
