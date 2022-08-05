@@ -30,7 +30,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
 
   TextEditingController _controllerTitle = TextEditingController();
   TextEditingController _controllerNews = TextEditingController();
-  var fname = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -299,7 +299,6 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                     selectnews = pgm['post'];
                                     print(selectedIndex);
                                     print(pgm['idpost']);
-                                    fname.text=selecttitle;
                                     print(selecttitle);
 
                                   // _controllerNews.clear();
