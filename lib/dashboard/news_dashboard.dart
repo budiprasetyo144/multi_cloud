@@ -22,13 +22,15 @@ class _NewsDashboardState extends State<NewsDashboard> {
   String news = '';
   String images = '';
   int id = 0;
+  String selecttitle ='';
+  String selectnews ='';
 
   int selectedIndex = 0;
 
 
-  TextEditingController _controllerId = TextEditingController();
   TextEditingController _controllerTitle = TextEditingController();
   TextEditingController _controllerNews = TextEditingController();
+  var fname = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -293,12 +295,16 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                   var pgm = snapshot.data[index];
                                     selectedIndex = index;
                                     id = pgm['idpost'];
+                                    selecttitle = pgm['title'];
+                                    selectnews = pgm['post'];
                                     print(selectedIndex);
                                     print(pgm['idpost']);
+                                    fname.text=selecttitle;
+                                    print(selecttitle);
 
-                                  _controllerNews.clear();
-                                  _controllerId.clear();
-                                  _controllerTitle.clear();
+                                  // _controllerNews.clear();
+                                  // _controllerId.clear();
+                                  // _controllerTitle.clear();
                                   showDialog<String>(
                                     context: context,
                                     builder: (BuildContext context) =>
@@ -336,11 +342,16 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                 Container(
                                                   width: 200,
                                                   child: TextFormField(
-                                                    controller: _controllerTitle,
+
+                                                    //controller: _controllerTitle,
+
                                                     textAlign: TextAlign.start,
+                                                    initialValue: pgm['title'],
                                                     decoration: InputDecoration(
-                                                      labelText: "Masukkan Title Baru",
-                                                      hintStyle: TextStyle(),
+
+                                                      labelText: 'Masukkan Title News Baru',
+                                                      //labelStyle: TextStyle(),
+
                                                       border: OutlineInputBorder(
                                                           borderRadius:
                                                           BorderRadius
@@ -358,8 +369,9 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                 Container(
                                                   width: 200,
                                                   child: TextFormField(
-                                                    controller: _controllerNews,
+                                                    //controller: _controllerNews,
                                                     textAlign: TextAlign.start,
+                                                    initialValue: pgm['post'],
                                                     maxLines: 7,
                                                     decoration: InputDecoration(
                                                       labelText:
