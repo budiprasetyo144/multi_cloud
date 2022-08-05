@@ -301,9 +301,9 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                     print(pgm['idpost']);
                                     print(selecttitle);
 
-                                  // _controllerNews.clear();
+                                   _controllerNews.clear();
                                   // _controllerId.clear();
-                                  // _controllerTitle.clear();
+                                   _controllerTitle.clear();
                                   showDialog<String>(
                                     context: context,
                                     builder: (BuildContext context) =>
@@ -415,14 +415,14 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                       .showSnackBar(
                                                     const SnackBar(
                                                         content: Text(
-                                                            'Content Can\'t Be Empty')),
+                                                            'Content Must Be Edited')),
                                                   );
                                                 } else if (title.isEmpty) {
                                                   ScaffoldMessenger.of(context)
                                                       .showSnackBar(
                                                     const SnackBar(
                                                         content: Text(
-                                                            'Name Can\'t Be Empty')),
+                                                            'Name Must Be Edited')),
                                                   );
                                                 } else {
                                                   NewsApi()
