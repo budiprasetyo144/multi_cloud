@@ -148,7 +148,169 @@ class _NewsDashboardState extends State<NewsDashboard> {
                         ),
                       );
                     },
-                    child: Text('Add News'))
+                    child: Text('Add News')),
+                SizedBox(width: 20,),
+                ElevatedButton(
+                  // style: TextButton.styleFrom(
+                  //   padding: const EdgeInsets.all(16.0),
+                  //   primary: Colors.black,
+                  //   backgroundColor:
+                  //   Color.fromARGB(255, 22, 197, 197),
+                  //   textStyle: const TextStyle(fontSize: 15),
+                  // ),
+                  onPressed: () {
+                    _controllerNews.clear();
+                    _controllerId.clear();
+                    _controllerTitle.clear();
+                    showDialog<String>(
+                      context: context,
+                      builder: (BuildContext context) =>
+                          AlertDialog(
+                            title: Center(
+                                child: const Text('Update News')),
+                            content: Form(
+                              key: formKey,
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                verticalDirection:
+                                VerticalDirection.down,
+                                children: [
+                                  Container(
+                                    width: 200,
+                                    child: TextFormField(
+                                      controller: _controllerId,
+                                      textAlign: TextAlign.start,
+                                      decoration: InputDecoration(
+                                        labelText: "Masukkan ID News",
+                                        hintStyle: TextStyle(),
+                                        border: OutlineInputBorder(
+                                            borderRadius:
+                                            BorderRadius
+                                                .circular(5.0)),
+                                      ),
+
+                                      onChanged: (value) =>
+                                      id = int.parse(value),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 40,
+                                  ),
+                                  Container(
+                                    width: 200,
+                                    child: TextFormField(
+                                      controller: _controllerTitle,
+                                      textAlign: TextAlign.start,
+                                      decoration: InputDecoration(
+                                        labelText: "Masukkan Title Baru",
+                                        hintStyle: TextStyle(),
+                                        border: OutlineInputBorder(
+                                            borderRadius:
+                                            BorderRadius
+                                                .circular(5.0)),
+                                      ),
+
+                                      onChanged: (value) =>
+                                      title = value,
+
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 40,
+                                  ),
+                                  Container(
+                                    width: 200,
+                                    child: TextFormField(
+                                      controller: _controllerNews,
+                                      textAlign: TextAlign.start,
+                                      maxLines: 7,
+                                      decoration: InputDecoration(
+                                        labelText:
+                                        "Masukkan Keterangan Baru",
+                                        hintStyle: TextStyle(),
+                                        border: OutlineInputBorder(
+                                          borderRadius:
+                                          BorderRadius.circular(
+                                              5.0),
+                                        ),
+                                      ),
+                                      onChanged: (value) =>
+                                      news = value,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            actions: <Widget>[
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  padding:
+                                  const EdgeInsets.all(16.0),
+                                  primary: Colors.black,
+                                  backgroundColor: Color.fromARGB(
+                                      255, 16, 199, 71),
+                                  textStyle:
+                                  const TextStyle(fontSize: 15),
+                                ),
+                                onPressed: () {
+                                  Navigator.pop(context);
+
+                                  if (title.isEmpty && news.isEmpty) {
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(
+                                      const SnackBar(
+                                          content: Text(
+                                              'Data Can\'t Be Empty')),
+                                    );
+                                  } else if (news.isEmpty) {
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(
+                                      const SnackBar(
+                                          content: Text(
+                                              'Content Can\'t Be Empty')),
+                                    );
+                                  } else if (title.isEmpty) {
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(
+                                      const SnackBar(
+                                          content: Text(
+                                              'Name Can\'t Be Empty')),
+                                    );
+                                  } else {
+                                    NewsApi()
+                                        .updateNews(id,title,news)
+                                        .then(
+                                          (isSuccess) {
+                                        if (isSuccess) {
+                                          setState(() {});
+                                          Scaffold.of(this.context)
+                                              .showSnackBar(
+                                            SnackBar(
+                                              content: Text(
+                                                  "Data success"),
+                                            ),
+                                          );
+                                        } else {
+                                          Scaffold.of(this.context)
+                                              .showSnackBar(
+                                            SnackBar(
+                                              content: Text(
+                                                  "Data failed!!!"),
+                                            ),
+                                          );
+                                        }
+                                      },
+                                    );
+                                  }
+                                },
+                                child: const Text('Update'),
+                              ),
+                            ],
+                          ),
+                    );
+                  },
+                  child: Text('Edit News'),
+                ),
               ],
             ),
           ),
@@ -277,163 +439,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                         DataCell(
                           Row(
                             children: [
-                              ElevatedButton(
-                                style: TextButton.styleFrom(
-                                  padding: const EdgeInsets.all(16.0),
-                                  primary: Colors.black,
-                                  backgroundColor:
-                                  Color.fromARGB(255, 22, 197, 197),
-                                  textStyle: const TextStyle(fontSize: 15),
-                                ),
-                                onPressed: () {
-                                  showDialog<String>(
-                                    context: context,
-                                    builder: (BuildContext context) =>
-                                        AlertDialog(
-                                          title: Center(
-                                              child: const Text('Update News')),
-                                          content: Form(
-                                            key: formKey,
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.min,
-                                              verticalDirection:
-                                              VerticalDirection.down,
-                                              children: [
-                                                Container(
-                                                  width: 200,
-                                                  child: TextFormField(
-                                                    controller: _controllerId,
-                                                    textAlign: TextAlign.start,
-                                                    decoration: InputDecoration(
-                                                      labelText: "Masukkan ID News",
-                                                      hintStyle: TextStyle(),
-                                                      border: OutlineInputBorder(
-                                                          borderRadius:
-                                                          BorderRadius
-                                                              .circular(5.0)),
-                                                    ),
 
-                                                    onChanged: (value) =>
-                                                    id = int.parse(value),
-                                                  ),
-                                                ),
-                                                SizedBox(
-                                                  height: 40,
-                                                ),
-                                                Container(
-                                                  width: 200,
-                                                  child: TextFormField(
-                                                    controller: _controllerTitle,
-                                                    textAlign: TextAlign.start,
-                                                    decoration: InputDecoration(
-                                                      labelText: "Masukkan Title Baru",
-                                                      hintStyle: TextStyle(),
-                                                      border: OutlineInputBorder(
-                                                          borderRadius:
-                                                          BorderRadius
-                                                              .circular(5.0)),
-                                                    ),
-
-                                                    onChanged: (value) =>
-                                                    title = value,
-                                                  ),
-                                                ),
-                                                SizedBox(
-                                                  height: 40,
-                                                ),
-                                                Container(
-                                                  width: 200,
-                                                  child: TextFormField(
-                                                    controller: _controllerNews,
-                                                    textAlign: TextAlign.start,
-                                                    maxLines: 7,
-                                                    decoration: InputDecoration(
-                                                      labelText:
-                                                      "Masukkan Keterangan Baru",
-                                                      hintStyle: TextStyle(),
-                                                      border: OutlineInputBorder(
-                                                        borderRadius:
-                                                        BorderRadius.circular(
-                                                            5.0),
-                                                      ),
-                                                    ),
-                                                    onChanged: (value) =>
-                                                    news = value,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          actions: <Widget>[
-                                            TextButton(
-                                              style: TextButton.styleFrom(
-                                                padding:
-                                                const EdgeInsets.all(16.0),
-                                                primary: Colors.black,
-                                                backgroundColor: Color.fromARGB(
-                                                    255, 16, 199, 71),
-                                                textStyle:
-                                                const TextStyle(fontSize: 15),
-                                              ),
-                                              onPressed: () {
-                                                Navigator.pop(context);
-
-                                                if (title.isEmpty && news.isEmpty) {
-                                                  ScaffoldMessenger.of(context)
-                                                      .showSnackBar(
-                                                    const SnackBar(
-                                                        content: Text(
-                                                            'Data Can\'t Be Empty')),
-                                                  );
-                                                } else if (news.isEmpty) {
-                                                  ScaffoldMessenger.of(context)
-                                                      .showSnackBar(
-                                                    const SnackBar(
-                                                        content: Text(
-                                                            'Content Can\'t Be Empty')),
-                                                  );
-                                                } else if (title.isEmpty) {
-                                                  ScaffoldMessenger.of(context)
-                                                      .showSnackBar(
-                                                    const SnackBar(
-                                                        content: Text(
-                                                            'Name Can\'t Be Empty')),
-                                                  );
-                                                } else {
-                                                  NewsApi()
-                                                      .updateNews(id,title,news)
-                                                      .then(
-                                                        (isSuccess) {
-                                                      if (isSuccess) {
-                                                        setState(() {});
-                                                        Scaffold.of(this.context)
-                                                            .showSnackBar(
-                                                          SnackBar(
-                                                            content: Text(
-                                                                "Data success"),
-                                                          ),
-                                                        );
-                                                      } else {
-                                                        Scaffold.of(this.context)
-                                                            .showSnackBar(
-                                                          SnackBar(
-                                                            content: Text(
-                                                                "Data failed!!!"),
-                                                          ),
-                                                        );
-                                                      }
-                                                    },
-                                                  );
-                                                }
-                                              },
-                                              child: const Text('Update'),
-                                            ),
-                                          ],
-                                        ),
-                                  );
-                                },
-                                child: Text('Edit'),
-                              ),
                               SizedBox(width: 10,),
                               TextButton(
                                 style: TextButton.styleFrom(
