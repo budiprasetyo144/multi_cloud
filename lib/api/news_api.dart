@@ -40,7 +40,7 @@ class NewsApi {
 
   Future<bool> deleteNews(id) async {
     final response = await http.delete(
-      Uri.parse('http://10.107.122.152:8081/partner/deletePartner/$id'),
+      Uri.parse('http://10.3.4.231:8081/post/deletePost/$id'),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },

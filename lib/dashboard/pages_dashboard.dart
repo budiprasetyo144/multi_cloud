@@ -208,6 +208,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                             gradient: LinearGradient(
                               colors: <Color>[
                                 Color(0xFF42A5F5),
+                                Color(0xFF42A5F5),
                               ],
                             ),
                           ),

@@ -48,7 +48,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                       showDialog<String>(
                         context: context,
                         builder: (BuildContext context) => AlertDialog(
-                          title: Center(child: const Text('Add News')),
+                          title: Center(child: Text('Add News')),
                           content: Form(
                             key: formKey,
                             child: Column(
@@ -194,6 +194,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                               gradient: LinearGradient(
                                 colors: <Color>[
                                   Color(0xFF42A5F5),
+                                  Color(0xFF42A5F5),
                                 ],
                               ),
                             ),
@@ -282,14 +283,14 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                   return AlertDialog(
                                     title: Text("Warning"),
                                     content: Text(
-                                        "Are you sure want to delete data news ${pgm['filename']}?"),
+                                        "Are you sure want to delete data news ${pgm['title']}?"),
                                     actions: <Widget>[
                                       TextButton(
                                         child: Text("Yes"),
                                         onPressed: () {
                                           Navigator.pop(context);
                                           NewsApi()
-                                              .deleteNews(pgm['partnerId'])
+                                              .deleteNews(pgm['idpost'])
                                               .then((isSuccess) {
                                             if (isSuccess) {
                                               setState(() {});
