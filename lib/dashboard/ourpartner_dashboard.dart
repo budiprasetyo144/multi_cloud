@@ -339,7 +339,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                 }
                 return DataTable(
                   decoration: BoxDecoration(color: Colors.white),
-                  columnSpacing: 150,
+                  columnSpacing: 190,
                   columns: const [
                     DataColumn(label: Text('Id')),
                     DataColumn(label: Text('Name')),
@@ -370,7 +370,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                               padding: const EdgeInsets.all(16.0),
                               primary: Colors.black,
                               backgroundColor: Color.fromARGB(255, 245, 27, 27),
-                              textStyle: const TextStyle(fontSize: 10),
+                              textStyle: const TextStyle(fontSize: 15),
                             ),
                             onPressed: () {
                               showDialog(
