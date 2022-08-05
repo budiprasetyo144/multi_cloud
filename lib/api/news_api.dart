@@ -17,11 +17,11 @@ class NewsApi {
     }
   }
 
-  Future<bool> updateNews(id, title, news, image) async {
+  Future<bool> updateNews(id, title, news) async {
     final response = await http.post(
         Uri.parse('http://10.3.4.231:8081/post/savePost'),
         body: jsonEncode(
-            {"idpost": id, "title": title, "post": news, "image": image}),
+            {"idpost": id, "title": title, "post": news}),
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         });
