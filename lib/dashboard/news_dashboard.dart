@@ -268,7 +268,57 @@ class _NewsDashboardState extends State<NewsDashboard> {
                           Text(pgm['status']),
                         ),
                         DataCell(
-                          Text('edit'),
+                          TextButton(
+                            style: TextButton.styleFrom(
+                              padding: const EdgeInsets.all(16.0),
+                              primary: Colors.black,
+                              backgroundColor: Color.fromARGB(255, 245, 27, 27),
+                              textStyle: const TextStyle(fontSize: 15),
+                            ),
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    title: Text("Warning"),
+                                    content: Text(
+                                        "Are you sure want to delete data news ${pgm['filename']}?"),
+                                    actions: <Widget>[
+                                      TextButton(
+                                        child: Text("Yes"),
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                          NewsApi()
+                                              .deleteNews(pgm['partnerId'])
+                                              .then((isSuccess) {
+                                            if (isSuccess) {
+                                              setState(() {});
+                                              Scaffold.of(this.context)
+                                                  .showSnackBar(SnackBar(
+                                                      content: Text(
+                                                          "Delete data success")));
+                                            } else {
+                                              Scaffold.of(this.context)
+                                                  .showSnackBar(SnackBar(
+                                                      content: Text(
+                                                          "Delete data failed")));
+                                            }
+                                          });
+                                        },
+                                      ),
+                                      TextButton(
+                                        child: Text("No"),
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            },
+                            child: const Text("Delete"),
+                          ),
                         ),
                       ]);
                     },
