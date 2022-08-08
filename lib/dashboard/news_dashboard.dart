@@ -345,7 +345,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                     //controller: _controllerTitle,
 
                                                     textAlign: TextAlign.start,
-                                                    initialValue: pgm['title'],
+                                                    initialValue: selecttitle,
                                                     decoration: InputDecoration(
 
                                                       labelText: 'Masukkan Title News Baru',
@@ -370,7 +370,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                   child: TextFormField(
                                                     //controller: _controllerNews,
                                                     textAlign: TextAlign.start,
-                                                    initialValue: pgm['post'],
+                                                    initialValue: selectnews,
                                                     maxLines: 7,
                                                     decoration: InputDecoration(
                                                       labelText:
