@@ -22,7 +22,7 @@ AppBar BarAtas(BuildContext context) {
             onPressed: ()  {
               Navigator.pushNamed(
                   context,
-                  '/home'
+                  '/'
               );
             },
             icon: Icon(
@@ -36,7 +36,7 @@ AppBar BarAtas(BuildContext context) {
             onPressed: () {
               Navigator.pushNamed(
                 context,
-                '/home'
+                '/'
               );
             },
             icon: Icon(Icons.output,
