@@ -20,11 +20,9 @@ AppBar BarAtas(BuildContext context) {
           //AlertForm(),
           TextButton.icon(
             onPressed: ()  {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomePage(),
-                ),
+              Navigator.pushNamed(
+                  context,
+                  '/home'
               );
             },
             icon: Icon(
@@ -36,9 +34,9 @@ AppBar BarAtas(BuildContext context) {
           ),
           TextButton.icon(
             onPressed: () {
-              Navigator.pop(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(builder: ((context) => HomePage())),
+                '/home'
               );
             },
             icon: Icon(Icons.output,

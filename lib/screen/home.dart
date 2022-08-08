@@ -134,7 +134,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                     SizedBox(
-                      width: screenSize.width * 0.03,
+                      width: screenSize.width * 0.08,
                     ),
                     SizedBox(
                       height: 50,
@@ -157,19 +157,19 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     const Spacer(),
-                    IconButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const Dashboard(),
-                            ),
-                          );
-                        },
-                        icon: const Icon(
-                          Icons.brightness_low_sharp,
-                          color: Colors.white,
-                        ))
+                    // IconButton(
+                    //     onPressed: () {
+                    //       Navigator.push(
+                    //         context,
+                    //         MaterialPageRoute(
+                    //           builder: (context) => const Dashboard(),
+                    //         ),
+                    //       );
+                    //     },
+                    //     icon: const Icon(
+                    //       Icons.brightness_low_sharp,
+                    //       color: Colors.white,
+                    //     ))
                   ],
                 ),
               ),
