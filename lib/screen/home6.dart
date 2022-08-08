@@ -3,6 +3,7 @@ import 'package:mcs_flutter/screen/post.dart';
 import 'package:mcs_flutter/screen/post_body.dart';
 import '../text/text_body.dart';
 import 'package:mcs_flutter/text/text_post.dart';
+import 'package:mcs_flutter/main.dart';
 
 class Home6 extends StatefulWidget {
   const Home6({Key? key}) : super(key: key);
@@ -209,11 +210,9 @@ class _Home6State extends State<Home6> {
 
 
             TextButton.icon(
-                onPressed: (){Navigator.push(
+                onPressed: (){Navigator.pushNamed(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const Post(),
-                  ),
+                  '/news',
                 );
                   },
                 icon: const Icon(Icons.newspaper,color: Colors.white,size: 30,),
