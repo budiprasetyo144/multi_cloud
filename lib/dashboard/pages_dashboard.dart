@@ -13,11 +13,14 @@ class PagesDashboard extends StatefulWidget {
 class _PagesDashboardState extends State<PagesDashboard> {
   final formKey = GlobalKey<FormState>();
 
-  String id = '';
+  int id = 0;
   String nm = '';
   String pg = '';
+  String selectname = '';
+  String selectpage = '';
 
-  TextEditingController _controllerId = TextEditingController();
+  int selectedIndex = 0;
+
   TextEditingController _controllerName = TextEditingController();
   TextEditingController _controllerPage = TextEditingController();
 
@@ -65,7 +68,6 @@ class _PagesDashboardState extends State<PagesDashboard> {
                               Container(
                                 width: 200,
                                 child: TextFormField(
-                                  controller: _controllerName,
                                   textAlign: TextAlign.start,
                                   decoration: InputDecoration(
                                     labelText: "Masukkan Nama",
@@ -83,7 +85,6 @@ class _PagesDashboardState extends State<PagesDashboard> {
                               Container(
                                 width: 200,
                                 child: TextFormField(
-                                  controller: _controllerPage,
                                   textAlign: TextAlign.start,
                                   maxLines: 7,
                                   decoration: InputDecoration(
@@ -281,120 +282,123 @@ class _PagesDashboardState extends State<PagesDashboard> {
                           DataCell(
                             Row(
                               children: [
-                                TextButton(
-                                  style: TextButton.styleFrom(
-                                    padding: const EdgeInsets.all(16.0),
-                                    primary: Colors.black,
-                                    backgroundColor:
-                                        Color.fromARGB(255, 245, 27, 27),
-                                    textStyle: const TextStyle(fontSize: 15),
-                                  ),
-                                  onPressed: () {
-                                    showDialog(
-                                      context: context,
-                                      builder: (context) {
-                                        return AlertDialog(
-                                          title: Text("Warning"),
-                                          content: Text(
-                                              "Are you sure want to delete data page ${pgm['title']}?"),
-                                          actions: <Widget>[
-                                            TextButton(
-                                              child: Text("Yes"),
-                                              onPressed: () {
-                                                Navigator.pop(context);
-                                                PageApi()
-                                                    .deletePage(pgm['idpage'])
-                                                    .then((isSuccess) {
-                                                  if (isSuccess) {
-                                                    setState(() {});
-                                                    Scaffold.of(this.context)
-                                                        .showSnackBar(SnackBar(
-                                                            content: Text(
-                                                                "Delete data success")));
-                                                  } else {
-                                                    Scaffold.of(this.context)
-                                                        .showSnackBar(SnackBar(
-                                                            content: Text(
-                                                                "Delete data failed")));
-                                                  }
-                                                });
-                                              },
-                                            ),
-                                            TextButton(
-                                              child: Text("No"),
-                                              onPressed: () {
-                                                Navigator.pop(context);
-                                              },
-                                            ),
-                                          ],
-                                        );
-                                      },
-                                    );
-                                  },
-                                  child: const Text("Delete"),
-                                ),
-                                SizedBox(width: 10),
                                 ElevatedButton(
-                                  style: TextButton.styleFrom(
-                                    padding: const EdgeInsets.all(16.0),
-                                    primary: Colors.black,
-                                    backgroundColor:
-                                        Color.fromARGB(255, 16, 199, 71),
-                                    textStyle: const TextStyle(fontSize: 15),
-                                  ),
+                                  // style: TextButton.styleFrom(
+                                  //   padding: const EdgeInsets.all(16.0),
+                                  //   primary: Colors.black,
+                                  //   backgroundColor:
+                                  //   Color.fromARGB(255, 22, 197, 197),
+                                  //   textStyle: const TextStyle(fontSize: 15),
+                                  // ),
                                   onPressed: () {
+                                    var pgm = snapshot.data[index];
+                                    selectedIndex = index;
+                                    id = pgm['idpage'];
+                                    selectname = pgm['title'];
+                                    selectpage = pgm['page'];
+                                    print(selectedIndex);
+                                    print(pgm['idpage']);
+                                    print(selectname);
+
+                                    _controllerName.clear();
+                                    // _controllerId.clear();
+                                    _controllerPage.clear();
                                     showDialog<String>(
                                       context: context,
                                       builder: (BuildContext context) =>
                                           AlertDialog(
                                         title: Center(
-                                            child: const Text('UPDATE PAGES')),
+                                            child: const Text('Update Pages')),
                                         content: Form(
                                           key: formKey,
                                           child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             mainAxisSize: MainAxisSize.min,
                                             verticalDirection:
                                                 VerticalDirection.down,
                                             children: [
-                                              Container(
-                                                width: 200,
-                                                child: TextFormField(
-                                                  controller: _controllerName,
-                                                  textAlign: TextAlign.start,
-                                                  decoration: InputDecoration(
-                                                    labelText: "Masukkan Nama",
-                                                    hintStyle: TextStyle(),
-                                                    border: OutlineInputBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(5.0)),
+                                              // Container(
+                                              //   width: 200,
+                                              //   child: TextFormField(
+                                              //     controller: _controllerId,
+                                              //     textAlign: TextAlign.start,
+                                              //     decoration: InputDecoration(
+                                              //       labelText: "Masukkan ID News",
+                                              //       hintStyle: TextStyle(),
+                                              //       border: OutlineInputBorder(
+                                              //           borderRadius:
+                                              //           BorderRadius
+                                              //               .circular(5.0)),
+                                              //     ),
+                                              //
+                                              //     onChanged: (value) =>
+                                              //     id = int.parse(value),
+                                              //   ),
+                                              // ),
+                                              SizedBox(
+                                                height: 10,
+                                              ),
+                                              const Text(
+                                                'Data Harus di Edit*',
+                                                style: TextStyle(
+                                                    fontSize: 13,
+                                                    color: Colors.red),
+                                              ),
+                                              SizedBox(
+                                                height: 15,
+                                              ),
+                                              Center(
+                                                child: Container(
+                                                  width: 200,
+                                                  child: TextFormField(
+                                                    //controller: _controllerName,
+
+                                                    textAlign: TextAlign.start,
+                                                    initialValue: selectname,
+                                                    decoration: InputDecoration(
+                                                      labelText:
+                                                          'Masukkan Nama Pages Baru',
+                                                      //labelStyle: TextStyle(),
+
+                                                      border:
+                                                          OutlineInputBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          5.0)),
+                                                    ),
+
+                                                    onChanged: (value) =>
+                                                        nm = value,
                                                   ),
-                                                  
-                                                  onChanged: (value) =>
-                                                      nm = value,
                                                 ),
                                               ),
                                               SizedBox(
                                                 height: 40,
                                               ),
-                                              Container(
-                                                width: 200,
-                                                child: TextFormField(
-                                                  controller: _controllerPage,
-                                                  textAlign: TextAlign.start,
-                                                  maxLines: 7,
-                                                  decoration: InputDecoration(
-                                                    labelText:
-                                                        "Masukkan Keterangan",
-                                                    hintStyle: TextStyle(),
-                                                    border: OutlineInputBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              5.0),
+                                              Center(
+                                                child: Container(
+                                                  width: 200,
+                                                  child: TextFormField(
+                                                    //controller: _controllerPage,
+                                                    textAlign: TextAlign.start,
+                                                    initialValue: selectpage,
+                                                    maxLines: 7,
+                                                    decoration: InputDecoration(
+                                                      labelText:
+                                                          "Masukkan Keterangan",
+                                                      hintStyle: TextStyle(),
+                                                      border:
+                                                          OutlineInputBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(5.0),
+                                                      ),
                                                     ),
+                                                    onChanged: (value) =>
+                                                        pg = value,
                                                   ),
-                                                  onChanged: (value) =>
-                                                      pg = value,
                                                 ),
                                               ),
                                             ],
@@ -468,7 +472,60 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                       ),
                                     );
                                   },
-                                  child: Text('Edit'),
+                                  child: Text('Edit News'),
+                                ),
+                                SizedBox(width: 10),
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    padding: const EdgeInsets.all(16.0),
+                                    primary: Colors.black,
+                                    backgroundColor:
+                                        Color.fromARGB(255, 245, 27, 27),
+                                    textStyle: const TextStyle(fontSize: 15),
+                                  ),
+                                  onPressed: () {
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return AlertDialog(
+                                          title: Text("Warning"),
+                                          content: Text(
+                                              "Are you sure want to delete data page ${pgm['title']}?"),
+                                          actions: <Widget>[
+                                            TextButton(
+                                              child: Text("Yes"),
+                                              onPressed: () {
+                                                Navigator.pop(context);
+                                                PageApi()
+                                                    .deletePage(pgm['idpage'])
+                                                    .then((isSuccess) {
+                                                  if (isSuccess) {
+                                                    setState(() {});
+                                                    Scaffold.of(this.context)
+                                                        .showSnackBar(SnackBar(
+                                                            content: Text(
+                                                                "Delete data success")));
+                                                  } else {
+                                                    Scaffold.of(this.context)
+                                                        .showSnackBar(SnackBar(
+                                                            content: Text(
+                                                                "Delete data failed")));
+                                                  }
+                                                });
+                                              },
+                                            ),
+                                            TextButton(
+                                              child: Text("No"),
+                                              onPressed: () {
+                                                Navigator.pop(context);
+                                              },
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
+                                  },
+                                  child: const Text("Delete"),
                                 ),
                               ],
                             ),
