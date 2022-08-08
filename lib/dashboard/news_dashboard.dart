@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mcs_flutter/dashboard/dashboard.dart';
 import 'package:mcs_flutter/widget/filter.dart';
 import 'package:mcs_flutter/widget/dropdownbuttondates.dart';
+import 'package:mcs_flutter/api/news_api.dart';
 
 class NewsDashboard extends StatefulWidget {
   const NewsDashboard({Key? key}) : super(key: key);
@@ -15,6 +17,20 @@ class _NewsDashboardState extends State<NewsDashboard> {
   bool value2 = false;
   bool value3 = false;
   bool value4 = false;
+  final formKey = GlobalKey<FormState>();
+  String title = '';
+  String news = '';
+  String images = '';
+  int id = 0;
+  String selecttitle ='';
+  String selectnews ='';
+
+  int selectedIndex = 0;
+
+
+  TextEditingController _controllerTitle = TextEditingController();
+  TextEditingController _controllerNews = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +53,108 @@ class _NewsDashboardState extends State<NewsDashboard> {
                         fontSize: 20,
                       )),
                 ),
-                ElevatedButton(onPressed: (){}, child: Text('Add New News'))
+                ElevatedButton(
+                    onPressed: () {
+                      showDialog<String>(
+                        context: context,
+                        builder: (BuildContext context) => AlertDialog(
+                          title: Center(child: Text('Add News')),
+                          content: Form(
+                            key: formKey,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              verticalDirection: VerticalDirection.down,
+                              children: [
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                //IconButton(onPressed: (){}, icon: Icon(Icons.add_photo_alternate_outlined,size: 30,)),
+                                Container(
+                                  width: 230,
+                                  child: TextFormField(
+                                    textAlign: TextAlign.start,
+                                    decoration: InputDecoration(
+                                      labelText: "Masukkan Code Image",
+                                      hintStyle: TextStyle(),
+                                      border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(5.0)),
+                                    ),
+                                    onChanged: (value) => images = value,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                Container(
+                                  width: 230,
+                                  child: TextFormField(
+                                    textAlign: TextAlign.start,
+                                    decoration: InputDecoration(
+                                      labelText: "Masukkan Title",
+                                      hintStyle: TextStyle(),
+                                      border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(5.0)),
+                                    ),
+                                    onChanged: (value) => title = value,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                Container(
+                                  width: 230,
+                                  child: TextFormField(
+                                    textAlign: TextAlign.start,
+                                    maxLines: 7,
+                                    decoration: InputDecoration(
+                                      labelText: "Masukkan Keterangan News",
+                                      hintStyle: TextStyle(),
+                                      border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(5.0)),
+                                    ),
+                                    onChanged: (value) => news = value,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          actions: <Widget>[
+                            TextButton(
+                              onPressed: () {
+                                if (title.trim().isEmpty &&
+                                    news == null &&
+                                    images == null) {
+                                  print('Title News Kosong');
+                                } else if (news.trim().isEmpty &&
+                                    title == null &&
+                                    images == null) {
+                                  print('Isi News kosong');
+                                } else if (images.trim().isEmpty &&
+                                    title == null &&
+                                    news == null) {
+                                  print('Images Kosong');
+                                }
+                                NewsApi().createNews(title, news, images);
+                                print('Data Tersimpan');
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Dashboard(),
+                                  ),
+                                );
+                              },
+                              child: const Text('Save'),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                    child: Text('Add News')),
+                SizedBox(width: 20,),
+
               ],
             ),
           ),
@@ -65,12 +182,12 @@ class _NewsDashboardState extends State<NewsDashboard> {
                         prefixIcon: const Icon(Icons.search),
                         enabledBorder: OutlineInputBorder(
                           borderSide:
-                          const BorderSide(width: 1, color: Colors.blue),
+                              const BorderSide(width: 1, color: Colors.blue),
                           borderRadius: BorderRadius.circular(5),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide:
-                          const BorderSide(width: 1, color: Colors.blue),
+                              const BorderSide(width: 1, color: Colors.blue),
                           borderRadius: BorderRadius.circular(5),
                         ),
                       ),
@@ -88,6 +205,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                             decoration: const BoxDecoration(
                               gradient: LinearGradient(
                                 colors: <Color>[
+                                  Color(0xFF42A5F5),
                                   Color(0xFF42A5F5),
                                 ],
                               ),
@@ -122,621 +240,287 @@ class _NewsDashboardState extends State<NewsDashboard> {
               Text("3 items"),
             ],
           ),
-          Expanded(
-            child: Container(
-              color: Colors.white,
-              height: screenSize.height * 0.5,
-              width: screenSize.width,
-              padding: const EdgeInsets.all(10),
-              child: ListView(
-                children: [
-                  DataTable(
-                      columnSpacing: 30,
-                      dataRowHeight: 70,
-                      horizontalMargin: 10,
-                      columns: [
-                        DataColumn(
-                            label: Checkbox(
-                                value: value,
-                                onChanged: (bool? value) {
-                                  setState(() {
-                                    this.value = value!;
-                                  });
-                                })),
-                        const DataColumn(
-                            label: Text(
-                              'Title',
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold),
-                            )),
-                        const DataColumn(
-                            label: Text(
-                              'Author',
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold),
-                            )),
-                        const DataColumn(
-                            label: Text(
-                              'Date',
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold),
-                            )),
-                      ],
-                      rows: [
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value1,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value1 = value!;
-                                });
-                              })),
-                          DataCell(Row(
+          Container(
+            child: FutureBuilder<List<dynamic>>(
+              future: NewsApi().getNews(),
+              builder: (BuildContext context, AsyncSnapshot snapshot) {
+                if (snapshot.hasError ||
+                    snapshot.data == null ||
+                    snapshot.connectionState == ConnectionState.waiting) {
+                  return const CircularProgressIndicator();
+                }
+                return DataTable(
+                  decoration: BoxDecoration(color: Colors.white),
+                  columnSpacing: 100,
+                  columns: const [
+                    DataColumn(label: Text('Id')),
+                    DataColumn(label: Text('Title')),
+                    DataColumn(label: Text('News')),
+                    DataColumn(label: Text('Images')),
+                    DataColumn(label: Text('Status')),
+                    DataColumn(label: Text('Action')),
+                  ],
+                  rows: List.generate(
+                    snapshot.data.length,
+                    (index) {
+                      var pgm = snapshot.data[index];
+                      return DataRow(cells: [
+                        DataCell(
+                          Text(pgm['idpost'].toString()),
+                        ),
+                        DataCell(
+                          Text(pgm['title']),
+                        ),
+                        DataCell(
+                          Text(pgm['post']),
+                        ),
+                        DataCell(
+                          Text(pgm['image']),
+                        ),
+                        DataCell(
+                          Text(pgm['status']),
+                        ),
+                        DataCell(
+                          Row(
                             children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
+                              ElevatedButton(
+                                // style: TextButton.styleFrom(
+                                //   padding: const EdgeInsets.all(16.0),
+                                //   primary: Colors.black,
+                                //   backgroundColor:
+                                //   Color.fromARGB(255, 22, 197, 197),
+                                //   textStyle: const TextStyle(fontSize: 15),
+                                // ),
+                                onPressed: () {
+                                  var pgm = snapshot.data[index];
+                                    selectedIndex = index;
+                                    id = pgm['idpost'];
+                                    selecttitle = pgm['title'];
+                                    selectnews = pgm['post'];
+                                    print(selectedIndex);
+                                    print(pgm['idpost']);
+                                    print(selecttitle);
+
+                                   _controllerNews.clear();
+                                  // _controllerId.clear();
+                                   _controllerTitle.clear();
+                                  showDialog<String>(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        AlertDialog(
+                                          title: Center(
+                                              child: const Text('Update News')),
+                                          content: Form(
+                                            key: formKey,
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              verticalDirection:
+                                              VerticalDirection.down,
+                                              children: [
+                                                // Container(
+                                                //   width: 200,
+                                                //   child: TextFormField(
+                                                //     controller: _controllerId,
+                                                //     textAlign: TextAlign.start,
+                                                //     decoration: InputDecoration(
+                                                //       labelText: "Masukkan ID News",
+                                                //       hintStyle: TextStyle(),
+                                                //       border: OutlineInputBorder(
+                                                //           borderRadius:
+                                                //           BorderRadius
+                                                //               .circular(5.0)),
+                                                //     ),
+                                                //
+                                                //     onChanged: (value) =>
+                                                //     id = int.parse(value),
+                                                //   ),
+                                                // ),
+                                                SizedBox(
+                                                  height: 40,
+                                                ),
+                                                Container(
+                                                  width: 200,
+                                                  child: TextFormField(
+
+                                                    //controller: _controllerTitle,
+
+                                                    textAlign: TextAlign.start,
+                                                    initialValue: pgm['title'],
+                                                    decoration: InputDecoration(
+
+                                                      labelText: 'Masukkan Title News Baru',
+                                                      //labelStyle: TextStyle(),
+
+                                                      border: OutlineInputBorder(
+                                                          borderRadius:
+                                                          BorderRadius
+                                                              .circular(5.0)),
+                                                    ),
+
+                                                    onChanged: (value) =>
+                                                    title = value,
+
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: 40,
+                                                ),
+                                                Container(
+                                                  width: 200,
+                                                  child: TextFormField(
+                                                    //controller: _controllerNews,
+                                                    textAlign: TextAlign.start,
+                                                    initialValue: pgm['post'],
+                                                    maxLines: 7,
+                                                    decoration: InputDecoration(
+                                                      labelText:
+                                                      "Masukkan Keterangan Baru",
+                                                      hintStyle: TextStyle(),
+                                                      border: OutlineInputBorder(
+                                                        borderRadius:
+                                                        BorderRadius.circular(
+                                                            5.0),
+                                                      ),
+                                                    ),
+                                                    onChanged: (value) =>
+                                                    news = value,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          actions: <Widget>[
+                                            TextButton(
+                                              style: TextButton.styleFrom(
+                                                padding:
+                                                const EdgeInsets.all(16.0),
+                                                primary: Colors.black,
+                                                backgroundColor: Color.fromARGB(
+                                                    255, 16, 199, 71),
+                                                textStyle:
+                                                const TextStyle(fontSize: 15),
+                                              ),
+                                              onPressed: () {
+                                                Navigator.pop(context);
+
+                                                if (title.isEmpty && news.isEmpty) {
+                                                  ScaffoldMessenger.of(context)
+                                                      .showSnackBar(
+                                                    const SnackBar(
+                                                        content: Text(
+                                                            'Data Can\'t Be Empty')),
+                                                  );
+                                                } else if (news.isEmpty) {
+                                                  ScaffoldMessenger.of(context)
+                                                      .showSnackBar(
+                                                    const SnackBar(
+                                                        content: Text(
+                                                            'Content Must Be Edited')),
+                                                  );
+                                                } else if (title.isEmpty) {
+                                                  ScaffoldMessenger.of(context)
+                                                      .showSnackBar(
+                                                    const SnackBar(
+                                                        content: Text(
+                                                            'Name Must Be Edited')),
+                                                  );
+                                                } else {
+                                                  NewsApi()
+                                                      .updateNews(id,title,news)
+                                                      .then(
+                                                        (isSuccess) {
+                                                      if (isSuccess) {
+                                                        setState(() {});
+                                                        Scaffold.of(this.context)
+                                                            .showSnackBar(
+                                                          SnackBar(
+                                                            content: Text(
+                                                                "Data success"),
+                                                          ),
+                                                        );
+                                                      } else {
+                                                        Scaffold.of(this.context)
+                                                            .showSnackBar(
+                                                          SnackBar(
+                                                            content: Text(
+                                                                "Data failed!!!"),
+                                                          ),
+                                                        );
+                                                      }
+                                                    },
+                                                  );
+                                                }
+                                              },
+                                              child: const Text('Update'),
+                                            ),
+                                          ],
+                                        ),
+                                  );
+                                },
+                                child: Text('Edit News'),
                               ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Books Recomendation by Senior Developer',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      const SizedBox(height: 10),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(width: 20)
-                                    ],
-                                  )
-                                ],
+                              SizedBox(width: 10,),
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  padding: const EdgeInsets.all(16.0),
+                                  primary: Colors.black,
+                                  backgroundColor: Color.fromARGB(255, 245, 27, 27),
+                                  textStyle: const TextStyle(fontSize: 15),
+                                ),
+                                onPressed: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (context) {
+                                      return AlertDialog(
+                                        title: Text("Warning"),
+                                        content: Text(
+                                            "Are you sure want to delete data news ${pgm['title']}?"),
+                                        actions: <Widget>[
+                                          TextButton(
+                                            child: Text("Yes"),
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                              NewsApi()
+                                                  .deleteNews(pgm['idpost'])
+                                                  .then((isSuccess) {
+                                                if (isSuccess) {
+                                                  setState(() {});
+                                                  Scaffold.of(this.context)
+                                                      .showSnackBar(SnackBar(
+                                                          content: Text(
+                                                              "Delete data success")));
+                                                } else {
+                                                  Scaffold.of(this.context)
+                                                      .showSnackBar(SnackBar(
+                                                          content: Text(
+                                                              "Delete data failed")));
+                                                }
+                                              });
+                                            },
+                                          ),
+                                          TextButton(
+                                            child: Text("No"),
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                            },
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                },
+                                child: const Text("Delete"),
                               ),
                             ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-06-18')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value2,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value2 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Welcome Bootcamp Batch 4',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(width: 20)
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-07-18')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value3,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value3 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Hello World!',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(width: 20)
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-07-17')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value4,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value4 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Why We Are Here?',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(height: 20, width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(height: 20, width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(height: 20, width: 20),
-                                    ],
-                                  )
-                                ],
-                              )
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-07-18'))
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value2,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value2 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Welcome Bootcamp Batch 4',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(width: 20)
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-07-18')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value2,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value2 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Welcome Bootcamp Batch 4',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(width: 20)
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-07-18')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value2,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value2 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Welcome Bootcamp Batch 4',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(width: 20)
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-07-18')),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(Checkbox(
-                              value: value2,
-                              onChanged: (bool? value) {
-                                setState(() {
-                                  value2 = value!;
-                                });
-                              })),
-                          DataCell(Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                child: const Image(
-                                  image: AssetImage('assets/icons/home.png'),
-                                  fit: BoxFit.cover,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    '    Welcome Bootcamp Batch 4',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(height: 15),
-                                  Row(
-                                    children: [
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Edit'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('Remove'),
-                                      ),
-                                      SizedBox(width: 20),
-                                      TextButton(
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.blue[900],
-                                          textStyle:
-                                          const TextStyle(fontSize: 15),
-                                        ),
-                                        onPressed: () {},
-                                        child: const Text('View'),
-                                      ),
-                                      SizedBox(width: 20)
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
-                          )),
-                          const DataCell(Text('Admin')),
-                          const DataCell(Text('2022-07-18')),
-                        ])
-                      ]),
-                ],
-              ),
+                          ),
+                        ),
+                      ]);
+                    },
+                  ).toList(),
+                );
+              },
             ),
-          )
+          ),
         ],
       ),
     );
