@@ -50,7 +50,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                 ElevatedButton(
                   style: TextButton.styleFrom(
                     padding: const EdgeInsets.all(16.0),
-                    primary: Colors.black,
+                    primary: Colors.white,
                     backgroundColor: Colors.blue,
                     textStyle: const TextStyle(fontSize: 15),
                   ),
@@ -218,7 +218,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       TextButton(
                         style: TextButton.styleFrom(
                           padding: const EdgeInsets.all(16.0),
-                          primary: Colors.black,
+                          primary: Colors.white,
                           backgroundColor: Colors.blue,
                           textStyle: const TextStyle(fontSize: 15),
                         ),
@@ -230,14 +230,6 @@ class _PagesDashboardState extends State<PagesDashboard> {
                 ),
               ],
             ),
-          ),
-          Row(
-            children: [
-              Spacer(
-                flex: 6,
-              ),
-              Text("3 items"),
-            ],
           ),
           SizedBox(
             height: 10,
@@ -472,13 +464,13 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                       ),
                                     );
                                   },
-                                  child: Text('Edit News'),
+                                  child: Text('Edit Page'),
                                 ),
                                 SizedBox(width: 10),
                                 TextButton(
                                   style: TextButton.styleFrom(
                                     padding: const EdgeInsets.all(16.0),
-                                    primary: Colors.black,
+                                    primary: Colors.white,
                                     backgroundColor:
                                         Color.fromARGB(255, 245, 27, 27),
                                     textStyle: const TextStyle(fontSize: 15),
