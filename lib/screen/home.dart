@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                 ),
-
+              ),
             ),
           ),
           const Home4(),
