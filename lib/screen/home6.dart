@@ -62,19 +62,7 @@ class _Home6State extends State<Home6> {
                       ),
                       TextButton(
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => PostBody(
-                                    Imagez: 'assets/images/xcxcxc.jpg',
-                                    HeadText: headgrid1,
-                                    Tanggal: tanggal,
-                                    Bodyfull: bodyfull1,
-                                    Urutan: urutan1,
-
-                                ),
-                              ),
-                            );
+                            Navigator.pushNamed(context, '/news/1');
                           },
                           child: const Text(
                             'LEARN MORE',
@@ -123,19 +111,7 @@ class _Home6State extends State<Home6> {
                       ),
                       TextButton(
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => PostBody(
-                                    Imagez: 'assets/images/eksad.jpg',
-                                    HeadText: headgrid7,
-                                    Tanggal: tanggal7,
-                                    Bodyfull: bodyfull7,
-                                    Urutan: urutan7,
-
-                                ),
-                              ),
-                            );
+                            Navigator.pushNamed(context, '/news/2');
                           },
                           child: const Text(
                             'LEARN MORE',
@@ -182,19 +158,7 @@ class _Home6State extends State<Home6> {
                       ),
                       TextButton(
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => PostBody(
-                                    Imagez: 'assets/images/cvcvcv.jpg',
-                                    HeadText: headgrid3,
-                                    Tanggal: tanggal,
-                                    Bodyfull: bodyfull3,
-                                    Urutan: urutan3,
-
-                                ),
-                              ),
-                            );
+                            Navigator.pushNamed(context, '/news/3');
                           },
                           child: const Text(
                             'LEARN MORE',
