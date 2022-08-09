@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mcs_flutter/animation/animasi1.dart';
-import 'package:mcs_flutter/animation/animasi2.dart';
-import 'package:mcs_flutter/animation/animasi3.dart';
-import 'package:mcs_flutter/animation/animasi4.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mcs_flutter/animation/animasi_kiri_kanan.dart';
+import 'package:mcs_flutter/animation/animasi_kanan_kiri.dart';
+import 'package:show_up_animation/show_up_animation.dart';
 
 class Home2 extends StatelessWidget {
   const Home2({
@@ -32,7 +31,7 @@ class Home2 extends StatelessWidget {
                     fontWeight: FontWeight.bold)),
           ),
           const SizedBox(
-            height: 15,
+            height: 25,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -42,17 +41,11 @@ class Home2 extends StatelessWidget {
                 width: screenSize.width * 0.2,
                 child: Column(
                   children: [
-                    const Animasi(),
+                    Animasi_Kiri_Kanan(screenSize: screenSize,widget: Image.asset("assets/icons/icon1.png",height: screenSize.height * 0.1,),),
                     SizedBox(
                       height: screenSize.height * 0.03,
                     ),
-                    Text(
-                      "MIGRATION",
-                      style: GoogleFonts.robotoCondensed(
-                          color: Color(0xff1e5ea8),
-                          fontSize: 26,
-                          fontWeight: FontWeight.bold),
-                    ),
+                    Animasi_Kanan_Kiri(judul: "MIGRATION",),
                     SizedBox(
                       height: screenSize.height * 0.03,
                     ),
@@ -90,17 +83,11 @@ class Home2 extends StatelessWidget {
                 width: screenSize.width * 0.2,
                 child: Column(
                   children: [
-                    const Animasi2(),
+                    Animasi_Kiri_Kanan(screenSize: screenSize,widget: Image.asset("assets/icons/icon2.png",height: screenSize.height * 0.1,),),
                     SizedBox(
                       height: screenSize.height * 0.03,
                     ),
-                    Text(
-                      "CONSULTING",
-                      style: GoogleFonts.robotoCondensed(
-                          color: Color(0xff1e5ea8),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    ),
+                    Animasi_Kanan_Kiri(judul: "CONSULTING",),
                     SizedBox(
                       height: screenSize.height * 0.03,
                     ),
@@ -148,17 +135,11 @@ class Home2 extends StatelessWidget {
                 width: screenSize.width * 0.2,
                 child: Column(
                   children: [
-                    const Animasi3(),
+                    Animasi_Kiri_Kanan(screenSize: screenSize,widget: Image.asset("assets/icons/icon3.png",height: screenSize.height * 0.1,),),
                     SizedBox(
                       height: screenSize.height * 0.03,
                     ),
-                    Text(
-                      "LOCAL SUPPORT",
-                      style: GoogleFonts.robotoCondensed(
-                          color: Color(0xff1e5ea8),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    ),
+                    Animasi_Kanan_Kiri(judul: "LOCAL SUPPORT",),
                     SizedBox(
                       height: screenSize.height * 0.03,
                     ),
@@ -206,17 +187,11 @@ class Home2 extends StatelessWidget {
                 width: screenSize.width * 0.2,
                 child: Column(
                   children: [
-                    const Animasi4(),
+                    Animasi_Kiri_Kanan(screenSize: screenSize,widget: Image.asset("assets/icons/icon4.png",height: screenSize.height * 0.1,),),
                     SizedBox(
                       height: screenSize.height * 0.03,
                     ),
-                    Text(
-                      "IMPLEMENTATION",
-                      style: GoogleFonts.robotoCondensed(
-                          color: Color(0xff1e5ea8),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    ),
+                    Animasi_Kanan_Kiri(judul: "IMPLEMENTATION",),
                     SizedBox(
                       height: screenSize.height * 0.03,
                     ),
@@ -270,3 +245,6 @@ class Home2 extends StatelessWidget {
     );
   }
 }
+
+
+
