@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mcs_flutter/widget/medsos.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 class Footer extends StatelessWidget {
@@ -58,10 +60,18 @@ class Footer extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              IconButton(onPressed: (){}, icon: Icon(FontAwesomeIcons.linkedinIn,size: 30,),iconSize: 20,),
-                              IconButton(onPressed: (){}, icon: Icon(FontAwesomeIcons.facebook,size: 30,),iconSize: 20,),
-                              IconButton(onPressed: (){}, icon: Icon(FontAwesomeIcons.instagram,size: 30,),iconSize: 20,),
-                              IconButton(onPressed: (){}, icon: Icon(FontAwesomeIcons.youtube,size: 30,),iconSize: 20,)
+                              IconButton(onPressed: (){
+                                _launchLinkedIn();
+                              }, icon: Icon(FontAwesomeIcons.linkedinIn,size: 30,),iconSize: 30,color: Colors.black),
+                              IconButton(onPressed: (){
+                                _launchTwitter();
+                              }, icon: Icon(FontAwesomeIcons.twitter,size: 30,),iconSize: 30,color: Colors.black,),
+                              IconButton(onPressed: (){
+                                _launchInstagram();
+                              }, icon: Icon(FontAwesomeIcons.instagram,size: 30,),iconSize: 30,color: Colors.black),
+                              IconButton(onPressed: (){
+                                _launchYoutube();
+                              }, icon: Icon(FontAwesomeIcons.youtube,size: 30,),iconSize: 30,color: Colors.black)
 
                             ],
                           ),
@@ -83,19 +93,19 @@ class Footer extends StatelessWidget {
                           height: screenSize.height * 0.04,
                           child: Text(' Sitemap',style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold,letterSpacing: 1.5),),
                         ),
+                        Spacer(flex: 3,),
+                        TextButton(onPressed: (){}, child: Text('Home',style: TextStyle(color: Color.fromARGB(
+                            255, 5, 22, 93),fontSize: 17),)),
+                        Spacer(),
+                        TextButton(onPressed: (){}, child: Text('About Us',style: TextStyle(color: Color.fromARGB(
+                            255, 5, 22, 93),fontSize: 17),)),
+                        Spacer(),
+                        TextButton(onPressed: (){}, child: Text('Solution',style: TextStyle(color: Color.fromARGB(
+                            255, 5, 22, 93),fontSize: 17),)),
+                        Spacer(),
+                        TextButton(onPressed: (){}, child: Text('Contact Us',style: TextStyle(color: Color.fromARGB(
+                            255, 5, 22, 93),fontSize: 17),)),
                         Spacer(flex: 6,),
-                        TextButton(onPressed: (){}, child: Text('About',style: TextStyle(color: Colors.black,decoration: TextDecoration.underline,fontSize: 17),)),
-                        Spacer(),
-                        TextButton(onPressed: (){}, child: Text('Solutions',style: TextStyle(color: Colors.black,decoration: TextDecoration.underline,fontSize: 17),)),
-                        Spacer(),
-                        TextButton(onPressed: (){}, child: Text('Portfolio',style: TextStyle(color: Colors.black,decoration: TextDecoration.underline,fontSize: 17),)),
-                        Spacer(),
-                        TextButton(onPressed: (){}, child: Text('Career',style: TextStyle(color: Colors.black,decoration: TextDecoration.underline,fontSize: 17),)),
-                        Spacer(),
-                        TextButton(onPressed: (){}, child: Text('Blog',style: TextStyle(color: Colors.black,decoration: TextDecoration.underline,fontSize: 17),)),
-                        Spacer(),
-                        TextButton(onPressed: (){}, child: Text('Contact Us',style: TextStyle(color: Colors.black,decoration: TextDecoration.underline,fontSize: 17),)),
-                        Spacer(),
 
                       ],
                     )
@@ -113,13 +123,19 @@ class Footer extends StatelessWidget {
                           height: screenSize.height * 0.04,
                           child: Text(' Solutions',style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold,letterSpacing: 1.5),),
                         ),
-                        Spacer(flex: 4,),
-                        TextButton(onPressed: (){}, child: Text('Software as a Service',style: TextStyle(color: Colors.black,decoration: TextDecoration.underline,fontSize: 17),)),
+                        Spacer(flex: 3,),
+                        TextButton(onPressed: (){}, child: Text('Cloud Migration',style: TextStyle(color: Color.fromARGB(
+                            255, 5, 22, 93),fontSize: 17),)),
                         Spacer(),
-                        TextButton(onPressed: (){}, child: Text('Cloud',style: TextStyle(color: Colors.black,decoration: TextDecoration.underline,fontSize: 17),)),
+                        TextButton(onPressed: (){}, child: Text('Consultation',style: TextStyle(color: Color.fromARGB(
+                            255, 5, 22, 93),fontSize: 17),)),
                         Spacer(),
-                        TextButton(onPressed: (){}, child: Text('IT Resource',style: TextStyle(color: Colors.black,decoration: TextDecoration.underline,fontSize: 17),)),
-                        Spacer(flex: 13,),
+                        TextButton(onPressed: (){}, child: Text('Local Support',style: TextStyle(color: Color.fromARGB(
+                            255, 5, 22, 93),fontSize: 17),)),
+                        Spacer(),
+                        TextButton(onPressed: (){}, child: Text('Cloud Implementation',style: TextStyle(color: Color.fromARGB(
+                            255, 5, 22, 93),fontSize: 17),)),
+                        Spacer(flex: 6,),
 
                       ],
                     )
@@ -144,6 +160,7 @@ class Footer extends StatelessWidget {
                               leading: Icon(
                                 Icons.phone,
                                 size: 25,
+                                color: Colors.black,
                               ),
                               title: TextButton(onPressed: (){},
                                 child: Text('(021) 5795 - 8040',
@@ -163,6 +180,7 @@ class Footer extends StatelessWidget {
                             leading: Icon(
                               Icons.mail,
                               size: 25,
+                              color: Colors.black,
                             ),
                             title: TextButton(onPressed: (){},
                               child: Text('info@eksad.com',
@@ -178,6 +196,7 @@ class Footer extends StatelessWidget {
                           leading: Icon(
                             Icons.location_on,
                             size: 30,
+                            color: Colors.black,
                           ),
                           title: Text('PT. Tiga Daya Digital Indonesia The East '
                             'Tower 19th Floor Jl. Dr. Ide Anak Agung '
@@ -204,5 +223,53 @@ class Footer extends StatelessWidget {
         ],
       )
     );
+  }
+}
+
+
+void _launchLinkedIn() async {
+  String url() {
+    return "https://www.linkedin.com/company/pt-tiga-daya-digital-indonesia-triputra-group-eksad-technology";
+  }
+
+  if (await canLaunch(url())) {
+    await launch(url());
+  } else {
+    throw 'Could not launch ${url()}';
+  }
+}
+void _launchTwitter() async {
+  String url() {
+    return "https://twitter.com/eksad_technology/";
+  }
+
+  if (await canLaunch(url())) {
+    await launch(url());
+  } else {
+    throw 'Could not launch ${url()}';
+  }
+}
+
+void _launchInstagram() async {
+  String url() {
+    return "https://www.instagram.com/eksad_technology/";
+  }
+
+  if (await canLaunch(url())) {
+    await launch(url());
+  } else {
+    throw 'Could not launch ${url()}';
+  }
+}
+
+void _launchYoutube() async {
+  String url() {
+    return "https://youtube.com/eksad_technology";
+  }
+
+  if (await canLaunch(url())) {
+    await launch(url());
+  } else {
+    throw 'Could not launch ${url()}';
   }
 }
