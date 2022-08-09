@@ -12,6 +12,7 @@ import 'package:mcs_flutter/screen/home6.dart';
 import 'package:mcs_flutter/screen/home7.dart';
 import 'package:mcs_flutter/screen/home8.dart';
 import 'package:mcs_flutter/screen/home9.dart';
+import 'package:mcs_flutter/screen/homee2.dart';
 import 'package:mcs_flutter/widget/botton.dart';
 import 'package:mcs_flutter/widget/whatsapp.dart';
 import 'package:show_up_animation/show_up_animation.dart';
@@ -30,14 +31,16 @@ class _HomePageState extends State<HomePage> {
   PageController controller = PageController();
   void _scrollToIndex2(int index) {
     controller.animateToPage(index,
-        duration: const Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
+        duration: const Duration(seconds: 2),
+        curve: Curves.fastLinearToSlowEaseIn);
   }
 
   //   Untuk pake LIST per height container
   ScrollController controller2 = ScrollController();
   void _scrollToIndex(double index) {
     controller2.animateTo(index,
-        duration: const Duration(seconds: 1), curve: Curves.fastLinearToSlowEaseIn);
+        duration: const Duration(seconds: 1),
+        curve: Curves.fastLinearToSlowEaseIn);
   }
 
   int selectedIndex = 0;
@@ -56,28 +59,30 @@ class _HomePageState extends State<HomePage> {
         controller: controller2,
         children: [
           const Home(),
+          Homee2(),
           Home2(screenSize: screenSize),
           Home3(
             isi: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  primary: kPrimaryColor),
+              onPressed: () {
+                _scrollToIndex(5900);
+              },
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                child: const Text(
+                  'Learn More',
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
                 ),
-                primary: kPrimaryColor),
-            onPressed: () {
-              _scrollToIndex(5900);
-            },
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              child: const Text(
-                'Learn More',
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
-              ),
+
             ),
-          ),),
+          ),
           const Home4(),
           const Home5(),
           const Home6(),
