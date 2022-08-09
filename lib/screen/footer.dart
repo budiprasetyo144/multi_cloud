@@ -93,17 +93,13 @@ class Footer extends StatelessWidget {
                           child: FooterHead('Sitemap'),
                         ),
                         Spacer(flex: 3,),
-                        TextButton(onPressed: (){}, child: Text('Home',style: TextStyle(color: Color.fromARGB(
-                            255, 5, 22, 93),fontSize: 17),)),
+                        TextButton(onPressed: (){}, child: FooterBody(teks: 'Home',)),
                         Spacer(),
-                        TextButton(onPressed: (){}, child: Text('About Us',style: TextStyle(color: Color.fromARGB(
-                            255, 5, 22, 93),fontSize: 17),)),
+                        TextButton(onPressed: (){}, child: FooterBody(teks: 'About Us',)),
                         Spacer(),
-                        TextButton(onPressed: (){}, child: Text('Solution',style: TextStyle(color: Color.fromARGB(
-                            255, 5, 22, 93),fontSize: 17),)),
+                        TextButton(onPressed: (){}, child: FooterBody(teks: 'Solution',)),
                         Spacer(),
-                        TextButton(onPressed: (){}, child: Text('Contact Us',style: TextStyle(color: Color.fromARGB(
-                            255, 5, 22, 93),fontSize: 17),)),
+                        TextButton(onPressed: (){}, child: FooterBody(teks: 'Contact Us',)),
                         Spacer(flex: 6,),
 
                       ],
@@ -122,17 +118,13 @@ class Footer extends StatelessWidget {
                           height: screenSize.height * 0.04,
                           child: FooterHead('Solution')),
                         Spacer(flex: 3,),
-                        TextButton(onPressed: (){}, child: Text('Cloud Migration',style: TextStyle(color: Color.fromARGB(
-                            255, 5, 22, 93),fontSize: 17),)),
+                        TextButton(onPressed: (){}, child: FooterBody(teks: 'Cloud Migration',)),
                         Spacer(),
-                        TextButton(onPressed: (){}, child: Text('Consultation',style: TextStyle(color: Color.fromARGB(
-                            255, 5, 22, 93),fontSize: 17),)),
+                        TextButton(onPressed: (){}, child: FooterBody(teks: 'Consultation',)),
                         Spacer(),
-                        TextButton(onPressed: (){}, child: Text('Local Support',style: TextStyle(color: Color.fromARGB(
-                            255, 5, 22, 93),fontSize: 17),)),
+                        TextButton(onPressed: (){}, child: FooterBody(teks: 'Local Support',)),
                         Spacer(),
-                        TextButton(onPressed: (){}, child: Text('Cloud Implementation',style: TextStyle(color: Color.fromARGB(
-                            255, 5, 22, 93),fontSize: 17),)),
+                        TextButton(onPressed: (){}, child: FooterBody(teks: 'Cloud Implementation',)),
                         Spacer(flex: 6,),
 
                       ],
@@ -225,8 +217,21 @@ class Footer extends StatelessWidget {
   }
 
   Text FooterHead(String title) =>
-      Text(title,style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,letterSpacing: 2),);
+      Text(title,style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,letterSpacing: 2),);
 
+}
+
+class FooterBody extends StatelessWidget {
+  FooterBody({
+    Key? key, required this.teks
+  }):super(key: key);
+  final String teks;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(teks,style: TextStyle(color: Color.fromARGB(
+        255, 5, 22, 93),fontSize: 16,letterSpacing: 1.2),);
+  }
 }
 
 
