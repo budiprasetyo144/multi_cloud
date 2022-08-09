@@ -13,12 +13,12 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
   final formKey = GlobalKey<FormState>();
   String nm = '';
   String pt = '';
-  String selectpartner = '';
   int selectedIndex = 0;
   int id = 0;
   String selectname = '';
+  String selectpath = '';
   TextEditingController _controllerName = TextEditingController();
-  TextEditingController _controllerPartner = TextEditingController();
+  TextEditingController _controllerPath = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -218,7 +218,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                       TextButton(
                         style: TextButton.styleFrom(
                           padding: const EdgeInsets.all(16.0),
-                          primary: Colors.black,
+                          primary: Colors.white,
                           backgroundColor: Colors.blue,
                           textStyle: const TextStyle(fontSize: 15),
                         ),
@@ -346,13 +346,13 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                   var pgm = snapshot.data[index];
                                   selectedIndex = index;
                                   id = pgm['partnerId'];
-                                  nm = pgm['filename'];
-                                  pt = pgm['filepath'];
+                                  selectname = pgm['filename'];
+                                  selectpath = pgm['filepath'];
                                   print(selectedIndex);
                                   print(pgm['partnerId']);
                                   print(selectname);
 
-                                  _controllerPartner.clear();
+                                  _controllerPath.clear();
                                   // _controllerId.clear();
                                   _controllerName.clear();
                                   showDialog<String>(
@@ -433,7 +433,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                                 child: TextFormField(
                                                   //controller: _controllerPartner,
                                                   textAlign: TextAlign.start,
-                                                  initialValue: selectpartner,
+                                                  initialValue: selectpath,
                                                   maxLines: 7,
                                                   decoration: InputDecoration(
                                                     labelText:
