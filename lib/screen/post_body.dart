@@ -89,12 +89,7 @@ class PostBody extends StatelessWidget {
                       Container(
                         height: 20,
                         child: TextButton(onPressed: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Post(),
-                            ),
-                          );
+                          Navigator.pushNamed(context, '/news');
                         }, child: Text('News',style: TextStyle(color: Colors.red,fontSize: 17),
                         ),
                         ),
