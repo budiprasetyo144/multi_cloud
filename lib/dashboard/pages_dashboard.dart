@@ -155,7 +155,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
             ),
           ),
           SizedBox(
-            height: 50,
+            height: 20,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -166,67 +166,6 @@ class _PagesDashboardState extends State<PagesDashboard> {
                   ),
                   onPressed: () {},
                   child: const Text("All (3)"),
-                ),
-                Spacer(
-                  flex: 3,
-                ),
-                // const Text('All(4)',
-                //     style: TextStyle(color: Color.fromARGB(255, 0, 0, 139))),
-
-                SizedBox(
-                  height: 40,
-                  width: 200,
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      labelText: "Search",
-                      prefixIcon: const Icon(Icons.search),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            const BorderSide(width: 1, color: Colors.blue),
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide:
-                            const BorderSide(width: 1, color: Colors.blue),
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 50,
-                ),
-                //     Spacer(
-                //       flex: 1,
-                // ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(3),
-                  child: Stack(
-                    children: <Widget>[
-                      Positioned.fill(
-                        child: Container(
-                          decoration: const BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: <Color>[
-                                Color(0xFF42A5F5),
-                                Color(0xFF42A5F5),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          padding: const EdgeInsets.all(16.0),
-                          primary: Colors.white,
-                          backgroundColor: Colors.blue,
-                          textStyle: const TextStyle(fontSize: 15),
-                        ),
-                        onPressed: () {},
-                        child: const Text("Search Pages"),
-                      ),
-                    ],
-                  ),
                 ),
               ],
             ),
@@ -245,7 +184,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                 }
                 return DataTable(
                   decoration: BoxDecoration(color: Colors.white),
-                  columnSpacing: 190,
+                  columnSpacing: 130,
                   columns: const [
                     DataColumn(label: Text('Id')),
                     DataColumn(label: Text('Title')),
@@ -310,24 +249,6 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                             verticalDirection:
                                                 VerticalDirection.down,
                                             children: [
-                                              // Container(
-                                              //   width: 200,
-                                              //   child: TextFormField(
-                                              //     controller: _controllerId,
-                                              //     textAlign: TextAlign.start,
-                                              //     decoration: InputDecoration(
-                                              //       labelText: "Masukkan ID News",
-                                              //       hintStyle: TextStyle(),
-                                              //       border: OutlineInputBorder(
-                                              //           borderRadius:
-                                              //           BorderRadius
-                                              //               .circular(5.0)),
-                                              //     ),
-                                              //
-                                              //     onChanged: (value) =>
-                                              //     id = int.parse(value),
-                                              //   ),
-                                              // ),
                                               SizedBox(
                                                 height: 10,
                                               ),
