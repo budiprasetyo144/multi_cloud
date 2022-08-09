@@ -14,7 +14,7 @@ import 'package:mcs_flutter/screen/home8.dart';
 import 'package:mcs_flutter/screen/home9.dart';
 import 'package:mcs_flutter/widget/botton.dart';
 import 'package:mcs_flutter/widget/whatsapp.dart';
-
+import 'package:show_up_animation/show_up_animation.dart';
 import '../widget/responsive.dart';
 import 'appbar.dart';
 
@@ -279,39 +279,70 @@ class _HomeState extends State<Home> {
           height: screenSize.height*0.65,
           padding: EdgeInsets.only(left: screenSize.width * 0.1, top: screenSize.height * 0.02),
 
+
+
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
-                child: Text(
-                  'Cloud Consulting Services.',style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold,color: Colors.white),overflow: TextOverflow.ellipsis,),
+                child: ShowUpAnimation(
+                  delayStart: Duration(seconds: 1),
+                  direction: Direction.horizontal,
+                  child: Text(
+                    'Cloud Consulting Services.',style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold,color: Colors.white),overflow: TextOverflow.ellipsis,),
+                ),
               ),
               Container(
+                padding: EdgeInsets.only(top: screenSize.height*0.01),
                 width: screenSize.width*0.5,
                 height: screenSize.height*0.17,
-                child: Text('We helps organizations transform their IT environment '
-                    'with cost-effective Cloud services. Our team of experts delivers '
-                    'cutting-edge Cloud computing consulting services that help companies '
-                    'boost their productivity to new heights.',style: TextStyle(fontSize:16,letterSpacing: 2,height:1.6,fontWeight: FontWeight.w400,color: Colors.white)),
+                child:
+                ShowUpAnimation(
+                  delayStart: Duration(seconds: 1),
+                  curve: Curves.bounceIn,
+                  direction: Direction.horizontal,
+                  offset: -0.2,
+                  child: Text('We helps organizations transform their IT environment '
+                      'with cost-effective Cloud services. Our team of experts delivers '
+                      'cutting-edge Cloud computing consulting services that help companies '
+                      'boost their productivity to new heights.',style: TextStyle(fontSize:16,letterSpacing: 2,height:1.6,fontWeight: FontWeight.w400,color: Colors.white)),
+
+                ),
               ),
               Container(
                 width: screenSize.width*0.5,
-                height: screenSize.height*0.21,
-                child: Text('Our Cloud managed services make it possible for organizations '
-                    'to reduce their overheads and better productivity, in addition to lowering '
-                    'costs and reducing time-to-market. We assist customers with our on-demand '
-                    'enterprise Cloud solutions, tools, and applications such as servers, storage,'
-                    ' databases, networking, software, and apps, among others.',style: TextStyle(fontSize:16,letterSpacing: 2,height:1.6,fontWeight: FontWeight.w400,color: Colors.white)),
-              ),
+                height: screenSize.height*0.22,
+                child:ShowUpAnimation(
+                  delayStart: Duration(seconds: 1),
+                  direction: Direction.horizontal,
+                  child: Text('Our Cloud managed services make it possible for organizations '
+                      'to reduce their overheads and better productivity, in addition to lowering '
+                      'costs and reducing time-to-market. We assist customers with our on-demand '
+                      'enterprise Cloud solutions, tools, and applications such as servers, storage,'
+                      ' databases, networking, software, and apps, among others.',style: TextStyle(fontSize:16,letterSpacing: 2,height:1.6,fontWeight: FontWeight.w400,color: Colors.white)),
+                ),
+
+
+                ),
               Container(
                 width: screenSize.width*0.15,
                   height: screenSize.height*0.08,
-                  child: ElevatedButton(onPressed: (){}, child: Text('CONTACT US',style: TextStyle(fontSize: 19,letterSpacing: 2),
+                  child:
+                  ShowUpAnimation(
+                    delayStart: Duration(seconds: 1),
+                    curve: Curves.bounceIn,
+                    direction: Direction.horizontal,
+                    offset: -0.2,
+                    child: ElevatedButton(onPressed: (){}, child: Text('CONTACT US',style: TextStyle(fontSize: 19,letterSpacing: 2),
+                    ),
+                        style: ElevatedButton.styleFrom(primary: Color.fromARGB(
+                            255, 29, 59, 189),)
+                    ),
                   ),
-                    style: ElevatedButton.styleFrom(primary: Color.fromARGB(
-                        255, 29, 59, 189),)
-                  ),
+
+
+
               )
             ],
           ),
