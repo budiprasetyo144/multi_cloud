@@ -341,7 +341,7 @@ class _HomeState extends State<Home> {
                     offset: -0.2,
                     child: ElevatedButton(onPressed: (){}, child: Text('CONTACT US',style: TextStyle(fontSize: 19,letterSpacing: 2),
                     ),
-                        style: ElevatedButton.styleFrom(primary: Color.fromARGB(255, 29, 59, 189),)
+                        style: ElevatedButton.styleFrom(primary: Color(0xff1e5ea8),)
                     ),
                   ),
 
