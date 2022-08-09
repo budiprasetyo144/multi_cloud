@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mcs_flutter/widget/medsos.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -91,7 +90,7 @@ class Footer extends StatelessWidget {
                         Container(
                           width: screenSize.width*0.1,
                           height: screenSize.height * 0.04,
-                          child: Text(' Sitemap',style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold,letterSpacing: 1.5),),
+                          child: FooterHead('Sitemap'),
                         ),
                         Spacer(flex: 3,),
                         TextButton(onPressed: (){}, child: Text('Home',style: TextStyle(color: Color.fromARGB(
@@ -121,8 +120,7 @@ class Footer extends StatelessWidget {
                         Container(
                           width: screenSize.width*0.13,
                           height: screenSize.height * 0.04,
-                          child: Text(' Solutions',style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold,letterSpacing: 1.5),),
-                        ),
+                          child: FooterHead('Solution')),
                         Spacer(flex: 3,),
                         TextButton(onPressed: (){}, child: Text('Cloud Migration',style: TextStyle(color: Color.fromARGB(
                             255, 5, 22, 93),fontSize: 17),)),
@@ -151,7 +149,7 @@ class Footer extends StatelessWidget {
                         SizedBox(
                           width: screenSize.width*0.2,
                           height: screenSize.height * 0.04,
-                          child: Text(' Contact',style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold,letterSpacing: 1.5),),
+                          child: FooterHead('Contact'),
                         ),
                         Spacer(),
                         Container(
@@ -211,6 +209,7 @@ class Footer extends StatelessWidget {
                       ],
                     )
                 ),
+                SizedBox()
               ],
             ),
           ),
@@ -224,6 +223,10 @@ class Footer extends StatelessWidget {
       )
     );
   }
+
+  Text FooterHead(String title) =>
+      Text(title,style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,letterSpacing: 2),);
+
 }
 
 
