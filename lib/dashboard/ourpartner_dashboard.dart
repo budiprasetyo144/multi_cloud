@@ -218,7 +218,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                       TextButton(
                         style: TextButton.styleFrom(
                           padding: const EdgeInsets.all(16.0),
-                          primary: Colors.black,
+                          primary: Colors.white,
                           backgroundColor: Colors.blue,
                           textStyle: const TextStyle(fontSize: 15),
                         ),
@@ -253,7 +253,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                 }
                 return DataTable(
                   decoration: BoxDecoration(color: Colors.white),
-                  columnSpacing: 170,
+                  columnSpacing: 120,
                   columns: const [
                     DataColumn(label: Text('Id')),
                     DataColumn(label: Text('Name')),
@@ -528,7 +528,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                               TextButton(
                                 style: TextButton.styleFrom(
                                   padding: const EdgeInsets.all(16.0),
-                                  primary: Colors.black,
+                                  primary: Colors.white,
                                   backgroundColor:
                                       Color.fromARGB(255, 245, 27, 27),
                                   textStyle: const TextStyle(fontSize: 15),
