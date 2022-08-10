@@ -208,13 +208,13 @@ class Home10 extends StatelessWidget {
                             filled: true,
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide:
-                              const BorderSide(width: 1, color: Colors.white),
+                              borderSide: const BorderSide(
+                                  width: 1, color: Colors.white),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide:
-                              const BorderSide(width: 1, color: Colors.white),
+                              borderSide: const BorderSide(
+                                  width: 1, color: Colors.white),
                             ),
                           ),
                         ),
@@ -232,13 +232,13 @@ class Home10 extends StatelessWidget {
                             filled: true,
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide:
-                              const BorderSide(width: 1, color: Colors.white),
+                              borderSide: const BorderSide(
+                                  width: 1, color: Colors.white),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide:
-                              const BorderSide(width: 1, color: Colors.white),
+                              borderSide: const BorderSide(
+                                  width: 1, color: Colors.white),
                             ),
                           ),
                         ),
@@ -264,12 +264,12 @@ class Home10 extends StatelessWidget {
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.zero,
                         borderSide:
-                            const BorderSide(width: 1, color: Colors.black),
+                            const BorderSide(width: 1, color: Colors.white),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.zero,
                         borderSide:
-                            const BorderSide(width: 1, color: Colors.black),
+                            const BorderSide(width: 1, color: Colors.white),
                       ),
                     ),
                     maxLines: 5,
