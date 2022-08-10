@@ -10,6 +10,7 @@ class Home10 extends StatelessWidget {
 
   final _formKey = GlobalKey<FormState>();
 
+  final nameController = TextEditingController();
   final emailController = TextEditingController();
   final messageController = TextEditingController();
 
@@ -164,6 +165,22 @@ class Home10 extends StatelessWidget {
                       style:
                           TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
                   TextFormField(
+                    controller: nameController,
+                    decoration: InputDecoration(
+                      hintText: "Enter your Name",
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide:
+                        const BorderSide(width: 1, color: Colors.black),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide:
+                        const BorderSide(width: 1, color: Colors.black),
+                      ),
+                    ),
+                  ),
+                  TextFormField(
                     controller: emailController,
                     decoration: InputDecoration(
                       hintText: "Email",
@@ -214,6 +231,7 @@ class Home10 extends StatelessWidget {
                       onPressed: () async {
                         if (_formKey.currentState!.validate()) {
                           final response = await SendEmail(
+                              nameController.value.text,
                               emailController.value.text,
                               messageController.value.text);
                           ScaffoldMessenger.of(context).showSnackBar(
@@ -226,6 +244,7 @@ class Home10 extends StatelessWidget {
                                     backgroundColor: Colors.red),
                           );
 
+                          nameController.clear();
                           emailController.clear();
                           messageController.clear();
                         }
@@ -245,11 +264,11 @@ class Home10 extends StatelessWidget {
     );
   }
 
-  Future SendEmail(String email, String message) async {
+  Future SendEmail(String name, String email, String message) async {
     final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
-    const serviceId = 'service_wava70j';
-    const templateId = 'template_koc73cj';
-    const userId = 'h4BmDnyWlm3OziBDx';
+    const serviceId = 'service_zfjchwr';
+    const templateId = 'template_1wbd3w9';
+    const userId = 'DP7R9Yu0J2SBQu2DC';
     final response = await http.post(url,
         headers: {
           'Content-Type': 'application/json'
@@ -258,7 +277,7 @@ class Home10 extends StatelessWidget {
           'service_id': serviceId,
           'template_id': templateId,
           'user_id': userId,
-          'template_params': {'to_email': email, 'message': message}
+          'template_params': {'from_name': name, 'to_email': email, 'message': message}
         }));
     return response.statusCode;
   }
