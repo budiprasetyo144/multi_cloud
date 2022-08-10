@@ -146,7 +146,7 @@ class Home10 extends StatelessWidget {
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
-                              fontWeight: FontWeight.bold),
+                              fontWeight: FontWeight.bold,letterSpacing: 1.2),
                         ),
                       ),
                       SizedBox(
@@ -158,7 +158,7 @@ class Home10 extends StatelessWidget {
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
-                              fontWeight: FontWeight.bold),
+                              fontWeight: FontWeight.bold,letterSpacing: 1.2),
                         ),
                       ),
                     ],
@@ -220,7 +220,7 @@ class Home10 extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
-                        fontWeight: FontWeight.bold),
+                        fontWeight: FontWeight.bold,letterSpacing: 1.2),
                   ),
                   TextFormField(
                     controller: messageController,
@@ -255,7 +255,7 @@ class Home10 extends StatelessWidget {
                           primary: Colors.white,
                           backgroundColor: const Color(0xff151534),
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(40))),
+                              borderRadius: BorderRadius.circular(10))),
                       onPressed: () async {
                         if (_formKey.currentState!.validate()) {
                           final response = await SendEmail(
