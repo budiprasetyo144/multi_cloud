@@ -17,6 +17,7 @@ import 'package:mcs_flutter/widget/whatsapp.dart';
 
 import '../widget/responsive.dart';
 import 'appbar.dart';
+import 'home11.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -231,6 +232,7 @@ class _HomePageState extends State<HomePage> {
           ),
           const Home9(),
           Home10(),
+          Home11(),
           const Footer(),
         ],
       ),
