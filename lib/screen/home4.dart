@@ -8,7 +8,7 @@ class Home4 extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return SizedBox(
-      height: screenSize.height*0.8,
+      height: screenSize.height * 0.8,
       width: screenSize.width,
       //color: Color.fromARGB(255, 0, 36, 192),
       child: Column(
@@ -17,15 +17,36 @@ class Home4 extends StatelessWidget {
           Container(
             width: screenSize.width,
             height: screenSize.height * 0.2,
-            color: const Color.fromARGB(255, 0, 36, 192),
+            color: Color.fromARGB(255, 12, 94, 149),
             child: Center(
-              child: Text(
-                overflow: TextOverflow.ellipsis,
-                "Our Partner",
-                style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
-                    fontSize: 60,
-                    fontWeight: FontWeight.bold),
+              child: Column(
+                children: [
+                  Spacer(
+                    flex: 1,
+                  ),
+                  Text(
+                    overflow: TextOverflow.ellipsis,
+                    "Strategic Partnerships",
+                    style: GoogleFonts.robotoCondensed(
+                        color: Colors.white,
+                        fontSize: 60,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Spacer(
+                    flex: 1,
+                  ),
+                  Text(
+                    overflow: TextOverflow.ellipsis,
+                    "Our expertise and experience in dealing with the leading public cloud platforms make us a perfect choice for your business:",
+                    style: GoogleFonts.robotoCondensed(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Spacer(
+                    flex: 1,
+                  ),
+                ],
               ),
             ),
           ),
@@ -39,7 +60,8 @@ class Home4 extends StatelessWidget {
                 ),
                 SizedBox(
                   width: screenSize.width * 0.3,
-                  child: const Image(image: AssetImage('assets/logo/alibaba.png')),
+                  child:
+                      const Image(image: AssetImage('assets/logo/alibaba.png')),
                 ),
                 const Spacer(
                   flex: 1,
@@ -47,7 +69,8 @@ class Home4 extends StatelessWidget {
                 // BARIS 2
                 SizedBox(
                   width: screenSize.width * 0.3,
-                  child: const Image(image: AssetImage('assets/logo/google.png')),
+                  child: const Image(
+                      image: AssetImage('assets/logo/googlecloud.png')),
                 ),
                 const Spacer(
                   flex: 1,
@@ -66,7 +89,10 @@ class Home4 extends StatelessWidget {
                 ),
                 SizedBox(
                   width: screenSize.width * 0.3,
-                  child: const Image(image: AssetImage('assets/logo/aws.png',),
+                  child: const Image(
+                    image: AssetImage(
+                      'assets/logo/huawei.png',
+                    ),
                   ),
                 ),
                 const Spacer(
@@ -74,7 +100,10 @@ class Home4 extends StatelessWidget {
                 ),
                 SizedBox(
                   width: screenSize.width * 0.3,
-                  child: const Image(image: AssetImage('assets/logo/huawei.png',),
+                  child: const Image(
+                    image: AssetImage(
+                      'assets/logo/aws.png',
+                    ),
                   ),
                 ),
                 const Spacer(

@@ -277,7 +277,7 @@ class _HomeState extends State<Home> {
         Container(
           width: screenSize.width,
           height: screenSize.height*0.7,
-          decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/home1.jpg",),fit: BoxFit.fill)),
+          decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/depan.png",),fit: BoxFit.cover)),
         ),
         Container(
           width: screenSize.width*0.5,
@@ -311,7 +311,7 @@ class _HomeState extends State<Home> {
                   child: Text('We helps organizations transform their IT environment '
                       'with cost-effective Cloud services. Our team of experts delivers '
                       'cutting-edge Cloud computing consulting services that help companies '
-                      'boost their productivity to new heights.',style: TextStyle(fontSize:16,letterSpacing: 2,height:1.6,fontWeight: FontWeight.w400,color: Colors.white)),
+                      'boost their productivity to new heights.',style: TextStyle(fontSize:16,letterSpacing: 1.8,height:1.6,fontWeight: FontWeight.w400,color: Colors.white)),
 
                 ),
               ),
@@ -325,7 +325,7 @@ class _HomeState extends State<Home> {
                       'to reduce their overheads and better productivity, in addition to lowering '
                       'costs and reducing time-to-market. We assist customers with our on-demand '
                       'enterprise Cloud solutions, tools, and applications such as servers, storage,'
-                      ' databases, networking, software, and apps, among others.',style: TextStyle(fontSize:16,letterSpacing: 2,height:1.6,fontWeight: FontWeight.w400,color: Colors.white)),
+                      ' databases, networking, software, and apps, among others.',style: TextStyle(fontSize:16,letterSpacing: 1.8,height:1.6,fontWeight: FontWeight.w400,color: Colors.white)),
                 ),
 
 
@@ -341,8 +341,7 @@ class _HomeState extends State<Home> {
                     offset: -0.2,
                     child: ElevatedButton(onPressed: (){}, child: Text('CONTACT US',style: TextStyle(fontSize: 19,letterSpacing: 2),
                     ),
-                        style: ElevatedButton.styleFrom(primary: Color.fromARGB(
-                            255, 29, 59, 189),)
+                        style: ElevatedButton.styleFrom(primary: Color(0xff1e5ea8),)
                     ),
                   ),
 

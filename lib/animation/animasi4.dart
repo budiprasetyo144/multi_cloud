@@ -36,7 +36,7 @@ class _Animasi4State extends State<Animasi4>
       position: _offsetAnimation,
       child: Container(
         padding: EdgeInsets.all(8.0),
-        child: Image.asset("assets/icons/4947736.png",height: screenSize.height * 0.1,),
+        child: Image.asset("assets/icons/icon4.png",height: screenSize.height * 0.1,),
       ),
     );
   }

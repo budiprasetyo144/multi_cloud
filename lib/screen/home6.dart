@@ -19,7 +19,7 @@ class _Home6State extends State<Home6> {
     return Container(
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 50),
         height: 680,
-        color: const Color.fromARGB(255, 12, 66, 101),
+        color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -28,7 +28,7 @@ class _Home6State extends State<Home6> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 241, 23, 42),
+                    color: const Color.fromARGB(255, 29, 59, 189),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   width: screenSize.width*0.25,
@@ -65,7 +65,7 @@ class _Home6State extends State<Home6> {
                             Navigator.pushNamed(context, '/news/1');
                           },
                           child: const Text(
-                            'LEARN MORE',
+                            'READ MORE',
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
                                 color: Colors.white),
@@ -77,7 +77,7 @@ class _Home6State extends State<Home6> {
 
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.grey,
                     borderRadius: BorderRadius.circular(30),
                   ),
                   width: screenSize.width*0.25,
@@ -114,7 +114,7 @@ class _Home6State extends State<Home6> {
                             Navigator.pushNamed(context, '/news/2');
                           },
                           child: const Text(
-                            'LEARN MORE',
+                            'READ MORE',
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
                                 color: Colors.black),
@@ -125,7 +125,7 @@ class _Home6State extends State<Home6> {
 
                 Container(
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 241, 23, 42),
+                    color: const Color.fromARGB(255, 29, 59, 189),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   width: screenSize.width*0.25,
@@ -161,7 +161,7 @@ class _Home6State extends State<Home6> {
                             Navigator.pushNamed(context, '/news/3');
                           },
                           child: const Text(
-                            'LEARN MORE',
+                            'READ MORE',
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
                                 color: Colors.white),
