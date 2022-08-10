@@ -164,7 +164,7 @@ class Home10 extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(50),
             height: screenSize.height * 0.7,
-            width: screenSize.width * 0.35,
+            width: screenSize.width * 0.38,
             child: Form(
               key: _formKey,
               child: Column(
@@ -183,7 +183,7 @@ class Home10 extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 170,
+                        width: 190,
                       ),
                       Container(
                         child: Text(
@@ -199,7 +199,7 @@ class Home10 extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                        width: 212,
+                        width: 235,
                         child: TextFormField(
                           controller: nameController,
                           decoration: InputDecoration(
@@ -223,7 +223,7 @@ class Home10 extends StatelessWidget {
                         width: 10,
                       ),
                       Container(
-                        width: 212,
+                        width: 235,
                         child: TextFormField(
                           controller: nameController,
                           decoration: InputDecoration(
@@ -243,10 +243,13 @@ class Home10 extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
+                      // SizedBox(
+                      //   height: 10,
+                      // ),
                     ],
+                  ),
+                  SizedBox(
+                    height: 1,
                   ),
                   Text(
                     "Message",
