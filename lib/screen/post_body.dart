@@ -5,7 +5,6 @@ import 'package:mcs_flutter/widget/responsive.dart';
 import 'package:mcs_flutter/screen/appbar.dart';
 import 'package:mcs_flutter/text/text_post.dart';
 import 'package:mcs_flutter/main.dart';
-import 'package:mcs_flutter/screen/post.dart';
 
 
 class PostBody extends StatelessWidget {

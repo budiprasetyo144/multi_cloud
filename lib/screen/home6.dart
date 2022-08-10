@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mcs_flutter/screen/post.dart';
 import 'package:mcs_flutter/screen/post_body.dart';
 import '../text/text_body.dart';
 import 'package:mcs_flutter/text/text_post.dart';
@@ -65,8 +64,10 @@ class _Home6State extends State<Home6> {
                             Navigator.pushNamed(context, '/news/1');
                           },
                           child: const Text(
+
                             'READ MORE',
                             style: TextStyle(
+                                fontSize: 21,
                                 decoration: TextDecoration.underline,
                                 color: Colors.white),
                           )
@@ -88,7 +89,7 @@ class _Home6State extends State<Home6> {
                         height: 250,
                         decoration: BoxDecoration(
                           image: const DecorationImage(
-                              image: AssetImage('assets/images/eksad.jpg'),
+                              image: AssetImage('assets/images/news2.jpg'),
                               fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(30),
                         ),
@@ -114,8 +115,10 @@ class _Home6State extends State<Home6> {
                             Navigator.pushNamed(context, '/news/2');
                           },
                           child: const Text(
+
                             'READ MORE',
                             style: TextStyle(
+                                fontSize: 21,
                                 decoration: TextDecoration.underline,
                                 color: Colors.black),
                           ))
@@ -136,7 +139,7 @@ class _Home6State extends State<Home6> {
                         height: 250,
                         decoration: BoxDecoration(
                           image: const DecorationImage(
-                              image: AssetImage('assets/images/cvcvcv.jpg'),
+                              image: AssetImage('assets/images/news3.jpg'),
                               fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(30),
                         ),
@@ -163,6 +166,7 @@ class _Home6State extends State<Home6> {
                           child: const Text(
                             'READ MORE',
                             style: TextStyle(
+                              fontSize: 21,
                                 decoration: TextDecoration.underline,
                                 color: Colors.white),
                           ))
@@ -171,17 +175,6 @@ class _Home6State extends State<Home6> {
                 ),
               ],
             ),
-
-
-            TextButton.icon(
-                onPressed: (){Navigator.pushNamed(
-                  context,
-                  '/news',
-                );
-                  },
-                icon: const Icon(Icons.newspaper,color: Colors.white,size: 30,),
-                label: const Text('Read All News',style: TextStyle(fontSize: 30,color: Colors.white),),
-            )
           ],
         ),
     );

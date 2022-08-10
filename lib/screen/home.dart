@@ -4,15 +4,11 @@ import 'package:mcs_flutter/dashboard/dashboard.dart';
 import 'package:mcs_flutter/screen/footer.dart';
 import 'package:mcs_flutter/screen/home10.dart';
 import 'package:mcs_flutter/const/conts.dart';
-import 'package:mcs_flutter/screen/home2.dart';
 import 'package:mcs_flutter/screen/home3.dart';
 import 'package:mcs_flutter/screen/home4.dart';
-import 'package:mcs_flutter/screen/home5.dart';
 import 'package:mcs_flutter/screen/home6.dart';
 import 'package:mcs_flutter/screen/home7.dart';
-import 'package:mcs_flutter/screen/home8.dart';
-import 'package:mcs_flutter/screen/home9.dart';
-import 'package:mcs_flutter/screen/homee2.dart';
+import 'package:mcs_flutter/screen/home2.dart';
 import 'package:mcs_flutter/widget/botton.dart';
 import 'package:mcs_flutter/widget/whatsapp.dart';
 import 'package:show_up_animation/show_up_animation.dart';
@@ -59,57 +55,13 @@ class _HomePageState extends State<HomePage> {
         controller: controller2,
         children: [
           const Home(),
-          Homee2(),
-          Home2(screenSize: screenSize),
-          Home3(
-            isi: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  primary: kPrimaryColor),
-              onPressed: () {
-                _scrollToIndex(5900);
-              },
-              child: Container(
-                padding: const EdgeInsets.all(20),
-                child: const Text(
-                  'Learn More',
-                  style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
-              ),
-            ),
-          ),
+          Home2(),
           const Home4(),
-          const Home5(),
+          Home3(screenSize: screenSize),
+
+
           const Home6(),
           const Home7(),
-          Home8(
-            isi: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  primary: kPrimaryColor),
-              onPressed: () {
-                _scrollToIndex(5900);
-              },
-              child: Container(
-                padding: const EdgeInsets.all(20),
-                child: const Text(
-                  "LEARN MORE",
-                  style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
-              ),
-            ),
-          ),
-          const Home9(),
           Home10(),
           const Footer(),
         ],

@@ -29,7 +29,7 @@ class Home4 extends StatelessWidget {
                     "Strategic Partnerships",
                     style: GoogleFonts.robotoCondensed(
                         color: Colors.white,
-                        fontSize: 60,
+                        fontSize: 50,
                         fontWeight: FontWeight.bold),
                   ),
                   Spacer(
@@ -41,7 +41,9 @@ class Home4 extends StatelessWidget {
                     style: GoogleFonts.robotoCondensed(
                         color: Colors.white,
                         fontSize: 20,
-                        fontWeight: FontWeight.bold),
+                        fontWeight: FontWeight.w400,
+                      letterSpacing: 1.1
+                    ),
                   ),
                   Spacer(
                     flex: 1,
