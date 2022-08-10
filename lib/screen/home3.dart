@@ -1,167 +1,250 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-// import '../widget/botton.dart';
-// import '../const/conts.dart';
+import 'package:mcs_flutter/animation/animasi_kiri_kanan.dart';
+import 'package:mcs_flutter/animation/animasi_kanan_kiri.dart';
+import 'package:show_up_animation/show_up_animation.dart';
 
 class Home3 extends StatelessWidget {
-  Home3({super.key, required this.isi});
+  const Home3({
+    Key? key,
+    required this.screenSize,
+  }) : super(key: key);
 
-  Widget isi;
-  PageController controller = PageController();
-  void _scrollToIndex(int index) {
-    controller.animateToPage(
-        index,
-        duration: const Duration(seconds: 2),
-        curve: Curves.fastLinearToSlowEaseIn);
-  }
+  final Size screenSize;
 
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: screenSize.height * 0.91,
+      height: screenSize.height * 0.5,
       width: screenSize.width,
-      color: const Color.fromARGB(255, 241, 252, 254),
-      child: Row(
+      color: Colors.grey[200],
+      child: Column(
         children: [
-          Container(
-            height: 600,
-            width: screenSize.width * 0.5,
-            padding:
-            EdgeInsets.only(left: screenSize.width * 0.1, top: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "Explore Cloud solutions",
-                  style: GoogleFonts.robotoCondensed(
-                      color: const Color.fromARGB(255, 12, 66, 101),
-                      fontSize: 50,
-                      fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "for every challenge and",
-                  style: GoogleFonts.robotoCondensed(
-                      color: const Color.fromARGB(255, 12, 66, 101),
-                      fontSize: 50,
-                      fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  "budget",
-                  style: GoogleFonts.robotoCondensed(
-                      color: const Color.fromARGB(255, 12, 66, 101),
-                      fontSize: 50,
-                      fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "Instead of operating within the constraints of a single cloud vendor",
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.black,
-                    fontSize: 20,
-                    height: 1.5,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "a multi-cloud strategy allows you to access the cloud services from",
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.black,
-                    fontSize: 20,
-                    height: 1.5,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "multiple cloud providers simultaneously. These cloud providers ",
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.black,
-                    fontSize: 20,
-                    height: 1.5,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  // "include AWS, Azure, Google Cloud Platform, or Oracle Cloud. Using",
-                  "include Alibaba Cloud, Huawei Cloud, Google Cloud, AWS. Using",
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.black,
-                    fontSize: 20,
-                    height: 1.5,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "the wide range of leading-edge services available from these providers",
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.black,
-                    fontSize: 20,
-                    height: 1.5,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "on a single data set, attached to all clouds simultaneously, can boost",
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.black,
-                    fontSize: 20,
-                    height: 1.5,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "innovation and grow your business faster than if your data was locked",
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.black,
-                    fontSize: 20,
-                    height: 1.5,
-                  ),
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "into a single cloud.",
-                  style: GoogleFonts.robotoCondensed(
-                    color: Colors.black,
-                    fontSize: 20,
-                    height: 1.5,
-                  ),
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                Row(
+          const SizedBox(
+            height: 15,
+          ),
+          const Center(
+            child: Text("Why Choose Us?",
+                style: TextStyle(
+                    fontSize: 36,
+                    color: Color(0xff1e5ea8),
+                    fontWeight: FontWeight.bold)),
+          ),
+          const SizedBox(
+            height: 25,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                width: screenSize.width * 0.2,
+                child: Column(
                   children: [
+                    Animasi_Kiri_Kanan(screenSize: screenSize,widget: Image.asset("assets/icons/icon1.png",height: screenSize.height * 0.1,),),
                     SizedBox(
-                      width: screenSize.width * 0.1,
-                      height: screenSize.height * 0.08,
-                      child: isi
+                      height: screenSize.height * 0.03,
+                    ),
+                    Animasi_Kanan_Kiri(judul: "MIGRATION",),
+                    SizedBox(
+                      height: screenSize.height * 0.03,
+                    ),
+                    Text(
+                      "We Experience in Data Migration",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14  ,
+                      ),
                     ),
                     SizedBox(
-                      width: screenSize.width * 0.03,
+                      height: 5,
+                    ),
+                    Text(
+                      "Multi Cloud, Migration from Premise",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      "Enviroment. ",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14,
+                      ),
                     ),
                   ],
                 ),
-              ],
-            ),
-          ),
-          SizedBox(
-            width: screenSize.width * 0.5,
-            height: 600,
-            child: ClipPath(
-              child: Image.asset("assets/images/hhhh.jpg"),
-            ),
+              ),
+              Container(
+                width: screenSize.width * 0.2,
+                child: Column(
+                  children: [
+                    Animasi_Kiri_Kanan(screenSize: screenSize,widget: Image.asset("assets/icons/icon2.png",height: screenSize.height * 0.1,),),
+                    SizedBox(
+                      height: screenSize.height * 0.03,
+                    ),
+                    Animasi_Kanan_Kiri(judul: "CONSULTING",),
+                    SizedBox(
+                      height: screenSize.height * 0.03,
+                    ),
+                    Text(
+                      "Our experienced Cloud Consultants",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14,
+                      ),
+                    ),
+                     SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      "can help you determine the efficacy",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14,
+                      ),
+                    ),
+                     SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      "of and implement these popular",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14,
+                      ),
+                    ),
+                     SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      "cloud solutions.",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: screenSize.width * 0.2,
+                child: Column(
+                  children: [
+                    Animasi_Kiri_Kanan(screenSize: screenSize,widget: Image.asset("assets/icons/icon3.png",height: screenSize.height * 0.1,),),
+                    SizedBox(
+                      height: screenSize.height * 0.03,
+                    ),
+                    Animasi_Kanan_Kiri(judul: "LOCAL SUPPORT",),
+                    SizedBox(
+                      height: screenSize.height * 0.03,
+                    ),
+                    Text(
+                      "Our local support team work with",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14,
+                      ),
+                    ),
+                     SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      "our clients every step of the way to",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14,
+                      ),
+                    ),
+                     SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      "ensure that their cloud are running",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14,
+                      ),
+                    ),
+                     SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      "smoothly.",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: screenSize.width * 0.2,
+                child: Column(
+                  children: [
+                    Animasi_Kiri_Kanan(screenSize: screenSize,widget: Image.asset("assets/icons/icon4.png",height: screenSize.height * 0.1,),),
+                    SizedBox(
+                      height: screenSize.height * 0.03,
+                    ),
+                    Animasi_Kanan_Kiri(judul: "IMPLEMENTATION",),
+                    SizedBox(
+                      height: screenSize.height * 0.03,
+                    ),
+                    Text(
+                      "We do cloud all cloud servicess",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      "such as Infrastructure  (IAAS),",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      "Platform (PAAS) and Software",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      "(SAAS).",
+                      style: GoogleFonts.robotoCondensed(
+                        color: Color(0xff111111),
+                        fontSize: 14,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),
     );
   }
 }
+
+
+

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/dashboard/dashboard.dart';
 import 'package:mcs_flutter/widget/filter.dart';
-import 'package:mcs_flutter/widget/dropdownbuttondates.dart';
 import 'package:mcs_flutter/api/news_api.dart';
 
 class NewsDashboard extends StatefulWidget {
@@ -217,12 +216,12 @@ class _NewsDashboardState extends State<NewsDashboard> {
                             TextButton(
                               style: TextButton.styleFrom(
                                 padding: const EdgeInsets.all(16.0),
-                                primary: Colors.black,
+                                primary: Colors.white,
                                 backgroundColor: Colors.blue,
                                 textStyle: const TextStyle(fontSize: 15),
                               ),
                               onPressed: () {},
-                              child: const Text("Search Post"),
+                              child: const Text("Search News"),
                             ),
                           ],
                         ),
@@ -460,7 +459,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                   TextButton(
                                     style: TextButton.styleFrom(
                                       padding: const EdgeInsets.all(16.0),
-                                      primary: Colors.black,
+                                      primary: Colors.white,
                                       backgroundColor: Color.fromARGB(255, 245, 27, 27),
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),

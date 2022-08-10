@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mcs_flutter/screen/post.dart';
 import 'package:mcs_flutter/screen/post_body.dart';
 import '../text/text_body.dart';
 import 'package:mcs_flutter/text/text_post.dart';
@@ -19,7 +18,7 @@ class _Home6State extends State<Home6> {
     return Container(
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 50),
         height: 680,
-        color: const Color.fromARGB(255, 12, 66, 101),
+        color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -28,7 +27,7 @@ class _Home6State extends State<Home6> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 241, 23, 42),
+                    color: const Color.fromARGB(255, 29, 59, 189),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   width: screenSize.width*0.25,
@@ -62,23 +61,13 @@ class _Home6State extends State<Home6> {
                       ),
                       TextButton(
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => PostBody(
-                                    Imagez: 'assets/images/xcxcxc.jpg',
-                                    HeadText: headgrid1,
-                                    Tanggal: tanggal,
-                                    Bodyfull: bodyfull1,
-                                    Urutan: urutan1,
-
-                                ),
-                              ),
-                            );
+                            Navigator.pushNamed(context, '/news/1');
                           },
                           child: const Text(
-                            'LEARN MORE',
+
+                            'READ MORE',
                             style: TextStyle(
+                                fontSize: 21,
                                 decoration: TextDecoration.underline,
                                 color: Colors.white),
                           )
@@ -89,7 +78,7 @@ class _Home6State extends State<Home6> {
 
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.grey,
                     borderRadius: BorderRadius.circular(30),
                   ),
                   width: screenSize.width*0.25,
@@ -100,7 +89,7 @@ class _Home6State extends State<Home6> {
                         height: 250,
                         decoration: BoxDecoration(
                           image: const DecorationImage(
-                              image: AssetImage('assets/images/eksad.jpg'),
+                              image: AssetImage('assets/images/news2.jpg'),
                               fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(30),
                         ),
@@ -123,23 +112,13 @@ class _Home6State extends State<Home6> {
                       ),
                       TextButton(
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => PostBody(
-                                    Imagez: 'assets/images/eksad.jpg',
-                                    HeadText: headgrid7,
-                                    Tanggal: tanggal7,
-                                    Bodyfull: bodyfull7,
-                                    Urutan: urutan7,
-
-                                ),
-                              ),
-                            );
+                            Navigator.pushNamed(context, '/news/2');
                           },
                           child: const Text(
-                            'LEARN MORE',
+
+                            'READ MORE',
                             style: TextStyle(
+                                fontSize: 21,
                                 decoration: TextDecoration.underline,
                                 color: Colors.black),
                           ))
@@ -149,7 +128,7 @@ class _Home6State extends State<Home6> {
 
                 Container(
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 241, 23, 42),
+                    color: const Color.fromARGB(255, 29, 59, 189),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   width: screenSize.width*0.25,
@@ -160,7 +139,7 @@ class _Home6State extends State<Home6> {
                         height: 250,
                         decoration: BoxDecoration(
                           image: const DecorationImage(
-                              image: AssetImage('assets/images/cvcvcv.jpg'),
+                              image: AssetImage('assets/images/news3.jpg'),
                               fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(30),
                         ),
@@ -182,23 +161,12 @@ class _Home6State extends State<Home6> {
                       ),
                       TextButton(
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => PostBody(
-                                    Imagez: 'assets/images/cvcvcv.jpg',
-                                    HeadText: headgrid3,
-                                    Tanggal: tanggal,
-                                    Bodyfull: bodyfull3,
-                                    Urutan: urutan3,
-
-                                ),
-                              ),
-                            );
+                            Navigator.pushNamed(context, '/news/3');
                           },
                           child: const Text(
-                            'LEARN MORE',
+                            'READ MORE',
                             style: TextStyle(
+                              fontSize: 21,
                                 decoration: TextDecoration.underline,
                                 color: Colors.white),
                           ))
@@ -207,17 +175,6 @@ class _Home6State extends State<Home6> {
                 ),
               ],
             ),
-
-
-            TextButton.icon(
-                onPressed: (){Navigator.pushNamed(
-                  context,
-                  '/news',
-                );
-                  },
-                icon: const Icon(Icons.newspaper,color: Colors.white,size: 30,),
-                label: const Text('Read All News',style: TextStyle(fontSize: 30,color: Colors.white),),
-            )
           ],
         ),
     );

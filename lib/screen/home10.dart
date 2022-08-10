@@ -10,8 +10,44 @@ class Home10 extends StatelessWidget {
 
   final _formKey = GlobalKey<FormState>();
 
+  final nameController = TextEditingController();
   final emailController = TextEditingController();
   final messageController = TextEditingController();
+
+  // @override
+  // Widget build(BuildContext context) {
+  //   var screenSize = MediaQuery.of(context).size;
+  //   return Container(
+  //       height: 680,
+  //       width: screenSize.width,
+  //       decoration: BoxDecoration(
+
+  //           gradient: LinearGradient(colors: [
+  //         Color(0xff027DFD),
+  //         Color(0xff4100e0),
+  //       ], begin: Alignment.topCenter, end: Alignment.bottomCenter))
+  //       child: Row(
+  //         children: [
+  //           const Spacer(
+  //             flex: 3,
+  //           ),
+  //           Container(
+  //             child: Column(
+  //                 crossAxisAlignment: CrossAxisAlignment.start,
+  //                 mainAxisAlignment: MainAxisAlignment.start,
+  //                 children: [
+  //                   const Spacer(
+  //                     flex: 1,
+  //                   )
+
+  //                 ],
+
+  //             )
+  //           )
+  //         ],
+  //       ),
+  //       );
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -19,27 +55,23 @@ class Home10 extends StatelessWidget {
     return Container(
       height: 680,
       width: screenSize.width,
-      color: Colors.white,
-      // decoration: BoxDecoration(
-      //     gradient: LinearGradient(
-      //         colors: <Color>[
-      //           Color(0xFF0D5396),
-      //           Color(0xFF2B69A4),
-      //           Color(0xFF42A5F5),
-      //         ])
-      // ),
+      // color: Colors.blue,
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+        colors: <Color>[
+          Color(0xff137fc2),
+          Color(0xff3958d5),
+          Color(0xff184b80),
+        ],
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+      )),
       child: Row(
         children: [
           const Spacer(
             flex: 3,
           ),
           Container(
-            decoration: BoxDecoration(
-                color: kPrimaryColor,
-                border: Border.all(
-                  color: kTextColor,
-                  width: 50,
-                )),
             height: screenSize.height * 0.7,
             width: screenSize.width * 0.35,
             child: Container(
@@ -51,72 +83,64 @@ class Home10 extends StatelessWidget {
                   const Spacer(
                     flex: 1,
                   ),
-                  Row(
-                    children: [
-                      const Icon(Icons.phone, color: Colors.white),
-                      const SizedBox(width: 5),
-                      Text("CALL US",
-                          style: GoogleFonts.robotoCondensed(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold)),
-                    ],
-                  ),
-                  const Spacer(
-                    flex: 1,
-                  ),
-                  const Text(
-                      "Office : (021) 5795 - 8040, "
-                      "Email : info@eksad.com",
+                  // Row(
+                  // children: [
+                  //   const Icon(Icons.phone, color: Colors.white),
+                  //   const SizedBox(width: 5),
+                  //   Text("CALL US",
+                  //       style: GoogleFonts.robotoCondensed(
+                  //           color: Colors.white,
+                  //           fontSize: 20,
+                  //           fontWeight: FontWeight.bold)),
+                  // ],
+                  // ),
+                  // const Spacer(
+                  //   flex: 1,
+                  // ),
+                  const Text("Leave your contact info and",
                       style: TextStyle(color: Colors.white, fontSize: 16)),
-                  const Spacer(
-                    flex: 2,
-                  ),
-                  Row(
-                    children: [
-                      const Icon(Icons.location_pin, color: Colors.white),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Text("LOCATION",
-                          style: GoogleFonts.robotoCondensed(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold)),
-                    ],
-                  ),
+                  // const Spacer(
+                  //   flex: 2,
+                  // ),
+                  // Row(
+                  // children: [
+                  //   const Icon(Icons.location_pin, color: Colors.white),
+                  //   const SizedBox(
+                  //     width: 5,
+                  //   ),
+                  //   Text("LOCATION",
+                  //       style: GoogleFonts.robotoCondensed(
+                  //           color: Colors.white,
+                  //           fontSize: 20,
+                  //           fontWeight: FontWeight.bold)),
+                  // ],
+                  // ),
                   const Spacer(
                     flex: 1,
                   ),
-                  const Text(
-                      "The East Tower 19th Floor, "
-                      "Jl. DR. Ide Anak Agung Gde Agung, "
-                      "Kuningan, Kecamatan Setiabudi, "
-                      "Kota Jakarta Selatan, DKI Jakarta 12950",
+                  const Text("Le​t’s Discuss Business",
                       style: TextStyle(color: Colors.white, fontSize: 16)),
-                  const Spacer(
-                    flex: 2,
-                  ),
-                  Row(
-                    children: [
-                      const Icon(Icons.access_time, color: Colors.white),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Text("BUSINESS HOURS",
-                          style: GoogleFonts.robotoCondensed(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold)),
-                    ],
-                  ),
+                  // const Spacer(
+                  //   flex: 2,
+                  // ),
+                  // Row(
+                  // children: [
+                  //   const Icon(Icons.access_time, color: Colors.white),
+                  //   const SizedBox(
+                  //     width: 5,
+                  //   ),
+                  //   Text("BUSINESS HOURS",
+                  //       style: GoogleFonts.robotoCondensed(
+                  //           color: Colors.white,
+                  //           fontSize: 20,
+                  //           fontWeight: FontWeight.bold)),
+                  // ],
+                  // ),
                   const Spacer(
                     flex: 1,
                   ),
                   const Text(
-                      "Mon–Fri   "
-                      "8.30 am–5.30 pm,  "
-                      "Sat&Sun Closed",
+                      "We’ll contact you immediately to discuss potential business",
                       style: TextStyle(color: Colors.white, fontSize: 16)),
                   const Spacer(
                     flex: 1,
@@ -130,15 +154,6 @@ class Home10 extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.all(50),
-            decoration: const BoxDecoration(color: Colors.white, boxShadow: [
-              BoxShadow(
-                color: Colors.grey,
-                spreadRadius: 3,
-                blurRadius: 4,
-                blurStyle: BlurStyle.normal,
-                offset: Offset(3, 3),
-              )
-            ]),
             height: screenSize.height * 0.7,
             width: screenSize.width * 0.35,
             child: Form(
@@ -150,12 +165,52 @@ class Home10 extends StatelessWidget {
                       style:
                           TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
                   TextFormField(
+                    controller: nameController,
+                    decoration: InputDecoration(
+                      hintText: "Enter your Name",
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide:
+                        const BorderSide(width: 1, color: Colors.black),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide:
+                        const BorderSide(width: 1, color: Colors.black),
+                      ),
+                    ),
+                  ),
+                  TextFormField(
                     controller: emailController,
-                    decoration: const InputDecoration(hintText: 'Email'),
+                    decoration: InputDecoration(
+                      hintText: "Email",
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide:
+                            const BorderSide(width: 1, color: Colors.black),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide:
+                            const BorderSide(width: 1, color: Colors.black),
+                      ),
+                    ),
                   ),
                   TextFormField(
                     controller: messageController,
-                    decoration: const InputDecoration(hintText: 'Message'),
+                    decoration: InputDecoration(
+                      hintText: "Message",
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide:
+                            const BorderSide(width: 1, color: Colors.black),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide:
+                            const BorderSide(width: 1, color: Colors.black),
+                      ),
+                    ),
                     maxLines: 5,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -176,6 +231,7 @@ class Home10 extends StatelessWidget {
                       onPressed: () async {
                         if (_formKey.currentState!.validate()) {
                           final response = await SendEmail(
+                              nameController.value.text,
                               emailController.value.text,
                               messageController.value.text);
                           ScaffoldMessenger.of(context).showSnackBar(
@@ -188,6 +244,7 @@ class Home10 extends StatelessWidget {
                                     backgroundColor: Colors.red),
                           );
 
+                          nameController.clear();
                           emailController.clear();
                           messageController.clear();
                         }
@@ -207,11 +264,11 @@ class Home10 extends StatelessWidget {
     );
   }
 
-  Future SendEmail(String email, String message) async {
+  Future SendEmail(String name, String email, String message) async {
     final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
-    const serviceId = 'service_wava70j';
-    const templateId = 'template_koc73cj';
-    const userId = 'h4BmDnyWlm3OziBDx';
+    const serviceId = 'service_zfjchwr';
+    const templateId = 'template_1wbd3w9';
+    const userId = 'DP7R9Yu0J2SBQu2DC';
     final response = await http.post(url,
         headers: {
           'Content-Type': 'application/json'
@@ -220,7 +277,7 @@ class Home10 extends StatelessWidget {
           'service_id': serviceId,
           'template_id': templateId,
           'user_id': userId,
-          'template_params': {'to_email': email, 'message': message}
+          'template_params': {'from_name': name, 'to_email': email, 'message': message}
         }));
     return response.statusCode;
   }
