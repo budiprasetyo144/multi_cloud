@@ -13,33 +13,63 @@ class Home10 extends StatelessWidget {
   final emailController = TextEditingController();
   final messageController = TextEditingController();
 
+  // @override
+  // Widget build(BuildContext context) {
+  //   var screenSize = MediaQuery.of(context).size;
+  //   return Container(
+  //       height: 680,
+  //       width: screenSize.width,
+  //       decoration: BoxDecoration(
+
+  //           gradient: LinearGradient(colors: [
+  //         Color(0xff027DFD),
+  //         Color(0xff4100e0),
+  //       ], begin: Alignment.topCenter, end: Alignment.bottomCenter))
+  //       child: Row(
+  //         children: [
+  //           const Spacer(
+  //             flex: 3,
+  //           ),
+  //           Container(
+  //             child: Column(
+  //                 crossAxisAlignment: CrossAxisAlignment.start,
+  //                 mainAxisAlignment: MainAxisAlignment.start,
+  //                 children: [
+  //                   const Spacer(
+  //                     flex: 1,
+  //                   )
+
+  //                 ],
+
+  //             )
+  //           )
+  //         ],
+  //       ),
+  //       );
+  // }
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
       height: 680,
       width: screenSize.width,
-      color: Colors.white,
-      // decoration: BoxDecoration(
-      //     gradient: LinearGradient(
-      //         colors: <Color>[
-      //           Color(0xFF0D5396),
-      //           Color(0xFF2B69A4),
-      //           Color(0xFF42A5F5),
-      //         ])
-      // ),
+      // color: Colors.blue,
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+        colors: <Color>[
+          Color(0xff1cdac5),
+          Color(0xFF027dfd),
+        ],
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+      )),
       child: Row(
         children: [
           const Spacer(
             flex: 3,
           ),
           Container(
-            decoration: BoxDecoration(
-                color: kPrimaryColor,
-                border: Border.all(
-                  color: kTextColor,
-                  width: 50,
-                )),
             height: screenSize.height * 0.7,
             width: screenSize.width * 0.35,
             child: Container(
@@ -51,72 +81,64 @@ class Home10 extends StatelessWidget {
                   const Spacer(
                     flex: 1,
                   ),
-                  Row(
-                    children: [
-                      const Icon(Icons.phone, color: Colors.white),
-                      const SizedBox(width: 5),
-                      Text("CALL US",
-                          style: GoogleFonts.robotoCondensed(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold)),
-                    ],
-                  ),
-                  const Spacer(
-                    flex: 1,
-                  ),
-                  const Text(
-                      "Office : (021) 5795 - 8040, "
-                      "Email : info@eksad.com",
+                  // Row(
+                  // children: [
+                  //   const Icon(Icons.phone, color: Colors.white),
+                  //   const SizedBox(width: 5),
+                  //   Text("CALL US",
+                  //       style: GoogleFonts.robotoCondensed(
+                  //           color: Colors.white,
+                  //           fontSize: 20,
+                  //           fontWeight: FontWeight.bold)),
+                  // ],
+                  // ),
+                  // const Spacer(
+                  //   flex: 1,
+                  // ),
+                  const Text("Leave your contact info and",
                       style: TextStyle(color: Colors.white, fontSize: 16)),
-                  const Spacer(
-                    flex: 2,
-                  ),
-                  Row(
-                    children: [
-                      const Icon(Icons.location_pin, color: Colors.white),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Text("LOCATION",
-                          style: GoogleFonts.robotoCondensed(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold)),
-                    ],
-                  ),
+                  // const Spacer(
+                  //   flex: 2,
+                  // ),
+                  // Row(
+                  // children: [
+                  //   const Icon(Icons.location_pin, color: Colors.white),
+                  //   const SizedBox(
+                  //     width: 5,
+                  //   ),
+                  //   Text("LOCATION",
+                  //       style: GoogleFonts.robotoCondensed(
+                  //           color: Colors.white,
+                  //           fontSize: 20,
+                  //           fontWeight: FontWeight.bold)),
+                  // ],
+                  // ),
                   const Spacer(
                     flex: 1,
                   ),
-                  const Text(
-                      "The East Tower 19th Floor, "
-                      "Jl. DR. Ide Anak Agung Gde Agung, "
-                      "Kuningan, Kecamatan Setiabudi, "
-                      "Kota Jakarta Selatan, DKI Jakarta 12950",
+                  const Text("Le​t’s Discuss Business",
                       style: TextStyle(color: Colors.white, fontSize: 16)),
-                  const Spacer(
-                    flex: 2,
-                  ),
-                  Row(
-                    children: [
-                      const Icon(Icons.access_time, color: Colors.white),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Text("BUSINESS HOURS",
-                          style: GoogleFonts.robotoCondensed(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold)),
-                    ],
-                  ),
+                  // const Spacer(
+                  //   flex: 2,
+                  // ),
+                  // Row(
+                  // children: [
+                  //   const Icon(Icons.access_time, color: Colors.white),
+                  //   const SizedBox(
+                  //     width: 5,
+                  //   ),
+                  //   Text("BUSINESS HOURS",
+                  //       style: GoogleFonts.robotoCondensed(
+                  //           color: Colors.white,
+                  //           fontSize: 20,
+                  //           fontWeight: FontWeight.bold)),
+                  // ],
+                  // ),
                   const Spacer(
                     flex: 1,
                   ),
                   const Text(
-                      "Mon–Fri   "
-                      "8.30 am–5.30 pm,  "
-                      "Sat&Sun Closed",
+                      "We’ll contact you immediately to discuss potential business",
                       style: TextStyle(color: Colors.white, fontSize: 16)),
                   const Spacer(
                     flex: 1,
@@ -130,15 +152,6 @@ class Home10 extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.all(50),
-            decoration: const BoxDecoration(color: Colors.white, boxShadow: [
-              BoxShadow(
-                color: Colors.grey,
-                spreadRadius: 3,
-                blurRadius: 4,
-                blurStyle: BlurStyle.normal,
-                offset: Offset(3, 3),
-              )
-            ]),
             height: screenSize.height * 0.7,
             width: screenSize.width * 0.35,
             child: Form(
