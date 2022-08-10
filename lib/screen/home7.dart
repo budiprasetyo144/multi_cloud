@@ -9,20 +9,20 @@ class Home7 extends StatelessWidget {
     var screenSize = MediaQuery.of(context).size;
     return Container(
       color: const Color.fromARGB(255, 227, 235, 253),
-      height: 655,
+      height: 660,
       padding: const EdgeInsets.all(10),
       width: screenSize.width,
       child: Column(
         children: [
-          const SizedBox(height: 10, width: 10,),
+          const SizedBox(height: 15, width: 10,),
           const Center(
             child: Text("Why Multi Cloud Solutions",
                 style: TextStyle(
-                    fontSize: 35,
+                    fontSize: 45,
                     color: Color.fromARGB(255, 12, 66, 101),
                     fontWeight: FontWeight.bold)),
           ),
-          const SizedBox(height: 20,),
+          const SizedBox(height: 25,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

@@ -216,8 +216,7 @@ class Footer extends StatelessWidget {
     );
   }
 
-  Text FooterHead(String title) =>
-      Text(title,style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,letterSpacing: 2),);
+  Text FooterHead(String title) => Text(title,style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,letterSpacing: 2),);
 
 }
 

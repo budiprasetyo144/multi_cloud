@@ -25,9 +25,8 @@ class _Home11State extends State<Home11> {
     String dropdownValue = 'Non Financial Services';
 
     return Container(
-      height: 650,
+      height: 873,
       width: screenSize.width,
-      color: Colors.lightBlueAccent,
 
       child: Column(
         children: [
@@ -37,44 +36,23 @@ class _Home11State extends State<Home11> {
             Text("VARIOUS INDUSTRY AND SECTORS",
               style: TextStyle(
                 fontSize: 45,
-                color: Colors.black,
-                fontWeight: FontWeight.bold),
+                color: Color(0xff1e5ea8),
+                fontWeight: FontWeight.bold,
+              letterSpacing: 1.1),
             )
             ),
           ),
-          SizedBox(height: 25,),
-          Center(
-            child: (
-            Text("Masing-masing Industri mempunyai kebutuhan spesifik nya, kami siap membantu untuk menyediakan layanan sesuai industri nya")
-            ),
-          ),
-          Center(
-            child: (
-            Text("Dari diskusi awal sampai dengan menyediakan expert consultant.")
-            ),
-          ),
-          SizedBox(height: 15,),
       Container(
-        width: screenSize.width*0.7,
-        child: SingleChildScrollView(
-          child: ExpansionPanelList.radio(
-            expansionCallback: (index, isExpanded) {
-              final tile = advancedTiles[index];
-              setState(() => tile.isExpanded = isExpanded);
+        padding: EdgeInsets.symmetric(horizontal: screenSize.width*0.15,vertical: 20),
+        child: Text('Each industry has its specific needs, we are'
+            ' ready to help to provide services according to its industry'
+            ', from initial discussions to providing expert consultants.',
+          style: TextStyle(fontSize: 21),textAlign: TextAlign.center,),
+      ),
 
-            },
-            children: advancedTiles
-                .map((tile) => ExpansionPanelRadio(
-              value: tile.title,
-              canTapOnHeader: true,
-              headerBuilder: (context, isExpanded) => buildTile(tile),
-              body: Column(
-                children: tile.tiles.map(buildTile).toList(),
-              ),
-            ))
-                .toList(),
-          ),
-        ),
+      Container(
+        width: screenSize.width*0.6,
+        child: Expansionpanel(),
       ),
         ],
       ),
@@ -82,47 +60,6 @@ class _Home11State extends State<Home11> {
 
 
   }
-  Widget buildTile(AdvancedTile tile) => ListTile(
-    title: Text(tile.title),
 
-  );
 }
-
-// class dd extends StatefulWidget {
-//   const dd({Key? key}) : super(key: key);
-//
-//   @override
-//   State<dd> createState() => _ddState();
-// }
-//
-// class _ddState extends State<dd> {
-//   String dropdownValue = 'One';
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return DropdownButton<String>(
-//       value: dropdownValue,
-//       icon: Icon(Icons.arrow_downward),
-//       elevation: 16,
-//       style: TextStyle(color: Colors.deepPurple),
-//       underline: Container(
-//         height: 2,
-//         color: Colors.deepPurpleAccent,
-//       ),
-//       onChanged: (String? newValue){
-//         setState(() {
-//           dropdownValue = newValue!;
-//         });
-//       },
-//       items: <String>['One', 'Two', 'Three'].map<DropdownMenuItem<String>>((String value){
-//         return DropdownMenuItem<String>(
-//           value: value,
-//           child: Text(value),
-//         )
-//       }
-//
-//       )
-//     )
-//   }
-// }
 

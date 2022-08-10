@@ -59,12 +59,12 @@ class _HomePageState extends State<HomePage> {
           Home2(),
           const Home4(),
           Home3(screenSize: screenSize),
-
+          Home11(),
           const Home7(),
           const Home6(),
 
           Home10(),
-          Home11(),
+
           const Footer(),
         ],
       ),

@@ -14,40 +14,7 @@ class Home10 extends StatelessWidget {
   final emailController = TextEditingController();
   final messageController = TextEditingController();
 
-  // @override
-  // Widget build(BuildContext context) {
-  //   var screenSize = MediaQuery.of(context).size;
-  //   return Container(
-  //       height: 680,
-  //       width: screenSize.width,
-  //       decoration: BoxDecoration(
 
-  //           gradient: LinearGradient(colors: [
-  //         Color(0xff027DFD),
-  //         Color(0xff4100e0),
-  //       ], begin: Alignment.topCenter, end: Alignment.bottomCenter))
-  //       child: Row(
-  //         children: [
-  //           const Spacer(
-  //             flex: 3,
-  //           ),
-  //           Container(
-  //             child: Column(
-  //                 crossAxisAlignment: CrossAxisAlignment.start,
-  //                 mainAxisAlignment: MainAxisAlignment.start,
-  //                 children: [
-  //                   const Spacer(
-  //                     flex: 1,
-  //                   )
-
-  //                 ],
-
-  //             )
-  //           )
-  //         ],
-  //       ),
-  //       );
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +45,7 @@ class Home10 extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   const Spacer(
                     flex: 1,
@@ -122,13 +89,13 @@ class Home10 extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 40,
-                          fontWeight: FontWeight.bold)),
+                          fontWeight: FontWeight.bold,letterSpacing: 1.3)),
 
                   const Text("Business",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 40,
-                          fontWeight: FontWeight.bold)),
+                          fontWeight: FontWeight.bold,letterSpacing: 1.3)),
                   // const Spacer(
                   //   flex: 2,
                   // ),
@@ -225,7 +192,7 @@ class Home10 extends StatelessWidget {
                       Container(
                         width: 212,
                         child: TextFormField(
-                          controller: nameController,
+                          controller: emailController,
                           decoration: InputDecoration(
                             hintText: "Enter a valid email address",
                             fillColor: Colors.white,
@@ -264,12 +231,12 @@ class Home10 extends StatelessWidget {
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.zero,
                         borderSide:
-                            const BorderSide(width: 1, color: Colors.black),
+                            const BorderSide(width: 1,color: Colors.white),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.zero,
                         borderSide:
-                            const BorderSide(width: 1, color: Colors.black),
+                            const BorderSide(width: 1,color: Colors.white ),
                       ),
                     ),
                     maxLines: 5,
