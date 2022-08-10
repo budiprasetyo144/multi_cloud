@@ -164,11 +164,35 @@ class Home10 extends StatelessWidget {
                           TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
                   TextFormField(
                     controller: emailController,
-                    decoration: const InputDecoration(hintText: 'Email'),
+                    decoration: InputDecoration(
+                      hintText: "Email",
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide:
+                            const BorderSide(width: 1, color: Colors.black),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide:
+                            const BorderSide(width: 1, color: Colors.black),
+                      ),
+                    ),
                   ),
                   TextFormField(
                     controller: messageController,
-                    decoration: const InputDecoration(hintText: 'Message'),
+                    decoration: InputDecoration(
+                      hintText: "Message",
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide:
+                            const BorderSide(width: 1, color: Colors.black),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide:
+                            const BorderSide(width: 1, color: Colors.black),
+                      ),
+                    ),
                     maxLines: 5,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
