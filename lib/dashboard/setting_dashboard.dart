@@ -1,8 +1,7 @@
-import 'dart:html';
-
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:mcs_flutter/api/file_api.dart';
 import 'package:mcs_flutter/api/setting_api.dart';
+import 'package:http/http.dart' as http;
 
 class SettingDashboard extends StatefulWidget {
   const SettingDashboard({super.key});
@@ -13,11 +12,57 @@ class SettingDashboard extends StatefulWidget {
 
 class _SettingDashboardState extends State<SettingDashboard> {
   String? img;
+  @override
+  Future<void> uploadFile() async {
+    // TODO: implement upload File
+    FilePickerResult? result;
+    print('Picker file');
+    result = await FilePicker.platform.pickFiles(
+        allowMultiple: true,
+        withReadStream: true,
+        withData: false
+    );
+    if(result != null){
+      print(result.files.first.name);
+      //create
+      var req = http.MultipartRequest(
+          "POST",
+          Uri.parse("http://10.107.72.92:8081/file")
+      );
+
+      List<PlatformFile>? files = result.files;
+
+      if(files != null){
+        print('Add file select with picker');
+        for (PlatformFile file in files){
+          //add select with req
+          req.files.add(http.MultipartFile(
+              "file",
+              file.readStream!,
+              file.size,
+              filename: file.name
+          ));
+
+          setState(() {
+            img = file.name;
+          });
+        }
+      }
+      // send request
+      var resp = await req.send();
+
+      //read response
+      String res = await resp.stream.bytesToString();
+
+      //your response
+      print(res);
+    }
+  }
   var btnText = 'Save Setting';
   var enb = true;
   final formKey =  GlobalKey<FormState>();
   String id = '';
-  String im ='assets/ass.jpg';
+  String im = '';
   String tt = '';
   String tl = '';
   String em = '';
@@ -129,7 +174,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                 height: 50,
                                 width: 150,
                                 child:
-                                Image.asset('$img'),
+                                Image.asset('assets/file/$img'),
                               ),
                               SizedBox(
                                 height: 20,

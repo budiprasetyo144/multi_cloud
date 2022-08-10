@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 VoidCallback uploadFile = () async{
   FilePickerResult? result;
-  print('Picke file');
+  print('Picker file');
   result = await FilePicker.platform.pickFiles(
     allowMultiple: true,
     withReadStream: true,
@@ -15,7 +15,7 @@ VoidCallback uploadFile = () async{
     //create
     var req = http.MultipartRequest(
       "POST",
-      Uri.parse("http://10.107.85.101:8081/file")
+      Uri.parse("http://10.107.72.92:8081/file")
     );
 
     List<PlatformFile>? files = result.files;
@@ -40,5 +40,6 @@ VoidCallback uploadFile = () async{
 
     //your response
     print(res);
+
   }
 };
