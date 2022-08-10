@@ -45,8 +45,9 @@ dependencies:
   font_awesome_flutter: ^10.1.0
   http: ^0.13.4
   dio: ^4.0.6
-  image_picker: ^0.8.5+3
   permission_handler: ^10.0.0
+  image_picker: ^0.8.5+3
+  file_picker: ^5.0.1
 
 dev_dependencies:
   flutter_test:

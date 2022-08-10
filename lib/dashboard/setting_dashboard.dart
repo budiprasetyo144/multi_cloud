@@ -1,4 +1,7 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
+import 'package:mcs_flutter/api/file_api.dart';
 import 'package:mcs_flutter/api/setting_api.dart';
 
 class SettingDashboard extends StatefulWidget {
@@ -9,6 +12,7 @@ class SettingDashboard extends StatefulWidget {
 }
 
 class _SettingDashboardState extends State<SettingDashboard> {
+  String? img;
   var btnText = 'Save Setting';
   var enb = true;
   final formKey =  GlobalKey<FormState>();
@@ -125,7 +129,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                 height: 50,
                                 width: 150,
                                 child:
-                                Image.asset("assets/logo/multicloudsolution.jpg"),
+                                Image.asset('$img'),
                               ),
                               SizedBox(
                                 height: 20,
@@ -134,7 +138,22 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                   height: 30,
                                   width: 100,
                                   child: ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: uploadFile,
+                                      //     () async {
+                                      //   final imagePicker = await ImagePickerPlugin()
+                                      //       .pickImage(source: ImageSource.gallery,imageQuality: 20);
+                                      //
+                                      //   if(imagePicker != null){
+                                      //     final file = File(imagePicker.path);
+                                      //     final result = await FileApi.upload(file);
+                                      //
+                                      //     final String imgPath = result['filePath'];
+                                      //
+                                      //     setState(() {
+                                      //       img = imgPath;
+                                      //     });
+                                      //   }
+                                      // },
                                       style: ElevatedButton.styleFrom(
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(5),
