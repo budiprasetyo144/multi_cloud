@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:mcs_flutter/const/conts.dart';
 
 import 'package:mcs_flutter/widget/expansion.dart';
 
@@ -22,12 +21,11 @@ class _Home11State extends State<Home11> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    String dropdownValue = 'Non Financial Services';
 
     return Container(
-      height: 650,
+      height: 700,
       width: screenSize.width,
-      color: Colors.lightBlueAccent,
+      color: Colors.white,
 
       child: Column(
         children: [
@@ -37,25 +35,35 @@ class _Home11State extends State<Home11> {
             Text("VARIOUS INDUSTRY AND SECTORS",
               style: TextStyle(
                 fontSize: 45,
-                color: Colors.black,
+                  color: Color(0xff1e5ea8),
                 fontWeight: FontWeight.bold),
             )
             ),
           ),
-          SizedBox(height: 25,),
+          SizedBox(height: 20,),
           Center(
             child: (
-            Text("Masing-masing Industri mempunyai kebutuhan spesifik nya, kami siap membantu untuk menyediakan layanan sesuai industri nya")
+            Text("Masing-masing Industri mempunyai kebutuhan spesifik nya, kami siap membantu untuk menyediakan layanan sesuai industri nya",
+              style: TextStyle(
+                fontSize: 18
+              ),
+            )
             ),
           ),
           Center(
             child: (
-            Text("Dari diskusi awal sampai dengan menyediakan expert consultant.")
+            Text("Dari diskusi awal sampai dengan menyediakan expert consultant.",
+              style: TextStyle(
+                fontSize: 18
+              ),
+            )
             ),
           ),
-          SizedBox(height: 15,),
+          SizedBox(height: 10,),
       Container(
-        width: screenSize.width*0.7,
+        width: screenSize.width*0.5,
+        height: 500,
+        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
         child: SingleChildScrollView(
           child: ExpansionPanelList.radio(
             expansionCallback: (index, isExpanded) {
@@ -83,8 +91,9 @@ class _Home11State extends State<Home11> {
 
   }
   Widget buildTile(AdvancedTile tile) => ListTile(
-    title: Text(tile.title),
-
+    title: Text(tile.title,
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
   );
 }
 
