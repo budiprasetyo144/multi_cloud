@@ -10,17 +10,10 @@ String redline =
     'across all cloud models and multiple delivery methods (IaaS, PaaS, and SaaS).';
 
 String row1 =
-    'EKSAD providing services high quality based '
-    'on strong experience in the industry and technology. '
-    'Building the right IT service solution to enable its '
-    'partners in speeding up business development.';
+    "Thank you Alibaba Cloud, Indonet our Distributor and all beloved customer for your strong support to Eksad..";
 
 String row2 =
-    'Thanks to the reliability and extensive ability '
-    'to deploy solutions from Alibaba Cloud '
-    'to dozens of client companies. '
-    'EKSAD received an award from Alibaba as the top performer of the year. '
-    '\n';
+    'Although invisible, cloud computing is in the daily life of most people.';
 
     // 'EKSAD provides tailored services focusing on clients’ '
     // 'specific demands in international and domestic markets.'
@@ -28,8 +21,6 @@ String row2 =
     // 'business across channels.';
 
 String row3 =
-    'Generally the detailed organization and implementation '
-    'of a complex operation. In a general business sense, logistics is '
-    'the point of consumption to meet the requirements of customers or corporations.';
+    'The world\'s data center and cloud services industry players are focusing on developing their businesses in.';
 
 
