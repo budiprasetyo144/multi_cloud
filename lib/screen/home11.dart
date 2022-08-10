@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/const/conts.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
+
+import 'package:mcs_flutter/widget/expansion.dart';
 
 
 // final List<String> items = [
@@ -53,10 +54,38 @@ class _Home11State extends State<Home11> {
             ),
           ),
           SizedBox(height: 15,),
+      Container(
+        width: screenSize.width*0.7,
+        child: SingleChildScrollView(
+          child: ExpansionPanelList.radio(
+            expansionCallback: (index, isExpanded) {
+              final tile = advancedTiles[index];
+              setState(() => tile.isExpanded = isExpanded);
+
+            },
+            children: advancedTiles
+                .map((tile) => ExpansionPanelRadio(
+              value: tile.title,
+              canTapOnHeader: true,
+              headerBuilder: (context, isExpanded) => buildTile(tile),
+              body: Column(
+                children: tile.tiles.map(buildTile).toList(),
+              ),
+            ))
+                .toList(),
+          ),
+        ),
+      ),
         ],
       ),
     );
+
+
   }
+  Widget buildTile(AdvancedTile tile) => ListTile(
+    title: Text(tile.title),
+
+  );
 }
 
 // class dd extends StatefulWidget {
