@@ -58,8 +58,9 @@ class Home10 extends StatelessWidget {
       decoration: BoxDecoration(
           gradient: LinearGradient(
         colors: <Color>[
-          Color(0xff1cdac5),
-          Color(0xFF027dfd),
+          Color(0xff137fc2),
+          Color(0xff3958d5),
+          Color(0xff184b80),
         ],
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
