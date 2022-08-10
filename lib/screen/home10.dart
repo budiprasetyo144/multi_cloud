@@ -53,7 +53,7 @@ class Home10 extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: 680,
+      height: 500,
       width: screenSize.width,
       // color: Colors.blue,
       decoration: BoxDecoration(
@@ -98,7 +98,7 @@ class Home10 extends StatelessWidget {
                   //   flex: 1,
                   // ),
                   const Text("Leave your contact info and",
-                      style: TextStyle(color: Colors.white, fontSize: 16)),
+                      style: TextStyle(color: Colors.white, fontSize: 25)),
                   // const Spacer(
                   //   flex: 2,
                   // ),
@@ -118,8 +118,17 @@ class Home10 extends StatelessWidget {
                   const Spacer(
                     flex: 1,
                   ),
-                  const Text("Le​t’s Discuss Business",
-                      style: TextStyle(color: Colors.white, fontSize: 16)),
+                  const Text("Le​t’s Discuss",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold)),
+
+                  const Text("Business",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold)),
                   // const Spacer(
                   //   flex: 2,
                   // ),
@@ -141,7 +150,7 @@ class Home10 extends StatelessWidget {
                   ),
                   const Text(
                       "We’ll contact you immediately to discuss potential business",
-                      style: TextStyle(color: Colors.white, fontSize: 16)),
+                      style: TextStyle(color: Colors.white, fontSize: 23)),
                   const Spacer(
                     flex: 1,
                   ),
@@ -161,29 +170,53 @@ class Home10 extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  const Text('Contact Us',
-                      style:
-                          TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
+                  // const Text('Contact Us',
+                  //     style:
+                  //         TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
+                  Text(
+                    "Name",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   TextFormField(
                     controller: nameController,
                     decoration: InputDecoration(
                       hintText: "Enter your Name",
+                      fillColor: Colors.white,
+                      filled: true,
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.zero,
                         borderSide:
-                        const BorderSide(width: 1, color: Colors.black),
+                            const BorderSide(width: 1, color: Colors.white),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.zero,
                         borderSide:
-                        const BorderSide(width: 1, color: Colors.black),
+                            const BorderSide(width: 1, color: Colors.white),
                       ),
                     ),
+                  ),
+                  Text(
+                    "Email",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   TextFormField(
                     controller: emailController,
                     decoration: InputDecoration(
-                      hintText: "Email",
+                      hintText: "Enter a valid email address",
+                      fillColor: Colors.white,
+                      filled: true,
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.zero,
                         borderSide:
@@ -196,10 +229,22 @@ class Home10 extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Text(
+                    "Message",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   TextFormField(
                     controller: messageController,
                     decoration: InputDecoration(
-                      hintText: "Message",
+                      hintText: "Enter your message",
+                      fillColor: Colors.white,
+                      filled: true,
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.zero,
                         borderSide:
@@ -249,7 +294,8 @@ class Home10 extends StatelessWidget {
                           messageController.clear();
                         }
                       },
-                      child: const Text('Send', style: TextStyle(fontSize: 16)),
+                      child:
+                          const Text('Submit', style: TextStyle(fontSize: 16)),
                     ),
                   ),
                 ],
@@ -277,7 +323,11 @@ class Home10 extends StatelessWidget {
           'service_id': serviceId,
           'template_id': templateId,
           'user_id': userId,
-          'template_params': {'from_name': name, 'to_email': email, 'message': message}
+          'template_params': {
+            'from_name': name,
+            'to_email': email,
+            'message': message
+          }
         }));
     return response.statusCode;
   }
