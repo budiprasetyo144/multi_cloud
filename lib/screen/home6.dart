@@ -38,25 +38,26 @@ class _Home6State extends State<Home6> {
                         height: 250,
                         decoration: BoxDecoration(
                           image: const DecorationImage(
-                              image: AssetImage('assets/images/xcxcxc.jpg'),
-                              fit: BoxFit.fill),
+                              image: AssetImage('assets/images/eksad.jpg'),
+                              fit: BoxFit.cover),
                           borderRadius: BorderRadius.circular(30),
                         ),
                       ),
                       Container(
-                        padding: const EdgeInsets.only(top: 20),
+                        height: 90,width: screenSize.width*0.24,
+                        padding: const EdgeInsets.only(top: 20,right: 20,left: 20),
                         child: Text(
-                          overflow: TextOverflow.ellipsis,
-                          'Our Company',
-                          style: TextStyle(color: Colors.white, fontSize: 30),
+                          'Top Performing Partner of the year',
+                          style: TextStyle(color: Colors.white, fontSize: 28),
+                          textAlign: TextAlign.center
                         ),
                       ),
                       Container(
-                        height: 150,
+                        height: 100,
                         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                         child: Text(
                           row1,
-                          style: const TextStyle(color: Colors.white, fontSize: 15),
+                          style: const TextStyle(color: Colors.white, fontSize: 17,height: 1.2,letterSpacing: 1.2),textAlign: TextAlign.center
                         ),
                       ),
                       TextButton(
@@ -95,19 +96,21 @@ class _Home6State extends State<Home6> {
                         ),
                       ),
                       Container(
-                        padding: const EdgeInsets.only(top: 20),
-                        child: const Text(
-                          'Award From Alibaba',
-                          style: TextStyle(color: Colors.black, fontSize: 30),
+                        height: 90,width: screenSize.width*0.24,
+                        padding: const EdgeInsets.only(top: 20,right: 20,left: 20),
+                        child: Text(
+                            'Cloud Demand in \n Indonesia is Predicted to Continue to Increase',
+                            style: TextStyle(color: Colors.black, fontSize: 28),
+                            textAlign: TextAlign.center,
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                       Container(
-                        height: 150,
+                        height: 100,
                         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                         child: Text(
-                          
                           row2,
-                          style: const TextStyle(color: Colors.black, fontSize: 15),
+                          style: const TextStyle(color: Colors.black, fontSize: 17,height: 1.2,letterSpacing: 1.2),textAlign: TextAlign.center
                         ),
                       ),
                       TextButton(
@@ -145,18 +148,20 @@ class _Home6State extends State<Home6> {
                         ),
                       ),
                       Container(
-                        padding: const EdgeInsets.only(top: 20),
-                        child: const Text(
-                          'Logistics',
-                          style: TextStyle(color: Colors.white, fontSize: 30),
+                        height: 90,width: screenSize.width*0.24,
+                        padding: const EdgeInsets.only(top: 20,right: 20,left: 20),
+                        child: Text(
+                            'Advancing Indonesia’s clouds',
+                            style: TextStyle(color: Colors.white, fontSize: 28),
+                            textAlign: TextAlign.center
                         ),
                       ),
                       Container(
-                        height: 150,
+                        height: 100,
                         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                         child: Text(
                           row3,
-                          style: const TextStyle(color: Colors.white, fontSize: 15),
+                          style: const TextStyle(color: Colors.white, fontSize: 17,height: 1.2,letterSpacing: 1.2),textAlign: TextAlign.center
                         ),
                       ),
                       TextButton(
