@@ -12,7 +12,7 @@ class Home3 extends StatelessWidget {
 
   final Size screenSize;
 
-  @override
+ @override
   Widget build(BuildContext context) {
     return Container(
       height: screenSize.height * 0.5,
@@ -30,8 +30,8 @@ class Home3 extends StatelessWidget {
                     color: Color(0xff1e5ea8),
                     fontWeight: FontWeight.bold)),
           ),
-          const SizedBox(
-            height: 25,
+          SizedBox(
+            height: 20,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -41,41 +41,55 @@ class Home3 extends StatelessWidget {
                 width: screenSize.width * 0.2,
                 child: Column(
                   children: [
-                    Animasi_Kiri_Kanan(screenSize: screenSize,widget: Image.asset("assets/icons/icon1.png",height: screenSize.height * 0.1,),),
-                    SizedBox(
-                      height: screenSize.height * 0.03,
-                    ),
-                    Animasi_Kanan_Kiri(judul: "MIGRATION",),
-                    SizedBox(
-                      height: screenSize.height * 0.03,
-                    ),
-                    Text(
-                      "We Experience in Data Migration",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14  ,
+                    Container(
+                      padding: EdgeInsets.only(top: screenSize.height * 0.01),
+                      width: screenSize.width * 0.5,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        curve: Curves.bounceIn,
+                        direction: Direction.horizontal,
+                        offset: -0.2,
+                        child: Image.asset(
+                          "assets/icons/icon1.png",
+                          height: screenSize.height * 0.1,
+                        ),
                       ),
                     ),
-                    SizedBox(
-                      height: 5,
+                    const SizedBox(
+                      height: 10,
                     ),
-                    Text(
-                      "Multi Cloud, Migration from Premise",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14,
+                    Container(
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "MIGRATION",
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff1e5ea8),
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                     ),
-                    SizedBox(
-                      height: 5,
+                    const SizedBox(
+                      height: 10,
                     ),
-                    Text(
-                      "Enviroment. ",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14,
+                    Container(
+                      width: 200,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "We Experience in Data Migration We Experience in Data Migration Multi Cloud, Migration from Premise Enviroment.",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff111111),
+                            fontSize: 14,
+                          ),
+                        ),
                       ),
-                    ),
+                    )
                   ],
                 ),
               ),
@@ -83,51 +97,55 @@ class Home3 extends StatelessWidget {
                 width: screenSize.width * 0.2,
                 child: Column(
                   children: [
-                    Animasi_Kiri_Kanan(screenSize: screenSize,widget: Image.asset("assets/icons/icon2.png",height: screenSize.height * 0.1,),),
-                    SizedBox(
-                      height: screenSize.height * 0.03,
-                    ),
-                    Animasi_Kanan_Kiri(judul: "CONSULTING",),
-                    SizedBox(
-                      height: screenSize.height * 0.03,
-                    ),
-                    Text(
-                      "Our experienced Cloud Consultants",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14,
+                    Container(
+                      padding: EdgeInsets.only(top: screenSize.height * 0.01),
+                      width: screenSize.width * 0.5,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        curve: Curves.bounceIn,
+                        direction: Direction.horizontal,
+                        offset: -0.2,
+                        child: Image.asset(
+                          "assets/icons/icon2.png",
+                          height: screenSize.height * 0.1,
+                        ),
                       ),
                     ),
-                     SizedBox(
-                      height: 5,
+                     const SizedBox(
+                      height: 10,
                     ),
-                    Text(
-                      "can help you determine the efficacy",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14,
+                    Container(
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "CONSULTING",
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff1e5ea8),
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                     ),
-                     SizedBox(
-                      height: 5,
+                     const SizedBox(
+                      height: 10,
                     ),
-                    Text(
-                      "of and implement these popular",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14,
+                    Container(
+                      width: 200,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "Our experienced Cloud Consultants can help you determine the efficacy of and implement these popular cloud solutions.",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff111111),
+                            fontSize: 14,
+                          ),
+                        ),
                       ),
-                    ),
-                     SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      "cloud solutions.",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14,
-                      ),
-                    ),
+                    )
                   ],
                 ),
               ),
@@ -135,51 +153,55 @@ class Home3 extends StatelessWidget {
                 width: screenSize.width * 0.2,
                 child: Column(
                   children: [
-                    Animasi_Kiri_Kanan(screenSize: screenSize,widget: Image.asset("assets/icons/icon3.png",height: screenSize.height * 0.1,),),
-                    SizedBox(
-                      height: screenSize.height * 0.03,
-                    ),
-                    Animasi_Kanan_Kiri(judul: "LOCAL SUPPORT",),
-                    SizedBox(
-                      height: screenSize.height * 0.03,
-                    ),
-                    Text(
-                      "Our local support team work with",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14,
+                    Container(
+                      padding: EdgeInsets.only(top: screenSize.height * 0.01),
+                      width: screenSize.width * 0.5,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        curve: Curves.bounceIn,
+                        direction: Direction.horizontal,
+                        offset: -0.2,
+                        child: Image.asset(
+                          "assets/icons/icon3.png",
+                          height: screenSize.height * 0.1,
+                        ),
                       ),
                     ),
-                     SizedBox(
-                      height: 5,
+                     const SizedBox(
+                      height: 10,
                     ),
-                    Text(
-                      "our clients every step of the way to",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14,
+                    Container(
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "LOCAL SUPPORT",
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff1e5ea8),
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                     ),
-                     SizedBox(
-                      height: 5,
+                     const SizedBox(
+                      height: 10,
                     ),
-                    Text(
-                      "ensure that their cloud are running",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14,
+                    Container(
+                      width: 200,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "Our local support team work with our clients every step of the way to ensure that their cloud are running smoothly.",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff111111),
+                            fontSize: 14,
+                          ),
+                        ),
                       ),
-                    ),
-                     SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      "smoothly.",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14,
-                      ),
-                    ),
+                    )
                   ],
                 ),
               ),
@@ -187,54 +209,55 @@ class Home3 extends StatelessWidget {
                 width: screenSize.width * 0.2,
                 child: Column(
                   children: [
-                    Animasi_Kiri_Kanan(screenSize: screenSize,widget: Image.asset("assets/icons/icon4.png",height: screenSize.height * 0.1,),),
-                    SizedBox(
-                      height: screenSize.height * 0.03,
-                    ),
-                    Animasi_Kanan_Kiri(judul: "IMPLEMENTATION",),
-                    SizedBox(
-                      height: screenSize.height * 0.03,
-                    ),
-                    Text(
-                      "We do cloud all cloud servicess",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14,
+                    Container(
+                      padding: EdgeInsets.only(top: screenSize.height * 0.01),
+                      width: screenSize.width * 0.5,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        curve: Curves.bounceIn,
+                        direction: Direction.horizontal,
+                        offset: -0.2,
+                        child: Image.asset(
+                          "assets/icons/icon4.png",
+                          height: screenSize.height * 0.1,
+                        ),
                       ),
                     ),
-                    SizedBox(
-                      height: 5,
+                     const SizedBox(
+                      height: 10,
                     ),
-                    Text(
-                      "such as Infrastructure  (IAAS),",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14,
+                    Container(
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "IMPLEMENTATION",
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff1e5ea8),
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                     ),
-                    SizedBox(
-                      height: 5,
+                     const SizedBox(
+                      height: 10,
                     ),
-                    Text(
-                      "Platform (PAAS) and Software",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14,
+                    Container(
+                      width: 200,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "We do cloud all cloud servicess such as Infrastructure  (IAAS), Platform (PAAS) and Software (SAAS).",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff111111),
+                            fontSize: 14,
+                          ),
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      "(SAAS).",
-                      style: GoogleFonts.robotoCondensed(
-                        color: Color(0xff111111),
-                        fontSize: 14,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
+                    )
                   ],
                 ),
               ),
@@ -245,6 +268,3 @@ class Home3 extends StatelessWidget {
     );
   }
 }
-
-
-
