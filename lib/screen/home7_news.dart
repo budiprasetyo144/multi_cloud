@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/screen/post_body.dart';
 import '../text/text_body.dart';
-import 'package:mcs_flutter/text/text_post.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:mcs_flutter/main.dart';
 
 class Home7_news extends StatefulWidget {
@@ -12,6 +12,28 @@ class Home7_news extends StatefulWidget {
 }
 
 class _Home7_newsState extends State<Home7_news> {
+
+
+  void launchNews(
+      {
+        required String WebsiteUrl,
+      }) async {
+    String url() {
+      return WebsiteUrl;
+    }
+
+    if (await canLaunch(url())) {
+      await launch(url());
+    } else {
+      throw 'Could not launch ${url()}';
+    }
+  }
+
+
+
+
+
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -62,7 +84,7 @@ class _Home7_newsState extends State<Home7_news> {
                       ),
                       TextButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, '/news/1');
+                            launchNews(WebsiteUrl: 'https://www.linkedin.com/feed/update/urn:li:share:6938149543133802497?utm_source=linkedin_share&utm_medium=member_desktop_share&utm_content=post');
                           },
                           child: const Text(
 
@@ -115,7 +137,7 @@ class _Home7_newsState extends State<Home7_news> {
                       ),
                       TextButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, '/news/2');
+                            launchNews(WebsiteUrl: "https://inet.detik.com/business/d-6219553/kebutuhan-cloud-di-indonesia-diprediksi-terus-melesat");
                           },
                           child: const Text(
 
@@ -166,7 +188,7 @@ class _Home7_newsState extends State<Home7_news> {
                       ),
                       TextButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, '/news/3');
+                            launchNews(WebsiteUrl: 'https://www.thejakartapost.com/front-row/2022/05/23/advancing-indonesias-cloud-and-data-center-services.html');
                           },
                           child: const Text(
                             'READ MORE',
@@ -185,4 +207,5 @@ class _Home7_newsState extends State<Home7_news> {
     );
   }
 }
+
 
