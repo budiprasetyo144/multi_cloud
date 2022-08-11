@@ -18,7 +18,7 @@ class Home8_contact_us extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: 500,
+      height: 400,
       width: screenSize.width,
       // color: Colors.blue,
       decoration: BoxDecoration(
@@ -218,9 +218,9 @@ class Home8_contact_us extends StatelessWidget {
                       // ),
                     ],
                   ),
-                  // SizedBox(
-                  //   height: 5,
-                  // ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Text(
                     "Message",
                     style: TextStyle(
