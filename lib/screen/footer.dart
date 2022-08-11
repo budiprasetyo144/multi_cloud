@@ -51,7 +51,7 @@ class Footer extends StatelessWidget {
                           child:  Center(
                             child: Text('  Your one stop IT Solution',
                               textAlign: TextAlign.right,
-                              style: GoogleFonts.poppins(color: Colors.black87,fontWeight: FontWeight.w500,letterSpacing: 1.5,fontSize: 16),),
+                              style: TextStyle(color: Colors.black87,fontWeight: FontWeight.w500,letterSpacing: 1.5,fontSize: 16),),
                           ),
                         ),
                         Spacer(flex: 3,),
@@ -156,7 +156,7 @@ class Footer extends StatelessWidget {
                             'Tower 19th Floor Jl. Dr. Ide Anak Agung '
                             'Gde Agung Blok E3.2 '
                             'Mega Kuningan, Jakarta Selatan 12950',
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
                               fontSize: 17,
                               height: 1.2
                             ),

@@ -15,7 +15,7 @@ class Animasi_Kiri_Kanan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ShowUpAnimation(
-        delayStart: Duration(seconds: 2),
+        delayStart: Duration(seconds: 1),
         curve: Curves.decelerate,
         direction: Direction.horizontal,
         offset: -0.3,
