@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
           Home6_advantages(),
           Home7_news(),
           Home8_contact_us(),
-          const Footer(),
+          Footer(content1: konten1(screenSize),content2: konten2(screenSize),),
         ],
       ),
     );
@@ -171,24 +171,13 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             const Spacer(),
-            // IconButton(
-            //     onPressed: () {
-            //       Navigator.push(
-            //         context,
-            //         MaterialPageRoute(
-            //           builder: (context) => const Dashboard(),
-            //         ),
-            //       );
-            //     },
-            //     icon: const Icon(
-            //       Icons.brightness_low_sharp,
-            //       color: Colors.white,
-            //     ))
+
           ],
         ),
       ),
     );
   }
+
 
   ButtonStyle Color_button_appbar() {
     return ButtonStyle(
@@ -201,7 +190,80 @@ class _HomePageState extends State<HomePage> {
       }),
     );
   }
+
+  Text FooterHead(String title) => Text(title,style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,letterSpacing: 2),);
+
+  Column konten1(Size screenSize){
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Container(
+          width: screenSize.width*0.1,
+          height: screenSize.height * 0.04,
+          child: FooterHead('Sitemap'),
+        ),
+        Spacer(flex: 3,),
+        TextButton(onPressed: (){
+          _scrollToIndex(0);
+        }, child: FooterBody(teks: 'Home',)),
+        Spacer(),
+        TextButton(onPressed: (){
+          _scrollToIndex(530);
+        }, child: FooterBody(teks: 'About Us',)),
+        Spacer(),
+        TextButton(onPressed: (){
+          _scrollToIndex(880);
+        }, child: FooterBody(teks: 'Solution',)),
+        Spacer(),
+        TextButton(onPressed: (){
+          _scrollToIndex(4070);
+        }, child: FooterBody(teks: 'Contact Us',)),
+        Spacer(flex: 6,),
+
+      ],
+    );
+  }
+
+  Column konten2(Size screenSize){
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Container(
+            width: screenSize.width*0.13,
+            height: screenSize.height * 0.04,
+            child: FooterHead('Solution')),
+        Spacer(flex: 3,),
+        TextButton(onPressed: (){
+          _scrollToIndex(1480);
+        }, child: FooterBody(teks: 'Cloud Migration',)),
+        Spacer(),
+        TextButton(onPressed: (){
+          _scrollToIndex(1480);
+        }, child: FooterBody(teks: 'Consultation',)),
+        Spacer(),
+        TextButton(onPressed: (){
+          _scrollToIndex(1480);
+        }, child: FooterBody(teks: 'Local Support',)),
+        Spacer(),
+        TextButton(onPressed: (){
+          _scrollToIndex(1480);
+        }, child: FooterBody(teks: 'Cloud Implementation',)),
+        Spacer(flex: 6,),
+
+      ],
+    );
+  }
+
 }
+
+
+
+
+
+
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);

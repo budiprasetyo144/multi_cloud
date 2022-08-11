@@ -140,7 +140,7 @@ class PostBody extends StatelessWidget {
                 ],
               ),
             ),
-          Footer(),
+          Footer(content1: Container(),content2: Container(),),
         ],
       ),
     );

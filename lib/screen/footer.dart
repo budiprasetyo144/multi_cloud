@@ -4,7 +4,9 @@ import 'package:url_launcher/url_launcher.dart';
 
 
 class Footer extends StatelessWidget {
-  const Footer({Key? key}) : super(key: key);
+  const Footer({Key? key,required this.content1, required this.content2}) : super(key: key);
+  final Widget content1;
+  final Widget content2;
 
   @override
   Widget build(BuildContext context) {
@@ -83,52 +85,13 @@ class Footer extends StatelessWidget {
                     width: screenSize.width*0.1,
                     height: screenSize.height * 0.35,
 
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                          width: screenSize.width*0.1,
-                          height: screenSize.height * 0.04,
-                          child: FooterHead('Sitemap'),
-                        ),
-                        Spacer(flex: 3,),
-                        TextButton(onPressed: (){}, child: FooterBody(teks: 'Home',)),
-                        Spacer(),
-                        TextButton(onPressed: (){}, child: FooterBody(teks: 'About Us',)),
-                        Spacer(),
-                        TextButton(onPressed: (){}, child: FooterBody(teks: 'Solution',)),
-                        Spacer(),
-                        TextButton(onPressed: (){}, child: FooterBody(teks: 'Contact Us',)),
-                        Spacer(flex: 6,),
-
-                      ],
-                    )
+                    child: content1
                 ),
                 Container(
                     width: screenSize.width*0.13,
                     height: screenSize.height * 0.35,
 
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                          width: screenSize.width*0.13,
-                          height: screenSize.height * 0.04,
-                          child: FooterHead('Solution')),
-                        Spacer(flex: 3,),
-                        TextButton(onPressed: (){}, child: FooterBody(teks: 'Cloud Migration',)),
-                        Spacer(),
-                        TextButton(onPressed: (){}, child: FooterBody(teks: 'Consultation',)),
-                        Spacer(),
-                        TextButton(onPressed: (){}, child: FooterBody(teks: 'Local Support',)),
-                        Spacer(),
-                        TextButton(onPressed: (){}, child: FooterBody(teks: 'Cloud Implementation',)),
-                        Spacer(flex: 6,),
-
-                      ],
-                    )
+                    child: content2
                 ),
                 Container(
                     width: screenSize.width*0.2,

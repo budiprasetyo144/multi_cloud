@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mcs_flutter/screen/post_body.dart';
 import '../text/text_body.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:mcs_flutter/main.dart';
 
 class Home7_news extends StatefulWidget {
   const Home7_news({Key? key}) : super(key: key);
