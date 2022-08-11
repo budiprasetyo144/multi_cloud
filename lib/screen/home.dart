@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mcs_flutter/screen/footer.dart';
 import 'package:mcs_flutter/screen/home8.dart';
-import 'package:mcs_flutter/screen/home4.dart';
-import 'package:mcs_flutter/screen/home3.dart';
+import 'package:mcs_flutter/screen/home3_edit.dart';
+import 'package:mcs_flutter/screen/home4_edit.dart';
+
 import 'package:mcs_flutter/screen/home6_advantage.dart';
 import 'package:mcs_flutter/screen/home7_news.dart';
 import 'package:mcs_flutter/screen/home2.dart';
@@ -54,7 +55,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           const Home(),
           const Home2(),
-          const Home3_partner(),
+          Home3_partner(),
           Home4_solution(screenSize: screenSize),
           const Home5_industry(),
           Home6_advantages(),

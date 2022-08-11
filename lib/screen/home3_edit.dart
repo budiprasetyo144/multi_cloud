@@ -42,7 +42,7 @@ class Home3_partner extends StatelessWidget {
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.w400,
-                      letterSpacing: 1.1
+                        letterSpacing: 1.1
                     ),
                   ),
                   Spacer(
@@ -63,7 +63,7 @@ class Home3_partner extends StatelessWidget {
                 SizedBox(
                   width: screenSize.width * 0.3,
                   child:
-                      const Image(image: AssetImage('assets/logo/alibaba.png')),
+                  const Image(image: AssetImage('assets/logo/alibaba.png')),
                 ),
                 const Spacer(
                   flex: 1,
