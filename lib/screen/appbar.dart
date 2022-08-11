@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mcs_flutter/main.dart';
 import 'package:mcs_flutter/widget/dropdown.dart';
 import '../const/conts.dart';
@@ -72,34 +73,34 @@ PreferredSize AppbarFullSize(Size screenSize, BuildContext context) {
                 ),
               );
             },
-            child: const Text(
+            child:  Text(
               "Home",
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                   fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
             ),
           ),
           SizedBox(
             width: screenSize.width * 0.03,
           ),
-          const Text(
+           Text(
             "About us",
-            style: TextStyle(
+            style: GoogleFonts.poppins(
                 fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
           ),
           SizedBox(
             width: screenSize.width * 0.03,
           ),
-          const Text(
+           Text(
             "Solution",
-            style: TextStyle(
+            style: GoogleFonts.poppins(
                 fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
           ),
           SizedBox(
             width: screenSize.width * 0.03,
           ),
-          const Text(
+           Text(
             "Contact Us",
-            style: TextStyle(
+            style: GoogleFonts.poppins(
                 fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
           ),
           SizedBox(

@@ -95,9 +95,9 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     _scrollToIndex(0);
                   },
-                  child: const Text(
+                  child:  Text(
                     "Home",
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 17,
                     ),
                   ),
@@ -110,9 +110,9 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     _scrollToIndex(530); //// POSISI ABOUT US
                   },
-                  child: const Text(
+                  child:  Text(
                     "About us",
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 17,
                     ),
                   ),
@@ -125,9 +125,9 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     _scrollToIndex(880); //// POSISI SOLUTION
                   },
-                  child: const Text(
+                  child:  Text(
                     "Solution",
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 17,
                     ),
                   ),
@@ -140,9 +140,9 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     _scrollToIndex(4070); //// POSISI CONTACT US
                   },
-                  child: const Text(
+                  child:  Text(
                     "Contact Us",
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 17,
                     ),
                   ),
@@ -191,7 +191,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Text FooterHead(String title) => Text(title,style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,letterSpacing: 2),);
+  Text FooterHead(String title) => Text(title,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.bold,letterSpacing: 2),);
 
   Column konten1(Size screenSize){
 
@@ -303,7 +303,7 @@ class _HomeState extends State<Home> {
                   direction: Direction.horizontal,
                   child: Text(
                     'Cloud Consulting Services.',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
@@ -322,7 +322,7 @@ class _HomeState extends State<Home> {
                   offset: -0.2,
                   child: Text(
                       'We help organisations in transforming their IT environments through the use of cost-effective Cloud services. Our expert team provides cutting-edge Cloud computing consulting services that help companies boost productivity to new heights.',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                           fontSize: 16,
                           letterSpacing: 1.8,
                           height: 1.6,
@@ -342,7 +342,7 @@ class _HomeState extends State<Home> {
                       'costs and reducing time-to-market. We assist customers with our on-demand '
                       'enterprise Cloud solutions, tools, and applications such as servers, storage,'
                       ' databases, networking, software, and apps, among others.',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                           fontSize: 16,
                           letterSpacing: 1.8,
                           height: 1.6,
@@ -362,7 +362,7 @@ class _HomeState extends State<Home> {
                       onPressed: () {},
                       child: Text(
                         'CONTACT US',
-                        style: TextStyle(fontSize: 19, letterSpacing: 2),
+                        style: GoogleFonts.poppins(fontSize: 19, letterSpacing: 2),
                       ),
                       style: ElevatedButton.styleFrom(
                         primary: Color(0xff1e5ea8),

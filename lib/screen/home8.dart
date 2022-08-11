@@ -62,8 +62,8 @@ class Home8_contact_us extends StatelessWidget {
                   // const Spacer(
                   //   flex: 1,
                   // ),
-                  const Text("Leave your contact info and",
-                      style: TextStyle(color: Colors.white, fontSize: 25)),
+                   Text("Leave your contact info and",
+                      style: GoogleFonts.poppins(color: Colors.white, fontSize: 25)),
                   // const Spacer(
                   //   flex: 2,
                   // ),
@@ -83,15 +83,15 @@ class Home8_contact_us extends StatelessWidget {
                   const Spacer(
                     flex: 1,
                   ),
-                  const Text("Le​t’s Discuss",
-                      style: TextStyle(
+                   Text("Le​t’s Discuss",
+                      style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 40,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1.3)),
 
-                  const Text("Business",
-                      style: TextStyle(
+                   Text("Business",
+                      style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 40,
                           fontWeight: FontWeight.bold,
@@ -115,9 +115,9 @@ class Home8_contact_us extends StatelessWidget {
                   const Spacer(
                     flex: 1,
                   ),
-                  const Text(
+                   Text(
                       "We will contact you immediately to discuss potential business",
-                      style: TextStyle(color: Colors.white, fontSize: 23)),
+                      style: GoogleFonts.poppins(color: Colors.white, fontSize: 23)),
                   const Spacer(
                     flex: 1,
                   ),
@@ -143,7 +143,7 @@ class Home8_contact_us extends StatelessWidget {
                       Container(
                         child: Text(
                           "Name",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 20,
                               letterSpacing: 1.2),
@@ -155,7 +155,7 @@ class Home8_contact_us extends StatelessWidget {
                       Container(
                         child: Text(
                           "Email",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 20,
                               letterSpacing: 1.2),
@@ -223,7 +223,7 @@ class Home8_contact_us extends StatelessWidget {
                   ),
                   Text(
                     "Message",
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                         color: Colors.white, fontSize: 20, letterSpacing: 1.2),
                   ),
 
@@ -284,7 +284,7 @@ class Home8_contact_us extends StatelessWidget {
                         }
                       },
                       child:
-                          const Text('Submit', style: TextStyle(fontSize: 16)),
+                           Text('Submit', style: GoogleFonts.poppins(fontSize: 16)),
                     ),
                   ),
                 ],

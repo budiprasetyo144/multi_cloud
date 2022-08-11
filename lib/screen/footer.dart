@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -47,10 +48,10 @@ class Footer extends StatelessWidget {
                           width: screenSize.width*0.15,
                           height: screenSize.height*0.04,
                           //color: Colors.blue,
-                          child: const Center(
+                          child:  Center(
                             child: Text('  Your one stop IT Solution',
                               textAlign: TextAlign.right,
-                              style: TextStyle(color: Colors.black87,fontWeight: FontWeight.w500,letterSpacing: 1.5,fontSize: 16),),
+                              style: GoogleFonts.poppins(color: Colors.black87,fontWeight: FontWeight.w500,letterSpacing: 1.5,fontSize: 16),),
                           ),
                         ),
                         Spacer(flex: 3,),
@@ -117,7 +118,7 @@ class Footer extends StatelessWidget {
                               ),
                               title: TextButton(onPressed: (){},
                                 child: Text('(021) 5795 - 8040',
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     fontSize: 17,
                                       color: Colors.black87,
                                   ),
@@ -137,7 +138,7 @@ class Footer extends StatelessWidget {
                             ),
                             title: TextButton(onPressed: (){},
                               child: Text('info@eksad.com',
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                   fontSize: 17,
                                   color: Colors.black87
                                 ),
@@ -155,7 +156,7 @@ class Footer extends StatelessWidget {
                             'Tower 19th Floor Jl. Dr. Ide Anak Agung '
                             'Gde Agung Blok E3.2 '
                             'Mega Kuningan, Jakarta Selatan 12950',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                               fontSize: 17,
                               height: 1.2
                             ),
@@ -172,14 +173,14 @@ class Footer extends StatelessWidget {
           SizedBox(
             width: screenSize.width,
             height: screenSize.height * 0.13,
-            child: const Center(child: Text('PT. Tiga Daya Digital Indonesia © 2018, All Rights Reserved',style: TextStyle(letterSpacing: 1.3,height: 1.4,fontSize: 17),)),
+            child:  Center(child: Text('PT. Tiga Daya Digital Indonesia © 2018, All Rights Reserved',style: GoogleFonts.poppins(letterSpacing: 1.3,height: 1.4,fontSize: 17),)),
           )
         ],
       )
     );
   }
 
-  Text FooterHead(String title) => Text(title,style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,letterSpacing: 2),);
+  Text FooterHead(String title) => Text(title,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.bold,letterSpacing: 2),);
 
 }
 
@@ -191,7 +192,7 @@ class FooterBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(teks,style: TextStyle(color: Color.fromARGB(
+    return Text(teks,style: GoogleFonts.poppins(color: Color.fromARGB(
         255, 5, 22, 93),fontSize: 16,letterSpacing: 1.2),);
   }
 }

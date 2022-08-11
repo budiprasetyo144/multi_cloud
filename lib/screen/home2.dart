@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mcs_flutter/const/conts.dart';
 
 class Home2 extends StatelessWidget {
@@ -22,7 +23,7 @@ class Home2 extends StatelessWidget {
           Container(
             width: screenSize.width,
             child: Text('How do we help?',
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                     fontSize: 30,
                     color: Color.fromARGB(255, 12, 66, 101),
                     fontWeight: FontWeight.bold)),
@@ -34,7 +35,7 @@ class Home2 extends StatelessWidget {
                     'Cloud services with diverse options which range from Cloud consulting '
                     'services to data center migration services. Besides, we can also seamlessly '
                     'scale and migrate your chosen application workloads.',
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 18,
                   letterSpacing: 1.1,
                   height: 1.3
@@ -49,7 +50,7 @@ class Home2 extends StatelessWidget {
                     'AWS, Azure, Google Cloud or Huawei Cloud. Using the wide range of leading-edge services '
                     'available from these providers on a single data set, attached to all clouds simultaneously, can boost'
                     ' innovation and grow your business faster than if your data was locked into a single cloud.',
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 18,
                     letterSpacing: 1.1,
                     height: 1.3
