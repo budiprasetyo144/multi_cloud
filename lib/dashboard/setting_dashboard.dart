@@ -11,7 +11,7 @@ class SettingDashboard extends StatefulWidget {
 }
 
 class _SettingDashboardState extends State<SettingDashboard> {
-  String? img;
+  String img = 'assets/file/empty.jpg';
   @override
   Future<void> uploadFile() async {
     // TODO: implement upload File
@@ -42,9 +42,8 @@ class _SettingDashboardState extends State<SettingDashboard> {
               file.size,
               filename: file.name
           ));
-
           setState(() {
-            img = file.name;
+            img = "assets/file/"+file.name;
           });
         }
       }
@@ -117,7 +116,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                           onPressed: () {
                             switch(btnText){
                               case 'Save Setting':
-                                SettingApi().createSetting(im.toString(), tt.toString(), tl.toString(), em.toString(), no.toString());
+                                createSetting(im.toString(), tt.toString(), tl.toString(), em.toString(), no.toString());
                                 setState(() {
                                   btnText = 'Update Setting';
                                   enb = false;
@@ -174,7 +173,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                 height: 50,
                                 width: 150,
                                 child:
-                                Image.asset('assets/file/$img'),
+                                Image.asset('$img'),
                               ),
                               SizedBox(
                                 height: 20,

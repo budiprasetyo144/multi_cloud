@@ -128,7 +128,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                         content: Text('Name Can\'t Be Empty')),
                                   );
                                 } else {
-                                  PartnerApi().createPartner(nm, pt).then(
+                                  createPartner(nm, pt).then(
                                     (isSuccess) {
                                       if (isSuccess) {
                                         setState(() {});
@@ -244,7 +244,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
           ),
           Container(
             child: FutureBuilder<List<dynamic>>(
-              future: PartnerApi().getPartner(),
+              future: getPartner(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 if (snapshot.hasError ||
                     snapshot.data == null ||
@@ -488,8 +488,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                                         'Name Must Be Edited')),
                                               );
                                             } else {
-                                              PartnerApi()
-                                                  .updatePartner(id, nm, pt)
+                                              updatePartner(id, nm, pt)
                                                   .then(
                                                 (isSuccess) {
                                                   if (isSuccess) {
@@ -546,8 +545,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                             child: Text("Yes"),
                                             onPressed: () {
                                               Navigator.pop(context);
-                                              PartnerApi()
-                                                  .deletePartner(
+                                              deletePartner(
                                                       pgm['partnerId'])
                                                   .then((isSuccess) {
                                                 if (isSuccess) {

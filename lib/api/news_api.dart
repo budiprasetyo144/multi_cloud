@@ -2,8 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-class NewsApi {
-  Future<bool> createNews(title, news, image) async {
+Future<bool> createNews(title, news, image) async {
     final response = await http.post(
         Uri.parse('http://10.107.217.11:8081/post/savePost'),
         body: jsonEncode({"title": title, "post": news, "image": image}),
@@ -51,4 +50,3 @@ class NewsApi {
       return false;
     }
   }
-}

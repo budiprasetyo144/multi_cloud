@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/dashboard/dashboard.dart';
-import 'package:mcs_flutter/widget/filter.dart';
 import 'package:mcs_flutter/api/news_api.dart';
 
 class NewsDashboard extends StatefulWidget {
@@ -138,7 +137,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                         news == null) {
                                       print('Images Kosong');
                                     }
-                                    NewsApi().createNews(title, news, images);
+                                    createNews(title, news, images);
                                     print('Data Tersimpan');
                                     Navigator.push(
                                       context,
@@ -231,7 +230,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
               SizedBox(height: 20,),
               Container(
                 child: FutureBuilder<List<dynamic>>(
-                  future: NewsApi().getNews(),
+                  future: getNews(),
                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                     if (snapshot.hasError ||
                         snapshot.data == null ||
@@ -421,8 +420,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                                 'Name Must Be Edited')),
                                                       );
                                                     } else {
-                                                      NewsApi()
-                                                          .updateNews(id,title,news)
+                                                      updateNews(id,title,news)
                                                           .then(
                                                             (isSuccess) {
                                                           if (isSuccess) {
@@ -476,8 +474,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                 child: Text("Yes"),
                                                 onPressed: () {
                                                   Navigator.pop(context);
-                                                  NewsApi()
-                                                      .deleteNews(pgm['idpost'])
+                                                  deleteNews(pgm['idpost'])
                                                       .then((isSuccess) {
                                                     if (isSuccess) {
                                                       setState(() {});

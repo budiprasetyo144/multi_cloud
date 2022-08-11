@@ -127,7 +127,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                       content: Text('Name Can\'t Be Empty')),
                                 );
                               } else {
-                                PageApi().createPage(nm, pg).then(
+                                createPage(nm, pg).then(
                                   (isSuccess) {
                                     if (isSuccess) {
                                       setState(() {});
@@ -175,7 +175,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
           ),
           Container(
             child: FutureBuilder<List<dynamic>>(
-              future: PageApi().getPage(),
+              future: getPage(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 if (snapshot.hasError ||
                     snapshot.data == null ||
@@ -353,8 +353,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                                           'Name Can\'t Be Empty')),
                                                 );
                                               } else {
-                                                PageApi()
-                                                    .updatePage(id, nm, pg)
+                                                updatePage(id, nm, pg)
                                                     .then(
                                                   (isSuccess) {
                                                     if (isSuccess) {
@@ -409,8 +408,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                               child: Text("Yes"),
                                               onPressed: () {
                                                 Navigator.pop(context);
-                                                PageApi()
-                                                    .deletePage(pgm['idpage'])
+                                                deletePage(pgm['idpage'])
                                                     .then((isSuccess) {
                                                   if (isSuccess) {
                                                     setState(() {});

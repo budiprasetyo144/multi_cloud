@@ -1,8 +1,7 @@
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-VoidCallback uploadFile = () async{
+Future<void> uploadFile() async{
   FilePickerResult? result;
   print('Picker file');
   result = await FilePicker.platform.pickFiles(
@@ -42,4 +41,4 @@ VoidCallback uploadFile = () async{
     print(res);
 
   }
-};
+}

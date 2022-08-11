@@ -1,9 +1,7 @@
 import 'dart:convert';
 
-import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
 
-class PageApi {
   Future<List<dynamic>> getPage() async {
     var response = await http
         .get(Uri.parse('http://10.107.217.11:8082/page/getAllPageByIdRole'));
@@ -53,4 +51,3 @@ class PageApi {
       return false;
     }
   }
-}

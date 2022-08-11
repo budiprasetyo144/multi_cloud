@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-class SettingApi{
   Future<bool> createSetting(im, tt, tl, em, no) async {
     final response = await http.post(
       Uri.parse('http://10.107.133.115:8081/setting/saveSetting'),
@@ -51,4 +50,3 @@ class SettingApi{
         Uri.parse('http://10.107.133.115:8082/setting/getAllSettingByIdRole'));
     return jsonDecode(response.body)['data'];
   }
-}
