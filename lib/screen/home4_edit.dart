@@ -77,11 +77,12 @@ class Home4_solution extends StatelessWidget {
                     ),
                     Container(
                       width: 200,
+                      height: 100,
                       child: ShowUpAnimation(
                         delayStart: Duration(seconds: 1),
                         direction: Direction.horizontal,
                         child: Text(
-                          "We Experience in Data Migration We Experience in Data Migration Multi Cloud, Migration from Premise Enviroment.",
+                          "We Experience in Data Migration Multi Cloud, Migration from Premise Enviroment.",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.robotoCondensed(
                             color: Color(0xff111111),
@@ -133,6 +134,7 @@ class Home4_solution extends StatelessWidget {
                     ),
                     Container(
                       width: 200,
+                      height: 100,
                       child: ShowUpAnimation(
                         delayStart: Duration(seconds: 1),
                         direction: Direction.horizontal,
@@ -189,6 +191,7 @@ class Home4_solution extends StatelessWidget {
                     ),
                     Container(
                       width: 200,
+                      height: 100,
                       child: ShowUpAnimation(
                         delayStart: Duration(seconds: 1),
                         direction: Direction.horizontal,
@@ -245,6 +248,7 @@ class Home4_solution extends StatelessWidget {
                     ),
                     Container(
                       width: 200,
+                      height: 100,
                       child: ShowUpAnimation(
                         delayStart: Duration(seconds: 1),
                         direction: Direction.horizontal,

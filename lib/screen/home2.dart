@@ -21,7 +21,9 @@ class Home2 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
+            padding: EdgeInsets.only(top: 20),
             width: screenSize.width,
+            height: 80,
             child: Text('How do we help?',
                 style: GoogleFonts.poppins(
                     fontSize: 30,
@@ -30,6 +32,7 @@ class Home2 extends StatelessWidget {
           ),
           Container(
             width: screenSize.width,
+            height: 100,
             child: Text(
                 'We are a one-stop Cloud service provider for world-class '
                     'Cloud services with diverse options which range from Cloud consulting '
@@ -43,6 +46,7 @@ class Home2 extends StatelessWidget {
           ),
           Container(
             width: screenSize.width,
+            height: 150,
             child: Text(
                 'Instead of operating within the constraints of a single cloud vendor,'
                     ' a multi-cloud strategy allows you to access the cloud services from '

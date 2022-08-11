@@ -304,7 +304,7 @@ class _HomeState extends State<Home> {
                   child: Text(
                     'Cloud Consulting Services.',
                     style: GoogleFonts.poppins(
-                        fontSize: 50,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                     overflow: TextOverflow.ellipsis,
