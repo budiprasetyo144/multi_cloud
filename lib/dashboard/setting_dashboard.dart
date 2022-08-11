@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/api/setting_api.dart';
@@ -29,6 +31,8 @@ class _SettingDashboardState extends State<SettingDashboard> {
           "POST",
           Uri.parse("http://10.107.72.92:8081/file")
       );
+
+      var response = http.get(Uri.parse("http://10.107.72.92:8081/file"));
 
       List<PlatformFile>? files = result.files;
 
