@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:file_picker/file_picker.dart';
 import 'package:http/http.dart' as http;
 
@@ -40,5 +42,25 @@ Future<void> uploadFile() async{
     //your response
     print(res);
 
+  }
+}
+
+Future<List<dynamic>> getFile(nm) async{
+  var response = await http
+      .get(Uri.parse('http://10.107.72.92:8081/file/$nm'));
+  return jsonDecode(response.body)['data'];
+}
+
+Future<bool> delFile(id) async{
+  final response = await http.delete(
+    Uri.parse('http://10.107.72.92:8081/file/$id'),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    }
+  );
+  if (response.statusCode == 200){
+    return true;
+  } else{
+    return false;
   }
 }

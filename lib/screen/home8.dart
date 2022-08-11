@@ -150,7 +150,7 @@ class Home8_contact_us extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 170,
+                        width: 140,
                       ),
                       Container(
                         child: Text(
@@ -163,10 +163,13 @@ class Home8_contact_us extends StatelessWidget {
                       ),
                     ],
                   ),
+                  // SizedBox(
+                  //   height: 1,
+                  // ),
                   Row(
                     children: [
                       Container(
-                        width: 212,
+                        width: 190,
                         child: TextFormField(
                           controller: nameController,
                           decoration: InputDecoration(
@@ -190,7 +193,7 @@ class Home8_contact_us extends StatelessWidget {
                         width: 10,
                       ),
                       Container(
-                        width: 212,
+                        width: 230,
                         child: TextFormField(
                           controller: emailController,
                           decoration: InputDecoration(
@@ -210,16 +213,20 @@ class Home8_contact_us extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
+                      // SizedBox(
+                      //   height: 1,
+                      // ),
                     ],
                   ),
+                  // SizedBox(
+                  //   height: 5,
+                  // ),
                   Text(
                     "Message",
                     style: TextStyle(
                         color: Colors.white, fontSize: 20, letterSpacing: 1.2),
                   ),
+
                   TextFormField(
                     controller: messageController,
                     decoration: InputDecoration(
@@ -245,6 +252,7 @@ class Home8_contact_us extends StatelessWidget {
                       return null;
                     },
                   ),
+
                   SizedBox(
                     height: 45,
                     width: 110,
