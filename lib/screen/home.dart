@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mcs_flutter/screen/footer.dart';
-import 'package:mcs_flutter/screen/home10.dart';
-import 'package:mcs_flutter/screen/home3.dart';
+import 'package:mcs_flutter/screen/home8.dart';
 import 'package:mcs_flutter/screen/home4.dart';
-import 'package:mcs_flutter/screen/home6.dart';
+import 'package:mcs_flutter/screen/home3.dart';
 import 'package:mcs_flutter/screen/home7.dart';
+import 'package:mcs_flutter/screen/home6.dart';
 import 'package:mcs_flutter/screen/home2.dart';
 import 'package:mcs_flutter/widget/whatsapp.dart';
 import 'package:show_up_animation/show_up_animation.dart';
 import '../widget/responsive.dart';
 import 'appbar.dart';
-import 'home11.dart';
+import 'home5.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -57,8 +57,8 @@ class _HomePageState extends State<HomePage> {
           const Home3_partner(),
           Home4_solution(screenSize: screenSize),
           const Home5_industry(),
-          const Home6_advantages(),
-          const Home7_news(),
+          Home6_advantages(),
+          Home7_news(),
           Home8_contact_us(),
           const Footer(),
         ],

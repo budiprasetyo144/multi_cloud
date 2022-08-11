@@ -1,118 +1,267 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mcs_flutter/animation/animasi_kiri_kanan.dart';
+import 'package:mcs_flutter/animation/animasi_kanan_kiri.dart';
+import 'package:show_up_animation/show_up_animation.dart';
 
-class Home3_partner extends StatelessWidget {
-  const Home3_partner({super.key});
+class Home4_solution extends StatelessWidget {
+  const Home4_solution({
+    Key? key,
+    required this.screenSize,
+  }) : super(key: key);
 
-  @override
+  final Size screenSize;
+
+ @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
-    return SizedBox(
-      height: screenSize.height * 0.8,
+    return Container(
+      height: screenSize.height * 0.5,
       width: screenSize.width,
-      //color: Color.fromARGB(255, 0, 36, 192),
+      color: Colors.grey[200],
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
-            width: screenSize.width,
-            height: screenSize.height * 0.2,
-            color: Color.fromARGB(255, 12, 94, 149),
-            child: Center(
-              child: Column(
-                children: [
-                  Spacer(
-                    flex: 1,
-                  ),
-                  Text(
-                    overflow: TextOverflow.ellipsis,
-                    "Strategic Partnerships",
-                    style: GoogleFonts.robotoCondensed(
-                        color: Colors.white,
-                        fontSize: 50,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  Spacer(
-                    flex: 1,
-                  ),
-                  Text(
-                    overflow: TextOverflow.ellipsis,
-                    "Our expertise and experience in dealing with the leading public cloud platforms make us a perfect choice for your business:",
-                    style: GoogleFonts.robotoCondensed(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                      letterSpacing: 1.1
+          const SizedBox(
+            height: 15,
+          ),
+          const Center(
+            child: Text("Why Choose Us?",
+                style: TextStyle(
+                    fontSize: 36,
+                    color: Color(0xff1e5ea8),
+                    fontWeight: FontWeight.bold)),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                width: screenSize.width * 0.2,
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(top: screenSize.height * 0.01),
+                      width: screenSize.width * 0.5,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        curve: Curves.bounceIn,
+                        direction: Direction.horizontal,
+                        offset: -0.2,
+                        child: Image.asset(
+                          "assets/icons/icon1.png",
+                          height: screenSize.height * 0.1,
+                        ),
+                      ),
                     ),
-                  ),
-                  Spacer(
-                    flex: 1,
-                  ),
-                ],
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "MIGRATION",
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff1e5ea8),
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      width: 200,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "We Experience in Data Migration We Experience in Data Migration Multi Cloud, Migration from Premise Enviroment.",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff111111),
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-          ),
-          SizedBox(
-            height: screenSize.height * 0.3,
-            width: screenSize.width,
-            child: Row(
-              children: [
-                const Spacer(
-                  flex: 1,
-                ),
-                SizedBox(
-                  width: screenSize.width * 0.3,
-                  child:
-                      const Image(image: AssetImage('assets/logo/alibaba.png')),
-                ),
-                const Spacer(
-                  flex: 1,
-                ),
-                // BARIS 2
-                SizedBox(
-                  width: screenSize.width * 0.3,
-                  child: const Image(
-                      image: AssetImage('assets/logo/googlecloud.png')),
-                ),
-                const Spacer(
-                  flex: 1,
-                ),
-              ],
-            ),
-          ),
-          // KOLOM 2
-          SizedBox(
-            height: screenSize.height * 0.3,
-            width: screenSize.width,
-            child: Row(
-              children: [
-                const Spacer(
-                  flex: 1,
-                ),
-                SizedBox(
-                  width: screenSize.width * 0.3,
-                  child: const Image(
-                    image: AssetImage(
-                      'assets/logo/huawei.png',
+              Container(
+                width: screenSize.width * 0.2,
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(top: screenSize.height * 0.01),
+                      width: screenSize.width * 0.5,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        curve: Curves.bounceIn,
+                        direction: Direction.horizontal,
+                        offset: -0.2,
+                        child: Image.asset(
+                          "assets/icons/icon2.png",
+                          height: screenSize.height * 0.1,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                const Spacer(
-                  flex: 1,
-                ),
-                SizedBox(
-                  width: screenSize.width * 0.3,
-                  child: const Image(
-                    image: AssetImage(
-                      'assets/logo/aws.png',
+                     const SizedBox(
+                      height: 10,
                     ),
-                  ),
+                    Container(
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "CONSULTING",
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff1e5ea8),
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                     const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      width: 200,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "Our experienced Cloud Consultants can help you determine the efficacy of and implement these popular cloud solutions.",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff111111),
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
                 ),
-                const Spacer(
-                  flex: 1,
+              ),
+              Container(
+                width: screenSize.width * 0.2,
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(top: screenSize.height * 0.01),
+                      width: screenSize.width * 0.5,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        curve: Curves.bounceIn,
+                        direction: Direction.horizontal,
+                        offset: -0.2,
+                        child: Image.asset(
+                          "assets/icons/icon3.png",
+                          height: screenSize.height * 0.1,
+                        ),
+                      ),
+                    ),
+                     const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "LOCAL SUPPORT",
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff1e5ea8),
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                     const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      width: 200,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "Our local support team work with our clients every step of the way to ensure that their cloud are running smoothly.",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff111111),
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
                 ),
-              ],
-            ),
+              ),
+              Container(
+                width: screenSize.width * 0.2,
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(top: screenSize.height * 0.01),
+                      width: screenSize.width * 0.5,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        curve: Curves.bounceIn,
+                        direction: Direction.horizontal,
+                        offset: -0.2,
+                        child: Image.asset(
+                          "assets/icons/icon4.png",
+                          height: screenSize.height * 0.1,
+                        ),
+                      ),
+                    ),
+                     const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "IMPLEMENTATION",
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff1e5ea8),
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                     const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      width: 200,
+                      child: ShowUpAnimation(
+                        delayStart: Duration(seconds: 1),
+                        direction: Direction.horizontal,
+                        child: Text(
+                          "We do cloud all cloud servicess such as Infrastructure  (IAAS), Platform (PAAS) and Software (SAAS).",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.robotoCondensed(
+                            color: Color(0xff111111),
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),
