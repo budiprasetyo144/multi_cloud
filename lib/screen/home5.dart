@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/const/conts.dart';
 
 import 'package:mcs_flutter/widget/expansion.dart';
-
 
 // final List<String> items = [
 //   '- Retail',
@@ -27,39 +25,36 @@ class _Home5_industryState extends State<Home5_industry> {
     return Container(
       height: 873,
       width: screenSize.width,
-
       child: Column(
         children: [
-          SizedBox(height: 20,),
+          SizedBox(
+            height: 20,
+          ),
           Center(
-            child: (
-            Text("VARIOUS INDUSTRY AND SECTORS",
+            child: (Text(
+              "VARIOUS INDUSTRY AND SECTORS",
               style: TextStyle(
-                fontSize: 45,
-                color: Color(0xff1e5ea8),
-                fontWeight: FontWeight.bold,
-              letterSpacing: 1.1),
-            )
+                  fontSize: 45,
+                  color: Color(0xff1e5ea8),
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.1),
+            )),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(
+                horizontal: screenSize.width * 0.15, vertical: 20),
+            child: Text(
+              'Each industry has a unique request. We are ready to assist and provide specific requirements based on the client\'s needs, from the first discussion to provide expert consultants.',
+              style: TextStyle(fontSize: 21),
+              textAlign: TextAlign.center,
             ),
           ),
-      Container(
-        padding: EdgeInsets.symmetric(horizontal: screenSize.width*0.15,vertical: 20),
-        child: Text('Each industry has its specific needs, we are'
-            ' ready to help to provide services according to its industry'
-            ', from initial discussions to providing expert consultants.',
-          style: TextStyle(fontSize: 21),textAlign: TextAlign.center,),
-      ),
-
-      Container(
-        width: screenSize.width*0.6,
-        child: Expansionpanel(),
-      ),
+          Container(
+            width: screenSize.width * 0.6,
+            child: Expansionpanel(),
+          ),
         ],
       ),
     );
-
-
   }
-
 }
-

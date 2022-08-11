@@ -12,7 +12,7 @@ class Home4_solution extends StatelessWidget {
 
   final Size screenSize;
 
- @override
+  @override
   Widget build(BuildContext context) {
     return Container(
       height: screenSize.height * 0.5,
@@ -111,7 +111,7 @@ class Home4_solution extends StatelessWidget {
                         ),
                       ),
                     ),
-                     const SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
@@ -128,7 +128,7 @@ class Home4_solution extends StatelessWidget {
                         ),
                       ),
                     ),
-                     const SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
@@ -167,7 +167,7 @@ class Home4_solution extends StatelessWidget {
                         ),
                       ),
                     ),
-                     const SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
@@ -184,7 +184,7 @@ class Home4_solution extends StatelessWidget {
                         ),
                       ),
                     ),
-                     const SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
@@ -223,7 +223,7 @@ class Home4_solution extends StatelessWidget {
                         ),
                       ),
                     ),
-                     const SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
@@ -240,7 +240,7 @@ class Home4_solution extends StatelessWidget {
                         ),
                       ),
                     ),
-                     const SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
@@ -249,7 +249,7 @@ class Home4_solution extends StatelessWidget {
                         delayStart: Duration(seconds: 1),
                         direction: Direction.horizontal,
                         child: Text(
-                          "We do cloud all cloud servicess such as Infrastructure  (IAAS), Platform (PAAS) and Software (SAAS).",
+                          "We do all cloud servicess such as Infrastructure  (IAAS), Platform (PAAS) and Software (SAAS).",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.robotoCondensed(
                             color: Color(0xff111111),

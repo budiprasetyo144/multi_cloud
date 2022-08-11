@@ -14,8 +14,6 @@ class Home8_contact_us extends StatelessWidget {
   final emailController = TextEditingController();
   final messageController = TextEditingController();
 
-
-
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -89,13 +87,15 @@ class Home8_contact_us extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 40,
-                          fontWeight: FontWeight.bold,letterSpacing: 1.3)),
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.3)),
 
                   const Text("Business",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 40,
-                          fontWeight: FontWeight.bold,letterSpacing: 1.3)),
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.3)),
                   // const Spacer(
                   //   flex: 2,
                   // ),
@@ -116,7 +116,7 @@ class Home8_contact_us extends StatelessWidget {
                     flex: 1,
                   ),
                   const Text(
-                      "We’ll contact you immediately to discuss potential business",
+                      "We will contact you immediately to discuss potential business",
                       style: TextStyle(color: Colors.white, fontSize: 23)),
                   const Spacer(
                     flex: 1,
@@ -146,7 +146,7 @@ class Home8_contact_us extends StatelessWidget {
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
-                              fontWeight: FontWeight.bold,letterSpacing: 1.2),
+                              letterSpacing: 1.2),
                         ),
                       ),
                       SizedBox(
@@ -158,7 +158,7 @@ class Home8_contact_us extends StatelessWidget {
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
-                              fontWeight: FontWeight.bold,letterSpacing: 1.2),
+                              letterSpacing: 1.2),
                         ),
                       ),
                     ],
@@ -175,13 +175,13 @@ class Home8_contact_us extends StatelessWidget {
                             filled: true,
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide:
-                              const BorderSide(width: 1, color: Colors.white),
+                              borderSide: const BorderSide(
+                                  width: 1, color: Colors.white),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide:
-                              const BorderSide(width: 1, color: Colors.white),
+                              borderSide: const BorderSide(
+                                  width: 1, color: Colors.white),
                             ),
                           ),
                         ),
@@ -199,13 +199,13 @@ class Home8_contact_us extends StatelessWidget {
                             filled: true,
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide:
-                              const BorderSide(width: 1, color: Colors.white),
+                              borderSide: const BorderSide(
+                                  width: 1, color: Colors.white),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide:
-                              const BorderSide(width: 1, color: Colors.white),
+                              borderSide: const BorderSide(
+                                  width: 1, color: Colors.white),
                             ),
                           ),
                         ),
@@ -218,9 +218,7 @@ class Home8_contact_us extends StatelessWidget {
                   Text(
                     "Message",
                     style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,letterSpacing: 1.2),
+                        color: Colors.white, fontSize: 20, letterSpacing: 1.2),
                   ),
                   TextFormField(
                     controller: messageController,
@@ -231,12 +229,12 @@ class Home8_contact_us extends StatelessWidget {
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.zero,
                         borderSide:
-                            const BorderSide(width: 1,color: Colors.white),
+                            const BorderSide(width: 1, color: Colors.white),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.zero,
                         borderSide:
-                            const BorderSide(width: 1,color: Colors.white ),
+                            const BorderSide(width: 1, color: Colors.white),
                       ),
                     ),
                     maxLines: 5,
