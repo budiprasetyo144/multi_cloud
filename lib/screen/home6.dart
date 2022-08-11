@@ -4,14 +4,14 @@ import '../text/text_body.dart';
 import 'package:mcs_flutter/text/text_post.dart';
 import 'package:mcs_flutter/main.dart';
 
-class Home6 extends StatefulWidget {
-  const Home6({Key? key}) : super(key: key);
+class Home7_news extends StatefulWidget {
+  const Home7_news({Key? key}) : super(key: key);
 
   @override
-  State<Home6> createState() => _Home6State();
+  State<Home7_news> createState() => _Home7_newsState();
 }
 
-class _Home6State extends State<Home6> {
+class _Home7_newsState extends State<Home7_news> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;

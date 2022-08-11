@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/const/conts.dart';
 
-class Home7 extends StatelessWidget {
-  const Home7({Key? key}) : super(key: key);
+class Home6_advantages extends StatelessWidget {
+  const Home6_advantages({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

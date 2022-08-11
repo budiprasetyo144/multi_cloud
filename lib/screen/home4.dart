@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Home4 extends StatelessWidget {
-  const Home4({super.key});
+class Home3_partner extends StatelessWidget {
+  const Home3_partner({super.key});
 
   @override
   Widget build(BuildContext context) {

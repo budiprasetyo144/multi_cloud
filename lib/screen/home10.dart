@@ -5,8 +5,8 @@ import 'package:mcs_flutter/const/conts.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-class Home10 extends StatelessWidget {
-  Home10({Key? key}) : super(key: key);
+class Home8_contact_us extends StatelessWidget {
+  Home8_contact_us({Key? key}) : super(key: key);
 
   final _formKey = GlobalKey<FormState>();
 

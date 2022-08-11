@@ -11,14 +11,14 @@ import 'package:mcs_flutter/widget/expansion.dart';
 // ];
 // String? selectedValue;
 
-class Home11 extends StatefulWidget {
-  const Home11({Key? key}) : super(key: key);
+class Home5_industry extends StatefulWidget {
+  const Home5_industry({Key? key}) : super(key: key);
 
   @override
-  State<Home11> createState() => _Home11State();
+  State<Home5_industry> createState() => _Home5_industryState();
 }
 
-class _Home11State extends State<Home11> {
+class _Home5_industryState extends State<Home5_industry> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;

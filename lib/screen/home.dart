@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mcs_flutter/dashboard/dashboard.dart';
 import 'package:mcs_flutter/screen/footer.dart';
 import 'package:mcs_flutter/screen/home10.dart';
-import 'package:mcs_flutter/const/conts.dart';
 import 'package:mcs_flutter/screen/home3.dart';
 import 'package:mcs_flutter/screen/home4.dart';
 import 'package:mcs_flutter/screen/home6.dart';
 import 'package:mcs_flutter/screen/home7.dart';
 import 'package:mcs_flutter/screen/home2.dart';
-import 'package:mcs_flutter/widget/botton.dart';
 import 'package:mcs_flutter/widget/whatsapp.dart';
 import 'package:show_up_animation/show_up_animation.dart';
 import '../widget/responsive.dart';
@@ -56,15 +53,13 @@ class _HomePageState extends State<HomePage> {
         controller: controller2,
         children: [
           const Home(),
-          Home2(),
-          const Home4(),
-          Home3(screenSize: screenSize),
-          Home11(),
-          const Home7(),
-          const Home6(),
-
-          Home10(),
-
+          const Home2(),
+          const Home3_partner(),
+          Home4_solution(screenSize: screenSize),
+          const Home5_industry(),
+          const Home6_advantages(),
+          const Home7_news(),
+          Home8_contact_us(),
           const Footer(),
         ],
       ),
@@ -117,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       TextButton(
                         onPressed: () {
-                          _scrollToIndex(3150); //// POSISI ABOUT US
+                          _scrollToIndex(530); //// POSISI ABOUT US
                         },
                         child: const Text(
                           "About us",
@@ -132,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       TextButton(
                         onPressed: () {
-                          _scrollToIndex(1230); //// POSISI SOLUTION
+                          _scrollToIndex(880); //// POSISI SOLUTION
                         },
                         child: const Text(
                           "Solution",
@@ -147,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       TextButton(
                         onPressed: () {
-                          _scrollToIndex(5900); //// POSISI CONTACT US
+                          _scrollToIndex(4070); //// POSISI CONTACT US
                         },
                         child: const Text(
                           "Contact Us",

@@ -4,8 +4,8 @@ import 'package:mcs_flutter/animation/animasi_kiri_kanan.dart';
 import 'package:mcs_flutter/animation/animasi_kanan_kiri.dart';
 import 'package:show_up_animation/show_up_animation.dart';
 
-class Home3 extends StatelessWidget {
-  const Home3({
+class Home4_solution extends StatelessWidget {
+  const Home4_solution({
     Key? key,
     required this.screenSize,
   }) : super(key: key);
