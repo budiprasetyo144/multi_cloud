@@ -312,9 +312,8 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(top: screenSize.height * 0.01),
                 width: screenSize.width * 0.5,
-                height: screenSize.height * 0.17,
+                height: screenSize.height * 0.16,
                 child: ShowUpAnimation(
                   delayStart: Duration(seconds: 1),
                   curve: Curves.bounceIn,
@@ -323,7 +322,7 @@ class _HomeState extends State<Home> {
                   child: Text(
                       'We help organisations in transforming their IT environments through the use of cost-effective Cloud services. Our expert team provides cutting-edge Cloud computing consulting services that help companies boost productivity to new heights.',
                       style: GoogleFonts.poppins(
-                          fontSize: 16,
+                          fontSize: 15,
                           letterSpacing: 1.8,
                           height: 1.6,
                           fontWeight: FontWeight.w400,
@@ -343,7 +342,7 @@ class _HomeState extends State<Home> {
                       'enterprise Cloud solutions, tools, and applications such as servers, storage,'
                       ' databases, networking, software, and apps, among others.',
                       style: GoogleFonts.poppins(
-                          fontSize: 16,
+                          fontSize: 15,
                           letterSpacing: 1.8,
                           height: 1.6,
                           fontWeight: FontWeight.w400,

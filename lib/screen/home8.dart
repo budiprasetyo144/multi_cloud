@@ -129,8 +129,8 @@ class Home8_contact_us extends StatelessWidget {
             flex: 1,
           ),
           Container(
-            padding: const EdgeInsets.all(50),
-            height: screenSize.height * 0.7,
+            padding: const EdgeInsets.all(40),
+            height: screenSize.height * 0.75,
             width: screenSize.width * 0.35,
             child: Form(
               key: _formKey,
@@ -252,7 +252,7 @@ class Home8_contact_us extends StatelessWidget {
                       return null;
                     },
                   ),
-
+                  SizedBox(height: 15,),
                   SizedBox(
                     height: 45,
                     width: 110,

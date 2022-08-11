@@ -109,7 +109,7 @@ class Footer extends StatelessWidget {
                         ),
                         Spacer(),
                         Container(
-                          width: screenSize.width*0.155,
+                          width: screenSize.width*0.164,
                           child: ListTile(
                               leading: Icon(
                                 Icons.phone,
@@ -129,7 +129,7 @@ class Footer extends StatelessWidget {
                         ),
 
                         Container(
-                          width: screenSize.width*0.15,
+                          width: screenSize.width*0.16,
                           child: ListTile(
                             leading: Icon(
                               Icons.mail,
