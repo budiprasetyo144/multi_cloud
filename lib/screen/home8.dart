@@ -150,7 +150,7 @@ class Home8_contact_us extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 140,
+                        width: 165,
                       ),
                       Container(
                         child: Text(
@@ -169,7 +169,7 @@ class Home8_contact_us extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                        width: 190,
+                        width: 223,
                         child: TextFormField(
                           controller: nameController,
                           decoration: InputDecoration(
@@ -193,7 +193,7 @@ class Home8_contact_us extends StatelessWidget {
                         width: 10,
                       ),
                       Container(
-                        width: 230,
+                        width: 223,
                         child: TextFormField(
                           controller: emailController,
                           decoration: InputDecoration(

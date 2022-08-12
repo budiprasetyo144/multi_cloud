@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../text/text_body.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -77,7 +78,7 @@ class _Home7_newsState extends State<Home7_news> {
                         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                         child: Text(
                           row1,
-                          style: const TextStyle(color: Colors.white, fontSize: 17,height: 1.2,letterSpacing: 1.2),textAlign: TextAlign.center
+                          style: GoogleFonts.poppins(color: Colors.white, fontSize: 17,height: 1.2,letterSpacing: 1.2),textAlign: TextAlign.center
                         ),
                       ),
                       TextButton(
@@ -130,7 +131,7 @@ class _Home7_newsState extends State<Home7_news> {
                         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                         child: Text(
                           row2,
-                          style: const TextStyle(color: Colors.black, fontSize: 17,height: 1.2,letterSpacing: 1.2),textAlign: TextAlign.center
+                          style: GoogleFonts.poppins(color: Colors.black, fontSize: 17,height: 1.2,letterSpacing: 1.2),textAlign: TextAlign.center
                         ),
                       ),
                       TextButton(
@@ -181,7 +182,7 @@ class _Home7_newsState extends State<Home7_news> {
                         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                         child: Text(
                           row3,
-                          style: const TextStyle(color: Colors.white, fontSize: 17,height: 1.2,letterSpacing: 1.2),textAlign: TextAlign.center
+                          style: GoogleFonts.poppins(color: Colors.white, fontSize: 17,height: 1.2,letterSpacing: 1.2),textAlign: TextAlign.center
                         ),
                       ),
                       TextButton(

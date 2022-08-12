@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
   ElevatedButton Button_scroll() {
     return ElevatedButton(
             onPressed: () {
-              _scrollToIndex(4070);
+              _scrollToIndex(4096);
             },
             child: Text(
               'CONTACT US',
@@ -152,7 +152,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 TextButton(
                   onPressed: () {
-                    _scrollToIndex(4070); //// POSISI CONTACT US
+                    _scrollToIndex(4096); //// POSISI CONTACT US
                   },
                   child:  Text(
                     "Contact Us",
@@ -232,7 +232,7 @@ class _HomePageState extends State<HomePage> {
         }, child: FooterBody(teks: 'Solution',)),
         Spacer(),
         TextButton(onPressed: (){
-          _scrollToIndex(4070);
+          _scrollToIndex(4096);
         }, child: FooterBody(teks: 'Contact Us',)),
         Spacer(flex: 6,),
 
