@@ -36,8 +36,9 @@ class Expansionpaneltate extends State<Expansionpanel> {
                       item.title,
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                        fontSize: 20.0,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600,
+                        color: Colors.grey[600]
                       ),
                     ));
               },
@@ -127,7 +128,9 @@ ListTile _posisi(String namaposisi) {
     title: Text(
       namaposisi,
       style: const TextStyle(
-          fontWeight: FontWeight.w500, fontSize: 16, letterSpacing: 1.2),
+          fontWeight: FontWeight.w500,
+          fontSize: 15,
+          letterSpacing: 1.2),
     ),
   );
 }

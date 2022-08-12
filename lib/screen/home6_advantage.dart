@@ -19,7 +19,7 @@ class Home6_advantages extends StatelessWidget {
            Center(
             child: Text("Why Multi Cloud Solutions",
                 style: GoogleFonts.poppins(
-                    fontSize: 45,
+                    fontSize: 35,
                     color: Color.fromARGB(255, 12, 66, 101),
                     fontWeight: FontWeight.bold)),
           ),

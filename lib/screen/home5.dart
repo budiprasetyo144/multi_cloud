@@ -34,10 +34,9 @@ class _Home5_industryState extends State<Home5_industry> {
             child: (Text(
               "VARIOUS INDUSTRY AND SECTORS",
               style: TextStyle(
-                  fontSize: 45,
+                  fontSize: 35,
                   color: Color(0xff1e5ea8),
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1.1),
+                  fontWeight: FontWeight.bold,),
             )),
           ),
           Container(
@@ -45,7 +44,7 @@ class _Home5_industryState extends State<Home5_industry> {
                 horizontal: screenSize.width * 0.15, vertical: 20),
             child: Text(
               'Each industry has a unique request. We are ready to assist and provide specific requirements based on the client\'s needs, from the first discussion to provide expert consultants.',
-              style: TextStyle(fontSize: 21),
+              style: TextStyle(fontSize: 17),
               textAlign: TextAlign.center,
             ),
           ),
