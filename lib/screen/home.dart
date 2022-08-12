@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mcs_flutter/screen/footer.dart';
+import 'package:mcs_flutter/screen/home1.dart';
 import 'package:mcs_flutter/screen/home8.dart';
 import 'package:mcs_flutter/screen/home3_edit.dart';
 import 'package:mcs_flutter/screen/home4_edit.dart';
@@ -9,7 +10,6 @@ import 'package:mcs_flutter/screen/home6_advantage.dart';
 import 'package:mcs_flutter/screen/home7_news.dart';
 import 'package:mcs_flutter/screen/home2.dart';
 import 'package:mcs_flutter/widget/whatsapp.dart';
-import 'package:show_up_animation/show_up_animation.dart';
 import '../widget/responsive.dart';
 import 'appbar.dart';
 import 'home5.dart';
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
         scrollDirection: Axis.vertical,
         controller: controller2,
         children: [
-          const Home(),
+          Home(wijet: Button_scroll(),),
           const Home2(),
           Home3_partner(),
           Home4_solution(screenSize: screenSize),
@@ -65,6 +65,20 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
     );
+  }
+
+  ElevatedButton Button_scroll() {
+    return ElevatedButton(
+            onPressed: () {
+              _scrollToIndex(4070);
+            },
+            child: Text(
+              'CONTACT US',
+              style: GoogleFonts.poppins(fontSize: 19, letterSpacing: 2),
+            ),
+            style: ElevatedButton.styleFrom(
+              primary: Color(0xff1e5ea8),
+            ),);
   }
 
   PreferredSize AppbarLarge(Size screenSize) {
@@ -265,114 +279,3 @@ class _HomePageState extends State<HomePage> {
 
 
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
-
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  @override
-  Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
-    return Stack(
-      children: [
-        Container(
-          width: screenSize.width,
-          height: screenSize.height * 0.7,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(
-                    "assets/images/depan.png",
-                  ),
-                  fit: BoxFit.cover)),
-        ),
-        Container(
-          width: screenSize.width * 0.5,
-          height: screenSize.height * 0.65,
-          padding: EdgeInsets.only(
-              left: screenSize.width * 0.1, top: screenSize.height * 0.02),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                child: ShowUpAnimation(
-                  delayStart: Duration(seconds: 1),
-                  direction: Direction.horizontal,
-                  child: Text(
-                    'Cloud Consulting Services.',
-                    style: GoogleFonts.poppins(
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ),
-              Container(
-                width: screenSize.width * 0.5,
-                height: screenSize.height * 0.16,
-                child: ShowUpAnimation(
-                  delayStart: Duration(seconds: 1),
-                  curve: Curves.bounceIn,
-                  direction: Direction.horizontal,
-                  offset: -0.2,
-                  child: Text(
-                      'We help organisations in transforming their IT environments through the use of cost-effective Cloud services. Our expert team provides cutting-edge Cloud computing consulting services that help companies boost productivity to new heights.',
-                      style: GoogleFonts.poppins(
-                          fontSize: 15,
-                          letterSpacing: 1.8,
-                          height: 1.6,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white)),
-                ),
-              ),
-              Container(
-                width: screenSize.width * 0.5,
-                height: screenSize.height * 0.22,
-                child: ShowUpAnimation(
-                  delayStart: Duration(seconds: 1),
-                  direction: Direction.horizontal,
-                  child: Text(
-                      'Our Cloud managed services make it possible for organizations '
-                      'to reduce their overheads and better productivity, in addition to lowering '
-                      'costs and reducing time-to-market. We assist customers with our on-demand '
-                      'enterprise Cloud solutions, tools, and applications such as servers, storage,'
-                      ' databases, networking, software, and apps, among others.',
-                      style: GoogleFonts.poppins(
-                          fontSize: 15,
-                          letterSpacing: 1.8,
-                          height: 1.6,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white)),
-                ),
-              ),
-              Container(
-                width: screenSize.width * 0.15,
-                height: screenSize.height * 0.08,
-                child: ShowUpAnimation(
-                  delayStart: Duration(seconds: 1),
-                  curve: Curves.bounceIn,
-                  direction: Direction.horizontal,
-                  offset: -0.2,
-                  child: ElevatedButton(
-                      onPressed: () {
-                      },
-                      child: Text(
-                        'CONTACT US',
-                        style: GoogleFonts.poppins(fontSize: 19, letterSpacing: 2),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        primary: Color(0xff1e5ea8),
-                      )),
-                ),
-              )
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-}
