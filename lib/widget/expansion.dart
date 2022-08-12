@@ -26,7 +26,6 @@ class Expansionpaneltate extends State<Expansionpanel> {
           },
           children: items.map((ExpansionpanelItem item) {
             return ExpansionPanelRadio(
-              backgroundColor: Colors.grey[200],
               canTapOnHeader: true,
               value: item.title,
               headerBuilder: (BuildContext context, bool isExpanded) {
@@ -38,8 +37,9 @@ class Expansionpaneltate extends State<Expansionpanel> {
                       item.title,
                       textAlign: TextAlign.left,
                       style: GoogleFonts.poppins(
-                        fontSize: 20.0,
+                        fontSize: 16.0,
                         fontWeight: FontWeight.w600,
+                        color: Colors.grey[600]
                       ),
                     ));
               },
@@ -110,7 +110,7 @@ Container _judulposisi (){
       'Position: ',
       textAlign: TextAlign.start,
       style: TextStyle(
-        fontSize: 17.0,
+        fontSize: 16.0,
         fontWeight: FontWeight.w400,
       ),
     ),
