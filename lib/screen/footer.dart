@@ -116,13 +116,15 @@ class Footer extends StatelessWidget {
                                 size: 25,
                                 color: Colors.black,
                               ),
-                              title: TextButton(onPressed: (){},
+                              title: TextButton(onPressed: (){
+                                launch('tel:02157958040');
+                              },
                                 child: Text('(021) 5795 - 8040',
                                   style: GoogleFonts.poppins(
                                     fontSize: 17,
-                                      color: Colors.black87,
+                                    color: Colors.black87,
                                   ),
-                                ),
+                                )
                               ),
 
                             ),
@@ -136,7 +138,9 @@ class Footer extends StatelessWidget {
                               size: 25,
                               color: Colors.black,
                             ),
-                            title: TextButton(onPressed: (){},
+                            title: TextButton(onPressed: (){
+                              launch('mailto:Info@eksad.com?subject=Info MCS');
+                            },
                               child: Text('info@eksad.com',
                                 style: GoogleFonts.poppins(
                                   fontSize: 17,
@@ -152,13 +156,16 @@ class Footer extends StatelessWidget {
                             size: 30,
                             color: Colors.black,
                           ),
-                          title: Text('PT. Tiga Daya Digital Indonesia The East '
-                            'Tower 19th Floor Jl. Dr. Ide Anak Agung '
-                            'Gde Agung Blok E3.2 '
-                            'Mega Kuningan, Jakarta Selatan 12950',
-                            style: TextStyle(
-                              fontSize: 17,
-                              height: 1.2
+                          title: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('PT. Tiga Daya Digital Indonesia The East '
+                              'Tower 19th Floor Jl. Dr. Ide Anak Agung '
+                              'Gde Agung Blok E3.2 '
+                              'Mega Kuningan, Jakarta Selatan 12950',
+                              style: TextStyle(
+                                fontSize: 17,
+                                height: 1.2
+                              ),
                             ),
                           ),
                         ),
