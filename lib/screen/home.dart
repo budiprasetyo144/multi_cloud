@@ -358,7 +358,9 @@ class _HomeState extends State<Home> {
                   direction: Direction.horizontal,
                   offset: -0.2,
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        _scrollToIndex(4070);
+                      },
                       child: Text(
                         'CONTACT US',
                         style: GoogleFonts.poppins(fontSize: 19, letterSpacing: 2),
