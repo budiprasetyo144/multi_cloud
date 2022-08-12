@@ -63,7 +63,10 @@ class Home3_partner extends StatelessWidget {
                 SizedBox(
                   width: screenSize.width * 0.3,
                   child:
-                  const Image(image: AssetImage('assets/logo/alibaba.png')),
+                  Image(image: AssetImage('assets/logo/alibaba.png'),
+                    height:42,
+                    width: 148,
+                  ),
                 ),
                 const Spacer(
                   flex: 1,
@@ -102,10 +105,12 @@ class Home3_partner extends StatelessWidget {
                 ),
                 SizedBox(
                   width: screenSize.width * 0.3,
-                  child: const Image(
+                  child: Image(
                     image: AssetImage(
                       'assets/logo/aws.png',
                     ),
+                    height: 125,
+                    width: 185,
                   ),
                 ),
                 const Spacer(

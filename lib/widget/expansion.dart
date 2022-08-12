@@ -26,20 +26,18 @@ class Expansionpaneltate extends State<Expansionpanel> {
           },
           children: items.map((ExpansionpanelItem item) {
             return ExpansionPanelRadio(
-              backgroundColor: Colors.grey[200],
               canTapOnHeader: true,
               value: item.title,
               headerBuilder: (BuildContext context, bool isExpanded) {
                 return ListTile(
-                  selectedColor: Colors.redAccent,
-                  selectedTileColor: Colors.red,
                     leading: item.leading,
                     title: Text(
                       item.title,
                       textAlign: TextAlign.left,
                       style: GoogleFonts.poppins(
-                        fontSize: 20.0,
+                        fontSize: 16.0,
                         fontWeight: FontWeight.w600,
+                        color: Colors.grey[600]
                       ),
                     ));
               },
@@ -69,9 +67,9 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
             _posisi('Supply chain and logistics'),
             _posisi('Energy'),
             _posisi('Healthcare and life sciences'),
-_posisi('Media and entertainment'),
-_posisi('Gaming'),
-_posisi('Telecomunications'),
+            _posisi('Media and entertainment'),
+            _posisi('Gaming'),
+            _posisi('Telecomunications'),
           ])),
       leading: Icon(Icons.computer)),
 
@@ -96,8 +94,8 @@ _posisi('Telecomunications'),
           child: Column(children: <Widget>[
             _posisi('Goverment'),
             _posisi('State and local goverment'),
-_posisi('Education'),
-_posisi('Education technology'),
+            _posisi('Education'),
+            _posisi('Education technology'),
           ])),
       leading: Icon(Icons.comment_outlined)),
 
@@ -109,8 +107,8 @@ Container _judulposisi (){
     child: Text(
       'Position: ',
       textAlign: TextAlign.start,
-      style: TextStyle(
-        fontSize: 17.0,
+      style: GoogleFonts.poppins(
+        fontSize: 16.0,
         fontWeight: FontWeight.w400,
       ),
     ),
@@ -128,7 +126,7 @@ ListTile _posisi(String namaposisi) {
         )),
     title: Text(
       namaposisi,
-      style: const TextStyle(
+      style: GoogleFonts.poppins(
           fontWeight: FontWeight.w500, fontSize: 16, letterSpacing: 1.2),
     ),
   );
