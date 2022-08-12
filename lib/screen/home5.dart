@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/const/conts.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mcs_flutter/widget/expansion.dart';
 
 // final List<String> items = [
@@ -23,7 +23,7 @@ class _Home5_industryState extends State<Home5_industry> {
     String dropdownValue = 'Non Financial Services';
 
     return Container(
-      height: 873,
+      height: 899,
       width: screenSize.width,
       child: Column(
         children: [
@@ -33,7 +33,7 @@ class _Home5_industryState extends State<Home5_industry> {
           Center(
             child: (Text(
               "VARIOUS INDUSTRY AND SECTORS",
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                   fontSize: 45,
                   color: Color(0xff1e5ea8),
                   fontWeight: FontWeight.bold,
@@ -45,7 +45,7 @@ class _Home5_industryState extends State<Home5_industry> {
                 horizontal: screenSize.width * 0.15, vertical: 20),
             child: Text(
               'Each industry has a unique request. We are ready to assist and provide specific requirements based on the client\'s needs, from the first discussion to provide expert consultants.',
-              style: TextStyle(fontSize: 21),
+              style: GoogleFonts.poppins(fontSize: 21),
               textAlign: TextAlign.center,
             ),
           ),

@@ -23,9 +23,9 @@ class Home4_solution extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          const Center(
+           Center(
             child: Text("Why Choose Us?",
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                     fontSize: 36,
                     color: Color(0xff1e5ea8),
                     fontWeight: FontWeight.bold)),

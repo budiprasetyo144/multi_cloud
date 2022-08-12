@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 
@@ -25,6 +26,7 @@ class Expansionpaneltate extends State<Expansionpanel> {
           },
           children: items.map((ExpansionpanelItem item) {
             return ExpansionPanelRadio(
+              backgroundColor: Colors.grey[200],
               canTapOnHeader: true,
               value: item.title,
               headerBuilder: (BuildContext context, bool isExpanded) {
@@ -35,7 +37,7 @@ class Expansionpaneltate extends State<Expansionpanel> {
                     title: Text(
                       item.title,
                       textAlign: TextAlign.left,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 20.0,
                         fontWeight: FontWeight.w600,
                       ),
