@@ -359,7 +359,6 @@ class _HomeState extends State<Home> {
                   offset: -0.2,
                   child: ElevatedButton(
                       onPressed: () {
-                        _scrollToIndex(4070);
                       },
                       child: Text(
                         'CONTACT US',
