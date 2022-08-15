@@ -43,7 +43,7 @@ class _Home5_industryState extends State<Home5_industry> {
             padding: EdgeInsets.symmetric(
                 horizontal: screenSize.width * 0.15, vertical: 20),
             child: Text(
-              'Each industry has a unique request. We are ready to assist and provide specific requirements based on the client\'s needs, from the first discussion to provide expert consultants.',
+              'Each industry has a unique request. We are ready to assist and provide specific requirements based on the client\'s needs, from the first discussion to providing expert consultants.',
               style: GoogleFonts.poppins(fontSize: 16),
               textAlign: TextAlign.center,
             ),

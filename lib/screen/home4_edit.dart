@@ -82,7 +82,7 @@ class Home4_solution extends StatelessWidget {
                         delayStart: Duration(seconds: 1),
                         direction: Direction.horizontal,
                         child: Text(
-                          "We Experience in Data Migration Multi Cloud, Migration from Premise Enviroment.",
+                          "We Experience in Data Migration Multi Cloud, Migration from Premise Environment.",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.robotoCondensed(
                             color: Color(0xff111111),
@@ -196,7 +196,7 @@ class Home4_solution extends StatelessWidget {
                         delayStart: Duration(seconds: 1),
                         direction: Direction.horizontal,
                         child: Text(
-                          "Our local support team work with our clients every step of the way to ensure that their cloud are running smoothly.",
+                          "Our local support team works with our clients every step of the way to ensure that their cloud is running smoothly.",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.robotoCondensed(
                             color: Color(0xff111111),
@@ -253,7 +253,7 @@ class Home4_solution extends StatelessWidget {
                         delayStart: Duration(seconds: 1),
                         direction: Direction.horizontal,
                         child: Text(
-                          "We do all cloud servicess such as Infrastructure  (IAAS), Platform (PAAS) and Software (SAAS).",
+                          "We do all cloud services such as Infrastructure  (IAAS), Platform (PAAS), and Software (SAAS).",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.robotoCondensed(
                             color: Color(0xff111111),

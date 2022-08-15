@@ -122,7 +122,7 @@ class Home6_advantages extends StatelessWidget {
                       width: screenSize.width,
                       height: 180,
                       child: Text(
-                        "cloud services allow you to focus on important aspects of your business without having to worry about IT solutions. Relying on an external cloud computing company to manage your cloud infrastructure and host your data and applications will enable you to fully commit to achieving your business objectives.",
+                        "Cloud services allow you to focus on important aspects of your business without having to worry about IT solutions. Relying on an external cloud computing company to manage your cloud infrastructure and host your data and applications will enable you to fully commit to achieving your business objectives.",
                         style: GoogleFonts.poppins(
                             color: Colors.black,
                             fontSize: 16,

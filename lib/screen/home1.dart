@@ -57,7 +57,7 @@ class Home extends StatelessWidget {
                   direction: Direction.horizontal,
                   offset: -0.2,
                   child: Text(
-                      'We help organisations in transforming their IT environments through the use of cost-effective Cloud services. Our expert team provides cutting-edge Cloud computing consulting services that help companies boost productivity to new heights.',
+                      'We help organizations in transforming their IT environments through the use of cost-effective Cloud services. Our expert team provides cutting-edge Cloud computing consulting services that help companies boost productivity to new heights.',
                       style: GoogleFonts.poppins(
                           fontSize: 15,
                           letterSpacing: 1.8,
