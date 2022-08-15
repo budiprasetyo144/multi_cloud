@@ -37,7 +37,7 @@ class Home2 extends StatelessWidget {
                 'We are a one-stop Cloud service provider for world-class '
                     'Cloud services with diverse options which range from Cloud consulting '
                     'services to data center migration services. Besides, we can also seamlessly '
-                    'scale and migrate your chosen application workloads.',
+                    'scale and migrate your chosen application workloads.', textAlign: TextAlign.justify,
                 style: GoogleFonts.poppins(
                   fontSize: 18,
                   letterSpacing: 1.1,
@@ -53,7 +53,7 @@ class Home2 extends StatelessWidget {
                     'multiple cloud providers simultaneously. These cloud providers include Alibaba Cloud,  '
                     'AWS, Azure, Google Cloud or Huawei Cloud. Using the wide range of leading-edge services '
                     'available from these providers on a single data set, attached to all clouds simultaneously, can boost'
-                    ' innovation and grow your business faster than if your data was locked into a single cloud.',
+                    ' innovation and grow your business faster than if your data was locked into a single cloud.',textAlign: TextAlign.justify,
                 style: GoogleFonts.poppins(
                   fontSize: 18,
                     letterSpacing: 1.1,

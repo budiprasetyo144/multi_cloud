@@ -49,6 +49,7 @@ class Home6_advantages extends StatelessWidget {
                       height: 180,
                       child: Text(
                         "Cloud technology eliminates all these hassles. Cloud storage providers have the necessary infrastructure to store your data. These providers also handle the security and maintenance for you! This means you can focus more on your core business instead of buying and maintaining storage devices. Simply use the space you want and pay only for what you use.",
+                        textAlign: TextAlign.justify,
                         style: GoogleFonts.poppins(
                             color: Colors.black,
                             fontSize: 16,
@@ -83,6 +84,7 @@ class Home6_advantages extends StatelessWidget {
                       height: 180,
                       child: Text(
                         "The virtually limitless storage and compute resources available in the cloud give organizations the flexibility to scale up or down to address changing business situations. This flexibility enables a company to quickly grow to handle increased customer demand and save money by scaling down resource use when appropriate.",
+                        textAlign: TextAlign.justify,
                         style: GoogleFonts.poppins(
                             color: Colors.black,
                             fontSize: 16,
@@ -123,6 +125,7 @@ class Home6_advantages extends StatelessWidget {
                       height: 180,
                       child: Text(
                         "Cloud services allow you to focus on important aspects of your business without having to worry about IT solutions. Relying on an external cloud computing company to manage your cloud infrastructure and host your data and applications will enable you to fully commit to achieving your business objectives.",
+                        textAlign: TextAlign.justify,
                         style: GoogleFonts.poppins(
                             color: Colors.black,
                             fontSize: 16,
@@ -158,6 +161,7 @@ class Home6_advantages extends StatelessWidget {
                       height: 180,
                       child: Text(
                         "The collaboration and efficiency possible with cloud platforms will often result in faster development cycles. This enables companies to take advantage of emerging trends and more efficiently address customer demands and expectations. In today’s competitive market, the ability to bring products to market promptly can be the difference between success and failure.",
+                        textAlign: TextAlign.justify,
                         style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 16,
