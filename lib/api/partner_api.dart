@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-class PartnerApi {
   Future<bool> createPartner(image, name) async {
     final response = await http.post(
         Uri.parse('http://10.107.122.152:8081/partner/savePartner'),
@@ -51,4 +50,3 @@ class PartnerApi {
       return false;
     }
   }
-}

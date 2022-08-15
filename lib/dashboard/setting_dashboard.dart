@@ -1,5 +1,9 @@
+import 'dart:convert';
+
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/api/setting_api.dart';
+import 'package:http/http.dart' as http;
 
 class SettingDashboard extends StatefulWidget {
   const SettingDashboard({super.key});
@@ -9,11 +13,59 @@ class SettingDashboard extends StatefulWidget {
 }
 
 class _SettingDashboardState extends State<SettingDashboard> {
+  String img = 'assets/file/empty.jpg';
+  @override
+  Future<void> uploadFile() async {
+    // TODO: implement upload File
+    FilePickerResult? result;
+    print('Picker file');
+    result = await FilePicker.platform.pickFiles(
+        allowMultiple: true,
+        withReadStream: true,
+        withData: false
+    );
+    if(result != null){
+      print(result.files.first.name);
+      //create
+      var req = http.MultipartRequest(
+          "POST",
+          Uri.parse("http://10.107.72.92:8081/file")
+      );
+
+      var response = http.get(Uri.parse("http://10.107.72.92:8081/file"));
+
+      List<PlatformFile>? files = result.files;
+
+      if(files != null){
+        print('Add file select with picker');
+        for (PlatformFile file in files){
+          //add select with req
+          req.files.add(http.MultipartFile(
+              "file",
+              file.readStream!,
+              file.size,
+              filename: file.name
+          ));
+          setState(() {
+            img = "assets/file/"+file.name;
+          });
+        }
+      }
+      // send request
+      var resp = await req.send();
+
+      //read response
+      String res = await resp.stream.bytesToString();
+
+      //your response
+      print(res);
+    }
+  }
   var btnText = 'Save Setting';
   var enb = true;
   final formKey =  GlobalKey<FormState>();
   String id = '';
-  String im ='assets/ass.jpg';
+  String im = '';
   String tt = '';
   String tl = '';
   String em = '';
@@ -68,7 +120,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                           onPressed: () {
                             switch(btnText){
                               case 'Save Setting':
-                                SettingApi().createSetting(im.toString(), tt.toString(), tl.toString(), em.toString(), no.toString());
+                                createSetting(im.toString(), tt.toString(), tl.toString(), em.toString(), no.toString());
                                 setState(() {
                                   btnText = 'Update Setting';
                                   enb = false;
@@ -125,7 +177,7 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                 height: 50,
                                 width: 150,
                                 child:
-                                Image.asset("assets/logo/multicloudsolution.jpg"),
+                                Image.asset('$img'),
                               ),
                               SizedBox(
                                 height: 20,
@@ -134,7 +186,22 @@ class _SettingDashboardState extends State<SettingDashboard> {
                                   height: 30,
                                   width: 100,
                                   child: ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: uploadFile,
+                                      //     () async {
+                                      //   final imagePicker = await ImagePickerPlugin()
+                                      //       .pickImage(source: ImageSource.gallery,imageQuality: 20);
+                                      //
+                                      //   if(imagePicker != null){
+                                      //     final file = File(imagePicker.path);
+                                      //     final result = await FileApi.upload(file);
+                                      //
+                                      //     final String imgPath = result['filePath'];
+                                      //
+                                      //     setState(() {
+                                      //       img = imgPath;
+                                      //     });
+                                      //   }
+                                      // },
                                       style: ElevatedButton.styleFrom(
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(5),

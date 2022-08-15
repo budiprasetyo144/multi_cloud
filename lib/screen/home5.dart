@@ -1,98 +1,59 @@
 import 'package:flutter/material.dart';
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mcs_flutter/const/conts.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:mcs_flutter/widget/expansion.dart';
 
-import '../text/text_body.dart';
+// final List<String> items = [
+//   '- Retail',
+//   '- Consumer packaged goods',
+// ];
+// String? selectedValue;
 
-class Home5 extends StatefulWidget {
-  const Home5({Key? key}) : super(key: key);
+class Home5_industry extends StatefulWidget {
+  const Home5_industry({Key? key}) : super(key: key);
 
   @override
-  State<Home5> createState() => _Home5State();
+  State<Home5_industry> createState() => _Home5_industryState();
 }
 
-class _Home5State extends State<Home5> {
+class _Home5_industryState extends State<Home5_industry> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    return Container(
-        height: 620,
-      color: const Color.fromARGB(255, 227, 235, 253),
-        child: Row(
-          //crossAxisAlignment: CrossAxisAlignment.center,
-          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            const Spacer(
-              flex: 3,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(30),
-              ),
-              width: screenSize.width * 0.3,
-              height: 500,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Container(
-                    padding: const EdgeInsets.only(left: 30),
-                    child: Image.asset(
-                      'assets/icons/206058.png',
-                      height: 50,
-                      width: 50,
-                    ),
-                  ),
-                  Container(
-                    width: screenSize.width * 0.5,
-                    height: 350,
-                    padding: const EdgeInsets.only(left: 30, right: 20),
-                    child: Text(
-                      whiteline,
-                      style: const TextStyle(
-                          fontSize: 20,
-                          color: Color.fromARGB(255, 118, 118, 118),
-                          letterSpacing: 2,
-                          height: 2),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const Spacer(
-              flex: 1,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 241, 23, 42),
-                borderRadius: BorderRadius.circular(30),
-              ),
-              padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 34),
-              width: screenSize.width * 0.3,
-              height: screenSize.height * 0.5,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  const SizedBox(height: 20,),
-                  SizedBox(
-                    height: screenSize.height*0.4,
-                    width: screenSize.width * 0.25,
-                    child: Text(
-                      redline,
-                      style: const TextStyle(
-                          color: Colors.white, fontSize: 22, height: 1.5),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const Spacer(
-              flex: 3,
-            ),
-          ],
-        ),
+    String dropdownValue = 'Non Financial Services';
 
+    return Container(
+      height: 899,
+      width: screenSize.width,
+      child: Column(
+        children: [
+          SizedBox(
+            height: 20,
+          ),
+          Center(
+            child: (Text(
+              "VARIOUS INDUSTRY AND SECTORS",
+              style: GoogleFonts.poppins(
+                  fontSize: 36,
+                  color: Color(0xff1e5ea8),
+                  fontWeight: FontWeight.bold,),
+            )),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(
+                horizontal: screenSize.width * 0.15, vertical: 20),
+            child: Text(
+              'Each industry has a unique request. We are ready to assist and provide specific requirements based on the client\'s needs, from the first discussion to provide expert consultants.',
+              style: GoogleFonts.poppins(fontSize: 16),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Container(
+            width: screenSize.width * 0.6,
+            child: Expansionpanel(),
+          ),
+        ],
+      ),
     );
   }
 }

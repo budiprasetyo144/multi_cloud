@@ -5,7 +5,6 @@ import 'package:mcs_flutter/widget/responsive.dart';
 import 'package:mcs_flutter/screen/appbar.dart';
 import 'package:mcs_flutter/text/text_post.dart';
 import 'package:mcs_flutter/main.dart';
-import 'package:mcs_flutter/screen/post.dart';
 
 
 class PostBody extends StatelessWidget {
@@ -89,12 +88,7 @@ class PostBody extends StatelessWidget {
                       Container(
                         height: 20,
                         child: TextButton(onPressed: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Post(),
-                            ),
-                          );
+                          Navigator.pushNamed(context, '/news');
                         }, child: Text('News',style: TextStyle(color: Colors.red,fontSize: 17),
                         ),
                         ),
@@ -146,7 +140,7 @@ class PostBody extends StatelessWidget {
                 ],
               ),
             ),
-          Footer(),
+          Footer(content1: Container(),content2: Container(),),
         ],
       ),
     );

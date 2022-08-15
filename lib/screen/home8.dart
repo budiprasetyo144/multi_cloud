@@ -1,119 +1,323 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:mcs_flutter/widget/botton.dart';
 import 'package:mcs_flutter/const/conts.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
-class Home8 extends StatelessWidget {
-  Home8({super.key, required this.isi});
+class Home8_contact_us extends StatelessWidget {
+  Home8_contact_us({Key? key}) : super(key: key);
 
-  Widget isi;
-  PageController controller = PageController();
-  void _scrollToIndex(int index) {
-    controller.animateToPage(index,
-        duration: const Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
-  }
+  final _formKey = GlobalKey<FormState>();
 
+  final nameController = TextEditingController();
+  final emailController = TextEditingController();
+  final messageController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    return Stack(
-      children: [
-        Container(
-          color: const Color.fromARGB(255, 1, 51, 93),
-          height: 300,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 300),
-          child: Container(
-            width: screenSize.width,
-            height: 450,
-            color: const Color.fromARGB(255, 227, 235, 253),
+    return Container(
+      height: 400,
+      width: screenSize.width,
+      // color: Colors.blue,
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+        colors: <Color>[
+          Color(0xff137fc2),
+          Color(0xff3958d5),
+          Color(0xff184b80),
+        ],
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+      )),
+      child: Row(
+        children: [
+          const Spacer(
+            flex: 3,
           ),
-        ),
-        Column(
-          children:  [
-            const SizedBox(
-              height: 150,
-            ),
-            Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+          Container(
+            height: screenSize.height * 0.7,
+            width: screenSize.width * 0.35,
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
-                    padding: const EdgeInsets.only(left: 40, right: 20),
-                    width: screenSize.width * 0.37,
-                    height: screenSize.height * 0.45,
-                    color: Colors.white,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Spacer(
-                          flex: 2,
-                        ),
-                        const Text(
-                          'Contact Us',
-                          style: TextStyle(
-                            fontSize: 40,
-                            color: kTextColor,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const Spacer(
-                          flex: 1,
-                        ),
-                        const Text(
-                          'Quickly incentivize impactful action items before tactical collaboration and idea-sharing. Monotonically engage market-driven intellectual capital through wireless opportunities. Progressively network performance based services for functionalized testing procedures.',
-                          style: TextStyle(fontSize: 20, height: 1.5),
-                        ),
-                        const Spacer(
-                          flex: 1,
-                        ),
-                        // Botton_tombol2(title: "LEARN MORE",),
-
-                        Container(
-                            child: isi
-                        ),
-                        const Spacer(
-                          flex: 2,
-                        ),
-                      ],
-                    ),
+                  const Spacer(
+                    flex: 1,
                   ),
-                  Container(
-                    width: screenSize.width * 0.37,
-                    height: screenSize.height * 0.6,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/server.jpg'),
-                          fit: BoxFit.fill),
-                    ),
-                  )
+                  // Row(
+                  // children: [
+                  //   const Icon(Icons.phone, color: Colors.white),
+                  //   const SizedBox(width: 5),
+                  //   Text("CALL US",
+                  //       style: GoogleFonts.robotoCondensed(
+                  //           color: Colors.white,
+                  //           fontSize: 20,
+                  //           fontWeight: FontWeight.bold)),
+                  // ],
+                  // ),
+                  // const Spacer(
+                  //   flex: 1,
+                  // ),
+                   Text("Leave your contact info and",
+                      style: GoogleFonts.poppins(color: Colors.white, fontSize: 25)),
+                  // const Spacer(
+                  //   flex: 2,
+                  // ),
+                  // Row(
+                  // children: [
+                  //   const Icon(Icons.location_pin, color: Colors.white),
+                  //   const SizedBox(
+                  //     width: 5,
+                  //   ),
+                  //   Text("LOCATION",
+                  //       style: GoogleFonts.robotoCondensed(
+                  //           color: Colors.white,
+                  //           fontSize: 20,
+                  //           fontWeight: FontWeight.bold)),
+                  // ],
+                  // ),
+                  const Spacer(
+                    flex: 1,
+                  ),
+                   Text("Le​t’s Discuss",
+                      style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.3)),
+
+                   Text("Business",
+                      style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.3)),
+                  // const Spacer(
+                  //   flex: 2,
+                  // ),
+                  // Row(
+                  // children: [
+                  //   const Icon(Icons.access_time, color: Colors.white),
+                  //   const SizedBox(
+                  //     width: 5,
+                  //   ),
+                  //   Text("BUSINESS HOURS",
+                  //       style: GoogleFonts.robotoCondensed(
+                  //           color: Colors.white,
+                  //           fontSize: 20,
+                  //           fontWeight: FontWeight.bold)),
+                  // ],
+                  // ),
+                  const Spacer(
+                    flex: 1,
+                  ),
+                   Text(
+                      "We will contact you immediately to discuss potential business",
+                      style: GoogleFonts.poppins(color: Colors.white, fontSize: 23)),
+                  const Spacer(
+                    flex: 1,
+                  ),
                 ],
               ),
             ),
-          ],
-        )
-      ],
+          ),
+          const Spacer(
+            flex: 1,
+          ),
+          Container(
+            padding: const EdgeInsets.all(40),
+            height: screenSize.height * 0.75,
+            width: screenSize.width * 0.35,
+            child: Form(
+              key: _formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        child: Text(
+                          "Name",
+                          style: GoogleFonts.poppins(
+                              color: Colors.white,
+                              fontSize: 20,
+                              letterSpacing: 1.2),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 165,
+                      ),
+                      Container(
+                        child: Text(
+                          "Email",
+                          style: GoogleFonts.poppins(
+                              color: Colors.white,
+                              fontSize: 20,
+                              letterSpacing: 1.2),
+                        ),
+                      ),
+                    ],
+                  ),
+                  // SizedBox(
+                  //   height: 1,
+                  // ),
+                  Row(
+                    children: [
+                      Container(
+                        width: 223,
+                        child: TextFormField(
+                          controller: nameController,
+                          decoration: InputDecoration(
+                            hintText: "Enter your Name",
+                            fillColor: Colors.white,
+                            filled: true,
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.zero,
+                              borderSide: const BorderSide(
+                                  width: 1, color: Colors.white),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.zero,
+                              borderSide: const BorderSide(
+                                  width: 1, color: Colors.white),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                        width: 223,
+                        child: TextFormField(
+                          controller: emailController,
+                          decoration: InputDecoration(
+                            hintText: "Enter a valid email address",
+                            fillColor: Colors.white,
+                            filled: true,
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.zero,
+                              borderSide: const BorderSide(
+                                  width: 1, color: Colors.white),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.zero,
+                              borderSide: const BorderSide(
+                                  width: 1, color: Colors.white),
+                            ),
+                          ),
+                        ),
+                      ),
+                      // SizedBox(
+                      //   height: 1,
+                      // ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "Message",
+                    style: GoogleFonts.poppins(
+                        color: Colors.white, fontSize: 20, letterSpacing: 1.2),
+                  ),
+
+                  TextFormField(
+                    controller: messageController,
+                    decoration: InputDecoration(
+                      hintText: "Enter your message",
+                      fillColor: Colors.white,
+                      filled: true,
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide:
+                            const BorderSide(width: 1, color: Colors.white),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.zero,
+                        borderSide:
+                            const BorderSide(width: 1, color: Colors.white),
+                      ),
+                    ),
+                    maxLines: 5,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return '*Required';
+                      }
+                      return null;
+                    },
+                  ),
+                  SizedBox(height: 15,),
+                  SizedBox(
+                    height: 45,
+                    width: 110,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          primary: Colors.white,
+                          backgroundColor: const Color(0xff151534),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10))),
+                      onPressed: () async {
+                        if (_formKey.currentState!.validate()) {
+                          final response = await SendEmail(
+                              nameController.value.text,
+                              emailController.value.text,
+                              messageController.value.text);
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            response == 200
+                                ? const SnackBar(
+                                    content: Text('Message Sent!'),
+                                    backgroundColor: Colors.green)
+                                : const SnackBar(
+                                    content: Text('Failed to send message!'),
+                                    backgroundColor: Colors.red),
+                          );
+
+                          nameController.clear();
+                          emailController.clear();
+                          messageController.clear();
+                        }
+                      },
+                      child:
+                           Text('Submit', style: GoogleFonts.poppins(fontSize: 16)),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const Spacer(
+            flex: 3,
+          ),
+        ],
+      ),
     );
   }
+
+  Future SendEmail(String name, String email, String message) async {
+    final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
+    const serviceId = 'service_zfjchwr';
+    const templateId = 'template_1wbd3w9';
+    const userId = 'DP7R9Yu0J2SBQu2DC';
+    final response = await http.post(url,
+        headers: {
+          'Content-Type': 'application/json'
+        }, //This line makes sure it works for all platforms.
+        body: json.encode({
+          'service_id': serviceId,
+          'template_id': templateId,
+          'user_id': userId,
+          'template_params': {
+            'from_name': name,
+            'to_email': email,
+            'message': message
+          }
+        }));
+    return response.statusCode;
+  }
 }
-
-
-
-// ElevatedButton(
-// style: ElevatedButton.styleFrom(
-// shape: RoundedRectangleBorder(
-// borderRadius: BorderRadius.circular(5),
-// ),
-// primary: kPrimaryColor),
-// onPressed: () {_scrollToIndex(isi);},
-// child: Container(
-// padding: EdgeInsets.all(20),
-// child: Text(
-// "LEARN MORE",
-// style: TextStyle(
-// fontSize: 15,
-// fontWeight: FontWeight.bold,
-// color: Colors.white),
-// ),
-// ),
-// ),

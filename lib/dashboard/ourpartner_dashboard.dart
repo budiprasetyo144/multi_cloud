@@ -1,95 +1,3 @@
-// import 'package:flutter/material.dart';
-
-// class OurPartner extends StatefulWidget {
-//   const OurPartner({Key? key}) : super(key: key);
-
-//   @override
-//   State<OurPartner> createState() => _OurPartnerState();
-// }
-
-// @override
-// Widget build(BuildContext context) {
-//   return Scaffold(
-//     body: Center(
-//       child: Column(
-//         crossAxisAlignment: CrossAxisAlignment.center,
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: [
-//           Container(
-//             child: Text('Our Talent'),
-//           ),
-//         ],
-//       ),
-//     ),
-//   );
-// }
-
-// class _OurPartnerState extends State<OurPartner> {
-//   //position , skill , level , industry, location
-
-//   int selectedIndex = 0;
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       backgroundColor: Color.fromRGBO(238, 224, 224, 1),
-//       body: Column(
-//         children: [
-//           SizedBox(
-//             height: 50,
-//           ),
-//           Center(
-//             child: Container(
-//               decoration: BoxDecoration(
-//                 color: Colors.white,
-//                 //borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
-//                 border: Border.all(color: Colors.black),
-//               ),
-//               width: 1200,
-//               height: 600,
-//               child: Column(
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Container(
-//                     decoration: BoxDecoration(
-//                       color: Color.fromARGB(255, 18, 108, 178),
-//                       border: Border(
-//                         bottom: BorderSide(color: Colors.white),
-//                       ),
-
-//                       //borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20),),
-//                     ),
-//                     padding: EdgeInsets.only(top: 27, left: 35),
-//                     height: 95,
-//                     width: 1200,
-//                     child: Text(
-//                       'Our Partner',
-//                       style: TextStyle(
-//                           fontSize: 35,
-//                           color: Colors.white,
-//                           fontWeight: FontWeight.bold,
-//                           letterSpacing: 2),
-//                     ),
-//                   ),
-//                   Container(
-//                     height: 503,
-//                     child: Row(
-//                       children: [
-//                         // Expanded(
-//                         //   child: views.elementAt(selectedIndex),
-//                         // )
-//                       ],
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/api/partner_api.dart';
 import 'package:mcs_flutter/dashboard/dashboard.dart';
@@ -105,6 +13,12 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
   final formKey = GlobalKey<FormState>();
   String nm = '';
   String pt = '';
+  int selectedIndex = 0;
+  int id = 0;
+  String selectname = '';
+  String selectpath = '';
+  TextEditingController _controllerName = TextEditingController();
+  TextEditingController _controllerPath = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -214,7 +128,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                         content: Text('Name Can\'t Be Empty')),
                                   );
                                 } else {
-                                  PartnerApi().createPartner(nm, pt).then(
+                                  createPartner(nm, pt).then(
                                     (isSuccess) {
                                       if (isSuccess) {
                                         setState(() {});
@@ -304,7 +218,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                       TextButton(
                         style: TextButton.styleFrom(
                           padding: const EdgeInsets.all(16.0),
-                          primary: Colors.black,
+                          primary: Colors.white,
                           backgroundColor: Colors.blue,
                           textStyle: const TextStyle(fontSize: 15),
                         ),
@@ -330,7 +244,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
           ),
           Container(
             child: FutureBuilder<List<dynamic>>(
-              future: PartnerApi().getPartner(),
+              future: getPartner(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 if (snapshot.hasError ||
                     snapshot.data == null ||
@@ -339,7 +253,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                 }
                 return DataTable(
                   decoration: BoxDecoration(color: Colors.white),
-                  columnSpacing: 190,
+                  columnSpacing: 120,
                   columns: const [
                     DataColumn(label: Text('Id')),
                     DataColumn(label: Text('Name')),
@@ -364,57 +278,305 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                         DataCell(
                           Text(pgm['status']),
                         ),
+                        // DataCell(
+                        //   TextButton(
+                        //     style: TextButton.styleFrom(
+                        //       padding: const EdgeInsets.all(16.0),
+                        //       primary: Colors.black,
+                        //       backgroundColor: Color.fromARGB(255, 245, 27, 27),
+                        //       textStyle: const TextStyle(fontSize: 15),
+                        //     ),
+                        //     onPressed: () {
+                        //       showDialog(
+                        //         context: context,
+                        //         builder: (context) {
+                        //           return AlertDialog(
+                        //             title: Text("Warning"),
+                        //             content: Text(
+                        //                 "Are you sure want to delete data partner ${pgm['filename']}?"),
+                        //             actions: <Widget>[
+                        //               TextButton(
+                        //                 child: Text("Yes"),
+                        //                 onPressed: () {
+                        //                   Navigator.pop(context);
+                        //                   PartnerApi()
+                        //                       .deletePartner(pgm['partnerId'])
+                        //                       .then((isSuccess) {
+                        //                     if (isSuccess) {
+                        //                       setState(() {});
+                        //                       Scaffold.of(this.context)
+                        //                           .showSnackBar(SnackBar(
+                        //                               content: Text(
+                        //                                   "Delete data success")));
+                        //                     } else {
+                        //                       Scaffold.of(this.context)
+                        //                           .showSnackBar(SnackBar(
+                        //                               content: Text(
+                        //                                   "Delete data failed")));
+                        //                     }
+                        //                   });
+                        //                 },
+                        //               ),
+                        //               TextButton(
+                        //                 child: Text("No"),
+                        //                 onPressed: () {
+                        //                   Navigator.pop(context);
+                        //                 },
+                        //               ),
+                        //             ],
+                        //           );
+                        //         },
+                        //       );
+                        //     },
+                        //     child: const Text("Delete"),
+                        //   ),
+                        // ),
                         DataCell(
-                          TextButton(
-                            style: TextButton.styleFrom(
-                              padding: const EdgeInsets.all(16.0),
-                              primary: Colors.black,
-                              backgroundColor: Color.fromARGB(255, 245, 27, 27),
-                              textStyle: const TextStyle(fontSize: 15),
-                            ),
-                            onPressed: () {
-                              showDialog(
-                                context: context,
-                                builder: (context) {
-                                  return AlertDialog(
-                                    title: Text("Warning"),
-                                    content: Text(
-                                        "Are you sure want to delete data partner ${pgm['filename']}?"),
-                                    actions: <Widget>[
-                                      TextButton(
-                                        child: Text("Yes"),
-                                        onPressed: () {
-                                          Navigator.pop(context);
-                                          PartnerApi()
-                                              .deletePartner(pgm['partnerId'])
-                                              .then((isSuccess) {
-                                            if (isSuccess) {
-                                              setState(() {});
-                                              Scaffold.of(this.context)
-                                                  .showSnackBar(SnackBar(
-                                                      content: Text(
-                                                          "Delete data success")));
+                          Row(
+                            children: [
+                              ElevatedButton(
+                                // style: TextButton.styleFrom(
+                                //   padding: const EdgeInsets.all(16.0),
+                                //   primary: Colors.black,
+                                //   backgroundColor:
+                                //   Color.fromARGB(255, 22, 197, 197),
+                                //   textStyle: const TextStyle(fontSize: 15),
+                                // ),
+                                onPressed: () {
+                                  var pgm = snapshot.data[index];
+                                  selectedIndex = index;
+                                  id = pgm['partnerId'];
+                                  selectname = pgm['filename'];
+                                  selectpath = pgm['filepath'];
+                                  print(selectedIndex);
+                                  print(pgm['partnerId']);
+                                  print(selectname);
+
+                                  _controllerPath.clear();
+                                  // _controllerId.clear();
+                                  _controllerName.clear();
+                                  showDialog<String>(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        AlertDialog(
+                                      title: Center(
+                                          child: const Text('Update Partner')),
+                                      content: Form(
+                                        key: formKey,
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          mainAxisSize: MainAxisSize.min,
+                                          verticalDirection:
+                                              VerticalDirection.down,
+                                          children: [
+                                            // Container(
+                                            //   width: 200,
+                                            //   child: TextFormField(
+                                            //     controller: _controllerId,
+                                            //     textAlign: TextAlign.start,
+                                            //     decoration: InputDecoration(
+                                            //       labelText: "Masukkan ID News",
+                                            //       hintStyle: TextStyle(),
+                                            //       border: OutlineInputBorder(
+                                            //           borderRadius:
+                                            //           BorderRadius
+                                            //               .circular(5.0)),
+                                            //     ),
+                                            //
+                                            //     onChanged: (value) =>
+                                            //     id = int.parse(value),
+                                            //   ),
+                                            // ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            const Text(
+                                              'Data Harus di Edit*',
+                                              style: TextStyle(
+                                                  fontSize: 13,
+                                                  color: Colors.red),
+                                            ),
+                                            SizedBox(
+                                              height: 15,
+                                            ),
+                                            Center(
+                                              child: Container(
+                                                width: 200,
+                                                child: TextFormField(
+                                                  //controller: _controllerTitle,
+
+                                                  textAlign: TextAlign.start,
+                                                  initialValue: selectname,
+                                                  decoration: InputDecoration(
+                                                    labelText:
+                                                        'Masukkan Name Partner Baru',
+                                                    //labelStyle: TextStyle(),
+
+                                                    border: OutlineInputBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(5.0)),
+                                                  ),
+
+                                                  onChanged: (value) =>
+                                                      nm = value,
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 40,
+                                            ),
+                                            Center(
+                                              child: Container(
+                                                width: 200,
+                                                child: TextFormField(
+                                                  //controller: _controllerPartner,
+                                                  textAlign: TextAlign.start,
+                                                  initialValue: selectpath,
+                                                  maxLines: 7,
+                                                  decoration: InputDecoration(
+                                                    labelText:
+                                                        "Masukkan Keterangan Baru",
+                                                    hintStyle: TextStyle(),
+                                                    border: OutlineInputBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              5.0),
+                                                    ),
+                                                  ),
+                                                  onChanged: (value) =>
+                                                      pt = value,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      actions: <Widget>[
+                                        TextButton(
+                                          style: TextButton.styleFrom(
+                                            padding: const EdgeInsets.all(16.0),
+                                            primary: Colors.black,
+                                            backgroundColor: Color.fromARGB(
+                                                255, 16, 199, 71),
+                                            textStyle:
+                                                const TextStyle(fontSize: 15),
+                                          ),
+                                          onPressed: () {
+                                            Navigator.pop(context);
+
+                                            if (nm.isEmpty && pt.isEmpty) {
+                                              ScaffoldMessenger.of(context)
+                                                  .showSnackBar(
+                                                const SnackBar(
+                                                    content: Text(
+                                                        'Data Must Be Edited')),
+                                              );
+                                            } else if (pt.isEmpty) {
+                                              ScaffoldMessenger.of(context)
+                                                  .showSnackBar(
+                                                const SnackBar(
+                                                    content: Text(
+                                                        'Content Must Be Edited')),
+                                              );
+                                            } else if (nm.isEmpty) {
+                                              ScaffoldMessenger.of(context)
+                                                  .showSnackBar(
+                                                const SnackBar(
+                                                    content: Text(
+                                                        'Name Must Be Edited')),
+                                              );
                                             } else {
-                                              Scaffold.of(this.context)
-                                                  .showSnackBar(SnackBar(
-                                                      content: Text(
-                                                          "Delete data failed")));
+                                              updatePartner(id, nm, pt)
+                                                  .then(
+                                                (isSuccess) {
+                                                  if (isSuccess) {
+                                                    setState(() {});
+                                                    Scaffold.of(this.context)
+                                                        .showSnackBar(
+                                                      SnackBar(
+                                                        content: Text(
+                                                            "Data success"),
+                                                      ),
+                                                    );
+                                                  } else {
+                                                    Scaffold.of(this.context)
+                                                        .showSnackBar(
+                                                      SnackBar(
+                                                        content: Text(
+                                                            "Data failed!!!"),
+                                                      ),
+                                                    );
+                                                  }
+                                                },
+                                              );
                                             }
-                                          });
-                                        },
-                                      ),
-                                      TextButton(
-                                        child: Text("No"),
-                                        onPressed: () {
-                                          Navigator.pop(context);
-                                        },
-                                      ),
-                                    ],
+                                          },
+                                          child: const Text('Update'),
+                                        ),
+                                      ],
+                                    ),
                                   );
                                 },
-                              );
-                            },
-                            child: const Text("Delete"),
+                                child: Text('Edit Partner'),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  padding: const EdgeInsets.all(16.0),
+                                  primary: Colors.white,
+                                  backgroundColor:
+                                      Color.fromARGB(255, 245, 27, 27),
+                                  textStyle: const TextStyle(fontSize: 15),
+                                ),
+                                onPressed: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (context) {
+                                      return AlertDialog(
+                                        title: Text("Warning"),
+                                        content: Text(
+                                            "Are you sure want to delete data partner ${pgm['title']}?"),
+                                        actions: <Widget>[
+                                          TextButton(
+                                            child: Text("Yes"),
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                              deletePartner(
+                                                      pgm['partnerId'])
+                                                  .then((isSuccess) {
+                                                if (isSuccess) {
+                                                  setState(() {});
+                                                  Scaffold.of(this.context)
+                                                      .showSnackBar(SnackBar(
+                                                          content: Text(
+                                                              "Delete data success")));
+                                                } else {
+                                                  Scaffold.of(this.context)
+                                                      .showSnackBar(SnackBar(
+                                                          content: Text(
+                                                              "Delete data failed")));
+                                                }
+                                              });
+                                            },
+                                          ),
+                                          TextButton(
+                                            child: Text("No"),
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                            },
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                },
+                                child: const Text("Delete"),
+                              ),
+                            ],
                           ),
                         ),
                       ]);
