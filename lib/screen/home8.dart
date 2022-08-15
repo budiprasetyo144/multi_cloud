@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 // import 'package:mcs_flutter/const/conts.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:mcs_flutter/widget/button_color.dart';
 
 class Home8_contact_us extends StatelessWidget {
   Home8_contact_us({Key? key}) : super(key: key);
@@ -24,14 +25,14 @@ class Home8_contact_us extends StatelessWidget {
       // color: Colors.blue,
       decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: <Color>[
-              Color(0xff137fc2),
-              Color(0xff3958d5),
-              Color(0xff184b80),
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          )),
+        colors: <Color>[
+          Color(0xff137fc2),
+          Color(0xff3958d5),
+          Color(0xff184b80),
+        ],
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+      )),
       child: Row(
         children: [
           const Spacer(
@@ -49,8 +50,7 @@ class Home8_contact_us extends StatelessWidget {
                   const Spacer(
                     flex: 1,
                   ),
-                  const Text(
-                      "Leave your contact info and",
+                  const Text("Leave your contact info and",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 25,
@@ -58,8 +58,7 @@ class Home8_contact_us extends StatelessWidget {
                   const Spacer(
                     flex: 1,
                   ),
-                  const Text(
-                      "Let's Discuss Business",
+                  const Text("Let's Discuss Business",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 40,
@@ -109,12 +108,12 @@ class Home8_contact_us extends StatelessWidget {
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.zero,
                           borderSide:
-                          const BorderSide(width: 1, color: Colors.white),
+                              const BorderSide(width: 1, color: Colors.white),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.zero,
                           borderSide:
-                          const BorderSide(width: 1, color: Colors.white),
+                              const BorderSide(width: 1, color: Colors.white),
                         ),
                       ),
                     ),
@@ -220,12 +219,12 @@ class Home8_contact_us extends StatelessWidget {
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.zero,
                           borderSide:
-                          const BorderSide(width: 1, color: Colors.white),
+                              const BorderSide(width: 1, color: Colors.white),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.zero,
                           borderSide:
-                          const BorderSide(width: 1, color: Colors.white),
+                              const BorderSide(width: 1, color: Colors.white),
                         ),
                       ),
                       maxLines: 5,
@@ -244,25 +243,25 @@ class Home8_contact_us extends StatelessWidget {
                     height: 45,
                     width: 100,
                     child: TextButton(
-                      style: ButtonStyle(
-                        shape: MaterialStateProperty.resolveWith(
-                                (ShapeBorder) => RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15))),
-                        overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                              (Set<MaterialState> states) {
-                            if (states.contains(MaterialState.hovered))
-                              return Colors.red;
-                            return Colors.white;
-                          },
-                        ),
+                      style: Btn_Submit(),
+                      // shape: MaterialStateProperty.resolveWith(
+                      //         (ShapeBorder) => RoundedRectangleBorder(
+                      //         borderRadius: BorderRadius.circular(15))),
+                      // overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                      //       (Set<MaterialState> states) {
+                      //     if (states.contains(MaterialState.hovered))
+                      //       return Colors.red;
+                      //     return Colors.white;
+                      //   },
+                      // ),
 
-                        // primary: Colors.white,
-                        // backgroundColor:
-                        //     const Color.fromARGB(255, 12, 66, 101),
-                        // shape: RoundedRectangleBorder(
-                        //     borderRadius: BorderRadius.circular(15),
-                        //     ),
-                      ),
+                      // primary: Colors.white,
+                      // backgroundColor:
+                      //     const Color.fromARGB(255, 12, 66, 101),
+                      // shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(15),
+                      //     ),
+
                       onPressed: () async {
                         if (_formKey.currentState!.validate()) {
                           final response = await SendEmail(
@@ -273,11 +272,11 @@ class Home8_contact_us extends StatelessWidget {
                           ScaffoldMessenger.of(context).showSnackBar(
                             response == 200
                                 ? const SnackBar(
-                                content: Text('Message Sent!'),
-                                backgroundColor: Colors.green)
+                                    content: Text('Message Sent!'),
+                                    backgroundColor: Colors.green)
                                 : const SnackBar(
-                                content: Text('Failed to send message!'),
-                                backgroundColor: Colors.red),
+                                    content: Text('Failed to send message!'),
+                                    backgroundColor: Colors.red),
                           );
 
                           nameController.clear();
