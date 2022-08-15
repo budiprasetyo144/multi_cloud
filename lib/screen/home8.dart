@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mcs_flutter/widget/botton.dart';
-import 'package:mcs_flutter/const/conts.dart';
+// import 'package:mcs_flutter/widget/botton.dart';
+// import 'package:mcs_flutter/const/conts.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
@@ -11,6 +11,7 @@ class Home8_contact_us extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
 
   final nameController = TextEditingController();
+  final phoneController = TextEditingController();
   final emailController = TextEditingController();
   final messageController = TextEditingController();
 
@@ -18,19 +19,19 @@ class Home8_contact_us extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: 400,
+      height: 450,
       width: screenSize.width,
       // color: Colors.blue,
       decoration: BoxDecoration(
           gradient: LinearGradient(
-        colors: <Color>[
-          Color(0xff137fc2),
-          Color(0xff3958d5),
-          Color(0xff184b80),
-        ],
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-      )),
+            colors: <Color>[
+              Color(0xff137fc2),
+              Color(0xff3958d5),
+              Color(0xff184b80),
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          )),
       child: Row(
         children: [
           const Spacer(
@@ -40,97 +41,47 @@ class Home8_contact_us extends StatelessWidget {
             height: screenSize.height * 0.7,
             width: screenSize.width * 0.35,
             child: Container(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Spacer(
                     flex: 1,
                   ),
-                  // Row(
-                  // children: [
-                  //   const Icon(Icons.phone, color: Colors.white),
-                  //   const SizedBox(width: 5),
-                  //   Text("CALL US",
-                  //       style: GoogleFonts.robotoCondensed(
-                  //           color: Colors.white,
-                  //           fontSize: 20,
-                  //           fontWeight: FontWeight.bold)),
-                  // ],
-                  // ),
-                  // const Spacer(
-                  //   flex: 1,
-                  // ),
-                   Text("Leave your contact info and",
-                      style: GoogleFonts.poppins(color: Colors.white, fontSize: 25)),
-                  // const Spacer(
-                  //   flex: 2,
-                  // ),
-                  // Row(
-                  // children: [
-                  //   const Icon(Icons.location_pin, color: Colors.white),
-                  //   const SizedBox(
-                  //     width: 5,
-                  //   ),
-                  //   Text("LOCATION",
-                  //       style: GoogleFonts.robotoCondensed(
-                  //           color: Colors.white,
-                  //           fontSize: 20,
-                  //           fontWeight: FontWeight.bold)),
-                  // ],
-                  // ),
+                  const Text(
+                      "Leave your contact info and",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold)),
                   const Spacer(
                     flex: 1,
                   ),
-                   Text("Le​t’s Discuss",
-                      style: GoogleFonts.poppins(
+                  const Text(
+                      "Let's Discuss Business",
+                      style: TextStyle(
                           color: Colors.white,
                           fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1.3)),
-
-                   Text("Business",
-                      style: GoogleFonts.poppins(
-                          color: Colors.white,
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1.3)),
-                  // const Spacer(
-                  //   flex: 2,
-                  // ),
-                  // Row(
-                  // children: [
-                  //   const Icon(Icons.access_time, color: Colors.white),
-                  //   const SizedBox(
-                  //     width: 5,
-                  //   ),
-                  //   Text("BUSINESS HOURS",
-                  //       style: GoogleFonts.robotoCondensed(
-                  //           color: Colors.white,
-                  //           fontSize: 20,
-                  //           fontWeight: FontWeight.bold)),
-                  // ],
-                  // ),
+                          // fontWeight: FontWeight.bold,
+                          letterSpacing: 1.1)),
                   const Spacer(
                     flex: 1,
                   ),
-                   Text(
-                      "We will contact you immediately to discuss potential business",
-                      style: GoogleFonts.poppins(color: Colors.white, fontSize: 23)),
+                  const Text(
+                      "We’ll contact you immediately to discuss potential business",
+                      style: TextStyle(color: Colors.white, fontSize: 23)),
                   const Spacer(
-                    flex: 1,
+                    flex: 2,
                   ),
                 ],
               ),
             ),
           ),
-          const Spacer(
-            flex: 1,
-          ),
+          Spacer(),
           Container(
-            padding: const EdgeInsets.all(40),
-            height: screenSize.height * 0.75,
+            padding: const EdgeInsets.all(20),
+            height: screenSize.height * 0.7,
             width: screenSize.width * 0.35,
             child: Form(
               key: _formKey,
@@ -138,42 +89,72 @@ class Home8_contact_us extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  Container(
+                    child: Text(
+                      "Name",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                  Container(
+                    width: 450,
+                    child: TextFormField(
+                      controller: nameController,
+                      decoration: InputDecoration(
+                        hintText: "Enter your Name",
+                        fillColor: Colors.white,
+                        filled: true,
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.zero,
+                          borderSide:
+                          const BorderSide(width: 1, color: Colors.white),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.zero,
+                          borderSide:
+                          const BorderSide(width: 1, color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Row(
                     children: [
                       Container(
                         child: Text(
-                          "Name",
-                          style: GoogleFonts.poppins(
+                          "Phone Number",
+                          style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
-                              letterSpacing: 1.2),
+                              fontWeight: FontWeight.w400),
                         ),
                       ),
                       SizedBox(
-                        width: 165,
+                        width: 92,
                       ),
                       Container(
                         child: Text(
                           "Email",
-                          style: GoogleFonts.poppins(
+                          style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
-                              letterSpacing: 1.2),
+                              fontWeight: FontWeight.w400),
                         ),
                       ),
                     ],
                   ),
-                  // SizedBox(
-                  //   height: 1,
-                  // ),
                   Row(
                     children: [
                       Container(
-                        width: 223,
+                        width: 220,
                         child: TextFormField(
-                          controller: nameController,
+                          controller: phoneController,
                           decoration: InputDecoration(
-                            hintText: "Enter your Name",
+                            hintText: "Enter a valid phone number",
                             fillColor: Colors.white,
                             filled: true,
                             enabledBorder: OutlineInputBorder(
@@ -190,10 +171,10 @@ class Home8_contact_us extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 10,
+                        width: 7,
                       ),
                       Container(
-                        width: 223,
+                        width: 220,
                         child: TextFormField(
                           controller: emailController,
                           decoration: InputDecoration(
@@ -213,78 +194,102 @@ class Home8_contact_us extends StatelessWidget {
                           ),
                         ),
                       ),
-                      // SizedBox(
-                      //   height: 1,
-                      // ),
+                      SizedBox(
+                        height: 20,
+                      ),
                     ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    "Message",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400),
+                  ),
+                  Container(
+                    width: 450,
+                    child: TextFormField(
+                      controller: messageController,
+                      decoration: InputDecoration(
+                        hintText: "Enter your message",
+                        fillColor: Colors.white,
+                        filled: true,
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.zero,
+                          borderSide:
+                          const BorderSide(width: 1, color: Colors.white),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.zero,
+                          borderSide:
+                          const BorderSide(width: 1, color: Colors.white),
+                        ),
+                      ),
+                      maxLines: 5,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return '*Required';
+                        }
+                        return null;
+                      },
+                    ),
                   ),
                   SizedBox(
                     height: 10,
                   ),
-                  Text(
-                    "Message",
-                    style: GoogleFonts.poppins(
-                        color: Colors.white, fontSize: 20, letterSpacing: 1.2),
-                  ),
-
-                  TextFormField(
-                    controller: messageController,
-                    decoration: InputDecoration(
-                      hintText: "Enter your message",
-                      fillColor: Colors.white,
-                      filled: true,
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.zero,
-                        borderSide:
-                            const BorderSide(width: 1, color: Colors.white),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.zero,
-                        borderSide:
-                            const BorderSide(width: 1, color: Colors.white),
-                      ),
-                    ),
-                    maxLines: 5,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return '*Required';
-                      }
-                      return null;
-                    },
-                  ),
-                  SizedBox(height: 15,),
                   SizedBox(
                     height: 45,
-                    width: 110,
+                    width: 100,
                     child: TextButton(
-                      style: TextButton.styleFrom(
-                          primary: Colors.white,
-                          backgroundColor: const Color(0xff151534),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10))),
+                      style: ButtonStyle(
+                        shape: MaterialStateProperty.resolveWith(
+                                (ShapeBorder) => RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15))),
+                        overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                              (Set<MaterialState> states) {
+                            if (states.contains(MaterialState.hovered))
+                              return Colors.red;
+                            return Colors.white;
+                          },
+                        ),
+
+                        // primary: Colors.white,
+                        // backgroundColor:
+                        //     const Color.fromARGB(255, 12, 66, 101),
+                        // shape: RoundedRectangleBorder(
+                        //     borderRadius: BorderRadius.circular(15),
+                        //     ),
+                      ),
                       onPressed: () async {
                         if (_formKey.currentState!.validate()) {
                           final response = await SendEmail(
                               nameController.value.text,
+                              phoneController.value.text,
                               emailController.value.text,
                               messageController.value.text);
                           ScaffoldMessenger.of(context).showSnackBar(
                             response == 200
                                 ? const SnackBar(
-                                    content: Text('Message Sent!'),
-                                    backgroundColor: Colors.green)
+                                content: Text('Message Sent!'),
+                                backgroundColor: Colors.green)
                                 : const SnackBar(
-                                    content: Text('Failed to send message!'),
-                                    backgroundColor: Colors.red),
+                                content: Text('Failed to send message!'),
+                                backgroundColor: Colors.red),
                           );
 
                           nameController.clear();
+                          phoneController.clear();
                           emailController.clear();
                           messageController.clear();
                         }
                       },
-                      child:
-                           Text('Submit', style: GoogleFonts.poppins(fontSize: 16)),
+                      child: const Text(
+                        'Submit',
+                        style: TextStyle(fontSize: 16, color: Colors.white),
+                      ),
                     ),
                   ),
                 ],
@@ -299,7 +304,8 @@ class Home8_contact_us extends StatelessWidget {
     );
   }
 
-  Future SendEmail(String name, String email, String message) async {
+  Future SendEmail(
+      String name, String phone, String email, String message) async {
     final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
     const serviceId = 'service_zfjchwr';
     const templateId = 'template_1wbd3w9';
@@ -314,6 +320,7 @@ class Home8_contact_us extends StatelessWidget {
           'user_id': userId,
           'template_params': {
             'from_name': name,
+            'from_phone': phone,
             'to_email': email,
             'message': message
           }
