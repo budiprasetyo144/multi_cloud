@@ -18,7 +18,7 @@ class Home extends StatelessWidget {
         Container(
           width: screenSize.width,
           height: screenSize.height * 0.7,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
                     "assets/images/depan.png",
@@ -36,7 +36,7 @@ class Home extends StatelessWidget {
             children: [
               Container(
                 child: ShowUpAnimation(
-                  delayStart: Duration(seconds: 1),
+                  delayStart: const Duration(seconds: 1),
                   direction: Direction.horizontal,
                   child: Text(
                     'Cloud Consulting Services.',
@@ -52,7 +52,7 @@ class Home extends StatelessWidget {
                 width: screenSize.width * 0.5,
                 height: screenSize.height * 0.16,
                 child: ShowUpAnimation(
-                  delayStart: Duration(seconds: 1),
+                  delayStart: const Duration(seconds: 1),
                   curve: Curves.bounceIn,
                   direction: Direction.horizontal,
                   offset: -0.2,
@@ -70,7 +70,7 @@ class Home extends StatelessWidget {
                 width: screenSize.width * 0.5,
                 height: screenSize.height * 0.22,
                 child: ShowUpAnimation(
-                  delayStart: Duration(seconds: 1),
+                  delayStart: const Duration(seconds: 1),
                   direction: Direction.horizontal,
                   child: Text(
                       'Our Cloud managed services make it possible for organizations '
@@ -90,7 +90,7 @@ class Home extends StatelessWidget {
                 width: screenSize.width * 0.15,
                 height: screenSize.height * 0.08,
                 child: ShowUpAnimation(
-                    delayStart: Duration(seconds: 1),
+                    delayStart: const Duration(seconds: 1),
                     curve: Curves.bounceIn,
                     direction: Direction.horizontal,
                     offset: -0.2,

@@ -20,7 +20,7 @@ class Home6_advantages extends StatelessWidget {
             child: Text("Why Multi Cloud Solutions",
                 style: GoogleFonts.poppins(
                     fontSize: 35,
-                    color: Color.fromARGB(255, 12, 66, 101),
+                    color: const Color.fromARGB(255, 12, 66, 101),
                     fontWeight: FontWeight.bold)),
           ),
           const SizedBox(height: 25,),
@@ -29,7 +29,7 @@ class Home6_advantages extends StatelessWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                    color: Color.fromARGB(100, 255, 236, 236),
+                    color: const Color.fromARGB(100, 255, 236, 236),
                     borderRadius: BorderRadius.circular(10)),
                 padding: const EdgeInsets.all(20),
                 height: 255,
@@ -43,7 +43,7 @@ class Home6_advantages extends StatelessWidget {
                           fontWeight: FontWeight.bold
                       ),
                     ),
-                    SizedBox(height: 5,),
+                    const SizedBox(height: 5,),
                     Container(
                       width: screenSize.width,
                       height: 180,
@@ -63,7 +63,7 @@ class Home6_advantages extends StatelessWidget {
               const SizedBox(height: 10, width: 10,),
               Container(
                 padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   // borderRadius: BorderRadius.circular(10),
                     color: Colors.white
                 ),
@@ -78,7 +78,7 @@ class Home6_advantages extends StatelessWidget {
                           fontWeight: FontWeight.bold
                       ),
                     ),
-                    SizedBox(height: 5,),
+                    const SizedBox(height: 5,),
                     Container(
                       width: screenSize.width,
                       height: 180,
@@ -104,7 +104,7 @@ class Home6_advantages extends StatelessWidget {
             children: [
               Container(
                 padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   // borderRadius: BorderRadius.circular(10),
                     color: Colors.white
                 ),
@@ -119,7 +119,7 @@ class Home6_advantages extends StatelessWidget {
                           fontWeight: FontWeight.bold
                       ),
                     ),
-                    SizedBox(height: 5,),
+                    const SizedBox(height: 5,),
                     Container(
                       width: screenSize.width,
                       height: 180,
@@ -141,7 +141,7 @@ class Home6_advantages extends StatelessWidget {
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color.fromARGB(255, 0, 70, 150)
+                    color: const Color.fromARGB(255, 0, 70, 150)
                 ),
                 height: 255,
                 width: screenSize.width * 0.40,
@@ -155,7 +155,7 @@ class Home6_advantages extends StatelessWidget {
                           fontWeight: FontWeight.bold
                       ),
                     ),
-                    SizedBox(height: 5,),
+                    const SizedBox(height: 5,),
                     Container(
                       width: screenSize.width,
                       height: 180,

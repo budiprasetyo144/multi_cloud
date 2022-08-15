@@ -55,11 +55,11 @@ class _HomePageState extends State<HomePage> {
         children: [
           Home(wijet: Button_scroll(),),
           const Home2(),
-          Home3_partner(),
+          const Home3_partner(),
           Home4_solution(screenSize: screenSize),
           const Home5_industry(),
-          Home6_advantages(),
-          Home7_news(),
+          const Home6_advantages(),
+          const Home7_news(),
           Home8_contact_us(),
           Footer(content1: konten1(screenSize),content2: konten2(screenSize),),
         ],
@@ -72,12 +72,12 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               _scrollToIndex(4096);
             },
+            style: ElevatedButton.styleFrom(
+              primary: const Color(0xff1e5ea8),
+            ),
             child: Text(
               'CONTACT US',
               style: GoogleFonts.poppins(fontSize: 19, letterSpacing: 2),
-            ),
-            style: ElevatedButton.styleFrom(
-              primary: Color(0xff1e5ea8),
             ),);
   }
 
@@ -109,14 +109,15 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     _scrollToIndex(0);
                   },
+                  style: Color_button_appbar(),
                   child:  Text(
                     "Home",
                     style: GoogleFonts.poppins(
                       fontSize: 17,
                     ),
                   ),
-                  style: Color_button_appbar(),
                 ),
+
                 SizedBox(
                   width: screenSize.width * 0.03,
                 ),
@@ -124,13 +125,13 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     _scrollToIndex(530); //// POSISI ABOUT US
                   },
+                  style: Color_button_appbar(),
                   child:  Text(
                     "About us",
                     style: GoogleFonts.poppins(
                       fontSize: 17,
                     ),
                   ),
-                  style: Color_button_appbar(),
                 ),
                 SizedBox(
                   width: screenSize.width * 0.03,
@@ -139,13 +140,13 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     _scrollToIndex(880); //// POSISI SOLUTION
                   },
+                  style: Color_button_appbar(),
                   child:  Text(
                     "Solution",
                     style: GoogleFonts.poppins(
                       fontSize: 17,
                     ),
                   ),
-                  style: Color_button_appbar(),
                 ),
                 SizedBox(
                   width: screenSize.width * 0.03,
@@ -154,13 +155,13 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     _scrollToIndex(4096); //// POSISI CONTACT US
                   },
+                  style: Color_button_appbar(),
                   child:  Text(
                     "Contact Us",
                     style: GoogleFonts.poppins(
                       fontSize: 17,
                     ),
                   ),
-                  style: Color_button_appbar(),
                 ),
               ],
             ),
@@ -174,8 +175,8 @@ class _HomePageState extends State<HomePage> {
                 decoration: InputDecoration(
                   labelText: "Search",
                   suffixIcon: const Icon(Icons.search),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(width: 1, color: Colors.grey),
+                  enabledBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(width: 1, color: Colors.grey),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
@@ -218,23 +219,23 @@ class _HomePageState extends State<HomePage> {
           height: screenSize.height * 0.04,
           child: FooterHead('Sitemap'),
         ),
-        Spacer(flex: 3,),
+        const Spacer(flex: 3,),
         TextButton(onPressed: (){
           _scrollToIndex(0);
         }, child: FooterBody(teks: 'Home',)),
-        Spacer(),
+        const Spacer(),
         TextButton(onPressed: (){
           _scrollToIndex(530);
         }, child: FooterBody(teks: 'About Us',)),
-        Spacer(),
+        const Spacer(),
         TextButton(onPressed: (){
           _scrollToIndex(880);
         }, child: FooterBody(teks: 'Solution',)),
-        Spacer(),
+        const Spacer(),
         TextButton(onPressed: (){
           _scrollToIndex(4096);
         }, child: FooterBody(teks: 'Contact Us',)),
-        Spacer(flex: 6,),
+        const Spacer(flex: 6,),
 
       ],
     );
@@ -249,23 +250,23 @@ class _HomePageState extends State<HomePage> {
             width: screenSize.width*0.13,
             height: screenSize.height * 0.04,
             child: FooterHead('Solution')),
-        Spacer(flex: 3,),
+        const Spacer(flex: 3,),
         TextButton(onPressed: (){
           _scrollToIndex(1480);
         }, child: FooterBody(teks: 'Cloud Migration',)),
-        Spacer(),
+        const Spacer(),
         TextButton(onPressed: (){
           _scrollToIndex(1480);
         }, child: FooterBody(teks: 'Consultation',)),
-        Spacer(),
+        const Spacer(),
         TextButton(onPressed: (){
           _scrollToIndex(1480);
         }, child: FooterBody(teks: 'Local Support',)),
-        Spacer(),
+        const Spacer(),
         TextButton(onPressed: (){
           _scrollToIndex(1480);
         }, child: FooterBody(teks: 'Cloud Implementation',)),
-        Spacer(flex: 6,),
+        const Spacer(flex: 6,),
 
       ],
     );

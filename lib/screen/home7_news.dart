@@ -67,7 +67,7 @@ class _Home7_newsState extends State<Home7_news> {
                       Container(
                         height: 90,width: screenSize.width*0.24,
                         padding: const EdgeInsets.only(top: 20,right: 20,left: 20),
-                        child: Text(
+                        child: const Text(
                           'Top Performing Partner of the year',
                           style: TextStyle(color: Colors.white, fontSize: 28),
                           textAlign: TextAlign.center
@@ -119,7 +119,7 @@ class _Home7_newsState extends State<Home7_news> {
                       Container(
                         height: 90,width: screenSize.width*0.24,
                         padding: const EdgeInsets.only(top: 20,right: 20,left: 20),
-                        child: Text(
+                        child: const Text(
                             'Cloud Demand in \n Indonesia is Predicted to Continue to Increase',
                             style: TextStyle(color: Colors.black, fontSize: 28),
                             textAlign: TextAlign.center,
@@ -171,7 +171,7 @@ class _Home7_newsState extends State<Home7_news> {
                       Container(
                         height: 90,width: screenSize.width*0.24,
                         padding: const EdgeInsets.only(top: 20,right: 20,left: 20),
-                        child: Text(
+                        child: const Text(
                             'Advancing Indonesia’s clouds',
                             style: TextStyle(color: Colors.white, fontSize: 28),
                             textAlign: TextAlign.center

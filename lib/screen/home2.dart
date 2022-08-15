@@ -21,13 +21,13 @@ class Home2 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
-            padding: EdgeInsets.only(top: 20),
+            padding: const EdgeInsets.only(top: 20),
             width: screenSize.width,
             height: 80,
             child: Text('How do we help?',
                 style: GoogleFonts.poppins(
                     fontSize: 30,
-                    color: Color.fromARGB(255, 12, 66, 101),
+                    color: const Color.fromARGB(255, 12, 66, 101),
                     fontWeight: FontWeight.bold)),
           ),
           Container(

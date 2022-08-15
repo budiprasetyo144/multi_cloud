@@ -17,11 +17,11 @@ class Home3_partner extends StatelessWidget {
           Container(
             width: screenSize.width,
             height: screenSize.height * 0.2,
-            color: Color.fromARGB(255, 12, 94, 149),
+            color: const Color.fromARGB(255, 12, 94, 149),
             child: Center(
               child: Column(
                 children: [
-                  Spacer(
+                  const Spacer(
                     flex: 1,
                   ),
                   Text(
@@ -32,7 +32,7 @@ class Home3_partner extends StatelessWidget {
                         fontSize: 50,
                         fontWeight: FontWeight.bold),
                   ),
-                  Spacer(
+                  const Spacer(
                     flex: 1,
                   ),
                   Text(
@@ -45,7 +45,7 @@ class Home3_partner extends StatelessWidget {
                         letterSpacing: 1.1
                     ),
                   ),
-                  Spacer(
+                  const Spacer(
                     flex: 1,
                   ),
                 ],
@@ -63,7 +63,7 @@ class Home3_partner extends StatelessWidget {
                 SizedBox(
                   width: screenSize.width * 0.3,
                   child:
-                  Image(image: AssetImage('assets/logo/alibaba.png'),
+                  const Image(image: AssetImage('assets/logo/alibaba.png'),
                     height:42,
                     width: 148,
                   ),
@@ -105,7 +105,7 @@ class Home3_partner extends StatelessWidget {
                 ),
                 SizedBox(
                   width: screenSize.width * 0.3,
-                  child: Image(
+                  child: const Image(
                     image: AssetImage(
                       'assets/logo/aws.png',
                     ),

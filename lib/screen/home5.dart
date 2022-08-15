@@ -27,7 +27,7 @@ class _Home5_industryState extends State<Home5_industry> {
       width: screenSize.width,
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Center(
@@ -35,7 +35,7 @@ class _Home5_industryState extends State<Home5_industry> {
               "VARIOUS INDUSTRY AND SECTORS",
               style: GoogleFonts.poppins(
                   fontSize: 36,
-                  color: Color(0xff1e5ea8),
+                  color: const Color(0xff1e5ea8),
                   fontWeight: FontWeight.bold,),
             )),
           ),

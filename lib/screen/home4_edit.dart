@@ -27,10 +27,10 @@ class Home4_solution extends StatelessWidget {
             child: Text("Why Choose Us?",
                 style: GoogleFonts.poppins(
                     fontSize: 36,
-                    color: Color(0xff1e5ea8),
+                    color: const Color(0xff1e5ea8),
                     fontWeight: FontWeight.bold)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -45,7 +45,7 @@ class Home4_solution extends StatelessWidget {
                       padding: EdgeInsets.only(top: screenSize.height * 0.01),
                       width: screenSize.width * 0.5,
                       child: ShowUpAnimation(
-                        delayStart: Duration(seconds: 1),
+                        delayStart: const Duration(seconds: 1),
                         curve: Curves.bounceIn,
                         direction: Direction.horizontal,
                         offset: -0.2,
@@ -60,12 +60,12 @@ class Home4_solution extends StatelessWidget {
                     ),
                     Container(
                       child: ShowUpAnimation(
-                        delayStart: Duration(seconds: 1),
+                        delayStart: const Duration(seconds: 1),
                         direction: Direction.horizontal,
                         child: Text(
                           "MIGRATION",
                           style: GoogleFonts.robotoCondensed(
-                            color: Color(0xff1e5ea8),
+                            color: const Color(0xff1e5ea8),
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
                           ),
@@ -79,13 +79,13 @@ class Home4_solution extends StatelessWidget {
                       width: 200,
                       height: 100,
                       child: ShowUpAnimation(
-                        delayStart: Duration(seconds: 1),
+                        delayStart: const Duration(seconds: 1),
                         direction: Direction.horizontal,
                         child: Text(
                           "We Experience in Data Migration Multi Cloud, Migration from Premise Environment.",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.robotoCondensed(
-                            color: Color(0xff111111),
+                            color: const Color(0xff111111),
                             fontSize: 14,
                           ),
                         ),
@@ -102,7 +102,7 @@ class Home4_solution extends StatelessWidget {
                       padding: EdgeInsets.only(top: screenSize.height * 0.01),
                       width: screenSize.width * 0.5,
                       child: ShowUpAnimation(
-                        delayStart: Duration(seconds: 1),
+                        delayStart: const Duration(seconds: 1),
                         curve: Curves.bounceIn,
                         direction: Direction.horizontal,
                         offset: -0.2,
@@ -117,12 +117,12 @@ class Home4_solution extends StatelessWidget {
                     ),
                     Container(
                       child: ShowUpAnimation(
-                        delayStart: Duration(seconds: 1),
+                        delayStart: const Duration(seconds: 1),
                         direction: Direction.horizontal,
                         child: Text(
                           "CONSULTING",
                           style: GoogleFonts.robotoCondensed(
-                            color: Color(0xff1e5ea8),
+                            color: const Color(0xff1e5ea8),
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
                           ),
@@ -136,13 +136,13 @@ class Home4_solution extends StatelessWidget {
                       width: 200,
                       height: 100,
                       child: ShowUpAnimation(
-                        delayStart: Duration(seconds: 1),
+                        delayStart: const Duration(seconds: 1),
                         direction: Direction.horizontal,
                         child: Text(
                           "Our experienced Cloud Consultants can help you determine the efficacy of and implement these popular cloud solutions.",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.robotoCondensed(
-                            color: Color(0xff111111),
+                            color: const Color(0xff111111),
                             fontSize: 14,
                           ),
                         ),
@@ -159,7 +159,7 @@ class Home4_solution extends StatelessWidget {
                       padding: EdgeInsets.only(top: screenSize.height * 0.01),
                       width: screenSize.width * 0.5,
                       child: ShowUpAnimation(
-                        delayStart: Duration(seconds: 1),
+                        delayStart: const Duration(seconds: 1),
                         curve: Curves.bounceIn,
                         direction: Direction.horizontal,
                         offset: -0.2,
@@ -174,12 +174,12 @@ class Home4_solution extends StatelessWidget {
                     ),
                     Container(
                       child: ShowUpAnimation(
-                        delayStart: Duration(seconds: 1),
+                        delayStart: const Duration(seconds: 1),
                         direction: Direction.horizontal,
                         child: Text(
                           "LOCAL SUPPORT",
                           style: GoogleFonts.robotoCondensed(
-                            color: Color(0xff1e5ea8),
+                            color: const Color(0xff1e5ea8),
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
                           ),
@@ -193,13 +193,13 @@ class Home4_solution extends StatelessWidget {
                       width: 200,
                       height: 100,
                       child: ShowUpAnimation(
-                        delayStart: Duration(seconds: 1),
+                        delayStart: const Duration(seconds: 1),
                         direction: Direction.horizontal,
                         child: Text(
                           "Our local support team works with our clients every step of the way to ensure that their cloud is running smoothly.",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.robotoCondensed(
-                            color: Color(0xff111111),
+                            color: const Color(0xff111111),
                             fontSize: 14,
                           ),
                         ),
@@ -216,7 +216,7 @@ class Home4_solution extends StatelessWidget {
                       padding: EdgeInsets.only(top: screenSize.height * 0.01),
                       width: screenSize.width * 0.5,
                       child: ShowUpAnimation(
-                        delayStart: Duration(seconds: 1),
+                        delayStart: const Duration(seconds: 1),
                         curve: Curves.bounceIn,
                         direction: Direction.horizontal,
                         offset: -0.2,
@@ -231,12 +231,12 @@ class Home4_solution extends StatelessWidget {
                     ),
                     Container(
                       child: ShowUpAnimation(
-                        delayStart: Duration(seconds: 1),
+                        delayStart: const Duration(seconds: 1),
                         direction: Direction.horizontal,
                         child: Text(
                           "IMPLEMENTATION",
                           style: GoogleFonts.robotoCondensed(
-                            color: Color(0xff1e5ea8),
+                            color: const Color(0xff1e5ea8),
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
                           ),
@@ -250,13 +250,13 @@ class Home4_solution extends StatelessWidget {
                       width: 200,
                       height: 100,
                       child: ShowUpAnimation(
-                        delayStart: Duration(seconds: 1),
+                        delayStart: const Duration(seconds: 1),
                         direction: Direction.horizontal,
                         child: Text(
                           "We do all cloud services such as Infrastructure  (IAAS), Platform (PAAS), and Software (SAAS).",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.robotoCondensed(
-                            color: Color(0xff111111),
+                            color: const Color(0xff111111),
                             fontSize: 14,
                           ),
                         ),
