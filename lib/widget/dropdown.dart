@@ -35,7 +35,7 @@ class _EnState extends State<En> {
                   child: Container(
                     child: Text(
                       items,
-                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
+                      style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
                     ),
                   ),
                 );

@@ -32,11 +32,11 @@ class GridContainer extends StatelessWidget {
                 );
               },
               child: Text(HeadGrid,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                       color: Colors.black))),
-          SizedBox(
+          const SizedBox(
             height: 2,
           ),
           TextButton(
@@ -60,7 +60,7 @@ class GridContainer extends StatelessWidget {
           Container(
             width: 350,
             height: 65,
-            padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+            padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
             child: Text(BodyGrid),
           ),
           TextButton(
@@ -72,7 +72,7 @@ class GridContainer extends StatelessWidget {
                 ),
               );
             },
-            child: Text(
+            child: const Text(
               'READ MORE',
               style: TextStyle(
                   decoration: TextDecoration.underline, color: Colors.black),

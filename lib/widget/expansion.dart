@@ -16,7 +16,7 @@ class Expansionpaneltate extends State<Expansionpanel> {
     return SingleChildScrollView(
       child:
       Padding(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         child: ExpansionPanelList.radio(
           initialOpenPanelValue:'Financial Services',
           expansionCallback: (int index, bool isExpanded) {
@@ -58,7 +58,7 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
       isExpanded: false,
       title: 'Non Financial Services',
       content: Padding(
-          padding: EdgeInsets.only( left: 20),
+          padding: const EdgeInsets.only( left: 20),
           child: Column(children: <Widget>[
             _posisi('Ritel'),
             _posisi('Consumer packaged goods'),
@@ -71,33 +71,33 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
             _posisi('Gaming'),
             _posisi('Telecomunications'),
           ])),
-      leading: Icon(Icons.computer)),
+      leading: const Icon(Icons.computer)),
 
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Financial Services',
       content: Padding(
-          padding: EdgeInsets.only( left: 20),
+          padding: const EdgeInsets.only( left: 20),
           child: Column(children: <Widget>[
             _posisi('Banking'),
             _posisi('Multifinance'),
             _posisi('Fintech'),
             _posisi('Financial Lending'),
           ])),
-      leading: Icon(Icons.manage_accounts)),
+      leading: const Icon(Icons.manage_accounts)),
 
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Goverment and public sector',
       content: Padding(
-          padding: EdgeInsets.only( left: 20),
+          padding: const EdgeInsets.only( left: 20),
           child: Column(children: <Widget>[
             _posisi('Goverment'),
             _posisi('State and local goverment'),
             _posisi('Education'),
             _posisi('Education technology'),
           ])),
-      leading: Icon(Icons.comment_outlined)),
+      leading: const Icon(Icons.comment_outlined)),
 
 ];
 
@@ -118,8 +118,8 @@ Container _judulposisi (){
 ListTile _posisi(String namaposisi) {
   return ListTile(
     leading: Container(
-        padding: EdgeInsets.only(top: 7),
-        child: Icon(
+        padding: const EdgeInsets.only(top: 7),
+        child: const Icon(
           Icons.circle,
           size: 10,
           color: Colors.black,

@@ -130,6 +130,6 @@ PreferredSize AppbarFullSize(Size screenSize, BuildContext context) {
   );
   void _scrollToIndex(int index) {
     controller.animateToPage(index + 1,
-        duration: Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
+        duration: const Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
   }
 }

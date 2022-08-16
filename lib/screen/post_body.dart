@@ -39,17 +39,17 @@ class PostBody extends StatelessWidget {
               const EdgeInsets.only(left: 30, top: 20, bottom: 20),
               child: Image.asset("assets/logo/multicloudsolution.jpg"),
             ),
-            Spacer(flex: 7,),
+            const Spacer(flex: 7,),
             IconButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Dashboard(),
+                      builder: (context) => const Dashboard(),
                     ),
                   );
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.brightness_low_sharp,
                   color: Colors.white,
                 ))
@@ -89,18 +89,18 @@ class PostBody extends StatelessWidget {
                         height: 20,
                         child: TextButton(onPressed: (){
                           Navigator.pushNamed(context, '/news');
-                        }, child: Text('News',style: TextStyle(color: Colors.red,fontSize: 17),
+                        }, child: const Text('News',style: TextStyle(color: Colors.red,fontSize: 17),
                         ),
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.only(top: 1),
+                        padding: const EdgeInsets.only(top: 1),
                         height: 20,
-                        child: Text(' >  ',style: TextStyle(color: Colors.red,fontSize: 17),),
+                        child: const Text(' >  ',style: TextStyle(color: Colors.red,fontSize: 17),),
                       ),
                       Container(
                         height: 20,
-                        child: Text(Urutan,style: TextStyle(color: Colors.red,fontSize: 17),),
+                        child: Text(Urutan,style: const TextStyle(color: Colors.red,fontSize: 17),),
                       )
                     ],
                   ),
@@ -114,10 +114,10 @@ class PostBody extends StatelessWidget {
                     height: 450,
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 19),
+                    padding: const EdgeInsets.symmetric(vertical: 19),
                     child: Text(
                       HeadText,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(200, 4, 4, 52),
@@ -127,14 +127,14 @@ class PostBody extends StatelessWidget {
                   Container(
                     child: Text(
                       Tanggal,
-                      style: TextStyle(fontSize: 18),
+                      style: const TextStyle(fontSize: 18),
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 19),
+                    padding: const EdgeInsets.symmetric(vertical: 19),
                     child: Text(
                       Bodyfull,
-                      style: TextStyle(fontSize: 20, height: 1.5),
+                      style: const TextStyle(fontSize: 20, height: 1.5),
                     ),
                   ),
                 ],
