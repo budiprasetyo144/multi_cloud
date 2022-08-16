@@ -96,7 +96,7 @@ class Footer extends StatelessWidget {
                 ),
                 Container(
                     width: screenSize.width*0.2,
-                    height: screenSize.height * 0.37,
+                    height: screenSize.height * 0.44,
 
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -150,23 +150,29 @@ class Footer extends StatelessWidget {
                             ),
                           ),
                         ),
-                        ListTile(
-                          leading: Icon(
-                            Icons.location_on,
-                            size: 30,
-                            color: Colors.black,
-                          ),
-                          title: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text('PT. Tiga Daya Digital Indonesia The East '
-                              'Tower 19th Floor Jl. Dr. Ide Anak Agung '
-                              'Gde Agung Blok E3.2 '
-                              'Mega Kuningan, Jakarta Selatan 12950',
-                              style: TextStyle(
-                                fontSize: 17,
-                                height: 1.2
+                        Container(
+                          width: screenSize.width * 0.25,
+                          height: screenSize.height*0.27,
+                          child: ListTile(
+                              leading: Icon(
+                                Icons.location_on,
+                                size: 30,
+                                color: Colors.black,
                               ),
-                            ),
+                              title: Container(
+                                width: screenSize.width * 0.25,
+                                height: screenSize.height*0.24,
+                                child: Text(
+                                  'PT. Tiga Daya Digital Indonesia \nThe East '
+                                      'Tower 19th Floor \nJl. Dr. Ide Anak Agung '
+                                      '\nGde Agung Blok E3.2 '
+                                      '\nMega Kuningan, \nJakarta Selatan 12950',
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    height: 1.5,
+                                  ),textAlign: TextAlign.left,
+                                ),
+                              )
                           ),
                         ),
                       ],
