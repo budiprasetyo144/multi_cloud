@@ -58,14 +58,14 @@ class _NewsDashboardState extends State<NewsDashboard> {
                           showDialog<String>(
                             context: context,
                             builder: (BuildContext context) => AlertDialog(
-                              title: Center(child: Text('Add News')),
+                              title: const Center(child: Text('Add News')),
                               content: Form(
                                 key: formKey,
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   verticalDirection: VerticalDirection.down,
                                   children: [
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 20,
                                     ),
                                     //IconButton(onPressed: (){}, icon: Icon(Icons.add_photo_alternate_outlined,size: 30,)),
@@ -75,7 +75,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                         textAlign: TextAlign.start,
                                         decoration: InputDecoration(
                                           labelText: "Masukkan Code Image",
-                                          hintStyle: TextStyle(),
+                                          hintStyle: const TextStyle(),
                                           border: OutlineInputBorder(
                                               borderRadius:
                                                   BorderRadius.circular(5.0)),
@@ -83,7 +83,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                         onChanged: (value) => images = value,
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 30,
                                     ),
                                     Container(
@@ -92,7 +92,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                         textAlign: TextAlign.start,
                                         decoration: InputDecoration(
                                           labelText: "Masukkan Title",
-                                          hintStyle: TextStyle(),
+                                          hintStyle: const TextStyle(),
                                           border: OutlineInputBorder(
                                               borderRadius:
                                                   BorderRadius.circular(5.0)),
@@ -100,7 +100,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                         onChanged: (value) => title = value,
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 30,
                                     ),
                                     Container(
@@ -110,7 +110,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                         maxLines: 7,
                                         decoration: InputDecoration(
                                           labelText: "Masukkan Keterangan News",
-                                          hintStyle: TextStyle(),
+                                          hintStyle: const TextStyle(),
                                           border: OutlineInputBorder(
                                               borderRadius:
                                                   BorderRadius.circular(5.0)),
@@ -142,7 +142,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => Dashboard(),
+                                        builder: (context) => const Dashboard(),
                                       ),
                                     );
                                   },
@@ -152,8 +152,8 @@ class _NewsDashboardState extends State<NewsDashboard> {
                             ),
                           );
                         },
-                        child: Text('Add News')),
-                    SizedBox(width: 20,),
+                        child: const Text('Add News')),
+                    const SizedBox(width: 20,),
 
                   ],
                 ),
@@ -227,7 +227,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                       ),
                     ],
                   )),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Container(
                 child: FutureBuilder<List<dynamic>>(
                   future: getNews(),
@@ -238,7 +238,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                       return const CircularProgressIndicator();
                     }
                     return DataTable(
-                      decoration: BoxDecoration(color: Colors.white),
+                      decoration: const BoxDecoration(color: Colors.white),
                       columnSpacing: 100,
                       columns: const [
                         DataColumn(label: Text('Id')),
@@ -296,8 +296,8 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                         context: context,
                                         builder: (BuildContext context) =>
                                             AlertDialog(
-                                              title: Center(
-                                                  child: const Text('Update News')),
+                                              title: const Center(
+                                                  child: Text('Update News')),
                                               content: Form(
                                                 key: formKey,
                                                 child: Column(
@@ -324,9 +324,9 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                     //     id = int.parse(value),
                                                     //   ),
                                                     // ),
-                                                    SizedBox(height: 10,),
+                                                    const SizedBox(height: 10,),
                                                     const Text('Data Harus di Edit*',style: TextStyle(fontSize: 13,color: Colors.red),),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 15,
                                                     ),
                                                     Center(
@@ -355,7 +355,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                         ),
                                                       ),
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 40,
                                                     ),
                                                     Center(
@@ -369,7 +369,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                           decoration: InputDecoration(
                                                             labelText:
                                                             "Masukkan Keterangan Baru",
-                                                            hintStyle: TextStyle(),
+                                                            hintStyle: const TextStyle(),
                                                             border: OutlineInputBorder(
                                                               borderRadius:
                                                               BorderRadius.circular(
@@ -390,7 +390,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                     padding:
                                                     const EdgeInsets.all(16.0),
                                                     primary: Colors.black,
-                                                    backgroundColor: Color.fromARGB(
+                                                    backgroundColor: const Color.fromARGB(
                                                         255, 16, 199, 71),
                                                     textStyle:
                                                     const TextStyle(fontSize: 15),
@@ -427,7 +427,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                             setState(() {});
                                                             Scaffold.of(this.context)
                                                                 .showSnackBar(
-                                                              SnackBar(
+                                                              const SnackBar(
                                                                 content: Text(
                                                                     "Data success"),
                                                               ),
@@ -435,7 +435,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                           } else {
                                                             Scaffold.of(this.context)
                                                                 .showSnackBar(
-                                                              SnackBar(
+                                                              const SnackBar(
                                                                 content: Text(
                                                                     "Data failed!!!"),
                                                               ),
@@ -451,14 +451,14 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                             ),
                                       );
                                     },
-                                    child: Text('Edit News'),
+                                    child: const Text('Edit News'),
                                   ),
-                                  SizedBox(width: 10,),
+                                  const SizedBox(width: 10,),
                                   TextButton(
                                     style: TextButton.styleFrom(
                                       padding: const EdgeInsets.all(16.0),
                                       primary: Colors.white,
-                                      backgroundColor: Color.fromARGB(255, 245, 27, 27),
+                                      backgroundColor: const Color.fromARGB(255, 245, 27, 27),
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),
                                     onPressed: () {
@@ -466,12 +466,12 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                         context: context,
                                         builder: (context) {
                                           return AlertDialog(
-                                            title: Text("Warning"),
+                                            title: const Text("Warning"),
                                             content: Text(
                                                 "Are you sure want to delete data news ${pgm['title']}?"),
                                             actions: <Widget>[
                                               TextButton(
-                                                child: Text("Yes"),
+                                                child: const Text("Yes"),
                                                 onPressed: () {
                                                   Navigator.pop(context);
                                                   deleteNews(pgm['idpost'])
@@ -479,12 +479,12 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                     if (isSuccess) {
                                                       setState(() {});
                                                       Scaffold.of(this.context)
-                                                          .showSnackBar(SnackBar(
+                                                          .showSnackBar(const SnackBar(
                                                               content: Text(
                                                                   "Delete data success")));
                                                     } else {
                                                       Scaffold.of(this.context)
-                                                          .showSnackBar(SnackBar(
+                                                          .showSnackBar(const SnackBar(
                                                               content: Text(
                                                                   "Delete data failed")));
                                                     }
@@ -492,7 +492,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                 },
                                               ),
                                               TextButton(
-                                                child: Text("No"),
+                                                child: const Text("No"),
                                                 onPressed: () {
                                                   Navigator.pop(context);
                                                 },

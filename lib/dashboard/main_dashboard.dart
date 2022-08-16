@@ -13,7 +13,7 @@ class MainDashboard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              child: Text('Welcome to Dashboard Multi Cloud Solution'),
+              child: const Text('Welcome to Dashboard Multi Cloud Solution'),
             ),
           ],
         ),

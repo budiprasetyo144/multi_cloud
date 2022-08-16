@@ -36,7 +36,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
             child: Row(
               children: [
                 Container(
-                  child: Text(
+                  child: const Text(
                     'Our Partner    ',
                     style: TextStyle(
                       fontSize: 20,
@@ -48,7 +48,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                       showDialog<String>(
                         context: context,
                         builder: (BuildContext context) => AlertDialog(
-                          title: Center(child: const Text('ADD NEW PARTNER')),
+                          title: const Center(child: Text('ADD NEW PARTNER')),
                           content: Form(
                             key: formKey,
                             child: Column(
@@ -61,7 +61,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                     textAlign: TextAlign.start,
                                     decoration: InputDecoration(
                                       labelText: "Masukkan Nama",
-                                      hintStyle: TextStyle(),
+                                      hintStyle: const TextStyle(),
                                       border: OutlineInputBorder(
                                           borderRadius:
                                               BorderRadius.circular(5.0)),
@@ -69,7 +69,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                     onChanged: (value) => pt = value,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 40,
                                 ),
                                 Container(
@@ -79,7 +79,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                     maxLines: 7,
                                     decoration: InputDecoration(
                                       labelText: "Masukkan Keterangan",
-                                      hintStyle: TextStyle(),
+                                      hintStyle: const TextStyle(),
                                       border: OutlineInputBorder(
                                           borderRadius:
                                               BorderRadius.circular(5.0)),
@@ -133,11 +133,11 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                       if (isSuccess) {
                                         setState(() {});
                                         Scaffold.of(this.context).showSnackBar(
-                                            SnackBar(
+                                            const SnackBar(
                                                 content: Text("Data success")));
                                       } else {
                                         Scaffold.of(this.context).showSnackBar(
-                                            SnackBar(
+                                            const SnackBar(
                                                 content:
                                                     Text("Data failed!!!")));
                                       }
@@ -151,7 +151,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                         ),
                       );
                     },
-                    child: Text('Add New Partner'))
+                    child: const Text('Add New Partner'))
               ],
             ),
           ),
@@ -168,7 +168,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                   onPressed: () {},
                   child: const Text("All (3)"),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 3,
                 ),
                 // const Text('All(4)',
@@ -232,14 +232,14 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
             ),
           ),
           Row(
-            children: [
+            children: const [
               Spacer(
                 flex: 6,
               ),
               Text("3 items"),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
@@ -252,7 +252,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                   return const CircularProgressIndicator();
                 }
                 return DataTable(
-                  decoration: BoxDecoration(color: Colors.white),
+                  decoration: const BoxDecoration(color: Colors.white),
                   columnSpacing: 120,
                   columns: const [
                     DataColumn(label: Text('Id')),
@@ -359,8 +359,8 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                     context: context,
                                     builder: (BuildContext context) =>
                                         AlertDialog(
-                                      title: Center(
-                                          child: const Text('Update Partner')),
+                                      title: const Center(
+                                          child: Text('Update Partner')),
                                       content: Form(
                                         key: formKey,
                                         child: Column(
@@ -388,7 +388,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                             //     id = int.parse(value),
                                             //   ),
                                             // ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 10,
                                             ),
                                             const Text(
@@ -397,7 +397,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                                   fontSize: 13,
                                                   color: Colors.red),
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 15,
                                             ),
                                             Center(
@@ -424,7 +424,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                                 ),
                                               ),
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 40,
                                             ),
                                             Center(
@@ -438,7 +438,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                                   decoration: InputDecoration(
                                                     labelText:
                                                         "Masukkan Keterangan Baru",
-                                                    hintStyle: TextStyle(),
+                                                    hintStyle: const TextStyle(),
                                                     border: OutlineInputBorder(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -458,7 +458,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                           style: TextButton.styleFrom(
                                             padding: const EdgeInsets.all(16.0),
                                             primary: Colors.black,
-                                            backgroundColor: Color.fromARGB(
+                                            backgroundColor: const Color.fromARGB(
                                                 255, 16, 199, 71),
                                             textStyle:
                                                 const TextStyle(fontSize: 15),
@@ -495,7 +495,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                                     setState(() {});
                                                     Scaffold.of(this.context)
                                                         .showSnackBar(
-                                                      SnackBar(
+                                                      const SnackBar(
                                                         content: Text(
                                                             "Data success"),
                                                       ),
@@ -503,7 +503,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                                   } else {
                                                     Scaffold.of(this.context)
                                                         .showSnackBar(
-                                                      SnackBar(
+                                                      const SnackBar(
                                                         content: Text(
                                                             "Data failed!!!"),
                                                       ),
@@ -519,9 +519,9 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                     ),
                                   );
                                 },
-                                child: Text('Edit Partner'),
+                                child: const Text('Edit Partner'),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
                               TextButton(
@@ -529,7 +529,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                   padding: const EdgeInsets.all(16.0),
                                   primary: Colors.white,
                                   backgroundColor:
-                                      Color.fromARGB(255, 245, 27, 27),
+                                      const Color.fromARGB(255, 245, 27, 27),
                                   textStyle: const TextStyle(fontSize: 15),
                                 ),
                                 onPressed: () {
@@ -537,12 +537,12 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                     context: context,
                                     builder: (context) {
                                       return AlertDialog(
-                                        title: Text("Warning"),
+                                        title: const Text("Warning"),
                                         content: Text(
                                             "Are you sure want to delete data partner ${pgm['title']}?"),
                                         actions: <Widget>[
                                           TextButton(
-                                            child: Text("Yes"),
+                                            child: const Text("Yes"),
                                             onPressed: () {
                                               Navigator.pop(context);
                                               deletePartner(
@@ -551,12 +551,12 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                                 if (isSuccess) {
                                                   setState(() {});
                                                   Scaffold.of(this.context)
-                                                      .showSnackBar(SnackBar(
+                                                      .showSnackBar(const SnackBar(
                                                           content: Text(
                                                               "Delete data success")));
                                                 } else {
                                                   Scaffold.of(this.context)
-                                                      .showSnackBar(SnackBar(
+                                                      .showSnackBar(const SnackBar(
                                                           content: Text(
                                                               "Delete data failed")));
                                                 }
@@ -564,7 +564,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                             },
                                           ),
                                           TextButton(
-                                            child: Text("No"),
+                                            child: const Text("No"),
                                             onPressed: () {
                                               Navigator.pop(context);
                                             },

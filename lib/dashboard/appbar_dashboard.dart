@@ -7,7 +7,7 @@ AppBar BarAtas(BuildContext context) {
     //backgroundColor: Color.fromARGB(200, 9, 47, 171),
     backgroundColor: Colors.white,
     leading: Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage('assets/logo/multicloudsolution.jpg'),
             fit: BoxFit.fill),
@@ -25,10 +25,10 @@ AppBar BarAtas(BuildContext context) {
                   '/'
               );
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.remove_red_eye,
             ),
-            label: Text(
+            label: const Text(
               'Site Online',
             ),
           ),
@@ -39,9 +39,9 @@ AppBar BarAtas(BuildContext context) {
                 '/'
               );
             },
-            icon: Icon(Icons.output,
+            icon: const Icon(Icons.output,
             ),
-            label: Text(
+            label: const Text(
               'Logout',
               style: TextStyle(
               ),
@@ -49,7 +49,7 @@ AppBar BarAtas(BuildContext context) {
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.person_pin,color: Colors.blue,),
+            icon: const Icon(Icons.person_pin,color: Colors.blue,),
             iconSize: 40,
           )
         ],
