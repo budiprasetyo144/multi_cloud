@@ -67,9 +67,9 @@ class _Home7_newsState extends State<Home7_news> {
                       Container(
                         height: 90,width: screenSize.width*0.24,
                         padding: const EdgeInsets.only(top: 20,right: 20,left: 20),
-                        child: const Text(
+                        child: Text(
                           'Top Performing Partner of the year',
-                          style: TextStyle(color: Colors.white, fontSize: 28),
+                          style: GoogleFonts.poppins(color: Colors.white, fontSize: 26),
                           textAlign: TextAlign.center
                         ),
                       ),
@@ -119,9 +119,9 @@ class _Home7_newsState extends State<Home7_news> {
                       Container(
                         height: 90,width: screenSize.width*0.24,
                         padding: const EdgeInsets.only(top: 20,right: 20,left: 20),
-                        child: const Text(
+                        child:  Text(
                             'Cloud Demand in \n Indonesia is Predicted to Continue to Increase',
-                            style: TextStyle(color: Colors.black, fontSize: 28),
+                            style: GoogleFonts.poppins(color: Colors.black, fontSize: 26),
                             textAlign: TextAlign.center,
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -171,9 +171,9 @@ class _Home7_newsState extends State<Home7_news> {
                       Container(
                         height: 90,width: screenSize.width*0.24,
                         padding: const EdgeInsets.only(top: 20,right: 20,left: 20),
-                        child: const Text(
+                        child: Text(
                             'Advancing Indonesia’s clouds',
-                            style: TextStyle(color: Colors.white, fontSize: 28),
+                            style: GoogleFonts.poppins(color: Colors.white, fontSize: 26),
                             textAlign: TextAlign.center
                         ),
                       ),
