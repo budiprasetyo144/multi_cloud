@@ -6,7 +6,6 @@ import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:mcs_flutter/screen/post_body.dart';
 import 'package:mcs_flutter/text/text_post.dart';
 
-
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   configureApp();
