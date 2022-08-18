@@ -45,7 +45,7 @@ class Footer extends StatelessWidget {
                                         'assets/logo/logo-eksad.png'),
                                     fit: BoxFit.fill)),
                           ),
-                          const Spacer(),
+                           Spacer(),
                           Container(
                             width: screenSize.width * 0.17,
                             height: screenSize.height * 0.04,
