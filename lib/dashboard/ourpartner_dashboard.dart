@@ -438,7 +438,8 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                                   decoration: InputDecoration(
                                                     labelText:
                                                         "Masukkan Keterangan Baru",
-                                                    hintStyle: const TextStyle(),
+                                                    hintStyle:
+                                                        const TextStyle(),
                                                     border: OutlineInputBorder(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -458,8 +459,9 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                           style: TextButton.styleFrom(
                                             padding: const EdgeInsets.all(16.0),
                                             primary: Colors.black,
-                                            backgroundColor: const Color.fromARGB(
-                                                255, 16, 199, 71),
+                                            backgroundColor:
+                                                const Color.fromARGB(
+                                                    255, 16, 199, 71),
                                             textStyle:
                                                 const TextStyle(fontSize: 15),
                                           ),
@@ -488,8 +490,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                                         'Name Must Be Edited')),
                                               );
                                             } else {
-                                              updatePartner(id, nm, pt)
-                                                  .then(
+                                              updatePartner(id, nm, pt).then(
                                                 (isSuccess) {
                                                   if (isSuccess) {
                                                     setState(() {});
@@ -545,8 +546,7 @@ class _OurpartnerDashboardState extends State<OurpartnerDashboard> {
                                             child: const Text("Yes"),
                                             onPressed: () {
                                               Navigator.pop(context);
-                                              deletePartner(
-                                                      pgm['partnerId'])
+                                              deletePartner(pgm['partnerId'])
                                                   .then((isSuccess) {
                                                 if (isSuccess) {
                                                   setState(() {});

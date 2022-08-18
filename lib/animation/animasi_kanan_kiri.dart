@@ -4,10 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:show_up_animation/show_up_animation.dart';
 
 class Animasi_Kanan_Kiri extends StatelessWidget {
-  const Animasi_Kanan_Kiri({
-    Key? key,
-    required this.judul
-  }) : super(key: key);
+  const Animasi_Kanan_Kiri({Key? key, required this.judul}) : super(key: key);
   final String judul;
 
   @override
@@ -22,6 +19,7 @@ class Animasi_Kanan_Kiri extends StatelessWidget {
             color: Color(0xff1e5ea8),
             fontSize: 20,
             fontWeight: FontWeight.bold),
-      ),);
+      ),
+    );
   }
 }

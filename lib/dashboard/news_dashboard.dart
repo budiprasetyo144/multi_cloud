@@ -20,15 +20,13 @@ class _NewsDashboardState extends State<NewsDashboard> {
   String news = '';
   String images = '';
   int id = 0;
-  String selecttitle ='';
-  String selectnews ='';
+  String selecttitle = '';
+  String selectnews = '';
 
   int selectedIndex = 0;
 
-
   TextEditingController _controllerTitle = TextEditingController();
   TextEditingController _controllerNews = TextEditingController();
-
 
   @override
   Widget build(BuildContext context) {
@@ -150,8 +148,9 @@ class _NewsDashboardState extends State<NewsDashboard> {
                       );
                     },
                     child: const Text('Add News')),
-                const SizedBox(width: 20,),
-
+                const SizedBox(
+                  width: 20,
+                ),
               ],
             ),
           ),
@@ -224,9 +223,11 @@ class _NewsDashboardState extends State<NewsDashboard> {
                   ),
                 ],
               )),
-          const SizedBox(height: 20,),
+          const SizedBox(
+            height: 20,
+          ),
           Container(
-            height: screenSize.height*0.65,
+            height: screenSize.height * 0.65,
             child: ListView(
               children: [
                 FutureBuilder<List<dynamic>>(
@@ -281,184 +282,205 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                     // ),
                                     onPressed: () {
                                       var pgm = snapshot.data[index];
-                                        selectedIndex = index;
-                                        id = pgm['idpost'];
-                                        selecttitle = pgm['title'];
-                                        selectnews = pgm['post'];
-                                        print(selectedIndex);
-                                        print(pgm['idpost']);
-                                        print(selecttitle);
+                                      selectedIndex = index;
+                                      id = pgm['idpost'];
+                                      selecttitle = pgm['title'];
+                                      selectnews = pgm['post'];
+                                      print(selectedIndex);
+                                      print(pgm['idpost']);
+                                      print(selecttitle);
 
-                                       _controllerNews.clear();
+                                      _controllerNews.clear();
                                       // _controllerId.clear();
-                                       _controllerTitle.clear();
+                                      _controllerTitle.clear();
                                       showDialog<String>(
                                         context: context,
                                         builder: (BuildContext context) =>
                                             AlertDialog(
-                                              title: const Center(
-                                                  child: Text('Update News')),
-                                              content: Form(
-                                                key: formKey,
-                                                child: Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  mainAxisSize: MainAxisSize.min,
-                                                  verticalDirection:
+                                          title: const Center(
+                                              child: Text('Update News')),
+                                          content: Form(
+                                            key: formKey,
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              mainAxisSize: MainAxisSize.min,
+                                              verticalDirection:
                                                   VerticalDirection.down,
-                                                  children: [
-                                                    // Container(
-                                                    //   width: 200,
-                                                    //   child: TextFormField(
-                                                    //     controller: _controllerId,
-                                                    //     textAlign: TextAlign.start,
-                                                    //     decoration: InputDecoration(
-                                                    //       labelText: "Masukkan ID News",
-                                                    //       hintStyle: TextStyle(),
-                                                    //       border: OutlineInputBorder(
-                                                    //           borderRadius:
-                                                    //           BorderRadius
-                                                    //               .circular(5.0)),
-                                                    //     ),
-                                                    //
-                                                    //     onChanged: (value) =>
-                                                    //     id = int.parse(value),
-                                                    //   ),
-                                                    // ),
-                                                    const SizedBox(height: 10,),
-                                                    const Text('Data Harus di Edit*',style: TextStyle(fontSize: 13,color: Colors.red),),
-                                                    const SizedBox(
-                                                      height: 15,
-                                                    ),
-                                                    Center(
-                                                      child: Container(
-                                                        width: 200,
-                                                        child: TextFormField(
-
-                                                          //controller: _controllerTitle,
-
-                                                          textAlign: TextAlign.start,
-                                                          initialValue: selecttitle,
-                                                          decoration: InputDecoration(
-
-                                                            labelText: 'Masukkan Title News Baru',
-                                                            //labelStyle: TextStyle(),
-
-                                                            border: OutlineInputBorder(
-                                                                borderRadius:
-                                                                BorderRadius
-                                                                    .circular(5.0)),
-                                                          ),
-
-                                                          onChanged: (value) =>
-                                                          title = value,
-
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 40,
-                                                    ),
-                                                    Center(
-                                                      child: Container(
-                                                        width: 200,
-                                                        child: TextFormField(
-                                                          //controller: _controllerNews,
-                                                          textAlign: TextAlign.start,
-                                                          initialValue: selectnews,
-                                                          maxLines: 7,
-                                                          decoration: InputDecoration(
-                                                            labelText:
-                                                            "Masukkan Keterangan Baru",
-                                                            hintStyle: const TextStyle(),
-                                                            border: OutlineInputBorder(
-                                                              borderRadius:
-                                                              BorderRadius.circular(
-                                                                  5.0),
-                                                            ),
-                                                          ),
-                                                          onChanged: (value) =>
-                                                          news = value,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
+                                              children: [
+                                                // Container(
+                                                //   width: 200,
+                                                //   child: TextFormField(
+                                                //     controller: _controllerId,
+                                                //     textAlign: TextAlign.start,
+                                                //     decoration: InputDecoration(
+                                                //       labelText: "Masukkan ID News",
+                                                //       hintStyle: TextStyle(),
+                                                //       border: OutlineInputBorder(
+                                                //           borderRadius:
+                                                //           BorderRadius
+                                                //               .circular(5.0)),
+                                                //     ),
+                                                //
+                                                //     onChanged: (value) =>
+                                                //     id = int.parse(value),
+                                                //   ),
+                                                // ),
+                                                const SizedBox(
+                                                  height: 10,
                                                 ),
-                                              ),
-                                              actions: <Widget>[
-                                                TextButton(
-                                                  style: TextButton.styleFrom(
-                                                    padding:
-                                                    const EdgeInsets.all(16.0),
-                                                    primary: Colors.black,
-                                                    backgroundColor: const Color.fromARGB(
-                                                        255, 16, 199, 71),
-                                                    textStyle:
-                                                    const TextStyle(fontSize: 15),
-                                                  ),
-                                                  onPressed: () {
-                                                    Navigator.pop(context);
+                                                const Text(
+                                                  'Data Harus di Edit*',
+                                                  style: TextStyle(
+                                                      fontSize: 13,
+                                                      color: Colors.red),
+                                                ),
+                                                const SizedBox(
+                                                  height: 15,
+                                                ),
+                                                Center(
+                                                  child: Container(
+                                                    width: 200,
+                                                    child: TextFormField(
+                                                      //controller: _controllerTitle,
 
-                                                    if (title.isEmpty && news.isEmpty) {
-                                                      ScaffoldMessenger.of(context)
-                                                          .showSnackBar(
-                                                        const SnackBar(
-                                                            content: Text(
-                                                                'Data Must Be Edited')),
-                                                      );
-                                                    } else if (news.isEmpty) {
-                                                      ScaffoldMessenger.of(context)
-                                                          .showSnackBar(
-                                                        const SnackBar(
-                                                            content: Text(
-                                                                'Content Must Be Edited')),
-                                                      );
-                                                    } else if (title.isEmpty) {
-                                                      ScaffoldMessenger.of(context)
-                                                          .showSnackBar(
-                                                        const SnackBar(
-                                                            content: Text(
-                                                                'Name Must Be Edited')),
-                                                      );
-                                                    } else {
-                                                      updateNews(id,title,news)
-                                                          .then(
-                                                            (isSuccess) {
-                                                          if (isSuccess) {
-                                                            setState(() {});
-                                                            Scaffold.of(this.context)
-                                                                .showSnackBar(
-                                                              const SnackBar(
-                                                                content: Text(
-                                                                    "Data success"),
-                                                              ),
-                                                            );
-                                                          } else {
-                                                            Scaffold.of(this.context)
-                                                                .showSnackBar(
-                                                              const SnackBar(
-                                                                content: Text(
-                                                                    "Data failed!!!"),
-                                                              ),
-                                                            );
-                                                          }
-                                                        },
-                                                      );
-                                                    }
-                                                  },
-                                                  child: const Text('Update'),
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      initialValue: selecttitle,
+                                                      decoration:
+                                                          InputDecoration(
+                                                        labelText:
+                                                            'Masukkan Title News Baru',
+                                                        //labelStyle: TextStyle(),
+
+                                                        border: OutlineInputBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        5.0)),
+                                                      ),
+
+                                                      onChanged: (value) =>
+                                                          title = value,
+                                                    ),
+                                                  ),
+                                                ),
+                                                const SizedBox(
+                                                  height: 40,
+                                                ),
+                                                Center(
+                                                  child: Container(
+                                                    width: 200,
+                                                    child: TextFormField(
+                                                      //controller: _controllerNews,
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      initialValue: selectnews,
+                                                      maxLines: 7,
+                                                      decoration:
+                                                          InputDecoration(
+                                                        labelText:
+                                                            "Masukkan Keterangan Baru",
+                                                        hintStyle:
+                                                            const TextStyle(),
+                                                        border:
+                                                            OutlineInputBorder(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      5.0),
+                                                        ),
+                                                      ),
+                                                      onChanged: (value) =>
+                                                          news = value,
+                                                    ),
+                                                  ),
                                                 ),
                                               ],
                                             ),
+                                          ),
+                                          actions: <Widget>[
+                                            TextButton(
+                                              style: TextButton.styleFrom(
+                                                padding:
+                                                    const EdgeInsets.all(16.0),
+                                                primary: Colors.black,
+                                                backgroundColor:
+                                                    const Color.fromARGB(
+                                                        255, 16, 199, 71),
+                                                textStyle: const TextStyle(
+                                                    fontSize: 15),
+                                              ),
+                                              onPressed: () {
+                                                Navigator.pop(context);
+
+                                                if (title.isEmpty &&
+                                                    news.isEmpty) {
+                                                  ScaffoldMessenger.of(context)
+                                                      .showSnackBar(
+                                                    const SnackBar(
+                                                        content: Text(
+                                                            'Data Must Be Edited')),
+                                                  );
+                                                } else if (news.isEmpty) {
+                                                  ScaffoldMessenger.of(context)
+                                                      .showSnackBar(
+                                                    const SnackBar(
+                                                        content: Text(
+                                                            'Content Must Be Edited')),
+                                                  );
+                                                } else if (title.isEmpty) {
+                                                  ScaffoldMessenger.of(context)
+                                                      .showSnackBar(
+                                                    const SnackBar(
+                                                        content: Text(
+                                                            'Name Must Be Edited')),
+                                                  );
+                                                } else {
+                                                  updateNews(id, title, news)
+                                                      .then(
+                                                    (isSuccess) {
+                                                      if (isSuccess) {
+                                                        setState(() {});
+                                                        Scaffold.of(
+                                                                this.context)
+                                                            .showSnackBar(
+                                                          const SnackBar(
+                                                            content: Text(
+                                                                "Data success"),
+                                                          ),
+                                                        );
+                                                      } else {
+                                                        Scaffold.of(
+                                                                this.context)
+                                                            .showSnackBar(
+                                                          const SnackBar(
+                                                            content: Text(
+                                                                "Data failed!!!"),
+                                                          ),
+                                                        );
+                                                      }
+                                                    },
+                                                  );
+                                                }
+                                              },
+                                              child: const Text('Update'),
+                                            ),
+                                          ],
+                                        ),
                                       );
                                     },
                                     child: const Text('Edit News'),
                                   ),
-                                  const SizedBox(width: 10,),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
                                   TextButton(
                                     style: TextButton.styleFrom(
                                       padding: const EdgeInsets.all(16.0),
                                       primary: Colors.white,
-                                      backgroundColor: const Color.fromARGB(255, 245, 27, 27),
+                                      backgroundColor: const Color.fromARGB(
+                                          255, 245, 27, 27),
                                       textStyle: const TextStyle(fontSize: 15),
                                     ),
                                     onPressed: () {
@@ -479,14 +501,16 @@ class _NewsDashboardState extends State<NewsDashboard> {
                                                     if (isSuccess) {
                                                       setState(() {});
                                                       Scaffold.of(this.context)
-                                                          .showSnackBar(const SnackBar(
-                                                              content: Text(
-                                                                  "Delete data success")));
+                                                          .showSnackBar(
+                                                              const SnackBar(
+                                                                  content: Text(
+                                                                      "Delete data success")));
                                                     } else {
                                                       Scaffold.of(this.context)
-                                                          .showSnackBar(const SnackBar(
-                                                              content: Text(
-                                                                  "Delete data failed")));
+                                                          .showSnackBar(
+                                                              const SnackBar(
+                                                                  content: Text(
+                                                                      "Delete data failed")));
                                                     }
                                                   });
                                                 },

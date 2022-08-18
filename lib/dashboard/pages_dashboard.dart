@@ -174,7 +174,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
             height: 10,
           ),
           Container(
-            height: screenSize.height*0.6,
+            height: screenSize.height * 0.6,
             child: ListView(
               controller: ScrollController(),
               children: [
@@ -243,7 +243,8 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                           builder: (BuildContext context) =>
                                               AlertDialog(
                                             title: Center(
-                                                child: const Text('Update Pages')),
+                                                child:
+                                                    const Text('Update Pages')),
                                             content: Form(
                                               key: formKey,
                                               child: Column(
@@ -271,19 +272,21 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                                       child: TextFormField(
                                                         //controller: _controllerName,
 
-                                                        textAlign: TextAlign.start,
-                                                        initialValue: selectname,
-                                                        decoration: InputDecoration(
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                        initialValue:
+                                                            selectname,
+                                                        decoration:
+                                                            InputDecoration(
                                                           labelText:
                                                               'Masukkan Nama Pages Baru',
                                                           //labelStyle: TextStyle(),
 
-                                                          border:
-                                                              OutlineInputBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              5.0)),
+                                                          border: OutlineInputBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          5.0)),
                                                         ),
 
                                                         onChanged: (value) =>
@@ -299,18 +302,23 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                                       width: 200,
                                                       child: TextFormField(
                                                         //controller: _controllerPage,
-                                                        textAlign: TextAlign.start,
-                                                        initialValue: selectpage,
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                        initialValue:
+                                                            selectpage,
                                                         maxLines: 7,
-                                                        decoration: InputDecoration(
+                                                        decoration:
+                                                            InputDecoration(
                                                           labelText:
                                                               "Masukkan Keterangan",
-                                                          hintStyle: TextStyle(),
+                                                          hintStyle:
+                                                              TextStyle(),
                                                           border:
                                                               OutlineInputBorder(
                                                             borderRadius:
                                                                 BorderRadius
-                                                                    .circular(5.0),
+                                                                    .circular(
+                                                                        5.0),
                                                           ),
                                                         ),
                                                         onChanged: (value) =>
@@ -324,45 +332,50 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                             actions: <Widget>[
                                               TextButton(
                                                 style: TextButton.styleFrom(
-                                                  padding:
-                                                      const EdgeInsets.all(16.0),
+                                                  padding: const EdgeInsets.all(
+                                                      16.0),
                                                   primary: Colors.black,
-                                                  backgroundColor: Color.fromARGB(
-                                                      255, 16, 199, 71),
-                                                  textStyle:
-                                                      const TextStyle(fontSize: 15),
+                                                  backgroundColor:
+                                                      Color.fromARGB(
+                                                          255, 16, 199, 71),
+                                                  textStyle: const TextStyle(
+                                                      fontSize: 15),
                                                 ),
                                                 onPressed: () {
                                                   Navigator.pop(context);
 
-                                                  if (nm.isEmpty && pg.isEmpty) {
-                                                    ScaffoldMessenger.of(context)
+                                                  if (nm.isEmpty &&
+                                                      pg.isEmpty) {
+                                                    ScaffoldMessenger.of(
+                                                            context)
                                                         .showSnackBar(
                                                       const SnackBar(
                                                           content: Text(
                                                               'Data Can\'t Be Empty')),
                                                     );
                                                   } else if (pg.isEmpty) {
-                                                    ScaffoldMessenger.of(context)
+                                                    ScaffoldMessenger.of(
+                                                            context)
                                                         .showSnackBar(
                                                       const SnackBar(
                                                           content: Text(
                                                               'Content Can\'t Be Empty')),
                                                     );
                                                   } else if (nm.isEmpty) {
-                                                    ScaffoldMessenger.of(context)
+                                                    ScaffoldMessenger.of(
+                                                            context)
                                                         .showSnackBar(
                                                       const SnackBar(
                                                           content: Text(
                                                               'Name Can\'t Be Empty')),
                                                     );
                                                   } else {
-                                                    updatePage(id, nm, pg)
-                                                        .then(
+                                                    updatePage(id, nm, pg).then(
                                                       (isSuccess) {
                                                         if (isSuccess) {
                                                           setState(() {});
-                                                          Scaffold.of(this.context)
+                                                          Scaffold.of(
+                                                                  this.context)
                                                               .showSnackBar(
                                                             SnackBar(
                                                               content: Text(
@@ -370,7 +383,8 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                                             ),
                                                           );
                                                         } else {
-                                                          Scaffold.of(this.context)
+                                                          Scaffold.of(
+                                                                  this.context)
                                                               .showSnackBar(
                                                             SnackBar(
                                                               content: Text(
@@ -397,7 +411,8 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                         primary: Colors.white,
                                         backgroundColor:
                                             Color.fromARGB(255, 245, 27, 27),
-                                        textStyle: const TextStyle(fontSize: 15),
+                                        textStyle:
+                                            const TextStyle(fontSize: 15),
                                       ),
                                       onPressed: () {
                                         showDialog(
@@ -416,12 +431,14 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                                         .then((isSuccess) {
                                                       if (isSuccess) {
                                                         setState(() {});
-                                                        Scaffold.of(this.context)
+                                                        Scaffold.of(
+                                                                this.context)
                                                             .showSnackBar(SnackBar(
                                                                 content: Text(
                                                                     "Delete data success")));
                                                       } else {
-                                                        Scaffold.of(this.context)
+                                                        Scaffold.of(
+                                                                this.context)
                                                             .showSnackBar(SnackBar(
                                                                 content: Text(
                                                                     "Delete data failed")));

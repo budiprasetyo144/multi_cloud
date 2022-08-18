@@ -19,7 +19,6 @@ class Animasi_Kiri_Kanan extends StatelessWidget {
         curve: Curves.decelerate,
         direction: Direction.horizontal,
         offset: -0.3,
-        child: widget
-    );
+        child: widget);
   }
 }

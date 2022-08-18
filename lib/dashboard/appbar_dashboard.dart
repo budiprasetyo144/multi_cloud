@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mcs_flutter/screen/home.dart';
 
-
 AppBar BarAtas(BuildContext context) {
   return AppBar(
     //backgroundColor: Color.fromARGB(200, 9, 47, 171),
@@ -19,11 +18,8 @@ AppBar BarAtas(BuildContext context) {
         children: [
           //AlertForm(),
           TextButton.icon(
-            onPressed: ()  {
-              Navigator.pushNamed(
-                  context,
-                  '/'
-              );
+            onPressed: () {
+              Navigator.pushNamed(context, '/');
             },
             icon: const Icon(
               Icons.remove_red_eye,
@@ -34,22 +30,22 @@ AppBar BarAtas(BuildContext context) {
           ),
           TextButton.icon(
             onPressed: () {
-              Navigator.pushNamed(
-                context,
-                '/'
-              );
+              Navigator.pushNamed(context, '/');
             },
-            icon: const Icon(Icons.output,
+            icon: const Icon(
+              Icons.output,
             ),
             label: const Text(
               'Logout',
-              style: TextStyle(
-              ),
+              style: TextStyle(),
             ),
           ),
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.person_pin,color: Colors.blue,),
+            icon: const Icon(
+              Icons.person_pin,
+              color: Colors.blue,
+            ),
             iconSize: 40,
           )
         ],
