@@ -47,13 +47,13 @@ class Footer extends StatelessWidget {
                           ),
                           const Spacer(),
                           Container(
-                            width: screenSize.width * 0.15,
+                            width: screenSize.width * 0.17,
                             height: screenSize.height * 0.04,
                             //color: Colors.blue,
                             child: Center(
                               child: Text(
                                 '  Your one stop IT Solution',
-                                textAlign: TextAlign.right,
+                                textAlign: TextAlign.left,
                                 style: GoogleFonts.poppins(
                                     color: Colors.black87,
                                     fontWeight: FontWeight.w500,
@@ -194,6 +194,7 @@ class Footer extends StatelessWidget {
                                   color: Colors.black,
                                 ),
                                 title: Container(
+                                  padding: EdgeInsets.only(left: 10),
                                   width: screenSize.width * 0.25,
                                   height: screenSize.height * 0.24,
                                   child: Text(
