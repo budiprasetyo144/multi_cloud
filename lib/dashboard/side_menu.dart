@@ -14,11 +14,11 @@ class SideMenu extends StatefulWidget {
 }
 
 List<Widget> views = [
-  MainDashboard(),
-  SettingDashboard(),
-  PagesDashboard(),
-  NewsDashboard(),
-  OurpartnerDashboard()
+  const MainDashboard(),
+  const SettingDashboard(),
+  const PagesDashboard(),
+  const NewsDashboard(),
+  const OurpartnerDashboard()
 ];
 
 int selectedIndex = 0;
@@ -31,7 +31,7 @@ class _SideMenuState extends State<SideMenu> {
         children: [
           SideNavigationBar(
             header: SideNavigationBarHeader(
-              image: CircleAvatar(
+              image: const CircleAvatar(
                 child: Icon(
                   Icons.person_pin,
                   size: 20,
@@ -39,8 +39,8 @@ class _SideMenuState extends State<SideMenu> {
                 radius: 20,
               ),
               title: Container(
-                padding: EdgeInsets.only(left: 10),
-                child: Text(
+                padding: const EdgeInsets.only(left: 10),
+                child: const Text(
                   'Fahrur Huzain',
                   style: TextStyle(
                       color: Colors.white,
@@ -87,10 +87,10 @@ class _SideMenuState extends State<SideMenu> {
             theme: SideNavigationBarTheme(
               backgroundColor:
                   //Color.fromARGB(200, 9, 47, 171),
-                  Color.fromARGB(255, 18, 108, 178),
-              togglerTheme: SideNavigationBarTogglerTheme(
+                  const Color.fromARGB(255, 18, 108, 178),
+              togglerTheme: const SideNavigationBarTogglerTheme(
                   shrinkIconColor: Colors.white, expandIconColor: Colors.white),
-              itemTheme: SideNavigationBarItemTheme(
+              itemTheme: const SideNavigationBarItemTheme(
                   selectedItemColor: Colors.white,
                   unselectedItemColor: Colors.white60),
               dividerTheme: SideNavigationBarDividerTheme.standard(),

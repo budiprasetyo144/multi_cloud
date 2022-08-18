@@ -10,13 +10,13 @@ class Animasi_Kanan_Kiri extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ShowUpAnimation(
-      delayStart: Duration(seconds: 1),
+      delayStart: const Duration(seconds: 1),
       curve: Curves.decelerate,
       direction: Direction.horizontal,
       child: Text(
         judul,
         style: GoogleFonts.robotoCondensed(
-            color: Color(0xff1e5ea8),
+            color: const Color(0xff1e5ea8),
             fontSize: 20,
             fontWeight: FontWeight.bold),
       ),

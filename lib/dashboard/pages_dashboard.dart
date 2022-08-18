@@ -40,7 +40,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
             child: Row(
               children: [
                 Container(
-                  child: Text(
+                  child: const Text(
                     'Pages    ',
                     style: TextStyle(
                       fontSize: 20,
@@ -58,7 +58,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                     showDialog<String>(
                       context: context,
                       builder: (BuildContext context) => AlertDialog(
-                        title: Center(child: const Text('ADD NEW PAGES')),
+                        title: const Center(child: Text('ADD NEW PAGES')),
                         content: Form(
                           key: formKey,
                           child: Column(
@@ -71,7 +71,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                   textAlign: TextAlign.start,
                                   decoration: InputDecoration(
                                     labelText: "Masukkan Nama",
-                                    hintStyle: TextStyle(),
+                                    hintStyle: const TextStyle(),
                                     border: OutlineInputBorder(
                                         borderRadius:
                                             BorderRadius.circular(5.0)),
@@ -79,7 +79,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                   onChanged: (value) => nm = value,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 40,
                               ),
                               Container(
@@ -89,7 +89,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                   maxLines: 7,
                                   decoration: InputDecoration(
                                     labelText: "Masukkan Keterangan",
-                                    hintStyle: TextStyle(),
+                                    hintStyle: const TextStyle(),
                                     border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(5.0),
                                     ),
@@ -105,7 +105,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                             style: TextButton.styleFrom(
                               padding: const EdgeInsets.all(16.0),
                               primary: Colors.black,
-                              backgroundColor: Color.fromARGB(255, 16, 199, 71),
+                              backgroundColor: const Color.fromARGB(255, 16, 199, 71),
                               textStyle: const TextStyle(fontSize: 15),
                             ),
                             onPressed: () {
@@ -132,11 +132,11 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                     if (isSuccess) {
                                       setState(() {});
                                       Scaffold.of(this.context).showSnackBar(
-                                          SnackBar(
+                                          const SnackBar(
                                               content: Text("Data success")));
                                     } else {
                                       Scaffold.of(this.context).showSnackBar(
-                                          SnackBar(
+                                          const SnackBar(
                                               content: Text("Data failed!!!")));
                                     }
                                   },
@@ -149,7 +149,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       ),
                     );
                   },
-                  child: Text('Add New Pages'),
+                  child: const Text('Add New Pages'),
                 ),
               ],
             ),
@@ -170,7 +170,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
@@ -187,7 +187,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                       return const CircularProgressIndicator();
                     }
                     return DataTable(
-                      decoration: BoxDecoration(color: Colors.white),
+                      decoration: const BoxDecoration(color: Colors.white),
                       columnSpacing: 130,
                       columns: const [
                         DataColumn(label: Text('Id')),
@@ -242,9 +242,9 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                           context: context,
                                           builder: (BuildContext context) =>
                                               AlertDialog(
-                                            title: Center(
+                                            title: const Center(
                                                 child:
-                                                    const Text('Update Pages')),
+                                                    Text('Update Pages')),
                                             content: Form(
                                               key: formKey,
                                               child: Column(
@@ -254,7 +254,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                                 verticalDirection:
                                                     VerticalDirection.down,
                                                 children: [
-                                                  SizedBox(
+                                                  const SizedBox(
                                                     height: 10,
                                                   ),
                                                   const Text(
@@ -263,7 +263,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                                         fontSize: 13,
                                                         color: Colors.red),
                                                   ),
-                                                  SizedBox(
+                                                  const SizedBox(
                                                     height: 15,
                                                   ),
                                                   Center(
@@ -294,7 +294,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                                       ),
                                                     ),
                                                   ),
-                                                  SizedBox(
+                                                  const SizedBox(
                                                     height: 40,
                                                   ),
                                                   Center(
@@ -312,7 +312,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                                           labelText:
                                                               "Masukkan Keterangan",
                                                           hintStyle:
-                                                              TextStyle(),
+                                                              const TextStyle(),
                                                           border:
                                                               OutlineInputBorder(
                                                             borderRadius:
@@ -336,7 +336,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                                       16.0),
                                                   primary: Colors.black,
                                                   backgroundColor:
-                                                      Color.fromARGB(
+                                                      const Color.fromARGB(
                                                           255, 16, 199, 71),
                                                   textStyle: const TextStyle(
                                                       fontSize: 15),
@@ -377,7 +377,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                                           Scaffold.of(
                                                                   this.context)
                                                               .showSnackBar(
-                                                            SnackBar(
+                                                            const SnackBar(
                                                               content: Text(
                                                                   "Data success"),
                                                             ),
@@ -386,7 +386,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                                           Scaffold.of(
                                                                   this.context)
                                                               .showSnackBar(
-                                                            SnackBar(
+                                                            const SnackBar(
                                                               content: Text(
                                                                   "Data failed!!!"),
                                                             ),
@@ -402,15 +402,15 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                           ),
                                         );
                                       },
-                                      child: Text('Edit Page'),
+                                      child: const Text('Edit Page'),
                                     ),
-                                    SizedBox(width: 10),
+                                    const SizedBox(width: 10),
                                     TextButton(
                                       style: TextButton.styleFrom(
                                         padding: const EdgeInsets.all(16.0),
                                         primary: Colors.white,
                                         backgroundColor:
-                                            Color.fromARGB(255, 245, 27, 27),
+                                            const Color.fromARGB(255, 245, 27, 27),
                                         textStyle:
                                             const TextStyle(fontSize: 15),
                                       ),
@@ -419,12 +419,12 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                           context: context,
                                           builder: (context) {
                                             return AlertDialog(
-                                              title: Text("Warning"),
+                                              title: const Text("Warning"),
                                               content: Text(
                                                   "Are you sure want to delete data page ${pgm['title']}?"),
                                               actions: <Widget>[
                                                 TextButton(
-                                                  child: Text("Yes"),
+                                                  child: const Text("Yes"),
                                                   onPressed: () {
                                                     Navigator.pop(context);
                                                     deletePage(pgm['idpage'])
@@ -433,13 +433,13 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                                         setState(() {});
                                                         Scaffold.of(
                                                                 this.context)
-                                                            .showSnackBar(SnackBar(
+                                                            .showSnackBar(const SnackBar(
                                                                 content: Text(
                                                                     "Delete data success")));
                                                       } else {
                                                         Scaffold.of(
                                                                 this.context)
-                                                            .showSnackBar(SnackBar(
+                                                            .showSnackBar(const SnackBar(
                                                                 content: Text(
                                                                     "Delete data failed")));
                                                       }
@@ -447,7 +447,7 @@ class _PagesDashboardState extends State<PagesDashboard> {
                                                   },
                                                 ),
                                                 TextButton(
-                                                  child: Text("No"),
+                                                  child: const Text("No"),
                                                   onPressed: () {
                                                     Navigator.pop(context);
                                                   },
