@@ -23,7 +23,7 @@ class Home8_contact_us extends StatelessWidget {
       height: 450,
       width: screenSize.width,
       // color: Colors.blue,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           gradient: LinearGradient(
         colors: <Color>[
           Color(0xff137fc2),
@@ -77,7 +77,7 @@ class Home8_contact_us extends StatelessWidget {
               ),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Container(
             padding: const EdgeInsets.all(20),
             height: screenSize.height * 0.7,
@@ -89,7 +89,7 @@ class Home8_contact_us extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
-                    child: Text(
+                    child: const Text(
                       "Name",
                       style: TextStyle(
                           color: Colors.white,
@@ -101,30 +101,30 @@ class Home8_contact_us extends StatelessWidget {
                     width: 450,
                     child: TextFormField(
                       controller: nameController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: "Enter your Name",
                         fillColor: Colors.white,
                         filled: true,
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.zero,
                           borderSide:
-                              const BorderSide(width: 1, color: Colors.white),
+                              BorderSide(width: 1, color: Colors.white),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.zero,
                           borderSide:
-                              const BorderSide(width: 1, color: Colors.white),
+                              BorderSide(width: 1, color: Colors.white),
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
                     children: [
                       Container(
-                        child: Text(
+                        child: const Text(
                           "Phone Number",
                           style: TextStyle(
                               color: Colors.white,
@@ -132,11 +132,11 @@ class Home8_contact_us extends StatelessWidget {
                               fontWeight: FontWeight.w400),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 92,
                       ),
                       Container(
-                        child: Text(
+                        child: const Text(
                           "Email",
                           style: TextStyle(
                               color: Colors.white,
@@ -152,56 +152,56 @@ class Home8_contact_us extends StatelessWidget {
                         width: 220,
                         child: TextFormField(
                           controller: phoneController,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             hintText: "Enter a valid phone number",
                             fillColor: Colors.white,
                             filled: true,
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                   width: 1, color: Colors.white),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                   width: 1, color: Colors.white),
                             ),
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 7,
                       ),
                       Container(
                         width: 220,
                         child: TextFormField(
                           controller: emailController,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             hintText: "Enter a valid email address",
                             fillColor: Colors.white,
                             filled: true,
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                   width: 1, color: Colors.white),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                   width: 1, color: Colors.white),
                             ),
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  Text(
+                  const Text(
                     "Message",
                     style: TextStyle(
                         color: Colors.white,
@@ -212,19 +212,19 @@ class Home8_contact_us extends StatelessWidget {
                     width: 450,
                     child: TextFormField(
                       controller: messageController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: "Enter your message",
                         fillColor: Colors.white,
                         filled: true,
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.zero,
                           borderSide:
-                              const BorderSide(width: 1, color: Colors.white),
+                              BorderSide(width: 1, color: Colors.white),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.zero,
                           borderSide:
-                              const BorderSide(width: 1, color: Colors.white),
+                              BorderSide(width: 1, color: Colors.white),
                         ),
                       ),
                       maxLines: 5,
@@ -236,7 +236,7 @@ class Home8_contact_us extends StatelessWidget {
                       },
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   SizedBox(

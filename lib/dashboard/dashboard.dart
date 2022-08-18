@@ -11,7 +11,7 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: BarAtas(context),
-      body: SideMenu(),
+      body: const SideMenu(),
     );
   }
 }

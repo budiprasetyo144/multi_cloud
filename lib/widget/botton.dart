@@ -20,13 +20,13 @@ class Botton_tombol2 extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(5),
             ),
-            primary: Color.fromARGB(255, 255, 47, 0)),
+            primary: const Color.fromARGB(255, 255, 47, 0)),
         onPressed: () {},
         child: Container(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Text(
             title,
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold,color: Colors.white),
+            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold,color: Colors.white),
           ),
         ),
       ),
@@ -55,10 +55,10 @@ class Botton_tombol extends StatelessWidget {
             primary: kPrimaryColor),
         onPressed: () {},
         child: Container(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Text(
             title,
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold,color: Colors.white),
+            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold,color: Colors.white),
           ),
         ),
       ),
