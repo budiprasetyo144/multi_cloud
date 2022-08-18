@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mcs_flutter/dashboard/dashboard.dart';
 import 'package:mcs_flutter/screen/home.dart';
 
-
-
 class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
 
@@ -25,13 +23,11 @@ class _loginState extends State<login> {
       body: Container(
         decoration: new BoxDecoration(
             image: new DecorationImage(
-              image: new AssetImage("assets/images/cloud.jpg"),
-              fit: BoxFit.fill,
-            )
-        ),
+          image: new AssetImage("assets/images/cloud.jpg"),
+          fit: BoxFit.fill,
+        )),
         height: screenSize.height,
         width: screenSize.width,
-
         padding: EdgeInsets.only(
             left: screenSize.width * 0.15,
             top: screenSize.height * 0.13,
@@ -86,14 +82,16 @@ class _loginState extends State<login> {
                       children: [
                         Container(
                           padding:
-                          EdgeInsets.only(left: screenSize.width * 0.055),
-                          height: screenSize.height*0.08,
-                          child: Image.asset("assets/logo/multicloudsolution.jpg",height: 15,),
+                              EdgeInsets.only(left: screenSize.width * 0.055),
+                          height: screenSize.height * 0.08,
+                          child: Image.asset(
+                            "assets/logo/multicloudsolution.jpg",
+                            height: 15,
+                          ),
                         ),
                         Spacer(
                           flex: 3,
                         ),
-
                         Row(
                           children: [
                             Icon(
@@ -122,12 +120,13 @@ class _loginState extends State<login> {
                                 borderRadius: BorderRadius.circular(5.0),
                               ),
                             ),
-                            validator: (value){
-                              if(value == null || value.trim().isEmpty){
+                            validator: (value) {
+                              if (value == null || value.trim().isEmpty) {
                                 return "please enter your email address";
-                              }else if(!RegExp(r'\S+@\S+\.\S+').hasMatch(value)){
+                              } else if (!RegExp(r'\S+@\S+\.\S+')
+                                  .hasMatch(value)) {
                                 return 'Please enter a valid email address';
-                              }else{
+                              } else {
                                 return null;
                               }
                             },
@@ -167,7 +166,7 @@ class _loginState extends State<login> {
                                     : Icons.visibility_off),
                                 onPressed: () {
                                   setState(
-                                        () {
+                                    () {
                                       _isObscure = !_isObscure;
                                     },
                                   );
@@ -177,10 +176,10 @@ class _loginState extends State<login> {
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5.0)),
                             ),
-                            validator: (value){
-                              if(value == null || value.trim().isEmpty){
+                            validator: (value) {
+                              if (value == null || value.trim().isEmpty) {
                                 return 'This field is required';
-                              } else if(value.trim().length<8){
+                              } else if (value.trim().length < 8) {
                                 return 'Password must be at least 8 characters in length';
                               }
                               return null;
@@ -198,7 +197,26 @@ class _loginState extends State<login> {
                               width: screenSize.width * 0.08,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  if(_usmail == 'admin@admin.com' || _uspswd == 'administrator') {
+                                  if (_usmail == 'admin@admin.com' &&
+                                      _uspswd != 'administrator') {
+                                    showDialog<String>(
+                                      context: context,
+                                      builder: (BuildContext context) =>
+                                          AlertDialog(
+                                        title: const Text('Gagal login'),
+                                        content: const Text(
+                                            'Password anda salah!!!'),
+                                        actions: <Widget>[
+                                          TextButton(
+                                            onPressed: () =>
+                                                Navigator.pop(context, 'OK'),
+                                            child: const Text('OK'),
+                                          ),
+                                        ],
+                                      ),
+                                    );
+                                  } else if (_usmail == 'admin@admin.com' &&
+                                      _uspswd == 'administrator') {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
@@ -207,8 +225,23 @@ class _loginState extends State<login> {
                                         },
                                       ),
                                     );
-                                  }else{
-                                    print('Gagal login');
+                                  } else {
+                                    showDialog<String>(
+                                      context: context,
+                                      builder: (BuildContext context) =>
+                                          AlertDialog(
+                                        title: const Text('Gagal login'),
+                                        content: const Text(
+                                            'Akun Belum terdaftar, Silahkan Registrasi'),
+                                        actions: <Widget>[
+                                          TextButton(
+                                            onPressed: () =>
+                                                Navigator.pop(context, 'OK'),
+                                            child: const Text('OK'),
+                                          ),
+                                        ],
+                                      ),
+                                    );
                                   }
                                 },
                                 child: Text("LOGIN"),

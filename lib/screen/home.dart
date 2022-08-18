@@ -53,7 +53,9 @@ class _HomePageState extends State<HomePage> {
         scrollDirection: Axis.vertical,
         controller: controller2,
         children: [
-          Home(wijet: Button_scroll(),),
+          Home(
+            wijet: Button_scroll(),
+          ),
           const Home2(),
           const Home3_partner(),
           Home4_solution(screenSize: screenSize),
@@ -61,7 +63,10 @@ class _HomePageState extends State<HomePage> {
           const Home6_advantages(),
           const Home7_news(),
           Home8_contact_us(),
-          Footer(content1: konten1(screenSize),content2: konten2(screenSize),),
+          Footer(
+            content1: konten1(screenSize),
+            content2: konten2(screenSize),
+          ),
         ],
       ),
     );
@@ -69,16 +74,17 @@ class _HomePageState extends State<HomePage> {
 
   ElevatedButton Button_scroll() {
     return ElevatedButton(
-            onPressed: () {
-              _scrollToIndex(4096);
-            },
-            style: ElevatedButton.styleFrom(
-              primary: const Color(0xff1e5ea8),
-            ),
-            child: Text(
-              'CONTACT US',
-              style: GoogleFonts.poppins(fontSize: 19, letterSpacing: 2),
-            ),);
+      onPressed: () {
+        _scrollToIndex(4096);
+      },
+      style: ElevatedButton.styleFrom(
+        primary: const Color(0xff1e5ea8),
+      ),
+      child: Text(
+        'CONTACT US',
+        style: GoogleFonts.poppins(fontSize: 19, letterSpacing: 2),
+      ),
+    );
   }
 
   PreferredSize AppbarLarge(Size screenSize) {
@@ -97,11 +103,15 @@ class _HomePageState extends State<HomePage> {
               width: screenSize.width * 0.1,
             ),
             Container(
-              padding: const EdgeInsets.only(left: 30, top: 20, bottom: 20),
-              child: Image.asset("assets/logo/multicloudsolution.jpg"),
+              padding: const EdgeInsets.only(left: 30, top: 10, bottom: 10),
+              child: Image.asset(
+                "assets/logo/multicloudsolution.jpg",
+                width: 200,
+                height: 300,
+              ),
             ),
             SizedBox(
-              width: screenSize.width * 0.2,
+              width: screenSize.width * 0.1,
             ),
             Row(
               children: [
@@ -110,14 +120,13 @@ class _HomePageState extends State<HomePage> {
                     _scrollToIndex(0);
                   },
                   style: Color_button_appbar(),
-                  child:  Text(
+                  child: Text(
                     "Home",
                     style: GoogleFonts.poppins(
                       fontSize: 17,
                     ),
                   ),
                 ),
-
                 SizedBox(
                   width: screenSize.width * 0.03,
                 ),
@@ -126,7 +135,7 @@ class _HomePageState extends State<HomePage> {
                     _scrollToIndex(530); //// POSISI ABOUT US
                   },
                   style: Color_button_appbar(),
-                  child:  Text(
+                  child: Text(
                     "About us",
                     style: GoogleFonts.poppins(
                       fontSize: 17,
@@ -141,7 +150,7 @@ class _HomePageState extends State<HomePage> {
                     _scrollToIndex(880); //// POSISI SOLUTION
                   },
                   style: Color_button_appbar(),
-                  child:  Text(
+                  child: Text(
                     "Solution",
                     style: GoogleFonts.poppins(
                       fontSize: 17,
@@ -156,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                     _scrollToIndex(4096); //// POSISI CONTACT US
                   },
                   style: Color_button_appbar(),
-                  child:  Text(
+                  child: Text(
                     "Contact Us",
                     style: GoogleFonts.poppins(
                       fontSize: 17,
@@ -186,13 +195,11 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             const Spacer(),
-
           ],
         ),
       ),
     );
   }
-
 
   ButtonStyle Color_button_appbar() {
     return ButtonStyle(
@@ -206,77 +213,110 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Text FooterHead(String title) => Text(title,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.bold,letterSpacing: 2),);
+  Text FooterHead(String title) => Text(
+        title,
+        style: GoogleFonts.poppins(
+            fontSize: 22, fontWeight: FontWeight.bold, letterSpacing: 2),
+      );
 
-  Column konten1(Size screenSize){
-
+  Column konten1(Size screenSize) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Container(
-          width: screenSize.width*0.1,
+          width: screenSize.width * 0.1,
           height: screenSize.height * 0.04,
           child: FooterHead('Sitemap'),
         ),
-        const Spacer(flex: 3,),
-        TextButton(onPressed: (){
-          _scrollToIndex(0);
-        }, child: FooterBody(teks: 'Home',)),
+        const Spacer(
+          flex: 3,
+        ),
+        TextButton(
+            onPressed: () {
+              _scrollToIndex(0);
+            },
+            child: FooterBody(
+              teks: 'Home',
+            )),
         const Spacer(),
-        TextButton(onPressed: (){
-          _scrollToIndex(530);
-        }, child: FooterBody(teks: 'About Us',)),
+        TextButton(
+            onPressed: () {
+              _scrollToIndex(530);
+            },
+            child: FooterBody(
+              teks: 'About Us',
+            )),
         const Spacer(),
-        TextButton(onPressed: (){
-          _scrollToIndex(880);
-        }, child: FooterBody(teks: 'Solution',)),
+        TextButton(
+            onPressed: () {
+              _scrollToIndex(880);
+            },
+            child: FooterBody(
+              teks: 'Solution',
+            )),
         const Spacer(),
-        TextButton(onPressed: (){
-          _scrollToIndex(4096);
-        }, child: FooterBody(teks: 'Contact Us',)),
-        const Spacer(flex: 6,),
-
+        TextButton(
+            onPressed: () {
+              _scrollToIndex(4096);
+            },
+            child: FooterBody(
+              teks: 'Contact Us',
+            )),
+        const Spacer(
+          flex: 6,
+        ),
       ],
     );
   }
 
-  Column konten2(Size screenSize){
+  Column konten2(Size screenSize) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Container(
-            width: screenSize.width*0.13,
+            width: screenSize.width * 0.13,
             height: screenSize.height * 0.04,
             child: FooterHead('Solution')),
-        const Spacer(flex: 3,),
-        TextButton(onPressed: (){
-          _scrollToIndex(1480);
-        }, child: FooterBody(teks: 'Cloud Migration',)),
+        const Spacer(
+          flex: 3,
+        ),
+        TextButton(
+            onPressed: () {
+              _scrollToIndex(1480);
+            },
+            child: FooterBody(
+              teks: 'Cloud Migration',
+            )),
         const Spacer(),
-        TextButton(onPressed: (){
-          _scrollToIndex(1480);
-        }, child: FooterBody(teks: 'Consultation',)),
+        TextButton(
+            onPressed: () {
+              _scrollToIndex(1480);
+            },
+            child: FooterBody(
+              teks: 'Consultation',
+            )),
         const Spacer(),
-        TextButton(onPressed: (){
-          _scrollToIndex(1480);
-        }, child: FooterBody(teks: 'Local Support',)),
+        TextButton(
+            onPressed: () {
+              _scrollToIndex(1480);
+            },
+            child: FooterBody(
+              teks: 'Local Support',
+            )),
         const Spacer(),
-        TextButton(onPressed: (){
-          _scrollToIndex(1480);
-        }, child: FooterBody(teks: 'Cloud Implementation',)),
-        const Spacer(flex: 6,),
-
+        TextButton(
+            onPressed: () {
+              _scrollToIndex(1480);
+            },
+            child: FooterBody(
+              teks: 'Cloud Implementation',
+            )),
+        const Spacer(
+          flex: 6,
+        ),
       ],
     );
   }
-
 }
-
-
-
-
-
-
-
