@@ -50,16 +50,16 @@ class Home8_contact_us extends StatelessWidget {
                   const Spacer(
                     flex: 1,
                   ),
-                  const Text("Leave your contact info and",
-                      style: TextStyle(
+                  Text("Leave your contact info and",
+                      style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 25,
                           fontWeight: FontWeight.bold)),
                   const Spacer(
                     flex: 1,
                   ),
-                  const Text("Let's Discuss Business",
-                      style: TextStyle(
+                  Text("Let's Discuss Business",
+                      style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 40,
                           // fontWeight: FontWeight.bold,
@@ -67,9 +67,10 @@ class Home8_contact_us extends StatelessWidget {
                   const Spacer(
                     flex: 1,
                   ),
-                  const Text(
+                  Text(
                       "We’ll contact you immediately to discuss potential business",
-                      style: TextStyle(color: Colors.white, fontSize: 23)),
+                      style: GoogleFonts.poppins(
+                          color: Colors.white, fontSize: 23)),
                   const Spacer(
                     flex: 2,
                   ),
@@ -89,11 +90,11 @@ class Home8_contact_us extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
-                    child: const Text(
+                    child: Text(
                       "Name",
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                           color: Colors.white,
-                          fontSize: 20,
+                          fontSize: 18,
                           fontWeight: FontWeight.w400),
                     ),
                   ),
@@ -107,13 +108,11 @@ class Home8_contact_us extends StatelessWidget {
                         filled: true,
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.zero,
-                          borderSide:
-                              BorderSide(width: 1, color: Colors.white),
+                          borderSide: BorderSide(width: 1, color: Colors.white),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.zero,
-                          borderSide:
-                              BorderSide(width: 1, color: Colors.white),
+                          borderSide: BorderSide(width: 1, color: Colors.white),
                         ),
                       ),
                     ),
@@ -124,11 +123,11 @@ class Home8_contact_us extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                        child: const Text(
+                        child: Text(
                           "Phone Number",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               color: Colors.white,
-                              fontSize: 20,
+                              fontSize: 18,
                               fontWeight: FontWeight.w400),
                         ),
                       ),
@@ -136,11 +135,11 @@ class Home8_contact_us extends StatelessWidget {
                         width: 92,
                       ),
                       Container(
-                        child: const Text(
+                        child: Text(
                           "Email",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               color: Colors.white,
-                              fontSize: 20,
+                              fontSize: 18,
                               fontWeight: FontWeight.w400),
                         ),
                       ),
@@ -158,13 +157,13 @@ class Home8_contact_us extends StatelessWidget {
                             filled: true,
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide: BorderSide(
-                                  width: 1, color: Colors.white),
+                              borderSide:
+                                  BorderSide(width: 1, color: Colors.white),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide: BorderSide(
-                                  width: 1, color: Colors.white),
+                              borderSide:
+                                  BorderSide(width: 1, color: Colors.white),
                             ),
                           ),
                         ),
@@ -182,13 +181,13 @@ class Home8_contact_us extends StatelessWidget {
                             filled: true,
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide: BorderSide(
-                                  width: 1, color: Colors.white),
+                              borderSide:
+                                  BorderSide(width: 1, color: Colors.white),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
-                              borderSide: BorderSide(
-                                  width: 1, color: Colors.white),
+                              borderSide:
+                                  BorderSide(width: 1, color: Colors.white),
                             ),
                           ),
                         ),
@@ -201,11 +200,11 @@ class Home8_contact_us extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  const Text(
+                  Text(
                     "Message",
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.w400),
                   ),
                   Container(
@@ -218,13 +217,11 @@ class Home8_contact_us extends StatelessWidget {
                         filled: true,
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.zero,
-                          borderSide:
-                              BorderSide(width: 1, color: Colors.white),
+                          borderSide: BorderSide(width: 1, color: Colors.white),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.zero,
-                          borderSide:
-                              BorderSide(width: 1, color: Colors.white),
+                          borderSide: BorderSide(width: 1, color: Colors.white),
                         ),
                       ),
                       maxLines: 5,
@@ -285,9 +282,9 @@ class Home8_contact_us extends StatelessWidget {
                           messageController.clear();
                         }
                       },
-                      child: const Text(
+                      child: Text(
                         'Submit',
-                        style: TextStyle(fontSize: 16, color: Colors.white),
+                        style: GoogleFonts.poppins(fontSize: 16, color: Colors.white),
                       ),
                     ),
                   ),

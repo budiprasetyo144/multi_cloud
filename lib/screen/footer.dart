@@ -50,11 +50,11 @@ class Footer extends StatelessWidget {
                             width: screenSize.width * 0.15,
                             height: screenSize.height * 0.04,
                             //color: Colors.blue,
-                            child: const Center(
+                            child: Center(
                               child: Text(
                                 '  Your one stop IT Solution',
                                 textAlign: TextAlign.right,
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                     color: Colors.black87,
                                     fontWeight: FontWeight.w500,
                                     letterSpacing: 1.5,
@@ -196,12 +196,12 @@ class Footer extends StatelessWidget {
                                 title: Container(
                                   width: screenSize.width * 0.25,
                                   height: screenSize.height * 0.24,
-                                  child: const Text(
+                                  child: Text(
                                     'PT. Tiga Daya Digital Indonesia \nThe East '
                                     'Tower 19th Floor \nJl. Dr. Ide Anak Agung '
                                     '\nGde Agung Blok E3.2 '
                                     '\nMega Kuningan, \nJakarta Selatan 12950',
-                                    style: TextStyle(
+                                    style: GoogleFonts.poppins(
                                       fontSize: 17,
                                       height: 1.5,
                                     ),

@@ -64,7 +64,7 @@ class Home4_solution extends StatelessWidget {
                         direction: Direction.horizontal,
                         child: Text(
                           "MIGRATION",
-                          style: GoogleFonts.robotoCondensed(
+                          style: GoogleFonts.poppins(
                             color: const Color(0xff1e5ea8),
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
@@ -84,9 +84,9 @@ class Home4_solution extends StatelessWidget {
                         child: Text(
                           "We Experience in Data Migration Multi Cloud, Migration from Premise Environment.",
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.robotoCondensed(
+                          style: GoogleFonts.poppins(
                             color: const Color(0xff111111),
-                            fontSize: 14,
+                            fontSize: 16,
                           ),
                         ),
                       ),
@@ -121,7 +121,7 @@ class Home4_solution extends StatelessWidget {
                         direction: Direction.horizontal,
                         child: Text(
                           "CONSULTING",
-                          style: GoogleFonts.robotoCondensed(
+                          style: GoogleFonts.poppins(
                             color: const Color(0xff1e5ea8),
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
@@ -141,9 +141,9 @@ class Home4_solution extends StatelessWidget {
                         child: Text(
                           "Our experienced Cloud Consultants can help you determine the efficacy of and implement these popular cloud solutions.",
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.robotoCondensed(
+                          style: GoogleFonts.poppins(
                             color: const Color(0xff111111),
-                            fontSize: 14,
+                            fontSize: 16,
                           ),
                         ),
                       ),
@@ -178,7 +178,7 @@ class Home4_solution extends StatelessWidget {
                         direction: Direction.horizontal,
                         child: Text(
                           "LOCAL SUPPORT",
-                          style: GoogleFonts.robotoCondensed(
+                          style: GoogleFonts.poppins(
                             color: const Color(0xff1e5ea8),
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
@@ -198,9 +198,9 @@ class Home4_solution extends StatelessWidget {
                         child: Text(
                           "Our local support team works with our clients every step of the way to ensure that their cloud is running smoothly.",
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.robotoCondensed(
+                          style: GoogleFonts.poppins(
                             color: const Color(0xff111111),
-                            fontSize: 14,
+                            fontSize: 16,
                           ),
                         ),
                       ),
@@ -235,7 +235,7 @@ class Home4_solution extends StatelessWidget {
                         direction: Direction.horizontal,
                         child: Text(
                           "IMPLEMENTATION",
-                          style: GoogleFonts.robotoCondensed(
+                          style: GoogleFonts.poppins(
                             color: const Color(0xff1e5ea8),
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
@@ -255,9 +255,9 @@ class Home4_solution extends StatelessWidget {
                         child: Text(
                           "We do all cloud services such as Infrastructure  (IAAS), Platform (PAAS), and Software (SAAS).",
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.robotoCondensed(
+                          style: GoogleFonts.poppins(
                             color: const Color(0xff111111),
-                            fontSize: 14,
+                            fontSize: 16,
                           ),
                         ),
                       ),
