@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
           ? AppbarSmallSize(screenSize)
           : AppbarLarge(screenSize),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-      floatingActionButton: const WAChat(),
+      floatingActionButton: WAChat(),
       body: ListView(
         scrollDirection: Axis.vertical,
         controller: controller2,

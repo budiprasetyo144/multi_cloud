@@ -126,7 +126,7 @@ class Footer extends StatelessWidget {
                       height: screenSize.height * 0.35,
                       child: content1),
                   Container(
-                      width: screenSize.width * 0.13,
+                      width: screenSize.width * 0.15,
                       height: screenSize.height * 0.35,
                       child: content2),
                   Container(
