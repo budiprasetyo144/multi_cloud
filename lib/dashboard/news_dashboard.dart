@@ -33,203 +33,203 @@ class _NewsDashboardState extends State<NewsDashboard> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    return ListView(
-      children: [
-        Container(
-          height: 2000,
-          width: screenSize.width,
-          padding: const EdgeInsets.only(left: 100, right: 100),
-          color: const Color.fromRGBO(238, 224, 224, 1),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: 100,
-                child: Row(
-                  children: [
-                    Container(
-                      child: const Text("Post     ",
-                          style: TextStyle(
-                            fontSize: 20,
-                          )),
-                    ),
-                    ElevatedButton(
-                        onPressed: () {
-                          showDialog<String>(
-                            context: context,
-                            builder: (BuildContext context) => AlertDialog(
-                              title: const Center(child: Text('Add News')),
-                              content: Form(
-                                key: formKey,
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  verticalDirection: VerticalDirection.down,
-                                  children: [
-                                    const SizedBox(
-                                      height: 20,
-                                    ),
-                                    //IconButton(onPressed: (){}, icon: Icon(Icons.add_photo_alternate_outlined,size: 30,)),
-                                    Container(
-                                      width: 230,
-                                      child: TextFormField(
-                                        textAlign: TextAlign.start,
-                                        decoration: InputDecoration(
-                                          labelText: "Masukkan Code Image",
-                                          hintStyle: const TextStyle(),
-                                          border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(5.0)),
-                                        ),
-                                        onChanged: (value) => images = value,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 30,
-                                    ),
-                                    Container(
-                                      width: 230,
-                                      child: TextFormField(
-                                        textAlign: TextAlign.start,
-                                        decoration: InputDecoration(
-                                          labelText: "Masukkan Title",
-                                          hintStyle: const TextStyle(),
-                                          border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(5.0)),
-                                        ),
-                                        onChanged: (value) => title = value,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 30,
-                                    ),
-                                    Container(
-                                      width: 230,
-                                      child: TextFormField(
-                                        textAlign: TextAlign.start,
-                                        maxLines: 7,
-                                        decoration: InputDecoration(
-                                          labelText: "Masukkan Keterangan News",
-                                          hintStyle: const TextStyle(),
-                                          border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(5.0)),
-                                        ),
-                                        onChanged: (value) => news = value,
-                                      ),
-                                    ),
-                                  ],
+    return Container(
+      width: screenSize.width,
+      padding: const EdgeInsets.only(left: 100, right: 100),
+      color: const Color.fromRGBO(238, 224, 224, 1),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            height: 100,
+            child: Row(
+              children: [
+                Container(
+                  child: const Text("Post     ",
+                      style: TextStyle(
+                        fontSize: 20,
+                      )),
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      showDialog<String>(
+                        context: context,
+                        builder: (BuildContext context) => AlertDialog(
+                          title: const Center(child: Text('Add News')),
+                          content: Form(
+                            key: formKey,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              verticalDirection: VerticalDirection.down,
+                              children: [
+                                const SizedBox(
+                                  height: 20,
                                 ),
-                              ),
-                              actions: <Widget>[
-                                TextButton(
-                                  onPressed: () {
-                                    if (title.trim().isEmpty &&
-                                        news == null &&
-                                        images == null) {
-                                      print('Title News Kosong');
-                                    } else if (news.trim().isEmpty &&
-                                        title == null &&
-                                        images == null) {
-                                      print('Isi News kosong');
-                                    } else if (images.trim().isEmpty &&
-                                        title == null &&
-                                        news == null) {
-                                      print('Images Kosong');
-                                    }
-                                    createNews(title, news, images);
-                                    print('Data Tersimpan');
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => const Dashboard(),
-                                      ),
-                                    );
-                                  },
-                                  child: const Text('Save'),
+                                //IconButton(onPressed: (){}, icon: Icon(Icons.add_photo_alternate_outlined,size: 30,)),
+                                Container(
+                                  width: 230,
+                                  child: TextFormField(
+                                    textAlign: TextAlign.start,
+                                    decoration: InputDecoration(
+                                      labelText: "Masukkan Code Image",
+                                      hintStyle: const TextStyle(),
+                                      border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(5.0)),
+                                    ),
+                                    onChanged: (value) => images = value,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 30,
+                                ),
+                                Container(
+                                  width: 230,
+                                  child: TextFormField(
+                                    textAlign: TextAlign.start,
+                                    decoration: InputDecoration(
+                                      labelText: "Masukkan Title",
+                                      hintStyle: const TextStyle(),
+                                      border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(5.0)),
+                                    ),
+                                    onChanged: (value) => title = value,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 30,
+                                ),
+                                Container(
+                                  width: 230,
+                                  child: TextFormField(
+                                    textAlign: TextAlign.start,
+                                    maxLines: 7,
+                                    decoration: InputDecoration(
+                                      labelText: "Masukkan Keterangan News",
+                                      hintStyle: const TextStyle(),
+                                      border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(5.0)),
+                                    ),
+                                    onChanged: (value) => news = value,
+                                  ),
                                 ),
                               ],
                             ),
-                          );
-                        },
-                        child: const Text('Add News')),
-                    const SizedBox(width: 20,),
-
-                  ],
-                ),
-              ),
-              SizedBox(
-                  height: 50,
-                  child: Row(
-                    children: [
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          primary: Colors.black,
-                          textStyle: const TextStyle(fontSize: 15),
-                        ),
-                        onPressed: () {},
-                        child: const Text("3 Items"),
-                      ),
-                      const Spacer(
-                        flex: 2,
-                      ),
-                      SizedBox(
-                        height: 40,
-                        width: 200,
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            labelText: "Search",
-                            prefixIcon: const Icon(Icons.search),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide:
-                                  const BorderSide(width: 1, color: Colors.blue),
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide:
-                                  const BorderSide(width: 1, color: Colors.blue),
-                              borderRadius: BorderRadius.circular(5),
-                            ),
                           ),
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 50,
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(3),
-                        child: Stack(
-                          children: <Widget>[
-                            Positioned.fill(
-                              child: Container(
-                                decoration: const BoxDecoration(
-                                  gradient: LinearGradient(
-                                    colors: <Color>[
-                                      Color(0xFF42A5F5),
-                                      Color(0xFF42A5F5),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
+                          actions: <Widget>[
                             TextButton(
-                              style: TextButton.styleFrom(
-                                padding: const EdgeInsets.all(16.0),
-                                primary: Colors.white,
-                                backgroundColor: Colors.blue,
-                                textStyle: const TextStyle(fontSize: 15),
-                              ),
-                              onPressed: () {},
-                              child: const Text("Search News"),
+                              onPressed: () {
+                                if (title.trim().isEmpty &&
+                                    news == null &&
+                                    images == null) {
+                                  print('Title News Kosong');
+                                } else if (news.trim().isEmpty &&
+                                    title == null &&
+                                    images == null) {
+                                  print('Isi News kosong');
+                                } else if (images.trim().isEmpty &&
+                                    title == null &&
+                                    news == null) {
+                                  print('Images Kosong');
+                                }
+                                createNews(title, news, images);
+                                print('Data Tersimpan');
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const Dashboard(),
+                                  ),
+                                );
+                              },
+                              child: const Text('Save'),
                             ),
                           ],
                         ),
+                      );
+                    },
+                    child: const Text('Add News')),
+                const SizedBox(width: 20,),
+
+              ],
+            ),
+          ),
+          SizedBox(
+              height: 50,
+              child: Row(
+                children: [
+                  TextButton(
+                    style: TextButton.styleFrom(
+                      primary: Colors.black,
+                      textStyle: const TextStyle(fontSize: 15),
+                    ),
+                    onPressed: () {},
+                    child: const Text("3 Items"),
+                  ),
+                  const Spacer(
+                    flex: 2,
+                  ),
+                  SizedBox(
+                    height: 40,
+                    width: 200,
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        labelText: "Search",
+                        prefixIcon: const Icon(Icons.search),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              const BorderSide(width: 1, color: Colors.blue),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide:
+                              const BorderSide(width: 1, color: Colors.blue),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
                       ),
-                    ],
-                  )),
-              const SizedBox(height: 20,),
-              Container(
-                child: FutureBuilder<List<dynamic>>(
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 50,
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(3),
+                    child: Stack(
+                      children: <Widget>[
+                        Positioned.fill(
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: <Color>[
+                                  Color(0xFF42A5F5),
+                                  Color(0xFF42A5F5),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.all(16.0),
+                            primary: Colors.white,
+                            backgroundColor: Colors.blue,
+                            textStyle: const TextStyle(fontSize: 15),
+                          ),
+                          onPressed: () {},
+                          child: const Text("Search News"),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              )),
+          const SizedBox(height: 20,),
+          Container(
+            height: screenSize.height*0.65,
+            child: ListView(
+              children: [
+                FutureBuilder<List<dynamic>>(
                   future: getNews(),
                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                     if (snapshot.hasError ||
@@ -239,7 +239,7 @@ class _NewsDashboardState extends State<NewsDashboard> {
                     }
                     return DataTable(
                       decoration: const BoxDecoration(color: Colors.white),
-                      columnSpacing: 100,
+                      columnSpacing: 80,
                       columns: const [
                         DataColumn(label: Text('Id')),
                         DataColumn(label: Text('Title')),
@@ -513,11 +513,11 @@ class _NewsDashboardState extends State<NewsDashboard> {
                     );
                   },
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
