@@ -41,7 +41,7 @@ class Home2 extends StatelessWidget {
                 style: GoogleFonts.poppins(
                   fontSize: 18,
                   letterSpacing: 1.1,
-                  height: 1.3
+                  height: 1.5
                 )),
           ),
           Container(
@@ -57,7 +57,7 @@ class Home2 extends StatelessWidget {
                 style: GoogleFonts.poppins(
                   fontSize: 18,
                     letterSpacing: 1.1,
-                    height: 1.3
+                    height: 1.5
                 )),
           ),
         ],

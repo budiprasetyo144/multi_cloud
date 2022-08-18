@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(
-              width: screenSize.width * 0.1,
+              width: screenSize.width * 0.15,
             ),
             Row(
               children: [
@@ -123,7 +123,8 @@ class _HomePageState extends State<HomePage> {
                   child: Text(
                     "Home",
                     style: GoogleFonts.poppins(
-                      fontSize: 17,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
@@ -138,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                   child: Text(
                     "About us",
                     style: GoogleFonts.poppins(
-                      fontSize: 17,
+                      fontSize: 18,fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
@@ -153,7 +154,7 @@ class _HomePageState extends State<HomePage> {
                   child: Text(
                     "Solution",
                     style: GoogleFonts.poppins(
-                      fontSize: 17,
+                      fontSize: 18,fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
@@ -168,7 +169,7 @@ class _HomePageState extends State<HomePage> {
                   child: Text(
                     "Contact Us",
                     style: GoogleFonts.poppins(
-                      fontSize: 17,
+                      fontSize: 18,fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),

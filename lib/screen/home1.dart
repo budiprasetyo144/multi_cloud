@@ -59,8 +59,8 @@ class Home extends StatelessWidget {
                   child: Text(
                       'We help organizations in transforming their IT environments through the use of cost-effective Cloud services. Our expert team provides cutting-edge Cloud computing consulting services that help companies boost productivity to new heights.',
                       style: GoogleFonts.poppins(
-                          fontSize: 15,
-                          letterSpacing: 1.8,
+                          fontSize: 16,
+                          letterSpacing: 1.4,
                           height: 1.6,
                           fontWeight: FontWeight.w400,
                           color: Colors.white)),
@@ -79,8 +79,8 @@ class Home extends StatelessWidget {
                           'enterprise Cloud solutions, tools, and applications such as servers, storage,'
                           ' databases, networking, software, and apps, among others.',
                       style: GoogleFonts.poppins(
-                          fontSize: 15,
-                          letterSpacing: 1.8,
+                          fontSize: 16,
+                          letterSpacing: 1.4,
                           height: 1.6,
                           fontWeight: FontWeight.w400,
                           color: Colors.white)),

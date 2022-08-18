@@ -44,7 +44,7 @@ class _Home5_industryState extends State<Home5_industry> {
                 horizontal: screenSize.width * 0.15, vertical: 20),
             child: Text(
               'Each industry has a unique request. We are ready to assist and provide specific requirements based on the client\'s needs, from the first discussion to providing expert consultants.',
-              style: GoogleFonts.poppins(fontSize: 16),
+              style: GoogleFonts.poppins(fontSize: 17),
               textAlign: TextAlign.center,
             ),
           ),
