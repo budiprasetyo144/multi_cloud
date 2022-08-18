@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mcs_flutter/dashboard/dashboard.dart';
 import 'package:mcs_flutter/screen/home.dart';
 
 
@@ -24,7 +25,7 @@ class _loginState extends State<login> {
       body: Container(
         decoration: new BoxDecoration(
             image: new DecorationImage(
-              image: new AssetImage("assets/images/blue background login.jpg"),
+              image: new AssetImage("assets/images/cloud.jpg"),
               fit: BoxFit.fill,
             )
         ),
@@ -45,7 +46,7 @@ class _loginState extends State<login> {
               width: screenSize.width * 0.36,
               height: screenSize.height * 0.9,
               child: Image.asset(
-                "assets/logo/eksad.jpg",
+                "assets/logo/eksad1.jpg",
               ),
             ),
             Padding(
@@ -86,81 +87,13 @@ class _loginState extends State<login> {
                         Container(
                           padding:
                           EdgeInsets.only(left: screenSize.width * 0.055),
-                          height: screenSize.width * 0.02,
-                          child: Image.asset("assets/logo/logo_protalent.png"),
+                          height: screenSize.height*0.08,
+                          child: Image.asset("assets/logo/multicloudsolution.jpg",height: 15,),
                         ),
                         Spacer(
-                          flex: 1,
+                          flex: 3,
                         ),
-                        Container(
-                          height: screenSize.width * 0.02,
-                          child: Text(
-                            'Login as : ',
-                            style: TextStyle(fontSize: 16),
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Spacer(),
-                            Container(
-                              height: 30,
-                              width: screenSize.width * 0.08,
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  // Navigator.push(
-                                  //   context,
-                                  //   MaterialPageRoute(
-                                  //     builder: (Context) {
-                                  //       return loginClient();
-                                  //     },
-                                  //   ),
-                                  // );
-                                },
-                                child: Text("CLIENT"),
-                                style: ElevatedButton.styleFrom(
-                                  fixedSize: Size(110, 30),
-                                  primary: Colors.white,
-                                  onPrimary: Colors.blue,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30),
-                                  ),
-                                  side: BorderSide(width: 1, color: Colors.blue),
-                                ),
-                              ),
-                            ),
-                            Spacer(),
-                            Container(
-                              height: 30,
-                              width: screenSize.width * 0.08,
-                              child: ElevatedButton(
-                                  onPressed: () {
-                                    // Navigator.push(
-                                    //   context,
-                                    //   MaterialPageRoute(
-                                    //     builder: (context) => Register(),
-                                    //   ),
-                                    // );
-                                  },
-                                  child: Text("ADMIN"),
-                                  style: ElevatedButton.styleFrom(
-                                    fixedSize: Size(110, 30),
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(30),
-                                    ),
-                                    side:
-                                    BorderSide(width: 1, color: Colors.blue),
-                                  )),
-                            ),
-                            Spacer(
-                              flex: 5,
-                            ),
-                          ],
-                        ),
-                        Spacer(
-                          flex: 2,
-                        ),
+
                         Row(
                           children: [
                             Icon(
@@ -270,7 +203,7 @@ class _loginState extends State<login> {
                                       context,
                                       MaterialPageRoute(
                                         builder: (Context) {
-                                          return HomePage();
+                                          return Dashboard();
                                         },
                                       ),
                                     );
