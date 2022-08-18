@@ -15,15 +15,20 @@ class Home6_advantages extends StatelessWidget {
       width: screenSize.width,
       child: Column(
         children: [
-          const SizedBox(height: 15, width: 10,),
-           Center(
+          const SizedBox(
+            height: 15,
+            width: 10,
+          ),
+          Center(
             child: Text("Why Multi Cloud Solutions",
                 style: GoogleFonts.poppins(
                     fontSize: 35,
                     color: const Color.fromARGB(255, 12, 66, 101),
                     fontWeight: FontWeight.bold)),
           ),
-          const SizedBox(height: 25,),
+          const SizedBox(
+            height: 25,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -36,14 +41,15 @@ class Home6_advantages extends StatelessWidget {
                 width: screenSize.width * 0.40,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children:  [
-                    Text("Efficiency Improvement",
+                  children: [
+                    Text(
+                      "Efficiency Improvement",
                       style: GoogleFonts.poppins(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                      ),
+                          fontSize: 20, fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(height: 5,),
+                    const SizedBox(
+                      height: 5,
+                    ),
                     Container(
                       width: screenSize.width,
                       height: 180,
@@ -53,32 +59,35 @@ class Home6_advantages extends StatelessWidget {
                         style: GoogleFonts.poppins(
                             color: Colors.black,
                             fontSize: 16,
-                            letterSpacing: 1, height: 1.5
-                        ),
+                            letterSpacing: 1,
+                            height: 1.5),
                       ),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(height: 10, width: 10,),
+              const SizedBox(
+                height: 10,
+                width: 10,
+              ),
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: const BoxDecoration(
-                  // borderRadius: BorderRadius.circular(10),
-                    color: Colors.white
-                ),
+                    // borderRadius: BorderRadius.circular(10),
+                    color: Colors.white),
                 height: 255,
                 width: screenSize.width * 0.40,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children:  [
-                    Text("Better Scalability",
+                  children: [
+                    Text(
+                      "Better Scalability",
                       style: GoogleFonts.poppins(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                      ),
+                          fontSize: 20, fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(height: 5,),
+                    const SizedBox(
+                      height: 5,
+                    ),
                     Container(
                       width: screenSize.width,
                       height: 180,
@@ -88,38 +97,44 @@ class Home6_advantages extends StatelessWidget {
                         style: GoogleFonts.poppins(
                             color: Colors.black,
                             fontSize: 16,
-                            letterSpacing: 1, height: 1.5
-                        ),
+                            letterSpacing: 1,
+                            height: 1.5),
                       ),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(height: 10, width: 10,),
+              const SizedBox(
+                height: 10,
+                width: 10,
+              ),
             ],
           ),
-          const SizedBox(height: 10, width: 10,),
+          const SizedBox(
+            height: 10,
+            width: 10,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: const BoxDecoration(
-                  // borderRadius: BorderRadius.circular(10),
-                    color: Colors.white
-                ),
+                    // borderRadius: BorderRadius.circular(10),
+                    color: Colors.white),
                 height: 255,
                 width: screenSize.width * 0.40,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children:  [
-                    Text("Agility & Adaptability",
+                  children: [
+                    Text(
+                      "Agility & Adaptability",
                       style: GoogleFonts.poppins(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                      ),
+                          fontSize: 20, fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(height: 5,),
+                    const SizedBox(
+                      height: 5,
+                    ),
                     Container(
                       width: screenSize.width,
                       height: 180,
@@ -129,33 +144,37 @@ class Home6_advantages extends StatelessWidget {
                         style: GoogleFonts.poppins(
                             color: Colors.black,
                             fontSize: 16,
-                            letterSpacing: 1, height: 1.5
-                        ),
+                            letterSpacing: 1,
+                            height: 1.5),
                       ),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(height: 10, width: 10,),
+              const SizedBox(
+                height: 10,
+                width: 10,
+              ),
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(255, 0, 70, 150)
-                ),
+                    color: const Color.fromARGB(255, 0, 70, 150)),
                 height: 255,
                 width: screenSize.width * 0.40,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children:  [
-                    Text("Faster Development Cycles",
+                  children: [
+                    Text(
+                      "Faster Development Cycles",
                       style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 20,
-                          fontWeight: FontWeight.bold
-                      ),
+                          fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(height: 5,),
+                    const SizedBox(
+                      height: 5,
+                    ),
                     Container(
                       width: screenSize.width,
                       height: 180,
@@ -165,14 +184,17 @@ class Home6_advantages extends StatelessWidget {
                         style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 16,
-                            letterSpacing: 1, height: 1.5
-                        ),
+                            letterSpacing: 1,
+                            height: 1.5),
                       ),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(height: 10, width: 10,),
+              const SizedBox(
+                height: 10,
+                width: 10,
+              ),
             ],
           ),
         ],

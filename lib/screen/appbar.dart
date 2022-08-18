@@ -73,7 +73,7 @@ PreferredSize AppbarFullSize(Size screenSize, BuildContext context) {
                 ),
               );
             },
-            child:  Text(
+            child: Text(
               "Home",
               style: GoogleFonts.poppins(
                   fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
@@ -82,7 +82,7 @@ PreferredSize AppbarFullSize(Size screenSize, BuildContext context) {
           SizedBox(
             width: screenSize.width * 0.03,
           ),
-           Text(
+          Text(
             "About us",
             style: GoogleFonts.poppins(
                 fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
@@ -90,7 +90,7 @@ PreferredSize AppbarFullSize(Size screenSize, BuildContext context) {
           SizedBox(
             width: screenSize.width * 0.03,
           ),
-           Text(
+          Text(
             "Solution",
             style: GoogleFonts.poppins(
                 fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
@@ -98,7 +98,7 @@ PreferredSize AppbarFullSize(Size screenSize, BuildContext context) {
           SizedBox(
             width: screenSize.width * 0.03,
           ),
-           Text(
+          Text(
             "Contact Us",
             style: GoogleFonts.poppins(
                 fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
@@ -130,6 +130,7 @@ PreferredSize AppbarFullSize(Size screenSize, BuildContext context) {
   );
   void _scrollToIndex(int index) {
     controller.animateToPage(index + 1,
-        duration: const Duration(seconds: 2), curve: Curves.fastLinearToSlowEaseIn);
+        duration: const Duration(seconds: 2),
+        curve: Curves.fastLinearToSlowEaseIn);
   }
 }

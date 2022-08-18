@@ -194,7 +194,7 @@ class Footer extends StatelessWidget {
                                   color: Colors.black,
                                 ),
                                 title: Container(
-                                  padding: EdgeInsets.only(left: 10),
+                                  padding: const EdgeInsets.only(left: 10),
                                   width: screenSize.width * 0.25,
                                   height: screenSize.height * 0.24,
                                   child: Text(

@@ -7,7 +7,7 @@ import '../widget/responsive.dart';
 //
 
 class Home extends StatelessWidget {
-  Home({Key? key,required this.wijet}) : super(key: key);
+  Home({Key? key, required this.wijet}) : super(key: key);
   final Widget wijet;
 
   @override
@@ -74,10 +74,10 @@ class Home extends StatelessWidget {
                   direction: Direction.horizontal,
                   child: Text(
                       'Our Cloud managed services make it possible for organizations '
-                          'to reduce their overheads and better productivity, in addition to lowering '
-                          'costs and reducing time-to-market. We assist customers with our on-demand '
-                          'enterprise Cloud solutions, tools, and applications such as servers, storage,'
-                          ' databases, networking, software, and apps, among others.',
+                      'to reduce their overheads and better productivity, in addition to lowering '
+                      'costs and reducing time-to-market. We assist customers with our on-demand '
+                      'enterprise Cloud solutions, tools, and applications such as servers, storage,'
+                      ' databases, networking, software, and apps, among others.',
                       style: GoogleFonts.poppins(
                           fontSize: 16,
                           letterSpacing: 1.4,
@@ -94,8 +94,7 @@ class Home extends StatelessWidget {
                     curve: Curves.bounceIn,
                     direction: Direction.horizontal,
                     offset: -0.2,
-                    child: wijet
-                ),
+                    child: wijet),
               )
             ],
           ),

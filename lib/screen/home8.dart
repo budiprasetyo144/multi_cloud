@@ -284,7 +284,8 @@ class Home8_contact_us extends StatelessWidget {
                       },
                       child: Text(
                         'Submit',
-                        style: GoogleFonts.poppins(fontSize: 16, color: Colors.white),
+                        style: GoogleFonts.poppins(
+                            fontSize: 16, color: Colors.white),
                       ),
                     ),
                   ),

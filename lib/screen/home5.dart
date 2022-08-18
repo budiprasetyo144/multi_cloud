@@ -34,9 +34,10 @@ class _Home5_industryState extends State<Home5_industry> {
             child: (Text(
               "VARIOUS INDUSTRY AND SECTORS",
               style: GoogleFonts.poppins(
-                  fontSize: 36,
-                  color: const Color(0xff1e5ea8),
-                  fontWeight: FontWeight.bold,),
+                fontSize: 36,
+                color: const Color(0xff1e5ea8),
+                fontWeight: FontWeight.bold,
+              ),
             )),
           ),
           Container(
