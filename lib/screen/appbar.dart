@@ -6,7 +6,7 @@ import '../const/conts.dart';
 
 PreferredSize AppbarSmallSize(Size screenSize) {
   return PreferredSize(
-    preferredSize: Size(screenSize.width, 135),
+    preferredSize: Size(screenSize.width, 80),
     child: Container(
       decoration: const BoxDecoration(
         border: Border(
