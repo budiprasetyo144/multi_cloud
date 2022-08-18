@@ -10,54 +10,45 @@ String headgrid7 = 'Alibaba Cloud Award';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-String bodygrid1 =
-    'Eksad providing services high quality based '
+String bodygrid1 = 'Eksad providing services high quality based '
     'on strong experience ... ';
-    // 'in the industry and technology. '
-    // 'Building the right IT Service Solution to enable it '
-    // 'Partners in speeding up business development';
+// 'in the industry and technology. '
+// 'Building the right IT Service Solution to enable it '
+// 'Partners in speeding up business development';
 
-String bodygrid2 =
-    'EKSAD provides tailored services focusing on clients’ '
+String bodygrid2 = 'EKSAD provides tailored services focusing on clients’ '
     'specific demands ... ';
-    // 'in international and domestic markets.'
-    // 'It’s time to bridge the gap and communicate with your '
-    // 'business across channels.';
+// 'in international and domestic markets.'
+// 'It’s time to bridge the gap and communicate with your '
+// 'business across channels.';
 
-String bodygrid3 =
-    'Generally the detailed organization and implementation '
+String bodygrid3 = 'Generally the detailed organization and implementation '
     'of a complex operation. In a general business sense, logistics is ... ';
-    // 'the point of consumption to meet the requirements of customers or corporations.';
+// 'the point of consumption to meet the requirements of customers or corporations.';
 
-String bodygrid4 =
-    'EKSAD partner in technology: '
+String bodygrid4 = 'EKSAD partner in technology: '
     '\n'
     '1. Alibaba Cloud  '
     '2. Google Cloud  '
     '3. Huawei Cloud ...'
     '\n ';
 
-String bodygrid5 =
-    'Flexibility to choose cloud service ... ';
-
+String bodygrid5 = 'Flexibility to choose cloud service ... ';
 
 String bodygrid6 =
     'EKSAD provides solutions and professional IT resource partners, which provides competent IT experts ...';
-    // 'which provides IT experts who are competent in working on company projects '
-    // 'and have proven technical knowledge. '
-    // 'EKSAD IT resources also help you improve service performance '
-    // 'and offer increased flexibility in workforce management.';
+// 'which provides IT experts who are competent in working on company projects '
+// 'and have proven technical knowledge. '
+// 'EKSAD IT resources also help you improve service performance '
+// 'and offer increased flexibility in workforce management.';
 
-String bodygrid7 =
-    'Thanks to the reliability and extensive ability '
+String bodygrid7 = 'Thanks to the reliability and extensive ability '
     'to deploy solutions from Alibaba Cloud ...'
     '\n';
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-String bodyfull1 =
-    'EKSAD providing services high quality based '
+String bodyfull1 = 'EKSAD providing services high quality based '
     'on strong experience in the industry and technology. '
     'Building the right IT service solution to enable it '
     'partners in speeding up business development.'
@@ -77,8 +68,7 @@ String bodyfull1 =
     'and SRE practices with cloud-native tooling and expert guidance.'
     '\n';
 
-String bodyfull2 =
-    'EKSAD provides tailored services focusing on clients’ '
+String bodyfull2 = 'EKSAD provides tailored services focusing on clients’ '
     'specific demands in international and domestic markets. '
     'It’s time to bridge the gap and communicate with your '
     'business across channels. '
@@ -89,8 +79,7 @@ String bodyfull2 =
     'control costs, and leverage the best cloud technologies available.'
     '\n';
 
-String bodyfull3 =
-    'Generally the detailed organization and implementation '
+String bodyfull3 = 'Generally the detailed organization and implementation '
     'of a complex operation. In a general business sense, logistics is '
     'the point of consumption to meet the requirements of customers or corporations. '
     '\n'
@@ -103,8 +92,7 @@ String bodyfull3 =
     'Google Cloud Platform, IBM Cloud and Microsoft Azure.'
     '\n';
 
-String bodyfull4 =
-    'EKSAD Partner in technology: '
+String bodyfull4 = 'EKSAD Partner in technology: '
     '\n'
     '1. Alibaba Cloud'
     '\n'
@@ -161,13 +149,11 @@ String bodyfull6 =
     'Competitive price evaluated every 2 years'
     '\n';
 
-String bodyfull7 =
-    'Thanks to the reliability and extensive ability '
+String bodyfull7 = 'Thanks to the reliability and extensive ability '
     'to deploy solutions from Alibaba Cloud '
     'to dozens of client companies. '
     'EKSAD received an award from Alibaba as the top performer of the year. '
     '\n';
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -190,4 +176,3 @@ String urutan6 = headgrid6;
 String urutan7 = headgrid7;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-

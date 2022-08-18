@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../const/conts.dart';
 
-
 class Botton_tombol2 extends StatelessWidget {
   Botton_tombol2({
     Key? key,
@@ -26,14 +25,14 @@ class Botton_tombol2 extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: Text(
             title,
-            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold,color: Colors.white),
+            style: const TextStyle(
+                fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
       ),
     );
   }
 }
-
 
 class Botton_tombol extends StatelessWidget {
   Botton_tombol({
@@ -58,7 +57,8 @@ class Botton_tombol extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: Text(
             title,
-            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold,color: Colors.white),
+            style: const TextStyle(
+                fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
       ),

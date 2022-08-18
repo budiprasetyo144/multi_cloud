@@ -1,24 +1,17 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-
 
 class Expansionpanel extends StatefulWidget {
   Expansionpaneltate createState() => Expansionpaneltate();
 }
 
 class Expansionpaneltate extends State<Expansionpanel> {
-
-
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child:
-      Padding(
+      child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: ExpansionPanelList.radio(
-          initialOpenPanelValue:'Financial Services',
+          initialOpenPanelValue: 'Financial Services',
           expansionCallback: (int index, bool isExpanded) {
             setState(() {
               items[index].isExpanded = isExpanded;
@@ -47,18 +40,16 @@ class Expansionpaneltate extends State<Expansionpanel> {
           }).toList(),
         ),
       ),
-
     );
   }
 }
 
 List<ExpansionpanelItem> items = <ExpansionpanelItem>[
-
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Non Financial Services',
       content: Padding(
-          padding: const EdgeInsets.only( left: 20),
+          padding: const EdgeInsets.only(left: 20),
           child: Column(children: <Widget>[
             _posisi('Ritel'),
             _posisi('Consumer packaged goods'),
@@ -72,12 +63,11 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
             _posisi('Telecomunications'),
           ])),
       leading: const Icon(Icons.computer)),
-
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Financial Services',
       content: Padding(
-          padding: const EdgeInsets.only( left: 20),
+          padding: const EdgeInsets.only(left: 20),
           child: Column(children: <Widget>[
             _posisi('Banking'),
             _posisi('Multifinance'),
@@ -85,12 +75,11 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
             _posisi('Financial Lending'),
           ])),
       leading: const Icon(Icons.manage_accounts)),
-
   ExpansionpanelItem(
       isExpanded: false,
       title: 'Goverment and public sector',
       content: Padding(
-          padding: const EdgeInsets.only( left: 20),
+          padding: const EdgeInsets.only(left: 20),
           child: Column(children: <Widget>[
             _posisi('Goverment'),
             _posisi('State and local goverment'),
@@ -98,10 +87,9 @@ List<ExpansionpanelItem> items = <ExpansionpanelItem>[
             _posisi('Education technology'),
           ])),
       leading: const Icon(Icons.comment_outlined)),
-
 ];
 
-Container _judulposisi (){
+Container _judulposisi() {
   return Container(
     width: 1400,
     child: Text(
@@ -135,16 +123,11 @@ ListTile _posisi(String namaposisi) {
 class ExpansionpanelItem {
   ExpansionpanelItem(
       {required this.isExpanded,
-        required this.title,
-        required this.content,
-        required this.leading});
+      required this.title,
+      required this.content,
+      required this.leading});
   bool isExpanded;
   final String title;
   final Widget content;
   final Icon leading;
 }
-
-
-
-
-
