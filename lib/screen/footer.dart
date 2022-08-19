@@ -14,7 +14,7 @@ class Footer extends StatelessWidget {
     var screenSize = MediaQuery.of(context).size;
     return Container(
         width: screenSize.width,
-        height: screenSize.height * 0.68,
+        height: screenSize.height * 0.73,
         color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -24,7 +24,7 @@ class Footer extends StatelessWidget {
             ),
             Container(
               width: screenSize.width,
-              height: screenSize.height * 0.45,
+              height: screenSize.height * 0.5,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,7 +131,7 @@ class Footer extends StatelessWidget {
                       child: content2),
                   Container(
                       width: screenSize.width * 0.2,
-                      height: screenSize.height * 0.44,
+                      height: screenSize.height * 0.49,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -196,7 +196,7 @@ class Footer extends StatelessWidget {
                                 title: Container(
                                   padding: const EdgeInsets.only(left: 10),
                                   width: screenSize.width * 0.25,
-                                  height: screenSize.height * 0.24,
+                                  height: screenSize.height * 0.26,
                                   child: Text(
                                     'PT. Tiga Daya Digital Indonesia \nThe East '
                                     'Tower 19th Floor \nJl. Dr. Ide Anak Agung '

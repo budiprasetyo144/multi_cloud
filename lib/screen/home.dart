@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 TextButton(
                   onPressed: () {
-                    _scrollToIndex(530); //// POSISI ABOUT US
+                    _scrollToIndex(515); //// POSISI ABOUT US
                   },
                   style: Color_button_appbar(),
                   child: Text(
@@ -149,7 +149,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 TextButton(
                   onPressed: () {
-                    _scrollToIndex(880); //// POSISI SOLUTION
+                    _scrollToIndex(860); //// POSISI SOLUTION
                   },
                   style: Color_button_appbar(),
                   child: Text(
@@ -165,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 TextButton(
                   onPressed: () {
-                    _scrollToIndex(4096); //// POSISI CONTACT US
+                    _scrollToIndex(4050); //// POSISI CONTACT US
                   },
                   style: Color_button_appbar(),
                   child: Text(
@@ -246,7 +246,7 @@ class _HomePageState extends State<HomePage> {
         const Spacer(),
         TextButton(
             onPressed: () {
-              _scrollToIndex(530);
+              _scrollToIndex(515);
             },
             child: FooterBody(
               teks: 'About Us',
@@ -254,7 +254,7 @@ class _HomePageState extends State<HomePage> {
         const Spacer(),
         TextButton(
             onPressed: () {
-              _scrollToIndex(880);
+              _scrollToIndex(860);
             },
             child: FooterBody(
               teks: 'Solution',
@@ -262,7 +262,7 @@ class _HomePageState extends State<HomePage> {
         const Spacer(),
         TextButton(
             onPressed: () {
-              _scrollToIndex(4096);
+              _scrollToIndex(4050);
             },
             child: FooterBody(
               teks: 'Contact Us',
