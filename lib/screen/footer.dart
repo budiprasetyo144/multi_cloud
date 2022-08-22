@@ -196,7 +196,7 @@ class Footer extends StatelessWidget {
                                 title: Container(
                                   padding: const EdgeInsets.only(left: 10),
                                   width: screenSize.width * 0.25,
-                                  height: screenSize.height * 0.26,
+                                  height: screenSize.height * 0.26  ,
                                   child: Text(
                                     'PT. Tiga Daya Digital Indonesia \nThe East '
                                     'Tower 19th Floor \nJl. Dr. Ide Anak Agung '
@@ -271,7 +271,7 @@ void _launchLinkedIn() async {
 
 void _launchTwitter() async {
   String url() {
-    return "https://twitter.com/eksad_technology/";
+    return "https://twitter.com/eksadtechnology/";
   }
 
   if (await canLaunch(url())) {
