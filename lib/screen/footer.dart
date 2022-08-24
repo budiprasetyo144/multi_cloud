@@ -295,7 +295,7 @@ void _launchInstagram() async {
 
 void _launchYoutube() async {
   String url() {
-    return "https://youtube.com/eksad_technology";
+    return "https://www.youtube.com/channel/UCiZgIbpWgrAMrHW-TaS9EPw";
   }
 
   if (await canLaunch(url())) {
