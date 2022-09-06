@@ -76,7 +76,7 @@ PreferredSize AppbarFullSize(Size screenSize, BuildContext context) {
             child: Text(
               "Home",
               style: GoogleFonts.poppins(
-                  fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
+                  fontSize: 18, fontWeight: FontWeight.bold, color: kTextColor),
             ),
           ),
           SizedBox(
@@ -85,7 +85,7 @@ PreferredSize AppbarFullSize(Size screenSize, BuildContext context) {
           Text(
             "About us",
             style: GoogleFonts.poppins(
-                fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
+                fontSize: 18, fontWeight: FontWeight.bold, color: kTextColor),
           ),
           SizedBox(
             width: screenSize.width * 0.03,
@@ -93,7 +93,7 @@ PreferredSize AppbarFullSize(Size screenSize, BuildContext context) {
           Text(
             "Solution",
             style: GoogleFonts.poppins(
-                fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
+                fontSize: 18, fontWeight: FontWeight.bold, color: kTextColor),
           ),
           SizedBox(
             width: screenSize.width * 0.03,
@@ -101,7 +101,7 @@ PreferredSize AppbarFullSize(Size screenSize, BuildContext context) {
           Text(
             "Contact Us",
             style: GoogleFonts.poppins(
-                fontSize: 17, fontWeight: FontWeight.bold, color: kTextColor),
+                fontSize: 18, fontWeight: FontWeight.bold, color: kTextColor),
           ),
           SizedBox(
             width: screenSize.width * 0.03,
@@ -112,6 +112,9 @@ PreferredSize AppbarFullSize(Size screenSize, BuildContext context) {
             child: TextFormField(
               decoration: InputDecoration(
                 labelText: "Search",
+                labelStyle: GoogleFonts.poppins(
+                  fontSize: 18
+                ),
                 prefixIcon: const Icon(Icons.search),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
