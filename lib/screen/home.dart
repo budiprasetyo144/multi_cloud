@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
         child: Row(
           children: [
             SizedBox(
-              width: screenSize.width * 0.1,
+              width: screenSize.width * 0.06,
             ),
             Container(
               padding: const EdgeInsets.only(left: 30, top: 10, bottom: 10),
@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(
-              width: screenSize.width * 0.15,
+              width: screenSize.width * 0.12,
             ),
             Row(
               children: [
